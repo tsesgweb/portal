@@ -1,0 +1,49 @@
+.noticia {
+    @include item("titulo") {
+        @include titulo-noticias;
+    }
+    @include item("dados") {
+        @include make-col-ready(0);
+        @include media-breakpoint-only(xs) {
+            @include make-col(12);
+            text-align: center;
+            border-top: 1px solid $cinza-claro;
+            border-bottom: 1px solid $cinza-claro;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+        }
+        span {
+            &:first-child {
+                margin-right: 0.625rem;
+                border-right: 1px solid $cinza-claro;
+            }
+            i {
+                color: $cinza;
+                font-size: 1rem;
+            }
+            .fa {
+                padding-right: 5px;
+            }
+            time {
+                padding-right: 0.8rem;
+                color: $cinza;
+            }
+        }
+    }
+    @include elemento("conteudo") {
+        @include make-col-ready(0);
+        #compartilhar-conteudo {
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+            }
+        }
+    }
+    @include elemento("linha") {
+        @include make-row(0);
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}

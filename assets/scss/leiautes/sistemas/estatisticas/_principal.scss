@@ -1,0 +1,46 @@
+// body {
+//     background-color: $bg-color-master;
+//     font-size: $font-size-base!important;
+// }
+.t-Body-content {
+    padding-bottom: 0 !important;
+}
+
+.t-Header-branding {
+    display: none;
+}
+
+.t-Region {
+    box-shadow: none;
+    &.t-Region--scrollBody {
+        border: 0;
+    }
+}
+
+.t-Body-contentInner {
+    >.container {
+        >.t-Region-bodyWrap {
+            border-left: 1px solid $brand-primary !important;
+        }
+    }
+}
+
+.t-Region-bodyWrap {
+    background-color: #fff;
+}
+
+.t-Body-topButton {
+    .a-Icon {
+        &::before {
+            color: $brand-primary;
+        }
+    }
+}
+
+.u-Processing {
+    background-color: $brand-primary;
+}
+
+form#wwvFlowForm {
+    min-height: inherit !important;
+}

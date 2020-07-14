@@ -1,0 +1,3 @@
+@mixin bg-color($bg: $dark-color) {
+    background-color: $bg !important;
+}

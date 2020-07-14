@@ -1,0 +1,64 @@
+//MENU
+.navbar {
+    margin-bottom: 50px !important; 
+}
+
+//RODAPÉ
+.faixa-rodape {
+    min-height: 20px;
+}
+
+// @media (min-width: 1200px) {
+//     #galeria-pagina-interna {
+//         .je-icone-youtube {
+//             height: 100px;
+//             img {
+//                 top: 0px;
+//             }
+//         }
+//     }
+//     .bloco-galeria {
+//         .je-icone-youtube {
+//             height: 100px;
+//             img {
+//                 top: 0px;
+//                 left: 20%;
+//             }
+//         }
+//     }
+// }
+#campanhas-diversas {
+    .campanha-laco {
+        display: none;
+    }
+}
+
+#content {
+    a:link {
+        color: #205c90;
+    }
+    a:hover {
+        color: #205c90 !important; 
+    }
+}
+
+#input-group-btn {
+    padding: 0;
+    margin: 0;
+
+}
+
+@media (min-width: 960px) {
+    .rodape {
+        .redes-sociais {
+            height: 100px;
+               
+            div {
+                position: absolute;                          
+                top: 33%;
+            }
+        }
+
+    }
+
+}

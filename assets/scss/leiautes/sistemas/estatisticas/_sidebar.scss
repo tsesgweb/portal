@@ -1,0 +1,68 @@
+#js-jeSideMenu {
+    @include make-sm-column(3, 0);
+    @include make-md-column(2, 0);
+    @include make-lg-column(2, 0);
+    padding-left: 0;
+    padding-right: 20px;
+    .js-jeButtonsBottom {
+        padding: 9px;
+    }
+    .je-breadcrumb,
+    .je-last_update {
+        .t-Report-cell {
+            padding: 0;
+        }
+    }
+    #parametro_pesquisa_est {
+        @include breakpoint(lg, sm) {
+            &.fixed {
+                @include make-lg-column(2, 0);
+                padding-right: 24px;
+                position: fixed;
+                width: 100%;
+                z-index: 99;
+            }
+        }
+        .t-Region-header {
+            line-height: 0;
+            .t-Region-headerItems--title {
+                padding-left: 0;
+                padding-right: 0;
+                .je-titulo-personalizado {
+                    padding-top: 10px;
+                    padding-bottom: 7.5px;
+                    background-color: #fff;
+                    .js-jeTituloSidebar {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        padding-right: 0;
+                        text-transform: none;
+                        color: #000;
+                        font-size: 1.2rem;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        .t-Region-bodyWrap {
+            background-color: $sidebar-bg-color;
+        }
+    }
+    .js-jeBotaoAjuda {
+        top: 7px;
+        position: absolute;
+        right: 0;
+        width: auto;
+        z-index: 1;
+    }
+    .je-btn_ajuda {
+        float: right;
+        .t-Icon {
+            font-size: 2rem;
+            &::before {
+                color: $brand-primary;
+                opacity: .5;
+            }
+        }
+    }
+}

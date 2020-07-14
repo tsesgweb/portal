@@ -1,0 +1,204 @@
+body.contraste {
+
+    @each $color,
+    $value in $theme-colors {
+        @include bg-variant('[class$="bg-#{$color}"]', $dark-color, true);
+        @include bg-variant('[class$="btn-#{$color}"]', $dark-color, true);
+    }
+
+    .acessibilidade_bg-azul {
+        @include bg-color($cinza-escuro);
+        @include border(border-bottom, $border-width, $border-color);
+    }
+
+    .card,
+    .noticia,
+    .tab-content,
+    .btn-custom,
+    .servicos__nav,
+    .fa,
+    .full-cards .item,
+    .redes__linha,
+    .aviso_link,
+    & {
+        @include bg-color();
+        @include text-color();
+    }
+
+    .aviso,
+    .rodape__topo {
+        @include bg-color($cinza-escuro);
+        @include border(border-top);
+    }
+
+    .rodape__informacoes {
+        background: none;
+        @include border(border-tb);
+    }
+
+    .rodape {
+        .comunicacao-interna {
+            .btn-azul {
+                @include border;
+                @include button-variant($dark, $light-color);
+            }
+        }
+    }
+
+    .menu {
+        @include navbar(dark);
+
+        .menu__item {
+            @include not('.active') {
+                @include border(border-bottom, $border-width, transparent);
+            }
+
+            &.active,
+            &:hover {
+                @include text-color-hover;
+            }
+        }
+
+        .sub-menu {
+            @include border(border-tb);
+            .sub-menu__list-group-item {
+                @include border(border-top);
+
+                &:hover {
+                    @include text-color-hover;
+                }
+            }
+
+            &,
+            .sub-menu__item:hover {
+                @include bg-color();
+                
+            }
+        }
+
+        @include elemento("item") {
+
+            &:focus,
+            &:hover,
+            &.active {
+
+                .menu__item-link {
+                    &:hover {
+                        @include text-color-hover;
+                    }
+                }
+            }
+        }
+
+        .formulario {
+            .opcao-pesquisa {
+                @include text-color;
+            }
+
+            .busca_fechar {
+                @include text-color;
+                opacity: 1;
+            }
+
+            @include elemento(form-control) {
+                @include bg-color();
+                @include border(border-bottom);
+
+                &::placeholder {
+                    @include text-color;
+                }
+            }
+
+            @include elemento(form-text) {
+                @include text-color;
+            }
+        }
+
+    }
+
+    .tooltip {
+        @include elemento(acessibilidade) {
+            .tooltip-inner {
+                @include bg-color();
+            }
+
+            .arrow::before {
+                @include border(border-tb, 1px, $dark-color);
+            }
+        }
+
+        @include elemento(setas) {
+
+            @extend .tooltip__acessibilidade;
+
+            .tooltip-inner {
+                @include bg-color();
+            }
+
+            .arrow::before {
+                @include border(border-tb, 1px, $dark-color);
+            }
+        }
+    }
+
+    button.close {
+        @include text-color;
+    }
+
+    #seu-feedback .nav-tabs {
+        @include border(border, 0);
+
+        .nav-item {
+            @include bg-color($cinza-escuro);
+
+            .nav-link.active {
+                @include bg-color($cinza);
+                @include text-color;
+                @include border(border);
+            }
+        }
+    }
+
+    .servicos_bloco .nav-tabs {
+        @include border(border-no-bottom);
+    }
+
+    .servicos_bloco .tab-content {
+        @include border(border-no-top);
+    }
+
+    #mapaModal {
+        .modal-content {
+
+            .modal-header,
+            .modal-body {
+                @include bg-color();
+            }
+        }
+    }
+
+    .feedback,
+    .servicos {
+        @include elemento(modal) {
+            .modal-content {
+                @include bg-color();
+            }
+
+            @include modificar(titulo) {
+                @include text-color;
+            }
+
+            .btn.btn-amarelo {
+                @include button-outline-variant($amarelo, $amarelo);
+            }
+        }
+    }
+
+    .gj-picker {
+        @include bg-color();
+    }
+
+    .btn-primary {
+        @include button-outline-variant($amarelo, $amarelo);
+    }
+}

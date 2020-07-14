@@ -1,0 +1,157 @@
+.load {
+  display: block;
+
+  @include media-breakpoint-only(xs) {
+    background: none!important;
+  }
+
+  background: linear-gradient(90deg, #f2f2f2 60%, #fff 40%);
+
+  .load-container {
+    @include media-breakpoint-up(lg) {
+      @include make-container-max-widths();
+    }
+
+    @include make-container();
+
+    .load-row {
+      @include make-row();
+
+      @include media-breakpoint-up(lg) {
+
+        height: 615px;
+      }
+
+      .load-principal {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(xs) {
+          @include make-col(12);
+          min-height: 215px;
+          background: linear-gradient(90deg, #f2f2f2 100%, #fff 40%);
+        }
+
+        @include media-breakpoint-up(lg) {
+          @include make-col(8);
+          min-height: 615px;
+        }
+
+        .load-card {
+          position: relative;
+        }
+
+        .load-badge {
+
+          @include media-breakpoint-only(xs) {
+            top: 35%;
+            left: 0;
+            height: 7%;
+          }
+
+          position: relative;
+          top: 70%;
+          left: 0;
+          width: 15%;
+          height: 3%;
+          background-image: linear-gradient(90deg, #dddddd 0px, rgba(229, 229, 229, 0.8) 40px, #dddddd 80px);
+          background-size: 600px;
+          animation: load-principal 2s infinite ease-out;
+        }
+
+        .load-title {
+          @extend .load-badge;
+          width: 100%;
+
+          @include media-breakpoint-only(xs) {
+
+            height: 10%;
+          }
+
+          height: 4%;
+          margin-top: 15px;
+        }
+      }
+
+      .load-secundario {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(xs) {
+          @include make-col(12);
+        }
+
+        @include media-breakpoint-up(lg) {
+          @include make-col(4);
+          padding-left: 20px;
+          display: flex;
+          flex-flow: column;
+          justify-content: space-around;
+          min-height: 100%;
+        }
+
+
+        .load-badge {
+          position: relative;
+          top: 50%;
+          left: 5%;
+          width: 20%;
+          height: 16px;
+          background-image: linear-gradient(90deg, #dddddd 0px, rgba(229, 229, 229, 0.8) 40px, #dddddd 80px);
+          background-size: 600px;
+          animation: load-secundario 2s infinite ease-out;
+        }
+
+        .load-title {
+          @extend .load-badge;
+          width: 80%;
+          margin-top: 15px;
+        }
+
+        .load-card {
+          @include card;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          min-width: 0;
+          word-wrap: break-word;
+          height: 172px;
+          background-color: #f2f2f2;
+          border: none;
+
+          @include media-breakpoint-only(xs) {
+            &:not(:first-child) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@keyframes load-secundario {
+  0% {
+    background-position: -100px;
+  }
+
+  40%,
+  100% {
+    background-position: 140px;
+  }
+}
+
+
+@keyframes load-principal {
+  0% {
+    background-position: -32px;
+  }
+
+  40%,
+  100% {
+    background-position: 208px;
+
+  }
+}

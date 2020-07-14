@@ -1,0 +1,6 @@
+@mixin text-color($text-color: $light-color) {
+    color: $text-color !important;
+}
+@mixin text-color-hover($text-color-hover: $azul-claro) {
+    color: $text-color-hover !important;
+}

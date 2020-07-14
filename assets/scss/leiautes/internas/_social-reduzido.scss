@@ -1,0 +1,64 @@
+#breadcrumb-reduzido {
+    @include make-col-ready();
+    @include media-breakpoint-up(lg) {
+        @include make-col(8);
+    }
+
+    &.breadcrumb {
+        background: transparent;
+        margin-bottom: 0;
+    }
+}
+
+#painel-compartilhamento {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(4);
+    }
+}
+
+.st0 {
+    fill: $brand-primary;
+}
+
+#icone-compartilhar {
+    width: 2em;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+
+    &:hover path {
+        fill: $cor-ativado;
+    }
+}
+
+#painel-compartilhamento {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+#painel-compartilhamento-icones {
+    padding: 3px;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
+    left: 30%;
+    right: 0;
+}
+
+.social-icon:before {
+    color: #3b3b3a;
+    font-size: 24px;
+    border-radius: 100%;
+    width: 42px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover:before {
+        color: rgba($brand-primary, .75);
+    }
+}

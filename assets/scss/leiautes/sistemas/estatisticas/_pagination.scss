@@ -1,0 +1,28 @@
+.t-Report-pagination {
+    td.pagination {
+        padding: inherit;
+        a.t-Button {
+            text-transform: lowercase;
+            &.t-Report-paginationLink {
+                @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+                color: $btn-info-bg !important;
+            }
+            .a-Icon {
+                vertical-align: middle;
+                position: relative;
+                top: -.1rem;
+            }
+        }
+        .t-Report-paginationText {
+            border: $btn-info-border;
+            color: slategray;
+            font-weight: bold;
+        }
+    }
+}
+
+.js-jeContainerButtons {
+    @include make-xs-column(2, 0);
+    top: -85px;
+    left: 25px;
+}

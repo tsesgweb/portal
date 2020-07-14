@@ -1,0 +1,72 @@
+#gestor-responsavel {
+    @include make-col-ready();
+    @include media-breakpoint-up(xs) {
+        @include make-col(12);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @include media-breakpoint-up(sm) {
+        @include make-col(12);
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    @include media-breakpoint-up(md) {
+        @include make-col(12);
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @include media-breakpoint-up(lg) {
+        @include make-col(12);
+    }
+    @include card-sidebar(0);
+    h3 {
+        @include titulo-sidebar;
+    }
+    >a {
+        @include paragrafo;
+        // padding: $global-padding;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: block;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        cursor: pointer;
+        &::after {
+            content: " + ";
+        }
+    }
+}
+
+.popover-body {
+    font-size: 0.875rem !important;
+    line-height: 1.5rem;
+}
+
+.noticia-base {
+    border-bottom: 1px solid $azul;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    .noticia-gestor {
+        margin-bottom: 10px;
+        a {
+            background: $cinza-claro;
+            text-decoration: none;
+            font-size: .875rem !important;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 40px;
+            &:hover {
+                background: $amarelo;
+                color: $theme-color !important;
+                text-decoration: none !important;
+            }
+        }
+        @include media-breakpoint-only(xs) {
+            span {
+                display: none;
+            }
+        }
+    }
+}

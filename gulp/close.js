@@ -1,0 +1,1 @@
+module.exports = (gulp, plugins) => plugins.connectPhp.closeServer();

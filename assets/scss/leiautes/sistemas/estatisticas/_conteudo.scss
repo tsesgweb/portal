@@ -1,0 +1,29 @@
+#js-jeContent {
+    @include make-sm-column(9, 0);
+    @include make-sm-column-offset(3);
+    @include make-md-column(10, 0);
+    @include make-md-column-offset(2);
+    @include make-lg-column(10, 0);
+    @include make-lg-column-offset(2);
+    float: none!important;
+}
+
+.je-template_listar {
+    #js-jeContent {
+        @include make-sm-column(12, 0);
+        @include make-sm-column-offset(0);
+        @include make-md-column(12, 0);
+        @include make-md-column-offset(0);
+        @include make-lg-column(12, 0);
+        @include make-lg-column-offset(0);
+    }
+}
+
+.a-BarChart.a-BarChart--modern {
+    .a-BarChart-item {
+        padding: 3px 12px;
+    }
+    .a-BarChart-bar {
+        background-color: $chart-bg-accent;
+    }
+}

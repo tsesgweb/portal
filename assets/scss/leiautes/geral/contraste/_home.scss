@@ -1,0 +1,282 @@
+body.contraste {
+    .full-cards {
+        .item {
+            @include border;
+        }
+    }
+    .acessibilidade {
+        a {
+            color: $amarelo;
+        }
+    }
+    .menu__item {
+        a {
+            color: $amarelo !important;
+            &:hover,
+            &:focus {
+                color: $amarelo !important;
+            }
+        }
+    }
+    .destaque-full {
+        display: none;
+    }
+    #destaque-principal,
+    .destaque__secundario {
+        .titulo {
+            a {
+                color: $amarelo;
+            }
+        }
+        img {
+            filter: grayscale(100%);
+        }
+        .bagde,
+        .badge-pill {
+            background: black;
+            color: #fff;
+        }
+    }
+    .noticia__botoes {
+        button {
+            color: $amarelo !important;
+        }
+    }
+    .destaque__item {
+        .card {
+            a {
+                color: $amarelo;
+            }
+        }
+    }
+    .banners #slider {
+        @include border(border-tb);
+    }
+    .banners__item {
+        @include bg-color();
+    }
+    .banners__figure__fundo {
+        display: none !important;
+    }
+    .nav-tabs .nav-item {
+        a.active,
+        a:hover {
+            color: #fff !important;
+        }
+    }
+    .servicos_bloco {
+        ul {
+            li {
+                a {
+                    background: $dark-color;
+                    &:hover {
+                        background: $dark-color;
+                        transition: none;
+                    }
+                }
+            }
+        }
+    }
+    .redes-sociais__conteudo {
+        .rede-card {
+            .card-titulo {
+                color: $amarelo !important;
+            }
+        }
+    }
+    #servicos-eleitor-tab {
+        background: $dark-color !important;
+        a {
+            color: tomato !important;
+        }
+    }
+    .titulo-redes-em-alta {
+        color: #fff !important;
+    }
+    .nav-tabs,
+    .destaque-temas__card_bloco-imagem,
+    .card-header,
+    .card-footer,
+    .redes__linha,
+    .card-body {
+        @include not($not-list-border) {
+            @include border(border);
+        }
+    }
+    .card-title {
+        @include text-color($cinza-claro);
+    }
+    .card-footer,
+    .card-body {
+        p {
+            @include text-color();
+        }
+        a {
+            @include text-color($amarelo);
+        }
+    }
+    #cards-social-media .card-header {
+        @include text-color();
+    }
+    .card-header {
+        @include border(border-bottom, 0, transparent);
+    }
+    .card-footer {
+        @include border(border-top, 0, transparent);
+    }
+    .destaque-temas__card_bloco-imagem {
+        @include border(border-right, 0);
+    }
+    .destaque-temas {
+        h3 {
+            color: $branco;
+        }
+    }
+    .destaque-temas__card_bloco-imagem:after {
+        width: 0;
+    }
+    .noticia .card-body {
+        @include border(border-no-top);
+    }
+    .noticia__titulo a:before {
+        @include bg-color($branco);
+    }
+    .destaque-temas__card_bloco-imagem,
+    .card-imagem,
+    .btn-custom {
+        img {
+            @include filterColor();
+        }
+    }
+    .ferramentas__botao_abrir {
+        @include filterColor(30%, 80%);
+    }
+    .navegacao__setas:before {
+        @include bg-color();
+    }
+    .navegacao__setas_descer,
+    .navegacao__setas_subir {
+        @include filterColor();
+    }
+    .servicos__lista_link {
+        @include button-variant($dark, $dark);
+        @include border;
+        &::after {
+            @include filterColor();
+        }
+    }
+    .servicos__nav .nav-link.active {
+        @include bg-color($cinza-escuro);
+    }
+    #cards-social-media h3 {
+        @include text-color();
+    }
+    .veiculos-redes {
+        .card-titulo {
+            @include text-color();
+        }
+    }
+    .cards-conteudo,
+    .card-post,
+    .card-img-top {
+        img {
+            filter: grayscale(100%)
+        }
+    }
+    .rodape,
+    .rodape__links {
+        a {
+            color: $amarelo;
+            &:hover {
+                background: none;
+            }
+        }
+    }
+    .comunicacao-interna,
+    .comunicacao-interna__item {
+        a {
+            color: $amarelo !important;
+        }
+    }
+    .aviso__linha a {
+        color: $amarelo !important;
+    }
+    .mapa {
+        background: $dark-color;
+        .mapa__card {
+            background: tomato;
+        }
+    }
+    .mapa__card-header {
+        background: $dark-color;
+        border: 1px solid $amarelo !important;
+        a {
+            color: $amarelo;
+        }
+    }
+    .mapa__lista-grupo {
+        background: $dark-color;
+        a {
+            color: $amarelo;
+            background: $dark-color;
+        }
+    }
+    .mapa-pesquisa {
+        background: $amarelo;
+        .fa-search,
+        .fa-close {
+            a {
+                color: $dark-color !important;
+                &:hover {
+                    background-color: tomato !important;
+                }
+            }
+        }
+    }
+    .mapa-resultado {
+        h6 {
+            color: $dark-color;
+        }
+        .mapa-resultado__lista-item {
+            background: $amarelo;
+        }
+    }
+    .mapa-acesso-botao {
+        border: 1px solid $amarelo !important;
+        color: $amarelo;
+        .fa-sitemap {
+            color: $amarelo !important;
+        }
+        &:hover {
+            background: $dark-color !important;
+        }
+    }
+    .mapa-acesso-botao {
+        background: $dark-color;
+    }
+    #button-addon1 {
+        background: $dark-color;
+        color: #fff;
+        .fa-search {
+            background: none !important;
+            color: #fff !important;
+        }
+        &:hover {
+            color: #fff;
+        }
+    }
+    .card-footer {
+        background-color: $dark-color !important;
+    }
+    .rodape__selos,
+    .banners__thumbnail {
+        img {
+            filter: grayscale(100%);
+        }
+    }
+    .mapa__lista-item {
+        span {
+            color: $dark-color;
+        }
+    }
+}

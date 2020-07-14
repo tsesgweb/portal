@@ -1,0 +1,76 @@
+.mais-acessados {
+    padding-bottom: $global-padding-bottom - 30;
+
+    h2 {
+        color: $global-bg;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .mais-acessados-abrir {
+        border-top: 2px solid $global-bg;
+    }
+
+    .acessados-link {
+         @include make-col-ready();
+        @include media-breakpoint-up(lg) {
+            @include make-col(12);
+        }
+
+        margin-top: -4px;
+        line-height: 1.4;
+        font-size: 18px;
+        display: none;
+    }
+
+    .acessos {
+         @include make-col-ready();
+        @include media-breakpoint-up(lg) {
+            @include make-col(12);
+        }
+
+        background-color: $global-invert-bg;
+        border-bottom: 2px solid $global-bg;
+        box-shadow: 9px 3px 5px #ccc;
+        display: none;
+        padding: 0 15px 15px;
+
+        ul {
+            li {
+                margin-right: 25px; //Celular
+
+                @include media-breakpoint-up(xs) {
+                    margin-right: 0;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    width: 100%;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.lista-mais-acessados+.lista-mais-acessados {
+    padding-left: 20px;
+}
+
+.lista-mais-acessados {
+    float: left;
+    @include list-unstyled();
+    @extend .icone, .icone-lista;
+}
+
+.acessos-acoes {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+        @include make-col(12);
+    }
+    a {
+        float: right;
+    }
+}

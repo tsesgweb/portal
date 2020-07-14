@@ -1,0 +1,105 @@
+$border-ativo: 4px solid $theme-color-secundario;
+
+@mixin menuAtivo {
+    border-left: $border-ativo;
+    transition: 0.2s;
+    background-color: $cinza-azulado;
+    font-weight: $font-weight-bold;
+    border-bottom: 1px solid $cinza-claro !important;
+    transition: 0.2s;
+
+    a {
+        font-size: 1rem;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+#menu-lateral {
+    @include card-sidebar;
+
+    h3 {
+        @include titulo-sidebar;
+    }
+
+    .menu-lateral {
+        @include list-group(true);
+
+        @include item(item) {
+            @include list-group-item;
+            @include paragrafo;
+            background: transparent;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            transition: 0.2s;
+            border-left: 0 solid transparent;
+            border-bottom: 1px solid $cinza-claro;
+            border-radius: 0;
+
+            &.has-submenu.menu-lateral-item_ativo {
+                &:hover {
+                    background-color: #fff;
+                }
+
+                >.menu-lateral-item-link {
+                    font-weight: bold;
+                    font-size: 1.1rem;
+
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        width: 20px;
+                        height: 2px;
+                        background: $amarelo;
+                        margin-bottom: 6px;
+                        margin-right: 10px;
+                        margin-left: -13px;
+                    }
+                }
+            }
+
+            @include item(link) {
+                @include list-group-item-action;
+            }
+
+            &:hover {
+                border-left: $border-ativo;
+                font-weight: bold;
+            }
+
+            &.menu-lateral-item_ativo {
+                @include not('.has-submenu') {
+                    @include menuAtivo;
+
+
+                }
+            }
+        }
+
+        .submenu {
+            min-width: 265px;  
+            &:hover{
+                min-width: 262px;
+            }          
+            .menu-lateral-item {
+                @include modificar(ativo) {
+                    @include menuAtivo;
+                }
+            }
+        }
+    }
+
+    .menu-lateral+.menu-lateral {
+        padding: 0;
+    }
+
+    .navbar-header {
+        display: none;
+    }
+
+    .collapse {
+        display: block;
+    }
+}

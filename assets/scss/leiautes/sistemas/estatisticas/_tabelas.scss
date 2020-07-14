@@ -1,0 +1,24 @@
+.je-table_lista_cand,
+.je-table {
+    .t-Report-wrap {
+        width: 100%;
+    }
+    .t-Report-tableWrap {
+        @extend .table-responsive;
+        table.t-Report-report {
+            border: 1px solid $border-box-color;
+            @extend .table;
+            @extend .table-striped;
+            @extend .table-bordered;
+            thead {
+                $thead-bg-color: $sidebar-bg-color;
+                background-color: $thead-bg-color;
+                color: #000;
+                th {
+                    text-align: center;
+                    vertical-align: top !important;
+                }
+            }
+        }
+    }
+}

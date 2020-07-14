@@ -1,0 +1,12 @@
+body.contraste {
+    .agenda-je {
+        .agenda-mais-detalhes {
+            span {
+                @include text-color();
+            }
+        }
+        .detalhes * {
+            @include text-color();
+        }
+    }
+}

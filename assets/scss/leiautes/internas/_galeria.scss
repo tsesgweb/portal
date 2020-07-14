@@ -1,0 +1,185 @@
+.galeria-content {
+    .organizacao-elementos-galeria {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+    }
+
+    .media-heading {
+        font-weight: bold;
+    }
+
+    &.galeria-quadro {
+        .bloco-galeria {
+            .media {
+                @include media-breakpoint-down(sm) {
+                    @include make-col(12);
+
+                    border-bottom: 1px solid $cinza-claro;
+                    border-right: none;
+                    margin-top: 0;
+                    padding-top: 1rem;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+
+                @include media-breakpoint-only(md) {
+                    @include make-col(6);
+
+                    &:nth-child(2n+2) {
+                        border-right: none;
+                    }
+                }
+
+                @include media-breakpoint-only(lg) {
+                    @include make-col(4);
+
+                    &:nth-child(3n+3) {
+                        border-right: none;
+                    }
+                }
+
+                @include media-breakpoint-only(xl) {
+                    @include make-col(4);
+
+                    &:nth-child(3n+3) {
+                        border-right: none;
+                    }
+                }
+
+                border-right: 1px solid $cinza-claro;
+                display: block;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+
+            }
+
+            @extend .organizacao-elementos-galeria;
+            .je-icone-foto {
+                &::before {
+                    padding: 0;
+                    left: auto !important;
+                    right: 5px;
+                    top: 20px;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+    &.galeria-lista {
+        @extend .organizacao-elementos-galeria;
+
+        .media {
+            @include make-col(12);
+
+            .media-left {
+                @include make-col(5);
+                text-align: center;
+                background-color: $cinza-claro;
+            }
+
+            .media-body {
+                @include make-col(7);
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            figure {
+                img {
+                    max-width: 100%;
+                    max-height: 165px;
+                }
+            }
+
+            @include media-breakpoint-down(xs) {
+                display: block;
+
+                .media-left {
+                    @include make-col(12);
+                }
+
+                .media-body {
+                    @include make-col(12);
+                }
+            }
+
+            border-bottom: 1px solid $cinza-claro;
+            padding-top: 1rem;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+#texto-conteudo {
+    .com-galeria {
+        @include make-col(10);
+        display: inline-block;
+
+        @include media-breakpoint-down(md) {
+            @include make-col(12);
+
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-right: 1rem;
+
+        }
+
+    }
+
+    #galeria-pagina-interna {
+
+        @include media-breakpoint-down(md) {
+            @include make-col(12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0;
+
+            > div {
+                margin-left: .5rem;
+                margin-right: .5rem;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(2);
+            float: right;
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            margin-top: 1rem;
+
+            > div {
+                border-bottom: 1px solid $gray-light;
+                padding-top: 1rem;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+            }
+        }
+
+        padding: 1rem;
+        background-color: $cinza-azulado;
+        border: 1px solid $gray-light;
+
+        .je-icone {
+
+            &::after {
+                background-color: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+}

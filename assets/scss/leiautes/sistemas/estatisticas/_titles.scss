@@ -1,0 +1,67 @@
+// Tiulos
+.t-Region-header {
+    border-bottom-color: transparent;
+    .je-titulo-personalizado {
+        @include tituloWrap;
+        .js-je-titulo-padrao {
+            @include tituloPadrao;
+        }
+    }
+    .t-Button {
+        .t-Icon {
+            font-size: 1.33333333em !important;
+            line-height: .75em !important;
+            vertical-align: -15% !important;
+            &::before {
+                color: $brand-primary;
+                opacity: .5;
+            }
+        }
+    }
+    .t-Region-headerItems--title {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        position: relative;
+        width: 100%;
+        padding-right: 0;
+    }
+    .js-je-titulo-link {
+        text-transform: lowercase;
+        color: $gray;
+        font-size: 0.75em;
+        display: inline-block !important;
+        width: 100%;
+    }
+    .t-Region-headerItems--buttons {
+        .t-Button {
+            line-height: 0;
+            position: absolute;
+            right: 4px;
+            top: 2px;
+            padding: 0;
+        }
+    }
+}
+
+.t-Region-bodyWrap {
+    .je-titulo-personalizado {
+        background-color: #fff;
+        line-height: 0;
+        .js-je-titulo-padrao {
+            text-transform: none;
+            color: #000;
+            font-size: 1.5rem;
+            font-weight: normal;
+        }
+    }
+}
+
+.a-Tabs-panel {
+    .t-Region-headerItems--title {
+        h2 {
+            @include breakpoint(lg, md) {
+                background-color: #fff;
+            }
+        }
+    }
+}

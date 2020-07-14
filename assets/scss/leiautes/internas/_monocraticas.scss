@@ -1,0 +1,286 @@
+#monocraticas-search {
+    padding-left: 25px;
+}
+
+#monocraticas-search {
+    label {
+        display: block;
+        float: left;
+        padding: 0 10px 0 0;
+        text-align: right;
+        width: 25%;
+    }
+
+    select#tipo_doc {
+        @include form-control;
+        padding: .5rem;
+    }
+
+    select#relator,
+    input[type="text"] {
+        width: 75%;
+        @include form-control;
+    }
+
+
+    .control-label {
+        width: 30%;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    form>div {
+        @extend .form-group;
+    }
+
+    #form-juris {
+        div:not(.borda) {
+            margin-top: 15px;
+            margin-right: 15px;
+            margin-bottom: 1px;
+        }
+
+        div+div {
+            margin-right: 0;
+        }
+
+        p {
+            @include paragrafo;
+        }
+    }
+
+    .estilo-label-2 {
+        float: left;
+    }
+
+    h4 {
+        margin: 20px 0 20px 0;
+    }
+
+    .titulo {
+        background: none repeat scroll 0 0 transparent;
+        color: $cinza-escuro;
+        font-family: $font-family-base;
+        font-size: 1.25em;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .estilo-label-2 label {
+        width: 70px;
+    }
+
+    .marcar-check {
+        float: left;
+    }
+
+    .em-linha {
+        @include media-breakpoint-up(xs) {
+            @include make-col(4);
+        }
+    }
+
+    .marcar-check input {
+        height: 10px;
+        border: 1px solid #999;
+    }
+
+    #form-juris {
+        font-family: $font-family-base;
+        margin-top: 30px;
+    }
+
+    #campos_legislacao {
+        border: 1px solid $cinza;
+        width: 80%;
+        padding: 10px 0 15px 0;
+        float: left;
+        margin: 0 0 20px 0;
+    }
+
+    .botoes {
+        display: flex;
+        flex: 0 0 100%;
+        min-width: 100%;
+        justify-content: flex-end;
+    }
+
+    #enviar {
+        @extend .btn;
+        order: 2;
+        min-width: 150px;
+        @include button-variant($theme-color-secundario, $theme-color-secundario);
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+        margin-left: 15px;
+    }
+
+    .limpar {
+        @extend .btn;
+        order: 1;
+        min-width: 150px;
+        margin-right: 15px;
+        @include button-outline-variant($cinza);
+        @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+    }
+
+    .buscaavancada {
+        font-size: 100% !important;
+        margin-bottom: 20px;
+        width: 100%;
+        float: left;
+    }
+
+    #botao_avancada {
+        margin: 15px 0 10px 118px;
+        float: left;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .buscaavancada p {
+        font-size: 12px !important;
+        font-weight: bold;
+        margin-left: 95px;
+    }
+
+    #relator {
+        width: 379px;
+    }
+
+    #tipo_doc {
+        width: 187px;
+        margin-left: 14px;
+        vertical-align: middle !important;
+    }
+
+    .borda {
+        border: 1px solid $cinza;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        margin-right: -15px;
+    }
+
+    table th {
+        background: none repeat scroll 0 0 #dee7ec;
+        font-weight: bold;
+        padding: 5px;
+        text-transform: none;
+    }
+
+    #portal-column-one {
+        display: none !important;
+    }
+
+    .bt {
+        font-size: 0.9em;
+
+        img {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    #links-integra-e-impressao {
+        max-width: 773px;
+    }
+
+    div.main-results-without-dn {
+        width: 100%;
+    }
+
+    #dsc-form-monocraticas-search {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+
+    #links-integra-e-impressao {
+        max-width: 775px;
+    }
+
+    .bt {
+        border: 1px solid #999 !important;
+        margin: 15px 3px 0;
+        padding: 6px 7px !important;
+    }
+
+    .seleciona-documento {
+        margin-left: 5px;
+    }
+}
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .template-monocraticas-search .botoes {
+        /*margin-left: 401px;*/
+        margin-bottom: 80px;
+    }
+}
+
+// @media screen and (-webkit-min-device-pixel-ratio: 0) {
+//     .template-monocraticas-search .limpar {
+//         // background-color: $cinza;
+//         // padding: 4px 6px;
+//         // height: 26px;
+//         // cursor: pointer;
+//         // margin-left: 58px;
+//         // *height: 22px;
+//         // *padding: 1px 6px;
+//     }
+// }
+#monocraticas-search {
+
+    #data_inicial,
+    #data_final {
+        width: 80px;
+    }
+}
+
+// .template-monocraticas-search {}
+
+/*.template-monocraticas-search .bt{
+	padding: 5px 7px !important;
+	border: 1px solid #999 !important;
+}*/
+
+
+/*.template-monocraticas-search .bt {padding: 5px 3px !important;}*/
+
+
+/*----------template-monocraticas-search--------*/
+
+
+/***********monocraticas-search-print************/
+
+@media print {
+    .template-monocraticas-search {
+
+        header,
+        #menusuperiornavacess,
+        #menusecundario,
+        #portal-breadcrumbs,
+        #mapasite_bg {
+            display: none !important;
+        }
+
+        #central {
+            border: none;
+            margin: 0 !important;
+        }
+
+        #menulateralesquerdo,
+        .sugestao {
+            display: none;
+        }
+    }
+}
+
+// #monocraticas-search {
+//     input,
+//     button {
+//         // border: 1px solid #999;
+//         // font-size: 13px;
+//         // padding: 0;
+//     }
+// }

@@ -1,0 +1,25 @@
+iframe {
+	border: none;
+	overflow: auto;
+	width: 100%;
+}
+.iframe-full {
+	left: 50%;
+	margin-left: -50vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	position: relative;
+	width: 99.5vw;
+	//Celular
+	@include media-breakpoint-only(xs) {
+		left: 0;
+    margin-left: 0;
+    padding-left: 0;
+		padding-right: 0;
+    width: 100%;
+	}
+	iframe {
+		display: block;
+		margin: 0 auto;
+	}
+}

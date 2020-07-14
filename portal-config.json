@@ -1,0 +1,79 @@
+{
+    "head": {
+        "css": {
+            "external": [
+
+            ],
+            "plugins": ["assets/css/plugins.css"],
+            "portal": [
+                "assets/css/master.css"
+            ],
+            "plus": ["assets/css/plus.css"],
+            "template": {
+                "home": ["assets/css/home.css"],
+                "internas": ["assets/css/internas.css"],
+                "biblioteca": ["assets/css/biblioteca.css"]
+
+            },
+            "ie": {
+                "9": ["assets/css/ie.css"],
+                "8": ["assets/css/ie8.css"]
+            }
+        },
+        "js": {
+            "ie": {
+                "9": [
+                    "assets/js/vendor/html5shiv.js",
+                    "assets/js/vendor/html5shiv-printshiv.js",
+                    "assets/js/vendor/respond.js", "ie/ie.js"
+                ],
+                "8": ["assets/js/vendor/ie8.polyfils.min.js"]
+            },
+            "head": ["assets/js/vendor/modernizr.js"]
+        }
+    },
+    "footer": {
+        "js": {
+            "vendor": [
+                "assets/js/vendor/jquery-3.3.1.min.js",
+                "assets/js/vendor/popper.min.js",
+                "assets/js/vendor/bootstrap.min.js",
+                "assets/js/vendor/breakpoints.js",
+                "assets/js/vendor/jquery.fancybox.min.js",
+                "assets/js/vendor/gijgo.js",
+                "assets/js/vendor/local/messages.pt-br.js"
+            ],
+            "external": [                
+                "node_modules/owl.carousel/dist/owl.carousel.js",
+                "node_modules/js-cookie/src/js.cookie.js",
+                "node_modules/jquery-placeholder/jquery.placeholder.js"                
+            ],
+            "rybena": [
+                "assets/js/vendor/rybenaDOMFull-1.6.js",
+                "assets/js/vendor/rybena-1.0.js"
+            ],
+            "portal": [
+                "assets/js/novo-portal.js",
+                "assets/js/botoes-ferramentas.js",
+                "assets/js/feedback.js",
+                "assets/js/rybena.js"
+            ],
+            "template": {
+                "home": [
+                    "assets/js/dje.js",
+                    "assets/js/cards-redes-sociais.js",
+                    "assets/js/banners-home.js",
+                    "assets/js/destaque-principal.js",
+                    "assets/js/destaques-carrosel.js",
+                    "assets/js/full-cards.js",
+                    "assets/js/home.js"
+                ],
+                "internas": [
+                    "assets/js/menu-lateral.js",
+                    "assets/js/conteudo.js",
+                    "assets/js/imprensa.js"
+                ]
+            }
+        }
+    }
+}

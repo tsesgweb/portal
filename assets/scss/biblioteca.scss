@@ -1,0 +1,122 @@
+@charset "utf-8";
+@import "variaveis/config";
+@import "mixins/mixins";
+@import "plugins//bootstrap";
+.biblioteca {
+    .banners {
+        @include make-row();
+        .item {
+            @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+                margin-top: 10px;
+            }
+        }
+    }
+    .conteudo {
+        padding-right: 0;
+        padding-left: 0;
+        >.link-banners {
+            border-top: none;
+        }
+    }
+    .apresentacao {
+        @include make-row();
+        border-bottom: 1px solid $cinza-claro;
+        .imagem {
+            @include make-col-ready(0);
+            @include media-breakpoint-up(xs) {
+                @include make-col(12);
+                padding-bottom: 2em;
+            }
+            @include media-breakpoint-up(sm) {
+                @include make-col(3);
+            }            
+        }
+        .texto {
+            @include make-col-ready();
+            @include media-breakpoint-up(xs) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(md) {
+                @include make-col(9);
+            }
+        }
+    }
+    .colunas {
+        @include make-row();
+        // @include debug;
+    }
+    .um {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @include make-col-ready();
+        @include media-breakpoint-up(xs) {
+            @include make-col(12);
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+        }
+    }
+    .dois {
+        @extend .um;
+    }
+    .titulo-personalizado {
+        @include make-row(0);
+        .titulo-padrao {
+            padding-left: 0;
+        }
+    }
+    .link-banners {
+        @include make-row();
+        padding-top: 15px;
+        margin-bottom: 15px;
+        border-top: 1px solid $cinza-claro;
+        .item {
+            @include make-col-ready();
+            @include media-breakpoint-up(xs) {
+                @include make-col(6);
+            }
+            @include media-breakpoint-up(sm) {
+                @include make-col(3);
+            }
+        }
+    }
+    .pesquisa {
+        .btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            .fa {
+                &::before {
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    .pesquisa-avancada {
+        @include make-row(0);
+        padding-bottom: 25px;
+        a {
+            color: $theme-color;
+        }
+    }
+    .links-renovacao {
+        font-weight: bold;
+        padding-top: 0px;
+        padding-bottom: 25px;
+    }
+    .texto-acervo {
+        @include media-breakpoint-up(xs) {
+            @include make-col(12);
+        }
+    }
+    .colecoes {
+        @include make-row(0);
+        p {
+            @include paragrafo;
+        }
+    }
+}

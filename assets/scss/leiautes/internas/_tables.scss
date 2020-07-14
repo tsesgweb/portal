@@ -1,0 +1,23 @@
+.table-borderless {
+    border: 0 solid $table-border-color;
+
+    >thead,
+    >tbody,
+    >tfoot {
+        >tr {
+
+            >th,
+            >td {
+                border: 0 solid $table-border-color;
+            }
+        }
+    }
+
+    >thead>tr {
+
+        >th,
+        >td {
+            border-bottom-width: 0;
+        }
+    }
+}

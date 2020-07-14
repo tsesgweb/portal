@@ -1,0 +1,12 @@
+.popover-body {
+    @include paragrafo;
+    a{
+        font-weight: $font-weight-bold;
+    }
+}
+
+.popover-header {
+    @include titulo-sidebar;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}

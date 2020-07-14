@@ -1,0 +1,31 @@
+#voltar-topo {
+  bottom: 30px;
+  position: fixed;
+  z-index: 10000;
+  a {
+    background: #fff;
+    border: 1px solid #666;
+    border-radius: 25px;
+    display: block;
+    height: 37px;
+    text-align: center;
+    width: 37px;
+  }
+  @include media-breakpoint-up(xs) {
+    right: 3%;
+  }
+  @include media-breakpoint-up(sm) {
+    right: 3%;
+  }
+  @include media-breakpoint-up(md) {
+    right: 3%;
+  }
+  @include media-breakpoint-up(lg) {
+    right: 3%;
+  }
+  .fa {
+    font-size: 3.7rem;
+    margin-left: 0px;
+    margin-top: -1px;
+  }
+}

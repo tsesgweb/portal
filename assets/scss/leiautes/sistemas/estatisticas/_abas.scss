@@ -1,0 +1,83 @@
+//tabs, abas
+.a-Tabs {
+    height: 50px;
+    margin-bottom: $altura;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $cor;
+        bottom: $altura;
+        z-index: 1;
+    }
+    .apex-rds a,
+    .t-Tabs-link {
+        margin-bottom: $altura;
+    }
+    span {
+        font-size: 14px;
+    }
+    li {
+        position: relative;
+    }
+    .apex-rds-selected {
+        @include includeArrowTop;
+        font-weight: bold;
+        color: $brand-primary;
+        &::before,
+        &::after {
+            bottom: -$altura;
+            z-index: 2;
+        }
+    }
+}
+
+.exemplo1,
+.je-submenu-interno {
+    &.a-MenuBar.a-MenuBar--overflow {
+        background-color: transparent;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    >ul {
+        background-color: transparent;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $cor;
+            bottom: 14px;
+            left: 0;
+            z-index: 1;
+        }
+        li.a-MenuBar-item {
+            border: none;
+            &.is-focused,
+            &:focus,
+            &:active,
+            &:hover {
+                box-shadow: none;
+                border-color: transparent;
+                background-color: transparent;
+                color: $cor-links-internas;
+            }
+            &.a-Menu--current {
+                a {
+                    @include includeArrowTop;
+                    position: relative;
+                    font-weight: bold;
+                    &::after,
+                    &::before {
+                        bottom: -10px;
+                    }
+                }
+            }
+            a:hover {
+                text-decoration: none;
+                color: $cor-links-internas;
+            }
+        }
+    }
+}

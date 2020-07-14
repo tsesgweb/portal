@@ -1,0 +1,132 @@
+#sugestao-pagina {
+    @include media-breakpoint-up(sm) {
+        @include make-col(12);
+        padding-top: $global-padding-top / 4;
+        padding-bottom: $global-padding-bottom / 4;
+    }
+
+    @include media-breakpoint-up(lg) {
+        @include make-col(12);
+        padding-top: $global-padding-top / 2;
+        padding-bottom: $global-padding-bottom / 2;
+    }
+
+    >a {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}
+
+#modal-sugestao-pagina {
+    top: 100px;
+
+    .modal {
+        &-content {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        &-header {
+            border: none;
+
+            legend {
+                border: none;
+                font-size: 1.7em;
+            }
+        }
+
+        &-body {
+            p {
+                color: $gray-medium;
+                font-size: 1.2em;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+        }
+
+        &-footer {
+            border: none;
+
+            p {
+                float: left;
+                font-size: .9em;
+                margin-top: 15px;
+                text-align: left;
+            }
+        }
+    }
+
+    .feed {
+        &-ex-site {
+            text-align: center;
+
+            label {
+                color: $gray-medium;
+
+                &.active,
+                &:hover {
+                    color: #116a7b;
+                }
+
+                .fa {
+                    display: block;
+                }
+            }
+        }
+
+        &-title-coment {
+
+            // border-bottom: 1px solid $gray-medium;
+            label {
+                display: inline-block;
+                margin: 0;
+                padding: 9px;
+                position: sticky;
+                color: #333;
+
+                &.active,
+                &.focus,
+                &:active {
+                    box-shadow: none;
+                    color: #116a7b;
+                    // font-weight: bold;
+                    @include includeArrowTop;
+
+                    &:after {
+                        bottom: -2px;
+                    }
+                }
+            }
+        }
+    }
+
+    .captura-feed {
+        color: $gray-medium;
+        float: left;
+        text-align: left;
+        width: 320px;
+
+        label {
+            cursor: pointer;
+            display: table-cell;
+
+            i {
+                display: table-cell;
+            }
+
+            #add-arquivo-texto {
+                display: table-cell;
+                font-weight: normal;
+                padding-left: 10px;
+                padding-right: 10px;
+                vertical-align: middle;
+            }
+        }
+
+        .remover-img-feed {
+            display: table-cell;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+    }
+}

@@ -1,0 +1,256 @@
+@import "variaveis/config";
+@import "mixins/mixins";
+@import "leiautes/geral/plus";
+
+#validate-error .error {
+    background-color: #fdc;
+    border: 1px solid red;
+    padding: 0.5em;
+    margin: 1em 0;
+    width: 100%;
+}
+
+#validate-error .requiredCaptcha {
+    border: 2px solid red;
+    width: 306px;
+}
+
+.carousel-aside-pause {
+    display: none;
+}
+
+.tab-pane {
+    &.active {
+        display: block;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.data-time-icon {
+    color: $branco;
+    background: $theme-color;
+
+    .gj-icon.clock {
+        top: 8px;
+    }
+}
+
+#content {
+    font-size: inherit;
+
+    ul,
+    .portletStaticText ul {
+        // list-style-type: none;
+    }
+
+    fieldset {
+        border: none !important;
+    }
+}
+
+.modal-header {
+    display: inherit !important;
+}
+
+#texto-conteudo {
+    table.listing {
+
+        a,
+        p a,
+        > a {
+            font-size: inherit !important;
+        }
+    }
+
+    iframe {
+        min-width: 100%;
+    }
+
+    .tab-pane {
+        
+        ol li {
+                list-style: decimal;
+                display: list-item;
+            }
+        
+
+        ul li {
+                display: list-item;
+            }
+        
+    }
+}
+
+//type: quad, check
+@mixin marcador($tipo) {
+    @include paragrafo;
+
+    &::before {
+        content: url("#{$path_img}/marcador_#{$tipo}.jpg");
+        width: 11px;
+        height: 11px;
+        padding-right: 5px;
+        margin-bottom: 15px;
+    }
+}
+
+
+#texto-conteudo {
+
+    font-size: 1.125rem;
+
+    li.marcador-quadrado,
+    ul.marcadorQuadrado li {
+        @include marcador(quad);
+        display: block;
+        font-size: .8em;
+
+    }
+
+    li.marcador-ticado,
+    ul.marcadorTicado li {
+        @include marcador(check);
+        display: block;
+        font-size: .8em;
+    }
+}
+
+#barra-verde {
+    max-width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#edit-bar {
+    display: block;
+    font-size: inherit;
+    margin: 0 auto;
+    max-width: 1140px;
+    position: relative;
+    min-height: 31px;
+    border-right: none;
+    border-top: none;
+    padding-top: 5px;
+}
+
+.contentViews {
+    margin-bottom: 0 !important;
+}
+
+#contentActionMenus {
+    border-radius: 0;
+    right: 0;
+    top: 0px;
+    padding: 0;
+}
+
+#contentActionMenus dl.actionMenu.activated dd {
+    right: 0;
+}
+
+#texto-conteudo {
+    p span {
+        &.italico {
+            font-style: italic;
+        }
+
+        &.bold {
+            font-weight: bold;
+        }
+    }
+
+    ol.lista-alfabetica li {
+        list-style-type: lower-latin;
+    }
+}
+
+.portaltype-jevideo iframe {
+    width: 500px;
+}
+
+.noticia-mais-relacionado .noticia-mais-full {
+    width: 100% !important;
+}
+
+#lista-noticias .lr-imagem-destaque .has-audio {
+    min-height: inherit;
+    min-width: inherit;
+}
+
+.lista-resultados .lr-container .lr-descricao {
+    display: block;
+}
+
+.portletStaticText ul {
+    list-style-type: inherit;
+    margin-left: inherit;
+}
+
+.ArchetypesField-ReferenceField ul li {
+    margin: 10px 0;
+}
+
+#tituloInterno h2 {
+    font-size: 3.6rem;
+}
+
+.portaltype-destaquehome .mceFirst {
+    #ancora_um_image {
+        display: block;
+    }
+
+    #ancora_um_media {
+        display: block;
+    }
+
+    #ancora_dois_image {
+        display: block;
+    }
+
+    #ancora_dois_media {
+        display: block;
+    }
+
+    #ancora_tres_image {
+        display: block;
+    }
+
+    #ancora_tres_media {
+        display: block;
+    }
+
+    #ancora_quatro_image {
+        display: block;
+    }
+
+    #ancora_quatro_media {
+        display: block;
+    }
+}
+
+body.mceForceColors {
+    background: $branco;
+    color: $black;
+}
+
+a.mceItemAnchor {
+    width: 12px;
+    line-height: 6px;
+    overflow: hidden;
+    padding-left: 12px;
+    background: $url_2 no-repeat bottom left;
+}
+
+img.mceItemAnchor {
+    width: 12px;
+    height: 12px;
+    background: $url_2 no-repeat;
+}
+
+html\:abbr {
+    border-bottom: 1px dashed $color_celeste_approx;
+    cursor: help;
+}

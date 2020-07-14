@@ -1,0 +1,392 @@
+.agenda-je {
+  @include make-col-ready(0);
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(12);
+  }
+
+  .arcodeon {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(12);
+    }
+  }
+
+  .agenda-mais-detalhes {
+    padding-left: 5px;
+    font-size: 0.8rem;
+  }
+
+  .titulo-com {
+    a {
+      width: 100%;
+      @include titulo-sidebar;
+      padding-left: 0;
+
+      &:after {
+        margin-top: 0 !important;
+      }
+    }
+
+    span {
+      font-size: 0.8rem;
+      padding-right: 20px;
+      color: $dark;
+    }
+  }
+
+  .fa-calendar {
+    padding-left: 0.8rem;
+    padding-right: 0.4rem;
+  }
+
+  .fa-clock-o {
+    padding-left: 0.8rem;
+    padding-right: 0.2rem;
+  }
+
+  .fa-map-marker {
+    padding-left: 0.8rem;
+    padding-right: 0.2rem;
+  }
+
+  .agenda,
+  .calendar,
+  .imagem,
+  .place,
+  .crew,
+  .details {
+    @include elemento(linha) {
+      @include make-row(0);
+      @include paragrafo;
+      padding-bottom: 15px;
+
+      font-size: 1rem;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      figure {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .navega-evento {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .panel-group {
+    border-top: none !important;
+  }
+
+  .evento_proximo {
+    width: 100%;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    font-size: 1.2rem;
+    text-align: center;
+
+    a {
+      font-size: 1rem;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .detalhes {
+    padding-left: 5px;
+
+    strong {
+      color: #828282;
+      font-size: 1.1rem;
+    }
+  }
+
+  span.cancelado {
+    padding-left: 20px;
+    font-weight: $font-weight-bold;
+    color: $vermelho;
+    font-size: 0.8rem;
+  }
+
+  .panel {
+    &.materia {
+      margin-top: 10px;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      a {
+        color: #828282;
+      }
+    }
+  }
+
+  .panel-collapse {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .img-responsive {
+    margin: auto;
+  }
+}
+
+.aside-agenda {
+
+  // @include card-sidebar;
+  .row {
+    background-color: $branco;
+  }
+
+  .portletCalendar {
+    text-align: center;
+
+    .hiddenStructure {
+      display: none;
+    }
+
+    .calendarPrev {
+      float: left;
+    }
+
+    .calendarNext {
+      float: right;
+    }
+
+    .portletHeader {
+      color: $branco;
+      font-size: 1.5rem;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center;
+      background-color: $theme-color;
+      vertical-align: middle;
+      line-height: 16px;
+      display: flex;
+      justify-content: center;
+
+      #calendar-previous {
+        order: 0;
+        padding-right: 15px;
+      }
+
+      #calendar-next {
+        order: 3;
+        padding-left: 15px;
+      }
+
+      a {
+        font-weight: bold;
+        color: $branco;
+        font-size: 1.2rem;
+        text-decoration: none !important;
+      }
+    }
+
+    .weekdays {
+      font-size: 15px;
+      font-weight: bold;
+      color: $cinza-escuro;
+      background-color: $cinza-claro;
+
+      th {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        border-bottom: 1px solid $theme-color;
+      }
+
+      table {
+        border: $cinza-escuro;
+      }
+    }
+
+    .todayevent {
+      background-color: $theme-color;
+      border-bottom: 2px solid $theme-color;
+
+      a {
+        color: $cinza-azulado;
+      }
+
+      &:hover {
+        background-color: $theme-color;
+      }
+    }
+
+    .eventday {
+      background-color: #ffda59;
+      color: $cinza-azulado;
+
+      a {
+        color: $cinza-escuro;
+      }
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    .pastevent {
+      color: $cinza-azulado;
+      background-color: #828282;
+    }
+
+    .event_select {
+
+      border: 1px solid black;
+      outline-style: solid;
+      outline-color: $azul;
+    }
+
+
+
+
+  }
+
+  padding-bottom: 0.5rem;
+}
+
+.ploneCalendar {
+  width: 100%;
+  border: 1px solid $theme-color;
+
+  .todayevent {
+    border-bottom: #828282;
+  }
+
+  tbody {
+    a {
+      font-weight: $font-weight-bold;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    td {
+      font-size: 1rem;
+      padding: 5px;
+      border: 1px solid black;
+    }
+  }
+}
+
+#coluna-lateral-agenda {
+  @include media-breakpoint-only(xs) {
+    order: -1;
+    @include make-col-ready();
+  }
+
+  margin-bottom: 15px;
+}
+
+.navega-evento-aside {
+  @include card-sidebar(0);
+  padding-left: 10px;
+
+  .btn {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+.aside-agenda {
+  %dropdown-menu-center {
+    background-color: $theme-color;
+    left: -6px !important;
+    right: auto !important;
+    text-align: center !important;
+    margin-top: 29px;
+    width: 285px !important;
+  }
+
+
+
+  #agenda-meses,
+  #agenda-anos {
+    margin-right: 15px;
+    margin-left: 15px;
+
+    .agenda-link-calendario__item {
+      background-color: $theme-color;
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      margin-top: 1px;
+      margin-bottom: 1px;
+
+      &:last-child {
+        border-bottom: 2px solid transparent;
+      }
+    }
+
+
+
+  }
+
+  .agenda-link-calendario {
+    @include list-group(flush);
+
+    @include elemento(item) {
+      @include list-group-item(true);
+      background-color: transparent;
+
+      &:hover {
+        background-color: $amarelo !important;
+        color: $theme-color !important;
+      }
+    }
+  }
+
+  #dropdownAgendaMeses,
+  #dropdownAgendaAnos {
+    &:hover {
+      cursor: pointer;
+      background-color: $amarelo;
+      color: $theme-color;
+    }
+  }
+
+
+  .dropdown-anos {
+    @extend %dropdown-menu-center;
+    transform: translate(-50%, 0) !important;
+  }
+
+  .dropdown-meses {
+    @extend %dropdown-menu-center;
+    transform: translate(-31%, 0) !important;
+  }
+
+  .agenda-anos-responsivo-xs,
+  .agenda-meses-responsivo-xs {
+    width: auto !important;
+    left: -23px !important;
+    margin-top: 30px !important;
+
+    .agenda-link-calendario__item {
+      // border-right: 1px solid #fff !important;
+      border-bottom-width: 0 !important;
+
+      // &:last-child {
+      //   border-bottom: 1px solid #fff !important border-right:none !important;
+      // }
+    }
+
+    .list-group {
+      flex-direction: row;
+    }
+  }
+}

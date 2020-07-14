@@ -1,0 +1,43 @@
+@import "../home/_noticias.scss";
+.video-servicos {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-height: 270px;
+    span {
+        margin: 8px 0 8px 10px;
+        color: #666666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 40px;
+        display: block;
+    }
+    figure img {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+.titulo-personalizado {
+    margin-bottom: 10px;
+}
+
+#quick-access {
+    @include make-sm-column(3, 0);
+}
+
+.electoral-clipping-item {
+    @include make-md-column(3, 0);
+    @include make-lg-column(3, 30px);
+    @include breakpoint(xs, md) {
+        @include make-md-column(3, 0);
+    }
+}
+
+.quick-access-item {
+    @include make-lg-column(12, 30px);
+    @include breakpoint(xs, md) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+

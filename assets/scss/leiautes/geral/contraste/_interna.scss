@@ -1,0 +1,130 @@
+body.contraste {
+
+    .breadcrumb__conteudo_full,
+    #gestor-responsavel,
+    #tags,
+    #midias-noticias,
+    #midias-noticias-2,
+    #destaques-noticias-coluna,
+    .imprensa-contato,
+    .imprensa-destaque,
+    #galeria-pagina-interna,
+    .conteudo {
+        @include bg-color($cinza-escuro);
+
+        h2,
+        h3,
+        p {
+            @include text-color();
+        }
+
+        .internal-link,
+        .external-link,
+        a {
+            @include text-color($azul-claro);
+        }
+    }
+
+    #opcoes-pesquisa-pagina {
+        @include bg-color();
+
+        .form-inline,
+        label {
+            @include text-color();
+        }
+
+    }
+
+    #menu-lateral {
+        @include bg-color($cinza-escuro);
+
+        h3 {
+            @include text-color();
+        }
+
+        .menu-lateral-item {
+            a {
+                color: $azul-claro;
+            }
+        }
+
+        .menu-lateral-item.has-submenu.menu-lateral-item_ativo:hover {
+            @include bg-color();
+        }
+
+        .menu-lateral-item.menu-lateral-item_ativo {
+            @include not('.has-submenu') {
+                @include bg-color($cinza);
+
+                a {
+                    @include text-color();
+                }
+            }
+        }
+    }
+    .lr-tags a,
+    .noticia-tags a,
+    .noticia-gestor a {
+
+        &,
+        .fa,
+        &:hover {
+            @include bg-color($cinza);
+            @include text-color();
+        }
+    }
+
+    .popover {
+        @include bg-color;
+
+        .popover-header {
+            @include bg-color;
+            @include text-color();
+
+        }
+
+        .popover-body {
+            @include text-color();
+
+            a {
+                @include text-color($azul-claro);
+            }
+        }
+
+        .arrow {
+
+            &::before,
+            &::after {
+                border-right-color: $dark-color;
+            }
+        }
+    }
+
+    // table.listing tbody tr.odd   
+    table {
+        tr {
+            th {
+                @include bg-color($cinza-escuro);
+            }
+
+            &.odd {
+                td {
+                    @include bg-color($azul-claro);
+                }
+            }
+
+        }
+    }
+
+    .abas-personalizadas {
+        .nav-link {
+            @include bg-color();
+        }
+    }
+
+    .todasUnidades h2,
+    .todasUnidades h3,
+    .todasUnidades h4 {
+        @include text-color();
+    }
+}

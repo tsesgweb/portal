@@ -1,0 +1,70 @@
+@include uiColors;
+.je-painel-dados {
+    @include uiColors;
+}
+
+.je-painel-secundario {
+    .t-BadgeList-item {
+        &:nth-child(45n + 1) {
+            border-right: 4px solid #fff;
+        }
+        &:nth-child(45n + 2) {
+            border-left: 4px solid #fff;
+        }
+    }
+    .t-BadgeList-wrap {
+        background-color: #e5ece5;
+    }
+    .t-BadgeList-value {
+        font-size: 1.5em !important;
+    }
+}
+
+.t-footer {
+    display: none !important;
+}
+
+.t-BadgeList-item {
+    a :hover {
+        text-decoration: underline;
+    }
+}
+
+.t-BadgeList-value {
+    font-size: 3rem !important;
+}
+
+.je-no-wrap {
+    .t-BadgeList-label.t-BadgeList-label--top {
+        white-space: inherit;
+    }
+}
+
+$lista: (00, 10, 20, 30, 40, 50, 60, 70, 80, 90);
+@each $space in $lista {
+    .je-height-1#{$space} {
+        .t-BadgeList-wrap {
+            height: 1#{$space}px;
+        }
+    }
+}
+
+.je-painel-comparativo {
+    .u-colors> :nth-child(45n + 1) .u-color {
+        background-color: #478a76;
+    }
+    .u-colors> :nth-child(45n + 2) .u-color {
+        background-color: #8fbfa0;
+        color: $gray-base;
+    }
+}
+
+.je-painel-primario {
+    .t-BadgeList-wrap.u-color {
+        background-color: #478a76;
+    }
+}
+
+#media_decisoes>.t-Region-bodyWrap>.t-Region-body::after {
+    content: " * Média calculada considerando somente processos com decisões."
+}

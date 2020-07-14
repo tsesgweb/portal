@@ -1,0 +1,204 @@
+@mixin backgrounds($c, $y) {
+    background: $c;
+    @for $i from 1 through $y {
+        $k: 3%;
+        $j: $i - 1;
+        @if $i==1 {
+            &:nth-child(#{$i}) {
+                background: $c;
+            }
+        }
+        @else {
+            &:nth-child(#{$i}) {
+                background: darken($c, ($k * $j));
+            }
+        }
+    }
+}
+
+@mixin estiloBotao {
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    @include button-size($padding-x, $padding-y, $font-size, $line-height, $border-radius);
+    @include user-select(none);
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            @include tab-focus;
+        }
+    }
+    &:hover,
+    &:focus,
+    &.focus {
+        color: $btn-default-color;
+        text-decoration: none;
+    }
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        @include opacity(.65);
+        @include box-shadow(none);
+    } // [converter] extracted a& to a.btn
+}
+
+@mixin estiloLink {
+    color: $link-color;
+    font-weight: normal;
+    border-radius: 0;
+    &,
+    &:active,
+    &.active,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: transparent;
+        @include box-shadow(none);
+    }
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: transparent;
+    }
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+        background-color: transparent;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus {
+            color: $btn-link-disabled-color;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin tituloWrap() {
+    font-size: 1.5rem !important;
+    font-weight: 500;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    background-color: lighten($global-bg, 40%);
+    @include breakpoint(xs) {
+        padding: 12px 0 12px 15px;
+    }
+    @include breakpoint(sm) {
+        padding: 10px 0 10px 12px;
+    }
+    @include breakpoint(md) {
+        /*padding: 4px 0 4px 10px;*/
+    }
+    @include breakpoint(lg) {
+        padding: 0;
+        margin: 0 0 0;
+    }
+    @content;
+}
+
+@mixin tituloPadrao() {
+    display: inline;
+    position: relative;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    border: none;
+    color: $titulos-geral;
+    line-height: $line-height-base;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 1;
+    @include breakpoint(sm, xs) {
+        background-color: none;
+    }
+    @include breakpoint(lg, md) {
+        background-color: $body-bg;
+    }
+    @content;
+}
+
+@mixin uiColors($selector: '.u-colors', $child: '.u-color', $child-bg: '.u-color-bg', $child-background: '.u-color-background', $child-text: '.u-color-text', $child-txt: '.u-color-txt', $child-text: '.u-color-text', $child-bd: '.u-color-bd', $child-border: '.u-color-border') {
+    #{$selector}> :nth-child(45n + 1) #{$child} {
+        background-color: #2a6160;
+        color: #fff;
+    }
+    #{$selector}> :nth-child(45n + 1) #{$child-bg},
+    #{$selector}> :nth-child(45n + 1) #{$child-background} {
+        background-color: #2a6160;
+    }
+    #{$selector}> :nth-child(45n + 1) #{$child-txt},
+    #{$selector}> :nth-child(45n + 1) #{$child-text} {
+        color: #2a6160;
+    }
+    #{$selector}> :nth-child(45n + 1) #{$child-bd},
+    #{$selector}> :nth-child(45n + 1) #{$child-border } {
+        border-color: #2a6160;
+    }
+    #{$selector}> :nth-child(45n + 2) #{$child} {
+        background-color: #478a76;
+        color: #fff;
+    }
+    #{$selector}> :nth-child(45n + 2) #{$child-bg},
+    #{$selector}> :nth-child(45n + 2) #{$child-background } {
+        background-color: #478a76;
+    }
+    #{$selector}> :nth-child(45n + 2) #{$child-txt},
+    #{$selector}> :nth-child(45n + 2) #{$child-text } {
+        color: #478a76;
+    }
+    #{$selector}> :nth-child(45n + 2) #{$child-bd},
+    #{$selector}> :nth-child(45n + 2) #{$child-border } {
+        border-color: #478a76;
+    }
+    #{$selector}> :nth-child(45n + 3) #{$child} {
+        background-color: #8fbfa0;
+        color: #000;
+    }
+    #{$selector}> :nth-child(45n + 3) #{$child-bg},
+    #{$selector}> :nth-child(45n + 3) #{$child-background } {
+        background-color: #8fbfa0;
+    }
+    #{$selector}> :nth-child(45n + 3) #{$child-txt},
+    #{$selector}> :nth-child(45n + 3) #{$child-text } {
+        color: #8fbfa0;
+    }
+    #{$selector}> :nth-child(45n + 3) #{$child-bd},
+    #{$selector}> :nth-child(45n + 3) #{$child-border } {
+        border-color: #8fbfa0;
+    }
+    #{$selector}> :nth-child(45n + 4) #{$child} {
+        background-color: #3caf85;
+        color: #f0faf6;
+    }
+    #{$selector}> :nth-child(45n + 4) #{$child-bg},
+    #{$selector}> :nth-child(45n + 4) #{$child-background } {
+        background-color: #3caf85;
+    }
+    #{$selector}> :nth-child(45n + 4) #{$child-txt},
+    #{$selector}> :nth-child(45n + 4) #{$child-text } {
+        color: #3caf85;
+    }
+    #{$selector}> :nth-child(45n + 4) #{$child-bd},
+    #{$selector}> :nth-child(45n + 4) #{$child-border } {
+        border-color: #3caf85;
+    }
+    @content;
+}

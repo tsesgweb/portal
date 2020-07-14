@@ -1,0 +1,47 @@
+a.t-Button {
+    &.disabled,
+    fieldset[disabled] & {
+        pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+}
+
+//botoes 
+.t-Button {
+    @include estiloBotao;
+    .fa {
+        vertical-align: middle !important;
+    }
+}
+
+.je-btn_pesquisar {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.je-btn_limpar {
+    @include button-outline-variant($btn-primary-bg, $btn-primary-border);
+    &:focus,
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.je-btn_voltar {
+    @extend .je-btn_limpar;
+}
+
+.je-btn_export {
+    // @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+    @extend .je-btn_pesquisar;
+}
+
+.a-Tabs-panel {
+    .t-Region-buttons {
+        &.t-Region-buttons--bottom {
+            .t-Region-buttons-left {
+                button.t-Button.je-bt_export {
+                    @extend .je-btn_pesquisar;
+                }
+            }
+        }
+    }
+}

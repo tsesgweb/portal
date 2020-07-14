@@ -1,0 +1,58 @@
+#paginacao-da-pagina {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(xs) {
+        @include make-col(12);
+    }
+
+    @include media-breakpoint-up(sm) {
+        @include make-col(12);
+    }
+
+    font-size: inherit;
+    padding-top: $global-padding-top / 2;
+    padding-bottom: $global-padding-bottom / 2;
+
+    .pagination {
+        @include media-breakpoint-only(xs){
+            @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
+            display: inline-block;
+        }
+        justify-content: center;
+        margin: 0;
+
+        .page-item {
+            display: inherit;
+
+            &:active {
+                color: $theme-color-link;
+
+                a {
+                    background-color:$azul !important;
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .page-link {
+            display: inherit;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid $cinza-claro;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            &:hover {
+                color: $branco;
+                background-color: $azul-claro;
+                text-decoration: none;
+            }
+
+            .fa {
+                padding: 1px 7.5px;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+
+        }
+    }
+}

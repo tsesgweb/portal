@@ -1,0 +1,48 @@
+// Forms
+//Selects
+// #R48073141233880529 {
+//     .container .row {
+//         float: left;
+//         @include make-xs-column(3, 0);
+//         .col.col-2 {
+//             @include make-xs-column(12, 0);
+//         }
+//     }
+// }
+.t-Form-labelContainer {
+    padding-bottom: 0;
+    padding-top: 0;
+    .t-Form-label {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
+}
+
+.t-Form-inputContainer {
+    @extend .form-group;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 0 !important;
+    .selectlist {
+        @extend .form-control;
+        height: 32px !important; // background: url('#{$path_img}/select-bg-2.png') !important;
+        background-position: center right !important;
+        background-repeat: no-repeat !important;
+        background-color: #fff !important;
+        &::before,
+        &::after {
+            content: ">";
+        }
+        &:focus {
+            $color: #555;
+            color: $color;
+            &::-ms-value {
+                color: $color;
+            }
+        }
+        &.apex_disabled {
+            // background-color: #E8F0F4 !important;
+            color: #98A4AF;
+        }
+    }
+}

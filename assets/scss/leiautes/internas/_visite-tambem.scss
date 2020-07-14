@@ -1,0 +1,92 @@
+.visite-tambem-itens {
+    margin-top: 18px;
+    border-top: 1px solid #ebebeb;
+    padding-top: 18px;
+    // @extend #sugestao-pagina;
+    @include media-breakpoint-only(xs) {
+        .titulo-personalizado {
+            margin-bottom: 20px;
+        }
+        .grupo-lista {
+            li {
+                a {
+                    font-size: 1rem !important;
+                }
+                line-height: 1.5rem !important;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    @include media-breakpoint-only(xs) {
+        float: left;
+        margin-bottom: 30px;
+    }
+    .titulo-padrao {
+        font-family: "Merriweather", sans-serif;
+        font-size: 1.625rem;
+        line-height: 1.5rem;
+        color: #1b305a;
+        padding-left: 15px;
+    }
+    //   li {
+    //     float: left;
+    //     padding: 0 30px;
+    //     width: 48%;
+    //     margin-bottom: 10px;
+    //     a {
+    //       color: #333;
+    //     }
+    //     @include media-breakpoint-only(xs) {
+    //       width: 100%;
+    //       height: auto;
+    //       margin: 5px 0;
+    //       padding: 0;
+    //     }
+    //     @include media-breakpoint-only(sm) {
+    //       width: 50%;
+    //     }
+    //   }
+    counter-reset: marcador-visita;
+    li {
+        @include titulo-noticias;
+        font-size: 1.125rem;
+        margin-left: 7px;
+        margin-right: 7px;
+        border-bottom-color: #ebebeb;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        &:last-child {
+            border-bottom-width: 0;
+        }
+        a {
+            color: $cinza;
+            text-decoration: none;
+            transition: 0.4s;
+            &:before {
+                content: " ";
+                display: inline-block;
+                margin-bottom: 5px;
+                margin-right: 10px;
+                background: $cinza;
+                height: 2px;
+                width: 22px;
+                transition: 0.4s;
+            }
+            &:hover {
+                color: $azul;
+                margin-left: 5px;
+                transition: 0.4s;
+                &:before {
+                    content: " ";
+                    display: inline-block;
+                    transition: 0.4s;
+                    margin-bottom: 5px;
+                    margin-right: 10px;
+                    background: $verde;
+                    height: 2px;
+                    width: 32px;
+                }
+            }
+        }
+    }
+}
