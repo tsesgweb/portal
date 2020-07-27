@@ -1,8 +1,9 @@
-$font-size-base:14px;
+$font-size-base:16px;
 $close-font-weight: bold !default;
 $close-color: #fff !default;
 $close-bg: #d9534f !default;
 $close-text-shadow: 0 1px 0 #fff !default;
+
 @mixin closeClass($close: 'close') {
     .#{$close} {
         float: right;
@@ -12,13 +13,18 @@ $close-text-shadow: 0 1px 0 #fff !default;
         color: $close-color;
         text-shadow: $close-text-shadow;
         @content;
+
         &:hover,
         &:focus {
             color: $close-color;
             text-decoration: none;
             cursor: pointer;
-        } // [converter] extracted button& to button.close
-    } // Additional properties for button version
+        }
+
+        // [converter] extracted button& to button.close
+    }
+
+    // Additional properties for button version
     // iOS requires the button element instead of an anchor tag.
     // If you want the anchor version, it requires `href="#"`.
     // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
@@ -29,6 +35,7 @@ $close-text-shadow: 0 1px 0 #fff !default;
         border: 0;
         -webkit-appearance: none;
     }
+
     a.#{$close} {
         @extend button.#{$close};
         color: $close-color;

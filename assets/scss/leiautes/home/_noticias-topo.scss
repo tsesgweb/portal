@@ -14,7 +14,7 @@
 @each $badge-nome,
 $badge-content in $badge-theme {
     .badge-#{$badge-nome} {
-        @if $badge-nome=='comunicado'or $badge-nome=='aovivo' {
+        @if $badge-nome=='comunicado'or $badge-nome=='aovivo'or $badge-nome=='video' {
             @include filtro($badge-content, #fff);
         }
 
@@ -423,7 +423,7 @@ $badge-content in $badge-theme {
             width: 100%;
             border-radius: 0;
             align-items: center;
-            
+
 
             &:first-child {
                 border-bottom: 1px solid #ddd;
@@ -432,9 +432,11 @@ $badge-content in $badge-theme {
             &:last-child {
                 border-top: 1px solid #ddd;
             }
+
             svg {
                 margin-right: 15px;
             }
+
             img {
                 padding: 5px 0;
                 margin-right: 5px;

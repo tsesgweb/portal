@@ -17,7 +17,17 @@
 
     #form-navagacao-noticias {
         select {
-            margin-right: .5em;
+            margin-right: 1em;
+        }
+
+        fieldset {
+            background-color: #C2D2ED;
+            padding: 4px 6px;
+            border-radius: $theme-radius;
+
+            select {
+                opacity: .7;
+            }
         }
     }
 
@@ -76,13 +86,16 @@
                 @include make-col-ready(0);
                 @include make-col(12);
             }
-            .lr-titulo{
+
+            .lr-titulo {
                 margin-top: 0;
             }
-            .lr-imagem{
+
+            .lr-imagem {
                 padding-right: 0;
                 padding-top: 0;
             }
+
             .media-body {
                 @include make-col-ready(0);
                 @include make-col(12);

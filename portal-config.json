@@ -12,6 +12,7 @@
             "template": {
                 "home": ["assets/css/home.css"],
                 "internas": ["assets/css/internas.css"],
+                "noticias": ["assets/css/noticias.css"],
                 "biblioteca": ["assets/css/biblioteca.css"]
 
             },
@@ -43,10 +44,10 @@
                 "assets/js/vendor/gijgo.js",
                 "assets/js/vendor/local/messages.pt-br.js"
             ],
-            "external": [                
+            "external": [
                 "node_modules/owl.carousel/dist/owl.carousel.js",
                 "node_modules/js-cookie/src/js.cookie.js",
-                "node_modules/jquery-placeholder/jquery.placeholder.js"                
+                "node_modules/jquery-placeholder/jquery.placeholder.js"
             ],
             "rybena": [
                 "assets/js/vendor/rybenaDOMFull-1.6.js",
@@ -71,7 +72,8 @@
                 "internas": [
                     "assets/js/menu-lateral.js",
                     "assets/js/conteudo.js",
-                    "assets/js/imprensa.js"
+                    "assets/js/imprensa.js",
+                    "assets/js/nova-imprensa.js"
                 ]
             }
         }

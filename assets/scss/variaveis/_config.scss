@@ -27,6 +27,7 @@ $rss: #fb9107;
 // theming
 $body-bg: $cinza-azulado;
 $font-family-menu: "Open Sans";
+$font-descriptions: $font-family-menu;
 $shadow: 0px 4px 13px 1px rgba(0, 0, 0, 0.05);
 $radius: 5px;
 $theme-color: $azul;
@@ -40,6 +41,7 @@ $theme-color-bg: $cinza-azulado;
 $theme-color-bg-secundario: $branco;
 $theme-shadow: $shadow;
 $theme-radius: $radius;
+
 // replaces bootstrap
 $theme-colors: ("primary": $theme-color,
   "azul": $azul,
@@ -63,6 +65,7 @@ $theme-colors: ("primary": $theme-color,
   "youtube": $youtube,
   "facebook": $facebook,
 );
+
 $social-media-pallet: ("facebook": $facebook,
   "twitter": $twitter,
   "google-plus": $google-plus,
@@ -73,33 +76,39 @@ $social-media-pallet: ("facebook": $facebook,
   "envelope": $envelope,
   "rss": $rss,
 );
+
 $card-social-media: ("facebook": $facebook,
   "twitter": $twitter,
   "youtube": $youtube,
   "instagram": $instagram,
 );
+
 $icones-destaques: ("video": "\f04b",
   "audio": "\f028",
   "foto": "\f065",
   "youtube": "\f16a",
 );
+
 $icones-home: ("fa-circle": "\f111",
   "fa-search": "\f002",
   "fa-sitemap": "\f0e8",
   "fa-download": "\f019",
 );
+
 $full-cards: ("justica-eleitoral": #406fbc,
   "regulariza-titulo": #48a681,
   "respostas-biometria": $amarelo,
   "seguranca-urna": #48c37c,
 );
+
 $badge-theme: ("aovivo": $vermelho,
   "evento": #5adbff,
   "noticia": $verde,
   "destaque": $roxo,
   "servico": $amarelo,
   "comunicado": $azul,
-  "video": $vermelho,
+  "video": $youtube,
+  "radio": #FF7541,
 );
 $thumb-bg: $cinza-azulado;
 // bootstrap default settings
