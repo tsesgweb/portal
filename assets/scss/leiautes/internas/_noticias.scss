@@ -76,13 +76,16 @@
                 @include make-col-ready(0);
                 @include make-col(12);
             }
-            .lr-titulo{
+
+            .lr-titulo {
                 margin-top: 0;
             }
-            .lr-imagem{
+
+            .lr-imagem {
                 padding-right: 0;
                 padding-top: 0;
             }
+
             .media-body {
                 @include make-col-ready(0);
                 @include make-col(12);
@@ -90,3 +93,19 @@
         }
     }
 }
+
+.noticia-mais {
+    margin-bottom: 30px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background: #4caf50;
+    width: 0%;
+  }

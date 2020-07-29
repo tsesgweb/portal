@@ -4,46 +4,58 @@
 
 #pesquisa-da-pagina {
     @include make-col-ready(0);
+
     @include media-breakpoint-only(xs) {
         @include make-col(12);
     }
+
     //Desktop
     @include media-breakpoint-only(lg) {
         padding-left: 15%;
         padding-right: 15%;
     }
+
     margin-bottom: 20px;
+
     input {
         min-width: 400px;
+
         //Celular
         @include media-breakpoint-only(xs) {
             min-width: 100%;
         }
     }
+
     //Celular
     @include media-breakpoint-only(xs) {
         button {
             margin-top: 5px;
             padding-top: 1px !important;
+
             span {
-                font-size: 1rem!important;
+                font-size: 1rem !important;
             }
         }
+
         input {
             font-size: 1rem !important;
         }
+
         a {
             font-size: 1rem !important;
         }
     }
+
     .busca-avancada-pesquisa {
         text-align: right;
+
         //Celular
         @include media-breakpoint-only(xs) {
             display: table-row;
             float: none;
         }
     }
+
     .estatistica-resultados {
         color: $gray;
         font-size: 0.85em;
@@ -55,11 +67,13 @@
     @include media-breakpoint-up(lg) {
         @include make-col(12);
     }
+
     color: $gray;
     font-size: 0.9em;
     background: $gray-lighter;
     padding-top: 5px;
     padding-bottom: 5px;
+
     //Celular
     @include media-breakpoint-only(xs) {
         .checkbox-inline {
@@ -68,33 +82,41 @@
             text-align: left;
             width: 100%;
         }
+
         input {
             margin-top: 5px !important;
         }
+
         .form-inline span,
         label {
             padding-left: 3px;
             font-size: 0.725rem !important;
         }
+
         input {
             height: 5px;
         }
     }
+
     .input-daterange {
         padding-left: 20px;
         width: auto;
+
         //Celular
         @include media-breakpoint-only(xs) {
             padding-left: 0;
         }
+
         //Tablet
         @include media-breakpoint-only(sm) {
             margin-top: 10px;
         }
+
         //Desktop
         @include media-breakpoint-only(lg) {
             margin-top: 0;
         }
+
         .input-group-addon {
             border: none;
             font-size: 1em;
@@ -114,49 +136,89 @@
         line-height: 1.4rem;
         margin-top: 1.5em;
     }
+
     p {
         font-size: 1rem;
     }
+
     .lr-descricao {
         font-size: 1rem;
         line-height: 1.2rem;
     }
+
     .lr-link {
         margin: 0;
         margin-bottom: 0.625rem;
     }
+
     .lr-container {
         border-bottom: 0.063rem solid $cinza-claro;
         margin-bottom: 10px;
+
         .lr-imagem {
             padding-right: 10px;
             padding-top: 10px;
         }
+
         a {
             text-decoration: none;
+
             &:hover {
                 color: $azul-claro;
             }
         }
     }
+
     //relacionados e recentes
+
     .noticia-chamada {
         border-top: 1px solid $cinza-claro;
+
         h3 {
             @include titulo-noticias;
-            font-size: 1.2rem;
-            line-height: 1.4rem;
+            font-size: .8rem;
+            line-height: 1.2rem;
             padding-top: 10px;
+
             a {
+                border-radius: 5px;
+                display: flex;
                 text-decoration: none;
+                padding: 2px;
+
+
+                .img-noticia {
+                    align-self: center;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    max-width: 122px;
+                    width: 100%;
+                }
+
+                .data-noticia {
+                    align-items: center;
+                    color: #BDBDBD;
+                    display: flex;
+                    justify-content: center;
+                    max-width: 80px;
+                    text-align: center;
+                    width: 100%;
+                }
+
                 &:hover {
-                    color: $azul-claro;
+                    background-color: #47C77D;
+
+                    .data-noticia {
+                        color: $azul;
+                    }
                 }
             }
         }
+
         &:first-child {
             border-top: none;
         }
+
     }
 }
 
@@ -179,21 +241,26 @@
         justify-content: center;
         align-items: baseline;
         color: $azul;
+
         span {
             padding-top: 1px;
         }
     }
+
     font-size: 0.813rem;
     padding-bottom: 10px;
     background-color: $cinza-claro;
+
     input {
         height: 1.5rem;
         margin-right: 5px;
     }
+
     label {
         padding-right: 10px;
         padding-left: 10px;
     }
+
     .lr-tags {
         @include filtro-tags;
         // padding-bottom: 1.5rem;
