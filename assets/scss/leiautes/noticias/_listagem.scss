@@ -1,0 +1,157 @@
+.news-list {
+  @include item(card) {
+    @include card;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #BDBDBD;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @include item(row) {
+    @include make-row(0);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+  }
+
+  @include item(col-4) {
+
+
+    @include media-breakpoint-up(xs) {}
+
+    @include media-breakpoint-up(sm) {}
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+      position: relative;
+    }
+  }
+
+  @include item(col-8) {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(xs) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include media-breakpoint-up(sm) {}
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+    }
+  }
+
+  @include item(col-12) {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(xs) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include media-breakpoint-up(sm) {}
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(12);
+      padding-top: 15px;
+    }
+  }
+
+  @include item(media) {
+    @include card-img;
+    margin: 0;
+  }
+
+  @include item(img) {
+    border-radius: $radius;
+  }
+
+  @include item(content) {
+    @include card-body;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include item(badge) {
+
+    &.news-list-badge__limited {
+      position: absolute;
+      bottom: 20px;
+      left: 10px;
+      z-index: 2;
+      padding-left: 0;
+      padding-right: 0;
+
+      span {
+        transition: ease-in-out 2s;
+        display: none;
+      }
+
+      &:hover {
+        span {
+          transition: ease-in-out 2s;
+          display: inline-block;
+        }
+      }
+
+    }
+
+    &.news-list-badge__expanded {
+      top: 0;
+    }
+  }
+
+  @include item(title) {
+    @include titulo-noticias($azul);
+    font-size: 1.25rem;
+    line-height: $line-height-base;
+  }
+
+  @include item(description) {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-family: $font-descriptions;
+    line-height: $line-height-base;
+    color: #6B6B6B;
+  }
+
+  @include item(footer) {
+    display: flex;
+    align-items: center;
+
+    .time {
+      font-size: 0.75rem;
+      color: #BDBDBD;
+    }
+
+    .sharing {
+      border: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      display: flex;
+      margin-left: 15px;
+      background-color: rgba(107, 107, 107, 0.2);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      padding: 4px;
+
+    }
+  }
+}

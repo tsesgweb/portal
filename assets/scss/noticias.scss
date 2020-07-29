@@ -1,0 +1,11 @@
+@import "variaveis/config";
+@import "plugins/bootstrap";
+@import "variaveis/remover";
+@import "mixins/mixins";
+//bootstrap
+@import "node_modules/bootstrap/scss/card";
+@import "node_modules/bootstrap/scss/list-group";
+
+@import "leiautes/noticias/destaques";
+@import "leiautes/noticias/listagem";
+@import "leiautes/noticias/aside-noticias-listagem";

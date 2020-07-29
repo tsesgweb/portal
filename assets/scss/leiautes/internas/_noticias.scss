@@ -17,7 +17,17 @@
 
     #form-navagacao-noticias {
         select {
-            margin-right: .5em;
+            margin-right: 1em;
+        }
+
+        fieldset {
+            background-color: #C2D2ED;
+            padding: 4px 6px;
+            border-radius: $theme-radius;
+
+            select {
+                opacity: .7;
+            }
         }
     }
 

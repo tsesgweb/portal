@@ -1,0 +1,115 @@
+$anim-speed: 0.3s;
+
+@mixin shadowEffect {
+  &::after {
+    content: '';
+    background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%)
+      0% 0% no-repeat padding-box;
+    width: 100%;
+    height: 50%;
+    // opacity: .7;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    // z-index: 2;
+    // transition-property: top, opacity;
+    // transition-duration: $anim-speed;
+    &:hover {
+      top: 100%;
+    }
+  }
+}
+
+.imprensa__conteudo {
+  background-color: #fff;
+  padding-bottom: 28px;
+
+  .titulo {
+    padding-top: 15px;
+    padding-left: 15px;
+    @include titulo-noticias($azul);
+    font-size: 2.5rem;
+  }
+}
+
+.noticia-listagem {
+  @include modificar(destaque) {
+    @include make-row(0);
+  }
+
+  @include modificar(card) {
+    @include make-col-ready();
+    @include card;
+    border: none;
+    position: relative;
+
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+  }
+
+  @include modificar(card-img) {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius;
+    @include shadowEffect;
+
+    img {
+      @include card-img;
+      transform: scale(1);
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  @include modificar(card-img-overlay) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 28px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transition: transform 0.2s;
+    }
+  }
+
+  @include modificar(badge) {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    z-index: 2;
+  }
+
+  @include modificar(title) {
+    margin-top: 10px;
+
+    a {
+      @include titulo-noticias;
+      line-height: $line-height-base;
+      font-size: 1.75rem;
+    }
+  }
+
+  @include modificar(description) {
+    color: #fff;
+    font-size: 1rem;
+    font-family: $font-descriptions;
+    display: none;
+    transition: ease-out 2s;
+
+    &.exibir {
+      transition: ease-in 2s;
+      display: block;
+    }
+  }
+}
