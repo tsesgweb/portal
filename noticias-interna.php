@@ -11,7 +11,7 @@ $maisvisitados  = false;
 $relacionadas   = false;
 include __DIR__ . '/inc/header.inc.php';
 ?>
-<progress value="0"></progress>
+
 <header class="noticia-cabecalho">
     <h2 class="noticia-titulo">Lei dos Partidos Políticos completa 24 anos nesta quinta (19)</h2>
     <p class="noticia-subtitulo">Ao longo do tempo, embora tenha passado por reformas, a norma manteve seu papel de
@@ -20,14 +20,41 @@ include __DIR__ . '/inc/header.inc.php';
 <div class="noticia__conteudo">
     <div class="noticia__linha">
         <div class="noticia-dados">
-            <span><i class="fa fa-calendar fa-lg"></i><time>16.04.2019</time></span><span><i
-                    class="fa fa-clock-o fa-lg"></i><time>12:20</time></span>
+            <div class="autor">Por <span class="nome-autor">Sebastian Abreu</span> e <span class="nome-autor">Túlio
+                    Maravilha</span> / Revisão: <span class="nome-revisor">Keisuke Honda</span> - <span
+                    class="local">TSE</span></div>
+            <div class="data-hora">17/01/2020 13:30 - <span class="atualizacao">Atualizado em 19/01/2020 - 18:30</span>
+            </div>
         </div>
         <?php include __DIR__ . '/inc/share.inc.php';?>
     </div>
 </div>
+<div class="nav flex-column" id="navbarSumario">
+    <div class="alinhar-sumario">
+        <h2 class="titulo">Tópicos da matéria:</h2>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Criação e registro dos partido <span class="sr-only">(atual)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Fundo Partidário</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cláusula de desempenho</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Coligações</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Propaganda Partidária e Fundo Especial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Candidatura de mulheres</a>
+            </li>
+        </ul>
+    </div>
+</div>
 <?php include __DIR__ . '/inc/imagem-topo.inc.php';?>
-
 <div class="noticia__conteudo">
     <div class="noticia__linha">
         <section id="texto-conteudo" class="texto-noticias-internas">
@@ -145,13 +172,6 @@ include __DIR__ . '/inc/header.inc.php';
                 </div>
             </div> -->
 
-            <div class="barra-ferramentas-noticias">
-                <div class="progress-container">
-                    <div class="progress-bar" id="myBar"></div>
-                </div>
-            </div>
-
-
         </section>
         <aside id="coluna-links-noticias">
             <?php 
@@ -161,6 +181,27 @@ include __DIR__ . '/inc/header.inc.php';
             include(__DIR__ .'/inc/noticias/quem-leu.php');
             ?>
         </aside>
+        <div id="barra-ferramentas-noticias">
+            <div class="links">
+                <div class="sumario">
+                    <nav class="navbar">
+                        <a class="navbar-brand sr-only" href="#">Tópicos da matéria:</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSumario"
+                            aria-controls="navbarSumario" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </nav>
+                </div>
+                <div class="paginacao"></div>
+                <div class="eventos-pagina">
+                    <div class="imprimir"></div>
+                    <div class="salvar"></div>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
     </div>
 </div>
 

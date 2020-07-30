@@ -59,6 +59,30 @@
         @include img-fluid;
         border-radius: 5px 5px 0px 0px;
     }
+    .descricao-img-principal {
+        background-color: #def8ff;
+        color: #1B305A;
+        font-size: .8em;
+        padding: 7px;
+        text-align: left;
+    }
+    .video {
+        position: relative;
+        &::before {
+            content: '';
+            background-image: url("../imagens/play-imagem-principal.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 50%;
+            height: 172px;
+            margin-left: -86px;
+            margin-top: -86px;
+            position: absolute;
+            top: 50%;
+            width: 172px;
+        }
+    }
 }
 
 #compartilhar-conteudo {
@@ -92,14 +116,18 @@
 
     .fa {
         border-radius: 50%;
-        background: $theme-color;
+        background: $branco;
+        border: 2px solid #6b6b6b;
+        width: 32px;
+        height: 32px;
 
         &::before {
-            color: $branco;
+            color: #6b6b6b;
         }
 
         &:hover {
-            background: $theme-color-secundario;
+            background: #47C77D;
+            border-color: #47C77D;
 
             &::before {
                 color: $branco;
