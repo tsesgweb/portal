@@ -157,31 +157,54 @@ $tags = array(
           <p class="news-list-description">
             <?= $noticia->description; ?>
           </p>
-          <footer class="news-list-footer">
-            <time class="time"
-              datetime="<?= "{$ano}-{$mes}-{$dia} {$hora}:{$min}" ?>"><?= $data_final; ?><?= $hora_final?></time>
-            <button class="sharing" type="button" data-container="body" data-toggle="popover" data-placement="top"
-              data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11.352 12.486">
-                <defs>
-                  <style>
-                    .a {
-                      fill: #6B6B6B;
-                    }
-                  </style>
-                </defs>
-                <path class="a"
-                  d="M9.079,4.453a2.253,2.253,0,0,0,2.273-2.226,2.274,2.274,0,0,0-4.547,0,2.188,2.188,0,0,0,.034.382l-2.9,2.25a2.29,2.29,0,0,0-1.665-.712,2.227,2.227,0,1,0,0,4.453,2.29,2.29,0,0,0,1.67-.717l2.877,2.125a2.2,2.2,0,0,0-.015.253A2.274,2.274,0,1,0,9.079,8.033,2.279,2.279,0,0,0,7,9.364L4.3,7.374a2.182,2.182,0,0,0,0-2.01L7.051,3.231A2.281,2.281,0,0,0,9.079,4.453Z" />
-              </svg>
+        </div>
+        <footer class="news-list-footer">
+          <time class="time"
+            datetime="<?= "{$ano}-{$mes}-{$dia} {$hora}:{$min}" ?>"><?= $data_final; ?><?= $hora_final?></time>
+          <button class="news-list-sharing" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11.352 12.486">
+              <defs>
+                <style>
+                  .a {
+                    fill: #6B6B6B;
+                  }
+                </style>
+              </defs>
+              <path class="a"
+                d="M9.079,4.453a2.253,2.253,0,0,0,2.273-2.226,2.274,2.274,0,0,0-4.547,0,2.188,2.188,0,0,0,.034.382l-2.9,2.25a2.29,2.29,0,0,0-1.665-.712,2.227,2.227,0,1,0,0,4.453,2.29,2.29,0,0,0,1.67-.717l2.877,2.125a2.2,2.2,0,0,0-.015.253A2.274,2.274,0,1,0,9.079,8.033,2.279,2.279,0,0,0,7,9.364L4.3,7.374a2.182,2.182,0,0,0,0-2.01L7.051,3.231A2.281,2.281,0,0,0,9.079,4.453Z" />
+            </svg>
+          </button>
+        </footer>
+        <div
+          class="news-list-sharing-overlay news-list-sharing-overlay__active news-list-sharing-overlay_color-<?= $tag['badge']; ?>">
+          <button class="news-list-sharing-overlay__close">X</button>
+          <span
+            class="news-list-sharing-overlay__tag news-list-sharing-overlay_color-<?= $tag['badge']; ?>__tag"><?= $tag['name']; ?></span>
+          <span class="news-list-sharing-overlay__title"><?= $noticia->title; ?></span>
+          <span class="news-list-sharing-overlay__content">
+            <div class="header">
+              COMPARTILHAR:
+              <div class="icons news-list-sharing-overlay__content_color-<?= $tag['badge']; ?>_icons">
+                <?php include __DIR__ . '/inc/share.inc.php';?>
+              </div>
+            </div>
+            <button aria-label="COPIAR LINK DA MATÉRIA" data-clipboard-text="<?= $noticia->url; ?>"
+              class="btn btn-link footer news-list-sharing-clipboard news-list-sharing-overlay__content_color-<?= $tag['badge']; ?>__footer">
+              COPIAR LINK DA MATÉRIA
             </button>
-          </footer>
+          </span>
+
         </div>
       </div>
     </div>
   </article>
+
   <?php
 }
 ?>
+  <footer class="news-list-read-more">
+    <button id="news-list-read-more-button" class="btn btn-primary btn-lg btn-block">Veja outras notícias</button>
+  </footer>
   <?php
 $paginacao && include __DIR__ . '/inc/paginacao.inc.php';
 ?>

@@ -34,7 +34,7 @@ array_multisort(array_shift($mais_lidas));
 	</div>
 	<div class="portletWrapper">
 		<div class="portlet-card">
-			<div class="portlet-card-header portlet-card-header_amarelo">
+			<div class="portlet-card-header ">
 				Serie: Ano não eleitoral
 			</div>
 			<ul class="portlet-list-group">
@@ -64,7 +64,7 @@ array_multisort(array_shift($mais_lidas));
 	</div>
 	<div class="portletWrapper">
 		<div class="portlet-card">
-			<div class="portlet-card-header portlet-card-header_verde">
+			<div class="portlet-card-header">
 				Biometria
 			</div>
 			<ul class="portlet-list-group">
@@ -96,7 +96,7 @@ array_multisort(array_shift($mais_lidas));
 	</div>
 	<div class="portletWrapper">
 		<div class="portlet-card">
-			<div class="portlet-card-header portlet-card-header_azul">
+			<div class="portlet-card-header">
 				TPS 2020
 			</div>
 			<ul class="portlet-list-group">

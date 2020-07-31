@@ -6,6 +6,14 @@
     padding-bottom: 15px;
   }
 
+  &>.portletWrapper:nth-child(3) {
+    .portlet-card .portlet-card-header {
+      border-bottom-color: #FFDE57;
+    }
+  }
+
+
+
   .lateral {
     padding-left: 15px;
     padding-right: 15px;
@@ -14,7 +22,7 @@
 
     @include elemento(mais-lidas) {
       @include card;
-      border-color: #BDBDBD;
+      border-color: #F5F5F5;
       border-radius: $radius;
       padding: 0 15px;
 
@@ -22,11 +30,12 @@
         @include card-header;
         background-color: #fff;
         border-bottom: none;
+        padding: 5px 0 0 0;
       }
 
       @include item (title) {
         @include titulo-noticias($azul);
-        font-size: 1.5rem;
+        font-size: 20px;
         font-weight: bold;
         line-height: 1.5;
         margin-bottom: 0;
@@ -36,10 +45,10 @@
 
         &::before {
           content: "";
-          width: 12px;
-          height: 12px;
+          width: 10px;
+          height: 10px;
           background: #47C77D;
-          margin-right: 8px;
+          margin-right: 6px;
         }
       }
 
@@ -60,7 +69,7 @@
         .item-carousel {
           display: flex;
           align-items: center;
-          border-top: 1px solid #BDBDBD;
+          border-top: 1px solid #F5F5F5;
           flex-direction: row;
           padding-top: 10px;
           padding-bottom: 10px;
@@ -70,8 +79,8 @@
             padding-right: 15px;
 
             span {
-              width: 32px;
-              height: 32px;
+              width: 26px;
+              height: 26px;
               border-radius: 50%;
               background-color: rgba(71, 199, 125, .2);
               color: #47c77d;
@@ -87,7 +96,7 @@
           margin-bottom: 0;
 
           a {
-            font-size: 1.125rem;
+            font-size: 14px;
             color: $azul;
 
             &:hover {
@@ -113,6 +122,7 @@
 .portlet {
   @include item(card) {
     @include card;
+    border-color: #F5F5F5;
     padding: 0 15px;
   }
 
@@ -120,22 +130,23 @@
     @include card-header;
     @include titulo-noticias($azul);
     padding: 0;
-    font-size: 1.5rem;
+    font-size: 20px;
     background-color: #fff;
     border-bottom-width: 3px;
     border-bottom-style: solid;
+    border-bottom-color: #F5F5F5;
 
-    @include modificar(amarelo) {
-      border-bottom-color: #FFDE57;
-    }
+    // @include modificar(amarelo) {
+    //   border-bottom-color: #FFDE57;
+    // }
 
-    @include modificar(verde) {
-      border-bottom-color: #47C77D;
-    }
+    // @include modificar(verde) {
+    //   border-bottom-color: #47C77D;
+    // }
 
-    @include modificar(azul) {
-      border-bottom-color: #5ADBFF;
-    }
+    // @include modificar(azul) {
+    //   border-bottom-color: #5ADBFF;
+    // }
 
   }
 
@@ -147,9 +158,10 @@
   @include item(list-group-item) {
     @include list-group-item;
 
+
     a {
       color: $azul;
-      font-size: 1.125rem;
+      font-size: 16px;
     }
   }
 
