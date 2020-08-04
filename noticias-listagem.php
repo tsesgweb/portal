@@ -23,19 +23,17 @@ $outrasNoticias[6]->video_url = 'https://www.youtube.com/watch?v=1PlnZEt797o';
 // print_r($outrasNoticias[2]);
 // echo '</pre>';
 $tags = array(
-        array('icon'=> '<i class="fa fa-circle" aria-hidden="true"></i> ','letter'=> null, 'badge'=>'aovivo', 'name'=> 'Ao Vivo'), 
-        array('icon'=> null,'letter'=> 'E', 'badge'=>'evento', 'name'=>'Evento'), 
-        array('icon'=> null,'letter'=> 'N', 'badge'=>'noticia', 'name'=>'Notícia'), 
-        array('icon'=> null,'letter'=> 'D', 'badge'=>'destaque', 'name'=>'Destaque'), 
-        array('icon'=> null,'letter'=> 'S', 'badge'=>'servico', 'name'=>'Serviço'), 
-        array('icon'=> null,'letter'=> 'C', 'badge'=>'comunicado', 'name'=>'Comunicado'), 
-        array('icon'=> null,'letter'=> 'V', 'badge'=>'video', 'name'=>'Vídeo'), 
-        array('icon'=> '<i class="fa fa-microphone" aria-hidden="true"></i> ','letter'=> null, 'badge'=>'radio', 'name'=>'Rádio'), 
-        array('icon'=> null,'letter'=> 'N', 'badge'=>'noticia', 'name'=>'Notícia'), 
-        array('icon'=> null,'letter'=> 'M', 'badge'=>'noticia', 'name'=>'MulheresPolitica'),
-        array('icon'=> null,'letter'=> 'N', 'badge'=>'noticia', 'name'=>'Notícia'));
-
-
+        array("icon"=> "<i class='fa fa-circle' aria-hidden='true'></i> ","letter"=> null, "badge"=>"aovivo", "name"=> "Ao Vivo"), 
+        array("icon"=> null,"letter"=> "E", "badge"=>"evento", "name"=>"Evento"), 
+        array("icon"=> null,"letter"=> "N", "badge"=>"noticia", "name"=>"Notícia"), 
+        array("icon"=> null,"letter"=> "D", "badge"=>"destaque", "name"=>"Destaque"), 
+        array("icon"=> null,"letter"=> "S", "badge"=>"servico", "name"=>"Serviço"), 
+        array("icon"=> null,"letter"=> "C", "badge"=>"comunicado", "name"=>"Comunicado"), 
+        array("icon"=> null,"letter"=> "V", "badge"=>"video", "name"=>"Vídeo"), 
+        array("icon"=> "<i class='fa fa-microphone' aria-hidden='true'></i> ","letter"=> null, "badge"=>"radio", "name"=>"Rádio"), 
+        array("icon"=> null,"letter"=> "N", "badge"=>"noticia", "name"=>"Notícia"), 
+        array("icon"=> null,"letter"=> "M", "badge"=>"noticia", "name"=>"MulheresPolitica"),
+        array("icon"=> null,"letter"=> "N", "badge"=>"noticia", "name"=>"Notícia"));
 ?>
 <div id="navegacao-data-noticias">
   <form method="GET" name="navegacao" class="form-inline" id="form-navagacao-noticias"
@@ -115,7 +113,7 @@ $tags = array(
       list($hora, $min, $segundos) = explode(':', $horas);
 
       $data_final = $dia.'.'.$mes.'.'.$ano; 
-      $hora_final = ' | '.$hora.':'.$min;       
+      $hora_final = ' | '.$hora.':'.$min;    
       
   ?>
   <article class="news-list-card">
@@ -125,8 +123,8 @@ $tags = array(
       ?>
       <div class="news-list-col-4">
         <span
-          class="badge-<?= $tag['badge'] ?> news-list-badge news-list-badge__limited"><?php $tag['icon'] !== null ? print $tag[icon] :  print substr($tag['name'], 0, 1) ?><span>
-            <?php  $tag['icon'] !== null ? print $tag['name']: print substr($tag['name'], 1) ?></span></span>
+          class="badge-<?= $tag['badge'] ?> news-list-badge news-list-badge__limited"><?php $tag["icon"] !== null ? print $tag['icon'] :  print substr($tag['name'], 0, 1) ?><span>
+            <?php $tag["icon"] !== null ? print $tag['name']: print substr($tag['name'], 1) ?></span></span>
         <?php if(!$noticia->video_image): ?>
         <a href="<?= $noticia->url; ?>" title="<?= $noticia->title; ?>">
           <?php else: ?>

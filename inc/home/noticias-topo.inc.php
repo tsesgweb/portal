@@ -6,24 +6,7 @@
                 <div class="load-title"></div>
                 <div class="load-title"></div>
                 <div class="load-title"></div>
-            </div>
-            <div class="load-secundario">
-                <div class="load-card">
-                    <div class="load-badge"></div>
-                    <div class="load-title"></div>
-                    <div class="load-title"></div>
-                </div>
-                <div class="load-card">
-                    <div class="load-badge"></div>
-                    <div class="load-title"></div>
-                    <div class="load-title"></div>
-                </div>
-                <div class="load-card">
-                    <div class="load-badge"></div>
-                    <div class="load-title"></div>
-                    <div class="load-title"></div>
-                </div>
-            </div>
+            </div>            
         </div>
     </div>
 </div>

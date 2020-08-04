@@ -25,7 +25,17 @@ $badge-content in $badge-theme {
 }
 
 .destaque {
-    @include icone;
+    @include icone {
+        @include media-breakpoint-up(xs) {
+            top: -25%;
+            left: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            left: 25%;
+            top: 0;
+        }
+    }
 
     &.oculto {
         display: none;

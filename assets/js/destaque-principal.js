@@ -16,7 +16,7 @@ $(window).on("load", function () {
       bottom: "-" + sutiaHeight + "px",
     });
 
-    if (dots !== NaN) {
+    if (!isNaN(dots)) {
       destaqueTitulo.css({
         bottom: sutiaHeight + dots + "px",
       });

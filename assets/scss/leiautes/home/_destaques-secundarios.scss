@@ -2,7 +2,7 @@
   @include make-container(0);
 
   // @include make-container-max-widths();
-  @include media-breakpoint-only(xs){
+  @include media-breakpoint-only(xs) {
     display: none;
   }
 }
@@ -42,7 +42,7 @@
       @include make-col-ready(0);
       // @include make-col-offset(1);      
       @include make-col(4);
-      padding-right: 15px;
+      margin-right: 15px;
     }
 
     @include elemento(col-7) {
@@ -59,15 +59,19 @@
         @include make-col(6);
       }
 
+      .icone {
+        left: 0;
+      }
 
       .card-body {
         padding: 0;
+
+
       }
 
       .card-img {
         @include img-fluid;
         border-radius: $radius;
-        max-width: 152px;
       }
 
       .card-title {

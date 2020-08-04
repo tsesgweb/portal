@@ -11,13 +11,21 @@
         var link = $(card).find(".card-title a");
         var img = $(card).find("img");
         var badge = $(card).find("span");
+        var icone = $(card).find(".icone");
 
         badge.removeClass("sr-only");
 
-        template +=
-          '<a href="' + link.attr("href") + '" alt="' + link.attr("alt") + '">';
+        if (icone.length) {
+          template += '<div class="destaque-link">'
+        } else {
+          template += '<a class="destaque-link" href="' + link.attr("href") + '" alt="' + link.attr("alt") + '">';
+        }
+
+
         template += '<div class="destaque__imagem">';
+
         template += '<img src="' + img.attr("src") + '"/></div>';
+
         template += '<div class="destaque__titulo">';
         template +=
           '<span class="' +
@@ -25,15 +33,28 @@
           '">' +
           $(badge).html() +
           "</span>";
-        template += '<h3 class="titulo">' + title.text() + "</h3>";
+        template += '<h3 class="titulo">';
+
+        icone.length ? template += '<a class="destaque-link" href="' + link.attr("href") + '" alt="' + link.attr("alt") + '">' : '';
+
+        template += title.text();
+
+        icone.length ? template += "</a>" : '';
+
+        template += "</h3>";
         template += "</div>";
-        template += "</a>";
+
+        if (icone.length) { template += '<div class="icone">' + icone.html() + '</div></div>' } else { template += "</a>"; }
+
         destaqueData[index] = template;
+
+
+
       });
 
       containerPrincipal.append(destaqueData);
       containerPrincipal.addClass("owl-carousel owl-theme");
-      containerPrincipal.find("a").wrap('<div class="item"></div>');
+      containerPrincipal.find(".destaque-link").wrap('<div class="item"></div>');
       destaqueSecundario.hide();
 
       containerPrincipal.owlCarousel({
@@ -53,7 +74,7 @@
     },
     leave: function () {
       var items = containerPrincipal.find(".item");
-      console.log(items);
+
       if (items.parent().is("div")) {
         items.unwrap();
         items.eq(1).remove();
