@@ -3,8 +3,9 @@
     margin-bottom: 10px; //Celular
 
     @include media-breakpoint-only(xs) {
-        select {
-            margin-bottom: 10px;
+        .form-group {
+            margin-top: 0;
+            margin-bottom: 0;
         }
     }
 
@@ -16,17 +17,51 @@
     }
 
     #form-navagacao-noticias {
+        @include media-breakpoint-only(xs) {
+            * {
+                font-size: .75rem;
+            }
+        }
+
         select {
             margin-right: 1em;
+
         }
 
         fieldset {
             background-color: #C2D2ED;
             padding: 4px 6px;
-            border-radius: $theme-radius;
+            border-radius: $radius;
 
             select {
                 opacity: .7;
+            }
+
+            @include media-breakpoint-only(xs) {
+                .form-control {
+                    height: calc(1.5em + .5rem + 2px);
+                    padding: .25rem .5rem;
+                    font-size: .75rem;
+                    line-height: 1.5;
+                    border-radius: .2rem;
+                }
+
+                .btn {
+                    display: block;
+                    width: 100%;
+                    margin-top: 2.5px;
+                    padding: .25rem .5rem;
+                    font-size: .875rem;
+                    line-height: 1.5;
+                    border-radius: .2rem;
+                }
+            }
+
+            @include media-breakpoint-only(sm) {
+                .btn {
+                    margin-top: 0;
+                    margin-left: 2px;
+                }
             }
         }
     }
