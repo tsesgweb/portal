@@ -8,6 +8,11 @@
     padding-top: 15px;
     border-bottom: 1px solid #BDBDBD;
 
+    @include media-breakpoint-only(xs) {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
     &:last-child {
       border-bottom: none;
     }
@@ -77,6 +82,10 @@
   @include item(media) {
     @include card-img;
     margin: 0;
+
+    @include media-breakpoint-only(xs) {
+      display: none;
+    }
   }
 
   @include item(img) {
@@ -255,6 +264,10 @@
       padding-left: 0;
       padding-right: 0;
 
+      @include media-breakpoint-only(xs) {
+        display: none;
+      }
+
       span {
         transition: ease-in-out 2s;
         display: none;
@@ -271,13 +284,22 @@
 
     &.news-list-badge__expanded {
       top: -20px;
+
+      @include media-breakpoint-only(xs) {
+        display: none;
+      }
     }
   }
 
   @include item(title) {
     @include titulo-noticias($azul);
-    font-size: 1.25rem;
     line-height: $line-height-base;
+    font-size: 1.25rem;
+
+    @include media-breakpoint-only(xs) {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
 
   }
 
@@ -287,11 +309,19 @@
     font-family: $font-descriptions;
     line-height: $line-height-base;
     color: #6B6B6B;
+
+    @include media-breakpoint-only(xs) {
+      display: none;
+    }
   }
 
   @include item(footer) {
     display: flex;
     align-items: center;
+
+    @include media-breakpoint-only(xs) {
+      display: none;
+    }
 
     .time {
       font-size: 0.75rem;

@@ -3,8 +3,7 @@ $anim-speed: 0.3s;
 @mixin shadowEffect {
   &::after {
     content: '';
-    background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%)
-      0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
     width: 100%;
     height: 50%;
     // opacity: .7;
@@ -25,17 +24,32 @@ $anim-speed: 0.3s;
   background-color: #fff;
   padding-bottom: 28px;
 
+  @include media-breakpoint-only(xs) {
+    padding-bottom: 0;
+
+  }
+
   .titulo {
     padding-top: 15px;
     padding-left: 15px;
     @include titulo-noticias($azul);
     font-size: 2.5rem;
+
+    @include media-breakpoint-only(xs) {
+      display: none;
+
+    }
+
   }
 }
 
 .noticia-listagem {
   @include modificar(destaque) {
     @include make-row(0);
+
+    @include media-breakpoint-only(xs) {
+      padding-top: 15px;
+    }
   }
 
   @include modificar(card) {
@@ -46,6 +60,10 @@ $anim-speed: 0.3s;
 
     @include media-breakpoint-up(xs) {
       @include make-col(12);
+
+      &+.noticia-listagem_card {
+        margin-top: 20px;
+      }
     }
 
     @include media-breakpoint-up(lg) {
@@ -88,6 +106,11 @@ $anim-speed: 0.3s;
     text-transform: uppercase;
     margin-bottom: 5px;
     z-index: 2;
+
+    @include media-breakpoint-only(xs) {
+      position: relative;
+      bottom: -15px;
+    }
   }
 
   @include modificar(title) {
@@ -96,7 +119,14 @@ $anim-speed: 0.3s;
     a {
       @include titulo-noticias;
       line-height: $line-height-base;
-      font-size: 1.75rem;
+
+      @include media-breakpoint-up(xs) {
+        font-size: 1.25rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.75rem;
+      }
     }
   }
 
