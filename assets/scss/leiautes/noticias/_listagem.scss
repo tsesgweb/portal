@@ -8,6 +8,11 @@
     padding-top: 15px;
     border-bottom: 1px solid #BDBDBD;
 
+    @include media-breakpoint-only(xs) {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
     &:last-child {
       border-bottom: none;
     }
@@ -67,12 +72,20 @@
     @include media-breakpoint-up(lg) {
       @include make-col(12);
       padding-top: 15px;
+
+      .news-list-sharing-overlay {
+        top: -20px;
+      }
     }
   }
 
   @include item(media) {
     @include card-img;
     margin: 0;
+
+    @include media-breakpoint-only(xs) {
+      display: none;
+    }
   }
 
   @include item(img) {
@@ -83,6 +96,162 @@
     @include card-body;
     padding-top: 0;
     padding-bottom: 0;
+    position: relative;
+  }
+
+  @include item(title) {
+    margin-bottom: 30px;
+
+    a {
+      &:hover {
+        color: lighten($azul, 10%);
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  @include item(sharing-overlay) {
+    padding: 5px 15px;
+    height: 100%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    height: 0;
+
+    @include modificar(active) {
+      justify-content: space-evenly;
+      visibility: visible;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: $radius;
+      background-color: rgba(27, 48, 90, .98);
+      width: 100%;
+      z-index: 3;
+      opacity: 1;
+      margin: 0 15px;
+      height: 100%;
+    }
+
+    @each $badge-nome,
+    $badge-content in $badge-theme {
+      @include modificar (color-#{$badge-nome}) {
+        @include elemento(tag) {
+          color: $badge-content;
+
+          @if $badge-nome=='comunicado' {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    @include elemento(close) {
+      text-align: center;
+      vertical-align: middle;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 16px;
+      height: 16px;
+      color: $azul;
+      background-color: #fff;
+      border-radius: 50%;
+      border: none;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    @include elemento(tag) {
+      font-size: 12px;
+    }
+
+    @include elemento(title) {
+      color: #fff;
+    }
+
+    @include elemento(content) {
+      .header {
+        color: #fff;
+        font-size: 10px;
+      }
+
+      .footer {
+        border-radius: $radius;
+        padding: 2.5px;
+        font-size: 10px;
+
+        button {
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      @each $badge-nome,
+      $badge-content in $badge-theme {
+        @include modificar (color-#{$badge-nome}) {
+
+          @include elemento(footer) {
+            color: $badge-content;
+            border: 1px solid $badge-content;
+
+            &:hover {
+              color: lighten($badge-content, 10%);
+            }
+
+            @if $badge-nome=='comunicado' {
+              color: #fff;
+
+              &:hover {
+                color: lighten(#fff, 10%);
+              }
+
+            }
+
+          }
+        }
+      }
+
+      @each $badge-nome,
+      $badge-content in $badge-theme {
+        @include modificar (color-#{$badge-nome}_icons) {
+          #compartilhar-conteudo .fa {
+            &:hover {
+              background-color: $badge-content;
+            }
+
+          }
+        }
+      }
+
+      .icons {
+        .noticia-compartilhar {
+          display: flex;
+
+          &#compartilhar-conteudo {
+            padding-top: 2.5px;
+            padding-bottom: 2.5px;
+          }
+        }
+      }
+    }
+  }
+
+  @include item(footer) {
+    @include card-footer;
+    padding-top: 5px;
+    padding-bottom: 0;
+    background-color: transparent;
+    border-top: none;
   }
 
   @include item(badge) {
@@ -94,6 +263,10 @@
       z-index: 2;
       padding-left: 0;
       padding-right: 0;
+
+      @include media-breakpoint-only(xs) {
+        display: none;
+      }
 
       span {
         transition: ease-in-out 2s;
@@ -110,14 +283,24 @@
     }
 
     &.news-list-badge__expanded {
-      top: 0;
+      top: -20px;
+
+      @include media-breakpoint-only(xs) {
+        display: none;
+      }
     }
   }
 
   @include item(title) {
     @include titulo-noticias($azul);
-    font-size: 1.25rem;
     line-height: $line-height-base;
+    font-size: 1.25rem;
+
+    @include media-breakpoint-only(xs) {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
   }
 
   @include item(description) {
@@ -126,32 +309,57 @@
     font-family: $font-descriptions;
     line-height: $line-height-base;
     color: #6B6B6B;
+
+    @include media-breakpoint-only(xs) {
+      display: none;
+    }
   }
 
   @include item(footer) {
     display: flex;
     align-items: center;
 
+    @include media-breakpoint-only(xs) {
+      display: none;
+    }
+
     .time {
       font-size: 0.75rem;
       color: #BDBDBD;
     }
 
-    .sharing {
-      border: 0;
 
-      &:hover {
-        cursor: pointer;
-      }
+  }
 
-      display: flex;
-      margin-left: 15px;
-      background-color: rgba(107, 107, 107, 0.2);
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      padding: 4px;
+  @include item(sharing) {
+    border: 0;
 
+    &:hover {
+      cursor: pointer;
+    }
+
+    display: flex;
+    margin-left: 15px;
+    background-color: rgba(107, 107, 107, 0.2);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 4px;
+  }
+
+
+
+  @include item(read-more) {
+    @include media-breakpoint-up(xs) {
+      margin: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: 30px 15%;
+    }
+
+    .btn {
+      // font-size: 16px;
     }
   }
 }

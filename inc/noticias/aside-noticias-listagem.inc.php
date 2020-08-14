@@ -2,7 +2,7 @@
 $url_mais_lidas         = 'http://www.tse.jus.br/@@get_lista_noticias';
 $data_mais_lidas    = file_get_contents($url_mais_lidas);
 $mais_lidas     = json_decode($data_mais_lidas);
-array_multisort(array_shift($mais_lidas));
+array_shift($mais_lidas);
 ?>
 <aside id="coluna-lateral-noticias" class="lateral nao-imprimir">
 	<h2 class="sr-only">Coluna relacionada a notícias</h2>
@@ -34,7 +34,7 @@ array_multisort(array_shift($mais_lidas));
 	</div>
 	<div class="portletWrapper">
 		<div class="portlet-card">
-			<div class="portlet-card-header portlet-card-header_amarelo">
+			<div class="portlet-card-header ">
 				Serie: Ano não eleitoral
 			</div>
 			<ul class="portlet-list-group">
@@ -64,7 +64,7 @@ array_multisort(array_shift($mais_lidas));
 	</div>
 	<div class="portletWrapper">
 		<div class="portlet-card">
-			<div class="portlet-card-header portlet-card-header_verde">
+			<div class="portlet-card-header">
 				Biometria
 			</div>
 			<ul class="portlet-list-group">
@@ -96,7 +96,7 @@ array_multisort(array_shift($mais_lidas));
 	</div>
 	<div class="portletWrapper">
 		<div class="portlet-card">
-			<div class="portlet-card-header portlet-card-header_azul">
+			<div class="portlet-card-header">
 				TPS 2020
 			</div>
 			<ul class="portlet-list-group">
