@@ -70,14 +70,12 @@
                 "node_modules/clipboard/dist/clipboard.min.js"
             ],
             "rybena": [
-                "assets/js/vendor/rybenaDOMFull-1.6.js",
-                "assets/js/vendor/rybena-1.0.js"
+                "assets/js/vendor/rybena-2.0.js?positionPlayer=left"
             ],
             "portal": [
                 "assets/js/novo-portal.js",
                 "assets/js/botoes-ferramentas.js",
-                "assets/js/feedback.js",
-                "assets/js/rybena.js"
+                "assets/js/feedback.js"
             ],
             "template": {
                 "home": [
