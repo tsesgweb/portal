@@ -11,50 +11,28 @@ $maisvisitados  = false;
 $relacionadas   = false;
 include __DIR__ . '/inc/header.inc.php';
 ?>
-
-<header class="noticia-cabecalho">
-    <h2 class="noticia-titulo">Lei dos Partidos Políticos completa 24 anos nesta quinta (19)</h2>
-    <p class="noticia-subtitulo">Ao longo do tempo, embora tenha passado por reformas, a norma manteve seu papel de
-        assegurar a representatividade e a autonomia das agremiações </p>
-</header>
-<div class="noticia__conteudo">
-    <div class="noticia__linha">
-        <div class="noticia-dados">
-            <div class="autor">Por <span class="nome-autor">Sebastian Abreu</span> e <span class="nome-autor">Túlio
-                    Maravilha</span> / Revisão: <span class="nome-revisor">Keisuke Honda</span> - <span
-                    class="local">TSE</span></div>
-            <div class="data-hora">17/01/2020 13:30 - <span class="atualizacao">Atualizado em 19/01/2020 - 18:30</span>
+<div class="order-elementos-header">
+    <header class="noticia-cabecalho">
+        <h2 class="noticia-titulo">Lei dos Partidos Políticos completa 24 anos nesta quinta (19)</h2>
+        <p class="noticia-subtitulo">Ao longo do tempo, embora tenha passado por reformas, a norma manteve seu papel de
+            assegurar a representatividade e a autonomia das agremiações </p>
+    </header>
+    <div class="noticia__conteudo">
+        <div class="noticia__linha">
+            <div class="noticia-dados">
+                <div class="autor">Por <span class="nome-autor">Sebastian Abreu</span> e <span class="nome-autor">Túlio
+                        Maravilha</span> / Revisão: <span class="nome-revisor">Keisuke Honda</span> - <span
+                        class="local">TSE</span></div>
+                <div class="data-hora">17/01/2020 13:30 - <span class="atualizacao">Atualizado em 19/01/2020 -
+                        18:30</span>
+                </div>
             </div>
+            <?php include __DIR__ . '/inc/share.inc.php';?>
         </div>
-        <?php include __DIR__ . '/inc/share.inc.php';?>
     </div>
+    <?php include __DIR__ . '/inc/imagem-topo.inc.php';?>
 </div>
-<div class="nav flex-column" id="navbarSumario">
-    <div class="alinhar-sumario">
-        <h2 class="titulo">Tópicos da matéria:</h2>
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Criação e registro dos partido <span class="sr-only">(atual)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Fundo Partidário</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cláusula de desempenho</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Coligações</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Propaganda Partidária e Fundo Especial</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Candidatura de mulheres</a>
-            </li>
-        </ul>
-    </div>
-</div>
-<?php include __DIR__ . '/inc/imagem-topo.inc.php';?>
+<?php include __DIR__ . '/inc/noticias/sumario.inc.php';?>
 <div class="noticia__conteudo">
     <div class="noticia__linha">
         <section id="texto-conteudo" class="texto-noticias-internas">
@@ -86,7 +64,7 @@ include __DIR__ . '/inc/header.inc.php';
                         possibilidade de defesa, com a participação de advogados na prestação de contas”, revelou.</p>
                     <p>Confira, a seguir, alguns dos principais pontos e mudanças ocorridas ao longo da vigência da
                         norma:</p>
-                    <h3>Criação e registro dos partidos</h3>
+                    <h3 id="titulo-1">Criação e registro dos partidos</h3>
                     <p>A Lei 9.096/1995 estabelece regras gerais para criação e registro dos partidos. A Resolução do
                         TSE nº 23.282/2010, por sua vez, detalha o que é necessário para se criar uma nova legenda. Quem
                         defere ou não a criação do partido é o TSE. Até a protocolização do pedido neste Tribunal, o
@@ -94,7 +72,7 @@ include __DIR__ . '/inc/header.inc.php';
                         por pelo menos 101 fundadores; o apoio de eleitores correspondente a, no mínimo, 0,5% dos votos
                         dados na última eleição geral para a Câmara dos Deputados, distribuído por um terço ou mais dos
                         Estados; e a certidão de apoio dos eleitores, emitida por cartórios eleitorais.</p>
-                    <h3>Fundo Partidário</h3>
+                    <h3 id="titulo-2">Fundo Partidário</h3>
                     <p>A Lei 9.096/1995 estabelece regras gerais para criação e registro dos partidos. A Resolução do
                         TSE nº 23.282/2010, por sua vez, detalha o que é necessário para se criar uma nova legenda. Quem
                         defere ou não a criação do partido é o TSE. Até a protocolização do pedido neste Tribunal, o
@@ -102,7 +80,7 @@ include __DIR__ . '/inc/header.inc.php';
                         por pelo menos 101 fundadores; o apoio de eleitores correspondente a, no mínimo, 0,5% dos votos
                         dados na última eleição geral para a Câmara dos Deputados, distribuído por um terço ou mais dos
                         Estados; e a certidão de apoio dos eleitores, emitida por cartórios eleitorais.</p>
-                    <h3>Cláusula de desempenho</h3>
+                    <h3 id="titulo-3">Cláusula de desempenho</h3>
                     <p>De acordo com o artigo 41-A da Lei dos Partidos Políticos, 5% do total do Fundo Partidário deve
                         ser distribuído, em partes iguais, a todas as legendas, e os outros 95%, na proporção dos votos
                         obtidos pelas agremiações na última eleição geral para a Câmara dos Deputados. Contudo, a Emenda
@@ -119,13 +97,13 @@ include __DIR__ . '/inc/header.inc.php';
                         gratuita no rádio e na televisão. O desempenho eleitoral exigido das legendas partidárias será
                         aplicado de forma gradual e alcançará seu ápice nas eleições de 2030, conforme previsto na EC nº
                         97/2017.</p>
-                    <h3>Coligações</h3>
+                    <h3 id="titulo-4">Coligações</h3>
                     <p>A EC nº 97 também vedou, a partir de 2020, a celebração de coligações nas eleições proporcionais
                         para a Câmara dos Deputados, Câmara Legislativa, assembleias legislativas e câmaras municipais.
                         Um dos principais reflexos da mudança se dará no ato do pedido de registro de candidaturas à
                         Justiça Eleitoral, especialmente porque, com o fim das coligações, cada partido deverá,
                         individualmente, indicar o mínimo de 30% de mulheres filiadas para concorrer no pleito.</p>
-                    <h3>Propaganda Partidária e Fundo Especial</h3>
+                    <h3 id="titulo-5">Propaganda Partidária e Fundo Especial</h3>
                     <p>Em 2017, a Lei nº 13.488 extinguiu a propaganda partidária no rádio e na TV. Outra Lei, a de nº
                         13.487, do mesmo ano, instituiu o Fundo Especial de Financiamento de Campanha (FEFC). Com o fim
                         da propaganda partidária, os valores de compensação fiscal das emissoras de rádio e televisão
@@ -134,88 +112,64 @@ include __DIR__ . '/inc/header.inc.php';
                         campanhas eleitorais de seus candidatos. Com a proibição de doações por parte de pessoas
                         jurídicas, estabelecida pelo Supremo Tribunal Federal (STF), o FEFC tornou-se uma das principais
                         fontes de receita para a realização das campanhas.</p>
-                    <h3>Candidatura de mulheres</h3>
+                    <h3 id="titulo-6">Candidatura de mulheres</h3>
                     <p>De acordo com o secretário judiciário do TSE, Fernando Alencastro, a partir de 2020, as legendas
                         deverão encaminhar à Justiça Eleitoral, juntamente com o Demonstrativo de Regularidade de Atos
                         Partidários (DRAP), a lista de candidatas que concorrerão no pleito, respeitando-se o percentual
                         mínimo de 30% e o máximo de 70% para candidaturas de cada sexo. A regra está prevista no artigo
                         10, parágrafo 3º da Lei nº 9.504/1997 (Lei das Eleições).</p>
+
                 </div>
                 <div role="tabpanel" class="tab-pane" id="ancora-2"></div>
                 <div role="tabpanel" class="tab-pane" id="ancora-3"></div>
                 <div role="tabpanel" class="tab-pane" id="ancora-4"></div>
             </div>
-            <!-- <div class="noticia-base nao-imprimir">
-                <div class="noticia-tags">
-                    <span>Tags:</span>
-                    <ul class="list-inline">
-                        <li><a
-                                href="http://www.tse.jus.br/imprensa/noticias-tse/2019/Abril/identidade-digital-confira-as-principais-duvidas-sobre-o-documento-e-o-programa-icn/listacategoria?Subject=ICN%20%E2%80%93%20Identifica%C3%A7%C3%A3o%20Civil%20Nacional">#ICN
-                                – Identificação Civil Nacional</a></li>
-                        <li><a
-                                href="http://www.tse.jus.br/imprensa/noticias-tse/2019/Abril/identidade-digital-confira-as-principais-duvidas-sobre-o-documento-e-o-programa-icn/listacategoria?Subject=Batimento%20biom%C3%A9trico">#Batimento
-                                biométrico</a></li>
-                        <li><a
-                                href="http://www.tse.jus.br/imprensa/noticias-tse/2019/Abril/identidade-digital-confira-as-principais-duvidas-sobre-o-documento-e-o-programa-icn/listacategoria?Subject=Biometria">#Biometria</a>
-                        </li>
-                        <li><a
-                                href="http://www.tse.jus.br/imprensa/noticias-tse/2019/Abril/identidade-digital-confira-as-principais-duvidas-sobre-o-documento-e-o-programa-icn/listacategoria?Subject=Tribunal%20Superior%20Eleitoral">#Tribunal
-                                Superior Eleitoral</a></li>
-                    </ul>
-                </div>
-                <div class="noticia-gestor">
-                    <a tabindex="0" role="button" data-toggle="popover" data-trigger="click" data-placement="bottom"
-                        data-content="<p>Telefone: +55 (61) 3030-7153/7085/7143/7083/7091</p><p>E-mail: <a href='mailto:imprensa@tse.jus.br'>imprensa@tse.jus.br</a></p><p>Última atualização:16/04/2019 12:20</p>"
-                        title="" data-original-title="Assessoria de Comunicação"><span>Gestor responsável:
-                        </span>Assessoria de
-                        Comunicação <i class="fa fa-plus-circle" aria-hidden="true"></i></a>
-                </div>
-            </div> -->
+            <?php include __DIR__ . '/inc/noticias/paragrafo-importante.inc.php';?>
+            <?php include __DIR__ . '/inc/noticias/aviso.inc.php';?>
 
         </section>
-        <aside id="coluna-links-noticias">
-            <?php 
-            include(__DIR__ .'/inc/noticias/relacionadas.php');
-            include(__DIR__ .'/inc/noticias/recentes.php');
-            include(__DIR__ .'/inc/noticias/temas.php');
-            include(__DIR__ .'/inc/noticias/quem-leu.php');
-            ?>
-        </aside>
-        <div id="barra-ferramentas-noticias">
-            <div class="links">
-                <div class="sumario">
-                    <nav class="navbar">
-                        <a class="navbar-brand sr-only" href="#">Tópicos da matéria:</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSumario"
-                            aria-controls="navbarSumario" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </nav>
-                </div>
-                <div class="paginacao"></div>
-                <div class="eventos-pagina">
-                    <div class="imprimir"></div>
-                    <div class="salvar"></div>
-                </div>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar" id="myBar"></div>
-            </div>
-        </div>
+        <?php include __DIR__ . '/inc/noticias/aside-noticias.inc.php';?>
+        <?php include __DIR__ . '/inc/noticias/barra-ferramentas-noticias.inc.php';?>
+
     </div>
 </div>
 
-<script>
-    window.onscroll = function () {
-        myFunction()
-    };
-
-    function myFunction() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
-    }
-</script>
-
 <?php include __DIR__ . '/inc/footer.inc.php';?>
+<script>
+    // window.onscroll = function () {
+    //     myFunction()
+    // };
+
+    // function myFunction() {
+    //     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    //     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    //     var scrolled = (winScroll / height) * 100;
+    //     document.getElementById("barra-progressao").style.width = scrolled + "%";
+    // }
+
+    // $(document).ready(function () {
+    //     (function () {
+    //         var procurar_imagem_pagina = $(".order-elementos-header").find("#imagem-principal-texto")
+    //         .length;
+
+    //         if (procurar_imagem_pagina) {
+    //             $(".order-elementos-header").addClass("titulo-mobile-imagem");
+    //             var titulo_pagina = $(".noticia-titulo").text();
+    //             $("<span class='titulo-pagina-img'>" + titulo_pagina + "</span>").insertAfter( "#imagem-principal-texto img" );
+    //         }
+
+    //     })();
+        
+    //     $('.abrir-sumario').on('click', function (e) {
+    //         e.stopPropagation();
+    //         $("#navbarSumario").toggleClass('fechar-mobile');
+    //     });
+    //     var path_sumario_link = $("#navbarSumario .navbar-nav .nav-item .nav-link");
+    //     path_sumario_link.on('click', function () {
+    //         $("#navbarSumario").toggleClass('fechar-mobile');
+    //         path_sumario_link.closest(".nav-link").removeClass("ativo");
+    //         $(this).closest(".nav-link").addClass("ativo");
+    //     });
+
+    // })
+</script>
