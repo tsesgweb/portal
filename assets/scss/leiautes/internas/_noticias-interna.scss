@@ -1,3 +1,5 @@
+$aviso_img: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='47' height='43.88' viewBox='0 0 47 43.88'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%231b305a;%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(-2.5 -4.06)'%3E%3Cpath class='a' d='M39.522,47.94H12.479A.5.5,0,0,1,12,47.282l2.08-6.241a.5.5,0,0,1,.475-.342H37.442a.5.5,0,0,1,.475.342L40,47.282a.5.5,0,0,1-.475.658Zm-26.351-1H38.829L37.082,41.7H14.919Z'/%3E%3Cpath class='a' d='M37.581,41.7H14.42a.5.5,0,0,1-.5-.5V25.055A11.647,11.647,0,0,1,25.554,13.422h.894A11.647,11.647,0,0,1,38.081,25.055V41.2A.5.5,0,0,1,37.581,41.7Zm-22.661-1H37.081V25.055A10.646,10.646,0,0,0,26.447,14.422h-.894A10.646,10.646,0,0,0,14.92,25.055V40.7Z'/%3E%3Cpath class='a' d='M26,9.221a.5.5,0,0,1-.5-.5V4.56a.5.5,0,0,1,1,0V8.721A.5.5,0,0,1,26,9.221Z'/%3E%3Cpath class='a' d='M41.528,15.653a.5.5,0,0,1-.354-.854l2.942-2.942a.5.5,0,0,1,.707.707l-2.942,2.942A.5.5,0,0,1,41.528,15.653Z'/%3E%3Cpath class='a' d='M49,31.181H44.84a.5.5,0,0,1,0-1H49a.5.5,0,0,1,0,1Z'/%3E%3Cpath class='a' d='M7.161,31.182H3a.5.5,0,1,1,0-1H7.161a.5.5,0,0,1,0,1Z'/%3E%3Cpath class='a' d='M10.472,15.654a.5.5,0,0,1-.354-.146L7.176,12.565a.5.5,0,0,1,.707-.707L10.825,14.8a.5.5,0,0,1-.354.854Z'/%3E%3Cpath class='a' d='M26,36.364a1.617,1.617,0,1,1,1.132-.474A1.544,1.544,0,0,1,26,36.364ZM24.48,20.756H27.5v2.781l-.647,7.783H25.128l-.647-7.783V20.756Z'/%3E%3C/g%3E%3C/svg%3E";
+
 .noticia {
     @include item("titulo") {
         @include titulo-noticias;
@@ -51,78 +53,227 @@
     &.texto-noticias-internas {
         @include make-col-ready();
         @include make-col(8);
-    }
-}
 
-#coluna-links-noticias {
-    @include make-col-ready();
-    @include make-col(4);
-}
-
-#barra-ferramentas-noticias {
-    @include make-col-ready(0);
-    @include make-col(12);
-
-    bottom: 0;
-    position: sticky;
-    min-height: 50px;
-    background-color: #F2F1F1;
-
-    .links {
-        .sumario {
-            
+        @include media-breakpoint-down(sm) {
+            @include make-col(12);
         }
     }
 
-    .progress-container {
-        background-color: #BDBDBD;
-        height: 4px;
-        width: 100%;
-    }
 
-    .progress-bar {
-        background-color: #4caf50;
-        height: 4px;
-        width: 0%;
-    }
 }
 
-#navbarSumario {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.aviso-ascom {
+    background-color: #fff5cd;
+    padding: 1rem;
+    padding-left: 150px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
 
-    .alinhar-sumario {
+    @include media-breakpoint-down(sm) {
+        padding-left: 1rem;
+    }
+
+    p {
+        color: #1B305A;
+        font-size: .9em;
+        margin: 0;
+    }
+
+    &::before {
+        content: "";
+        background-color: #ffea92;
+        background-image: url($aviso_img);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 100%;
+        display: block;
+        height: 75px;
+        width: 75px;
         position: absolute;
-        left: -260px;
-        width: 240px;
+        left: 30px;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: "";
+        background-color: #ffea92;
+        display: block;
+        width: 1px;
+        height: 70%;
+        position: absolute;
+        left: 125px;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
     }
 }
 
-.temas-tag {
-    margin-bottom: 30px;
+$aspas_abre: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='95.333px' height='95.332px' viewBox='0 0 95.333 95.332' style='enable-background:new 0 0 95.333 95.332;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath  fill='%231B305A' d='M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793 c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045 s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076 c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002 c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z'/%3E%3Cpath  fill='%231B305A' d='M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019 c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23 c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16 c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312 c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A";
+$aspas_fecha: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='98.829px' height='98.829px' viewBox='0 0 98.829 98.829' style='enable-background:new 0 0 98.829 98.829;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath  fill='%231B305A' d='M96.76,41.603C91.511,22.831,78.562,9.204,65.975,9.204c-1.011,0-2.021,0.088-3.005,0.262 c-0.558,0.098-1.046,0.426-1.348,0.902c-0.301,0.479-0.386,1.061-0.233,1.605l2.591,9.268c0.25,0.895,1.113,1.5,2.01,1.459 l0.206-0.004c4.668,0,13.199,6.996,17.548,22.545c0.172,0.617,0.335,1.248,0.492,1.906c-4.882-2.416-10.706-2.975-15.98-1.506 C56.358,48.97,49.388,61.356,52.714,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.046-0.834 c7.846-2.193,13.745-8.707,16.611-18.338C99.521,61.764,99.456,51.249,96.76,41.603z'/%3E%3Cpath  fill='%231B305A' d='M14.088,9.206c-1.009,0-2.02,0.086-3.003,0.26c-0.557,0.096-1.046,0.426-1.347,0.902 c-0.301,0.479-0.386,1.061-0.234,1.605l2.592,9.268c0.25,0.895,1.097,1.5,2.01,1.459l0.204-0.004 c4.668,0,13.2,6.996,17.549,22.545c0.173,0.621,0.336,1.252,0.492,1.906c-4.884-2.416-10.706-2.975-15.98-1.506 C4.475,48.97-2.497,61.356,0.831,73.252c2.696,9.639,11.563,16.373,21.563,16.373c2.037,0,4.071-0.281,6.047-0.834 c7.845-2.193,13.744-8.707,16.611-18.338c2.586-8.689,2.522-19.205-0.175-28.852C39.625,22.831,26.678,9.206,14.088,9.206z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A";
 
-    .tags {
-        list-style: none;
-        margin-top: 20px;
+.paragrafo-importante {
+    margin-top: 70px;
 
-        .tag {
+    p {
+        color: #1B305A;
+
+        &::before,
+        &::after {
+            content: '';
             display: inline-block;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
 
-            .tag-link {
-                background-color: #E5E5E5;
-                border-radius: 15px;
-                display: block;
-                font-size: .9em;
-                font-weight: bold;
-                margin: 0px 10px 10px 0px;
-                padding: 4px 15px;
+        &::before {
+            background-image: url($aspas_abre);
+            height: 25px;
+            width: 35px;
+            margin-right: 5px;
+            background-position: center bottom;
+        }
 
-                &:hover {
-                    text-decoration: none;
-                    background-color: #47C77D;
+        &::after {
+            background-image: url($aspas_fecha);
+            height: 15px;
+            width: 20px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.order-elementos-header {
+    @include media-breakpoint-only(xs) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+
+    .noticia-subtitulo {
+        @include media-breakpoint-only(xs) {
+            display: none;
+        }
+
+    }
+
+    .noticia-icone {
+        @include media-breakpoint-only(xs) {
+            display: none;
+        }
+    }
+
+    .noticia-cabecalho {
+        @include media-breakpoint-only(xs) {
+            order: 2;
+            &:before {
+                content: "Notícia";
+                background: #47c77d;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 10px;
+                color: #000;
+                font-weight: normal;
+                padding-right: 0.6em !important;
+                padding-left: 0.6em !important;
+                border-radius: 10px;
+                text-transform: uppercase;
+            }
+        }
+
+        .noticia-titulo {
+            @include media-breakpoint-only(xs) {
+                border: none;
+                font-size: 1.1em !important;
+                line-height: 28px !important;
+
+            }
+        }
+    }
+
+    #imagem-principal-texto {
+        @include media-breakpoint-only(xs) {
+            order: 1;
+            position: relative;
+            display: contents;
+        }
+
+        .descricao-img-principal {
+            @include media-breakpoint-only(xs) {
+                display: none;
+            }
+        }
+
+        .video {
+            @include media-breakpoint-only(xs) {
+                z-index: 1;
+            }
+
+            &:before {
+                @include media-breakpoint-only(xs) {
+                    // margin-top: -60px;
+                }
+
+            }
+        }
+
+    }
+
+    .noticia__conteudo {
+        @include media-breakpoint-only(xs) {
+            order: 3;
+        }
+    }
+
+    .noticia-dados {
+        @include media-breakpoint-only(xs) {
+            border-top: none;
+            text-align: left;
+            padding-bottom: 15px;
+        }
+    }
+
+    &.titulo-mobile-imagem {
+        .noticia-cabecalho {
+            @include media-breakpoint-only(xs) {
+                display: none;
+            }
+        }
+
+        #imagem-principal-texto {
+            .titulo-pagina-img {
+                display: none;
+
+                @include media-breakpoint-only(xs) {
+                    display: block;
+                    position: absolute;
+                    z-index: 2;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    padding-top: 10px;
+                    background: #020024;
+                    background: linear-gradient(0deg, rgba(2, 0, 36, 0.812763) 0%, rgba(29, 29, 29, 0) 100%);
+                    color: #fff;
+                    bottom: 0;
+                    left: 0;
+                    height: 40%;
+                    width: 100%;
+                    text-align: left;
+                    font-family: "Merriweather", sans-serif;
+                    font-size: .85em;
+                }
+
+                @media only screen and (max-width: 320px) {
+                    height: 50%;
                 }
             }
         }
+
     }
 }
