@@ -55,7 +55,7 @@ const htmlreplace = {
   },
   jshead: `js/modernizr${min}.js`,
   jsvendor: `js/vendor${min}.js`,
-  jsrybena: `js/rybena${min}.js`,
+  jsrybena: `js/rybena${min}.js?positionPlayer=left`,
   jsexternal: `js/external${min}.js`,
   jsportal: `js/portal${min}.js`,
   jshome: `js/home${min}.js`,
