@@ -1,0 +1,51 @@
+.radio {
+  @include item('lista') {
+    @include card;
+    border: none;
+    background: url('#{$path_img}/noticias/sound.svg') repeat-x padding-box
+      bottom center;
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    flex-flow: wrap;
+    min-height: 225px;
+
+    a {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+
+      &:hover {
+        text-decoration: none;
+        opacity: 0.8;
+      }
+    }
+
+    @include item(verde-escuro) {
+      background-color: #009291;
+    }
+
+    @include item(amarelo) {
+      background-color: #ffcc66;
+
+      a {
+        color: #82424a;
+      }
+    }
+
+    @include item(verde) {
+      background-color: #20ab6f;
+    }
+
+    @include item(vermelho) {
+      background-color: #e07a5f;
+      a {
+        color: #873c42;
+      }
+    }
+  }
+  @include item('lista-body') {
+    @include card-body;
+  }
+}

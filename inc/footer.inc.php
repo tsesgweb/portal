@@ -1,7 +1,8 @@
 <?php $maisvisitados && include __DIR__ . '/mais-visitado.inc.php'; ?>
-<?php !$home && $asideinterna || $asidenoticia || $asideagenda || $asidenoticialistagem ? print '</div><!-- end:conteudo?coluna-->' : ''; ?>
+<?php !$home && $asideinterna || $asidenoticia || $asideagenda || $asidenoticialistagem || $asidenoticiaradio ? print '</div><!-- end:conteudo?coluna-->' : ''; ?>
 <?php $asidenoticia && include __DIR__ . '/noticias/aside-noticias.inc.php'; ?>
 <?php $asidenoticialistagem && include __DIR__ . '/noticias/aside-noticias-listagem.inc.php'; ?>
+<?php $asidenoticiaradio && include __DIR__ . '/noticias/aside-noticias-radio.inc.php'; ?>
 <?php $asideagenda && include __DIR__ . '/aside-agenda.inc.php'; ?>
 <?php $feedback && include __DIR__ . '/feedback.inc.php'; ?>
 <?php !$home && print '</div></main><!-- end:linha < conteudo-->'; ?>

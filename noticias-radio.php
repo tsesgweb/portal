@@ -2,26 +2,19 @@
 include __DIR__ . '/inc/config.inc.php';
 $asideinterna         = false;
 $asidenoticia         = false;
-$titulo               = 'Notícias';
+$titulo               = 'Rádio';
 $compartilhar         = false;
 $tags                 = false;
 $gestor               = false;
 $maisvisitados        = false;
 $paginacao            = false;
 $destaquenoticia      = true;
-$asidenoticialistagem = true;
+$asidenoticiaradio    = true;
 include __DIR__ . '/inc/header.inc.php';
-$url            = 'http://www.tse.jus.br/@@get_lista_noticias_categoria?subject=Tribunal%20Superior%20Eleitoral&sort=date%3AD%3AL%3Ad1';
-$data           = file_get_contents($url);
-$outrasNoticias = json_decode($data);
-$outrasNoticias[5]->image_preview = null;
-$outrasNoticias[5]->video_image = null;
-$outrasNoticias[6]->image_preview = null;
-$outrasNoticias[6]->video_image = 'https://img.youtube.com/vi/1PlnZEt797o/maxresdefault.jpg';
-$outrasNoticias[6]->video_url = 'https://www.youtube.com/watch?v=1PlnZEt797o';
-// echo '<pre>';
-// print_r($outrasNoticias[2]);
-// echo '</pre>';
+$url                  = 'http://www.tse.jus.br/@@get_lista_noticias_categoria?subject=Elei%C3%A7%C3%B5es%20(2020)&sort=date%3AD%3AL%3Ad1';
+$data                 = file_get_contents($url);
+$outrasNoticias       = json_decode($data);
+
 $tags = array(
         array("icon"=> "<i class='fa fa-circle' aria-hidden='true'></i> ","letter"=> null, "badge"=>"aovivo", "name"=> "Ao Vivo"), 
         array("icon"=> null,"letter"=> "E", "badge"=>"evento", "name"=>"Evento"), 
@@ -35,7 +28,9 @@ $tags = array(
         array("icon"=> null,"letter"=> "M", "badge"=>"noticia", "name"=>"MulheresPolitica"),
         array("icon"=> null,"letter"=> "N", "badge"=>"noticia", "name"=>"Notícia"));
 ?>
+
 <?php __DIR__.'/inc/noticias/navegacao-data.inc.php';?>
+
 <div id="news-list" class="news-list">
   <?php
   
@@ -54,10 +49,7 @@ $tags = array(
       <?php
       if ($noticia->image_preview  || $noticia->video_image) :
       ?>
-      <div class="news-list-col-4">
-        <span
-          class="badge-<?= $tag['badge'] ?> news-list-badge news-list-badge__limited"><?php $tag["icon"] !== null ? print $tag['icon'] :  print substr($tag['name'], 0, 1) ?><span>
-            <?php $tag["icon"] !== null ? print $tag['name']: print substr($tag['name'], 1) ?></span></span>
+      <div class="news-list-col-4">        
         <?php if(!$noticia->video_image): ?>
         <a href="<?= $noticia->url; ?>" title="<?= $noticia->title; ?>">
           <?php else: ?>
@@ -75,11 +67,7 @@ $tags = array(
       </div>
       <?php endif; ?>
       <div class="news-list-col-<?php $noticia->image_preview || $noticia->video_image ? print '8': print '12';?>">
-        <div class="news-list-content">
-          <?php 
-          !$noticia->image_preview &&
-          !$noticia->video_image &&
-          print '<span class="badge-'.$tag['badge'].' news-list-badge news-list-badge__expanded">'.$tag['name'].'</span>'; ?>
+        <div class="news-list-content">          
           <h3 class="news-list-title">
             <a href="<?= $noticia->url; ?>" title="<?= $noticia->title; ?>">
               <?= $noticia->title; ?>

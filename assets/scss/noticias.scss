@@ -1,13 +1,14 @@
-@import "variaveis/config";
-@import "plugins/bootstrap";
-@import "variaveis/remover";
-@import "mixins/mixins";
+@import 'variaveis/config';
+@import 'plugins/bootstrap';
+@import 'variaveis/remover';
+@import 'mixins/mixins';
 //bootstrap
-@import "node_modules/bootstrap/scss/card";
-@import "node_modules/bootstrap/scss/list-group";
+@import 'node_modules/bootstrap/scss/card';
+@import 'node_modules/bootstrap/scss/list-group';
 
-@import "leiautes/noticias/destaques";
-@import "leiautes/noticias/listagem";
-@import "leiautes/noticias/aside-noticias";
-@import "leiautes/noticias/barra-ferramentas";
-@import "leiautes/noticias/aside-noticias-listagem";
+@import 'leiautes/noticias/destaques';
+@import 'leiautes/noticias/listagem';
+@import 'leiautes/noticias/aside-noticias';
+@import 'leiautes/noticias/barra-ferramentas';
+@import 'leiautes/noticias/aside-noticias-radio';
+@import 'leiautes/noticias/aside-noticias-listagem';
