@@ -70,7 +70,7 @@
                 "node_modules/clipboard/dist/clipboard.min.js"
             ],
             "rybena": [
-                "assets/js/vendor/rybena-2.0.js?positionPlayer=left"
+                "assets/js/vendor/rybena-2.0.js"
             ],
             "portal": [
                 "assets/js/novo-portal.js",
