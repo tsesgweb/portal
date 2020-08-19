@@ -88,20 +88,10 @@ $tags = array(
           <p class="news-list-description">
             <?= $noticia->description; ?>
           </p>
-        </div>
+        </div>        
         <footer class="news-list-footer">          
           <button class="news-list-sharing" type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11.352 12.486">
-              <defs>
-                <style>
-                  .a {
-                    fill: #6B6B6B;
-                  }
-                </style>
-              </defs>
-              <path class="a"
-                d="M9.079,4.453a2.253,2.253,0,0,0,2.273-2.226,2.274,2.274,0,0,0-4.547,0,2.188,2.188,0,0,0,.034.382l-2.9,2.25a2.29,2.29,0,0,0-1.665-.712,2.227,2.227,0,1,0,0,4.453,2.29,2.29,0,0,0,1.67-.717l2.877,2.125a2.2,2.2,0,0,0-.015.253A2.274,2.274,0,1,0,9.079,8.033,2.279,2.279,0,0,0,7,9.364L4.3,7.374a2.182,2.182,0,0,0,0-2.01L7.051,3.231A2.281,2.281,0,0,0,9.079,4.453Z" />
-            </svg>
+            <img src="assets/imagens/noticias/share.svg" alt="share icon">
           </button>
           <time class="time"
             datetime="<?= "{$ano}-{$mes}-{$dia} {$hora}:{$min}" ?>"><?= $data_final; ?><?= $hora_final?></time>

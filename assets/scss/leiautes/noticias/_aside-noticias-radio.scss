@@ -2,13 +2,21 @@
   @include item('lista') {
     @include card;
     border: none;
-    background: url('#{$path_img}/noticias/sound.svg') repeat-x padding-box
-      bottom center;
+    background: url('#{$path_img}/noticias/sound.svg') repeat-x padding-box bottom center;
     display: flex;
     justify-items: center;
     align-content: center;
     flex-flow: wrap;
-    min-height: 225px;
+
+    @include media-breakpoint-up(xs) {
+      min-height: 160px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      min-height: 225px;
+    }
+
+
 
     a {
       color: #fff;
@@ -40,12 +48,15 @@
 
     @include item(vermelho) {
       background-color: #e07a5f;
+
       a {
         color: #873c42;
       }
     }
   }
+
   @include item('lista-body') {
     @include card-body;
+    text-align: center;
   }
 }
