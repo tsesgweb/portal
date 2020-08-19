@@ -1,355 +1,413 @@
-.news-list {
-  @include item(card) {
-    @include card;
-    border: 0;
-    border-radius: 0;
-    width: 100%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    border-bottom: 1px solid #bdbdbd;
+@mixin listagem($name: news) {
+  .#{$name}-list {
+    @include item(card) {
+      @include card;
+      border-radius: 0;
+      width: 100%;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      border-width: 0;
+      border-bottom: 1px solid #bdbdbd;
 
-    @include media-breakpoint-only(xs) {
-      padding-bottom: 0;
+      @include media-breakpoint-only(xs) {
+        padding-bottom: 0;
+        padding-top: 0;
+        border-radius: $radius;
+        border: 1px solid #bdbdbd;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @include item(row) {
+      @include make-row(0);
+      padding-top: 5px;
+      padding-bottom: 5px;
+      align-items: center;
+    }
+
+    @include item(col-4) {
+      @include media-breakpoint-up(xs) {}
+
+      @include media-breakpoint-up(sm) {}
+
+      @include media-breakpoint-up(md) {}
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(4);
+        position: relative;
+      }
+    }
+
+    @include item(col-8) {
+      @include make-col-ready();
+
+      @include media-breakpoint-up(xs) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      @include media-breakpoint-up(sm) {}
+
+      @include media-breakpoint-up(md) {}
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(8);
+      }
+    }
+
+    @include item(col-12) {
+      @include make-col-ready();
+
+      @include media-breakpoint-up(xs) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      @include media-breakpoint-up(sm) {}
+
+      @include media-breakpoint-up(md) {}
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(12);
+        padding-top: 15px;
+
+        .#{$name}-list-sharing-overlay {
+          top: -20px;
+        }
+      }
+    }
+
+    @include item(media) {
+      @include card-img;
+      margin: 0;
+
+      @include media-breakpoint-only(xs) {
+        display: none;
+      }
+    }
+
+    @include item(img) {
+      border-radius: $radius;
+    }
+
+    @include item(content) {
+      @include card-body;
       padding-top: 0;
-    }
-
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-
-  @include item(row) {
-    @include make-row(0);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    align-items: center;
-  }
-
-  @include item(col-4) {
-    @include media-breakpoint-up(xs) {
-    }
-
-    @include media-breakpoint-up(sm) {
-    }
-
-    @include media-breakpoint-up(md) {
-    }
-
-    @include media-breakpoint-up(lg) {
-      @include make-col(4);
+      padding-bottom: 0;
       position: relative;
     }
-  }
 
-  @include item(col-8) {
-    @include make-col-ready();
+    @include item(title) {
+      margin-bottom: 30px;
 
-    @include media-breakpoint-up(xs) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    @include media-breakpoint-up(sm) {
-    }
-
-    @include media-breakpoint-up(md) {
-    }
-
-    @include media-breakpoint-up(lg) {
-      @include make-col(8);
-    }
-  }
-
-  @include item(col-12) {
-    @include make-col-ready();
-
-    @include media-breakpoint-up(xs) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    @include media-breakpoint-up(sm) {
-    }
-
-    @include media-breakpoint-up(md) {
-    }
-
-    @include media-breakpoint-up(lg) {
-      @include make-col(12);
-      padding-top: 15px;
-
-      .news-list-sharing-overlay {
-        top: -20px;
+      a {
+        &:hover {
+          color: lighten($azul, 10%);
+          text-decoration: none;
+        }
       }
     }
-  }
 
-  @include item(media) {
-    @include card-img;
-    margin: 0;
-
-    @include media-breakpoint-only(xs) {
-      display: none;
-    }
-  }
-
-  @include item(img) {
-    border-radius: $radius;
-  }
-
-  @include item(content) {
-    @include card-body;
-    padding-top: 0;
-    padding-bottom: 0;
-    position: relative;
-  }
-
-  @include item(title) {
-    margin-bottom: 30px;
-
-    a {
-      &:hover {
-        color: lighten($azul, 10%);
-        text-decoration: none;
-      }
-    }
-  }
-
-  @include item(sharing-overlay) {
-    padding: 5px 15px;
-    height: 100%;
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    height: 0;
-
-    @include modificar(active) {
-      justify-content: space-evenly;
-      visibility: visible;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: $radius;
-      background-color: rgba(27, 48, 90, 0.98);
-      width: 100%;
-      z-index: 3;
-      opacity: 1;
-      margin: 0 15px;
+    @include item(sharing-overlay) {
+      padding: 5px 15px;
       height: 100%;
-    }
-
-    @each $badge-nome, $badge-content in $badge-theme {
-      @include modificar(color-#{$badge-nome}) {
-        @include elemento(tag) {
-          color: $badge-content;
-
-          @if $badge-nome== 'comunicado' {
-            color: #ffffff;
-          }
-        }
-      }
-    }
-
-    @include elemento(close) {
-      text-align: center;
-      vertical-align: middle;
+      visibility: hidden;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      width: 16px;
-      height: 16px;
-      color: $azul;
-      background-color: #fff;
-      border-radius: 50%;
-      border: none;
-      font-size: 10px;
-      font-weight: bold;
-    }
+      flex-direction: column;
+      opacity: 0;
+      height: 0;
 
-    @include elemento(tag) {
-      font-size: 12px;
-    }
-
-    @include elemento(title) {
-      color: #fff;
-    }
-
-    @include elemento(content) {
-      .header {
-        color: #fff;
-        font-size: 10px;
+      @include modificar(active) {
+        justify-content: space-evenly;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: $radius;
+        background-color: rgba(27, 48, 90, 0.98);
+        width: 100%;
+        z-index: 3;
+        opacity: 1;
+        margin: 0 15px;
+        height: 100%;
       }
 
-      .footer {
-        border-radius: $radius;
-        padding: 2.5px;
-        font-size: 10px;
+      @each $badge-nome,
+      $badge-content in $badge-theme {
+        @include modificar(color-#{$badge-nome}) {
+          @include elemento(tag) {
+            color: $badge-content;
 
-        button {
-          &:hover {
-            text-decoration: none;
+            @if $badge-nome=='comunicado' {
+              color: #ffffff;
+            }
           }
         }
       }
 
-      @each $badge-nome, $badge-content in $badge-theme {
-        @include modificar(color-#{$badge-nome}) {
-          @include elemento(footer) {
-            color: $badge-content;
-            border: 1px solid $badge-content;
+      @include elemento(close) {
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 16px;
+        height: 16px;
+        color: $azul;
+        background-color: #fff;
+        border-radius: 50%;
+        border: none;
+        font-size: 10px;
+        font-weight: bold;
+      }
 
+      @include elemento(tag) {
+        font-size: 12px;
+      }
+
+      @include elemento(title) {
+        color: #fff;
+      }
+
+      @include elemento(content) {
+        .header {
+          color: #fff;
+          font-size: 10px;
+        }
+
+        .footer {
+          border-radius: $radius;
+          padding: 2.5px;
+          font-size: 10px;
+
+          button {
             &:hover {
-              color: lighten($badge-content, 10%);
+              text-decoration: none;
             }
+          }
+        }
 
-            @if $badge-nome== 'comunicado' {
-              color: #fff;
+        @each $badge-nome,
+        $badge-content in $badge-theme {
+          @include modificar(color-#{$badge-nome}) {
+            @include elemento(footer) {
+              color: $badge-content;
+              border: 1px solid $badge-content;
 
               &:hover {
-                color: lighten(#fff, 10%);
+                color: lighten($badge-content, 10%);
+              }
+
+              @if $badge-nome=='comunicado' {
+                color: #fff;
+
+                &:hover {
+                  color: lighten(#fff, 10%);
+                }
               }
             }
           }
         }
-      }
 
-      @each $badge-nome, $badge-content in $badge-theme {
-        @include modificar(color-#{$badge-nome}_icons) {
-          #compartilhar-conteudo .fa {
-            &:hover {
-              background-color: $badge-content;
+        @each $badge-nome,
+        $badge-content in $badge-theme {
+          @include modificar(color-#{$badge-nome}_icons) {
+            #compartilhar-conteudo .fa {
+              &:hover {
+                background-color: $badge-content;
+                border-color: $badge-content;
+              }
+            }
+          }
+        }
+
+        .icons {
+          .noticia-compartilhar {
+            display: flex;
+
+            &#compartilhar-conteudo {
+              padding-top: 10px;
+              padding-bottom: 10px;
             }
           }
         }
       }
+    }
 
-      .icons {
-        .noticia-compartilhar {
-          display: flex;
+    @include item(footer) {
+      @include card-footer;
+      padding-top: 5px;
+      padding-bottom: 0;
+      background-color: transparent;
+      border-top: none;
+    }
 
-          &#compartilhar-conteudo {
-            padding-top: 2.5px;
-            padding-bottom: 2.5px;
+    @include item(badge) {
+      &.#{$name}-list-badge__limited {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        z-index: 2;
+        padding-left: 0;
+        padding-right: 0;
+
+        @include media-breakpoint-only(xs) {
+          display: none;
+        }
+
+        span {
+          transition: ease-in-out 2s;
+          display: none;
+        }
+
+        &:hover {
+          span {
+            transition: ease-in-out 2s;
+            display: inline-block;
           }
         }
       }
-    }
-  }
 
-  @include item(footer) {
-    @include card-footer;
-    padding-top: 5px;
-    padding-bottom: 0;
-    background-color: transparent;
-    border-top: none;
-  }
+      &.#{$name}-list-badge__expanded {
+        top: -20px;
 
-  @include item(badge) {
-    &.news-list-badge__limited {
-      position: absolute;
-      bottom: 20px;
-      left: 10px;
-      z-index: 2;
-      padding-left: 0;
-      padding-right: 0;
-
-      @include media-breakpoint-only(xs) {
-        display: none;
-      }
-
-      span {
-        transition: ease-in-out 2s;
-        display: none;
-      }
-
-      &:hover {
-        span {
-          transition: ease-in-out 2s;
-          display: inline-block;
+        @include media-breakpoint-only(xs) {
+          display: none;
         }
       }
     }
 
-    &.news-list-badge__expanded {
-      top: -20px;
+    @include item(title) {
+      @include titulo-noticias($azul);
+      line-height: $line-height-base;
+      font-size: 1.25rem;
+
+      @include media-breakpoint-only(xs) {
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+    }
+
+    @include item(description) {
+      margin-bottom: 5px;
+      font-size: 1rem;
+      font-family: $font-descriptions;
+      line-height: $line-height-base;
+      color: #6b6b6b;
 
       @include media-breakpoint-only(xs) {
         display: none;
       }
     }
-  }
 
-  @include item(title) {
-    @include titulo-noticias($azul);
-    line-height: $line-height-base;
-    font-size: 1.25rem;
+    @include item(footer) {
+      display: flex;
+      align-items: center;
 
-    @include media-breakpoint-only(xs) {
-      font-size: 1rem;
-      margin-bottom: 0;
+      .time {
+        font-size: 0.75rem;
+        color: #bdbdbd;
+      }
+    }
+
+    @include item(sharing) {
+      border: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      display: flex;
+      margin-right: 10px;
+      background-color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      padding: 0;
+    }
+
+    @include item(download) {
+      @extend .#{$name}-list-sharing;
+    }
+
+    @include item(play) {
+      @extend .#{$name}-list-sharing;
+    }
+
+    @include item(view) {
+      @extend .#{$name}-list-sharing;
+    }
+
+    @include item(read-more) {
+      @include media-breakpoint-up(xs) {
+        margin: 0;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin: 30px 15%;
+      }
     }
   }
 
-  @include item(description) {
-    margin-bottom: 5px;
-    font-size: 1rem;
-    font-family: $font-descriptions;
-    line-height: $line-height-base;
-    color: #6b6b6b;
+  @content;
+}
 
-    @include media-breakpoint-only(xs) {
-      display: none;
-    }
-  }
-
+@include listagem(news) {
   @include item(footer) {
-    display: flex;
-    align-items: center;
-
     @include media-breakpoint-only(xs) {
       display: none;
     }
+  }
+}
 
-    .time {
-      font-size: 0.75rem;
-      color: #bdbdbd;
+@include listagem(radio) {
+  @include item('footer') {
+    @include media-breakpoint-only(xs) {
+      display: block;
     }
   }
+}
 
-  @include item(sharing) {
-    border: 0;
+.radio {
+  @include item(progress-player) {
+    // display: none;
+    height: 5px;
+    position: relative;
+    background: #bdbdbd;
+    border-radius: $radius;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 
-    &:hover {
-      cursor: pointer;
+    span {
+      display: block;
+      height: 100%;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background-color: $radio;
+      background-image: linear-gradient(center bottom, $radio 37%, $radio 69%);
+      box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
     }
 
-    display: flex;
-    margin-right: 10px;
-    background-color: rgba(107, 107, 107, 0.2);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    padding: 4px;
   }
 
-  @include item(read-more) {
-    @include media-breakpoint-up(xs) {
-      margin: 0;
-    }
 
-    @include media-breakpoint-up(lg) {
-      margin: 30px 15%;
-    }
+}
 
-    .btn {
-      // font-size: 16px;
-    }
-  }
+.btn-radio {
+  color: #fff;
 }
