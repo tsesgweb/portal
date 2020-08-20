@@ -29,6 +29,7 @@ $paginafull     = false;
 $aviso          = true;
 $selos          = false;
 $destaquenoticia = false;
+$internanoticia = false;
 $asidenoticialistagem = false;
 $asidenoticiaradio = false;
 $arrayTags = ['Partidos políticos', 'Prestação de contas partidárias', 'Partidos registrados no TSE', 'Filiação', 'Cassação','Eleições (2016)','Tribunal Superior Eleitoral','Justiça Eleitoral'];
