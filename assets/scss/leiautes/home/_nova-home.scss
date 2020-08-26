@@ -1,0 +1,379 @@
+@mixin filtro($bg-color, $color: #000) {
+  background: $bg-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  color: $color;
+  font-weight: normal;
+  position: absolute;
+  padding-right: 0.6em !important;
+  padding-left: 0.6em !important;
+  border-radius: 10px;
+}
+
+// $bagde-theme in _config.scss
+@each $badge-nome, $badge-content in $badge-theme {
+  .badge-#{$badge-nome} {
+    @if $badge-nome==
+      'comunicado' or
+      $badge-nome==
+      'aovivo' or
+      $badge-nome==
+      'video'
+    {
+      @include filtro($badge-content, #fff);
+    } @else {
+      @include filtro($badge-content);
+    }
+  }
+}
+.destaque {
+  &.oculto {
+    display: none;
+  }
+  @include elemento(carregando) {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    // padding: 30px 0;
+    .spinner-border {
+      color: $theme-color;
+    }
+
+    &.oculto {
+      display: none;
+    }
+  }
+
+  @include item(noticia) {
+    @include make-col(9);
+  }
+
+  @include item(servico) {
+    background-color: wheat;
+    @include make-col(3);
+  }
+}
+
+.noticia {
+  @include item(item) {
+    &.noticia-item_video {
+      @include icone;
+      position: relative;
+    }
+  }
+
+  @include item(principal) {
+    @include make-row(0);
+    @include elemento(titulo) {
+      position: absolute;
+      color: #fff;
+      transition: 0.6s;
+      padding-right: 15px;
+      padding-left: 15px;
+
+      &:focus,
+      &:hover {
+        transition: 0.4s;
+        cursor: pointer;
+
+        .sutia {
+          opacity: 1;
+          display: block;
+          transition: 0.4s;
+
+          &:before {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 5px;
+            background: $verde;
+            transition: 0.4s;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      .titulo {
+        @include media-breakpoint-up(xs) {
+          font-size: 1rem;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 2.25rem;
+        }
+
+        font-family: 'Merriweather', sans-serif;
+
+        font-weight: 700;
+        text-shadow: 1px 1px 2px black, 0 0 1em $cinza, 0 0 0.2em $cinza;
+        margin-top: 1rem;
+
+        a {
+          line-height: 3rem;
+          color: #fff;
+          text-decoration: none;
+          transition: 0.4s;
+
+          &:focus,
+          &:hover {
+            transition: 0.4s;
+          }
+        }
+
+        span {
+          @include paragrafo;
+          font-size: 1.875rem;
+          line-height: 2.125rem;
+          font-weight: 400;
+          letter-spacing: 1px;
+          margin-top: 10px;
+          opacity: 0;
+          display: block;
+          transition: 0.4s;
+          color: #fff;
+          text-shadow: 2px 2px 4px black, 0 0 1em $cinza, 0 0 0.2em $cinza;
+        }
+      }
+
+      // animação no ao vivo
+      @keyframes vivo {
+        0%,
+        100% {
+          opacity: 0;
+        }
+
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .fa-circle {
+        animation-name: vivo;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  @include item(secundaria) {
+    display: flex;
+
+    .noticia__titulo {
+      @extend .noticia-principal__titulo;
+      top: 0;
+      .titulo {
+        font-size: 1rem;
+        a {
+          line-height: $line-height-base;
+        }
+        .sutia {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // noticias sem imagem
+
+  @include make-col-ready();
+
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    background: $theme-color-bg;
+
+    .card {
+      border: none;
+      border-top-right-radius: 0px !important;
+      border-top-left-radius: 0px !important;
+      box-shadow: 0px 4px 13px 1px rgba(0, 0, 0, 0.05);
+
+      .card-body {
+        border-top: 1px solid $theme-color-bg;
+      }
+    }
+  }
+
+  @include media-breakpoint-only(xs) {
+    @include make-col-ready(0);
+    @include make-col(12);
+
+    .mais-noticias {
+      padding: 0.625rem;
+      background: $amarelo;
+    }
+
+    padding: 5px;
+
+    a {
+      font-size: 14px;
+    }
+
+    .card {
+      background-color: transparent;
+      border: 0;
+
+      @include item(body) {
+        padding: 0;
+      }
+    }
+
+    @include elemento(titulo) {
+      a {
+        &::before {
+          display: none !important;
+        }
+      }
+    }
+
+    @include elemento(itens) {
+      background-color: #fff;
+      padding: 0 20px;
+
+      hr {
+        margin: 5px 0;
+      }
+    }
+
+    @include elemento(botoes) {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+      margin-top: 10px !important;
+      border-top: none !important;
+      display: flex;
+      justify-content: space-between;
+
+      button.btn-custom {
+        font-size: 14px;
+        font-weight: bold;
+        color: $theme-color;
+        background-color: #fff;
+        margin-right: 5px;
+        margin-left: 5px;
+        border-radius: $radius;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          color: $theme-color;
+          margin-right: 5px;
+        }
+
+        img {
+          max-height: 15px;
+          padding: 0;
+        }
+
+        &:first-child {
+          border-bottom: none !important;
+          margin-top: 0 !important;
+          margin-left: 0;
+        }
+
+        &:last-child {
+          border-top: none !important;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @include elemento(itens) {
+    border-right: 1px solid $theme-color-bg;
+    @include make-col-ready();
+
+    @include media-breakpoint-only(xs) {
+      @include make-col(12);
+      border-right: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(10);
+    }
+  }
+
+  @include elemento(botoes) {
+    @include make-col-ready();
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(2);
+    }
+
+    .btn-custom {
+      @include paragrafo;
+      font-size: 1rem;
+      display: flex;
+      font-weight: 400;
+      color: #555;
+      width: 100%;
+      border-radius: 0;
+      align-items: center;
+
+      &:first-child {
+        border-bottom: 1px solid #ddd;
+      }
+
+      &:last-child {
+        border-top: 1px solid #ddd;
+      }
+
+      svg {
+        margin-right: 15px;
+      }
+
+      img {
+        padding: 5px 0;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        font-weight: 600;
+        background: $verde;
+        color: #fff;
+
+        img {
+          filter: contrast(10%) brightness(200%);
+        }
+      }
+    }
+  }
+
+  @include elemento(titulo) {
+    font-family: 'Merriweather', sans-serif;
+    font-size: 18px;
+    color: #6b6b6b;
+    line-height: 20px;
+
+    a {
+      text-decoration: none;
+      transition: 0.4s;
+
+      &:before {
+        content: ' ';
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-right: 10px;
+        background: $verde;
+        height: 2px;
+        width: 22px;
+        transition: 0.4s;
+      }
+
+      &:focus,
+      &:hover {
+        margin-left: 5px;
+        transition: 0.4s;
+
+        &:before {
+          content: ' ';
+          display: inline-block;
+          transition: 0.4s;
+          margin-bottom: 5px;
+          margin-right: 10px;
+          background: $verde;
+          height: 2px;
+          width: 32px;
+        }
+      }
+    }
+  }
+}

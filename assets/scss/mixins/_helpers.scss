@@ -35,8 +35,7 @@
     $rss-color: map-get($social-media-pallet, rss) !global;
   }
 }
-
-
+// para funcionar import  'node_modules/bootstrap/scss/list-group';
 @mixin list-group-horizontal {
   @extend .list-group-horizontal;
 }
@@ -45,7 +44,7 @@
   @extend .list-group-flush;
 }
 
-@mixin list-group($type:flush) {
+@mixin list-group($type: flush) {
   @extend .list-group;
 
   @if $type==flush {
@@ -61,15 +60,13 @@
   @extend .list-group-item-action;
 }
 
-@mixin list-group-item($action:false) {
+@mixin list-group-item($action: false) {
   @extend .list-group-item;
 
   @if $action==true {
     @include list-group-item-action;
   }
 }
-
-
 
 @mixin nav {
   @extend .nav;
@@ -91,9 +88,7 @@
   @if $color==light {
     @extend .navbar-#{$color};
     background-color: $branco;
-  }
-
-  @else {
+  } @else {
     @extend .navbar-#{$color};
     background-color: $dark;
   }
