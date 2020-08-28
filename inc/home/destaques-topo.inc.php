@@ -1,17 +1,3 @@
-<!-- loading... -->
-<div class="load destaque__carregando" id="load-destaques">
-  <div class="load-container">
-    <div class="load-row">
-      <div class="load-principal">
-        <div class="load-badge"></div>
-        <div class="load-title"></div>
-        <div class="load-title"></div>
-        <div class="load-title"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- loading... -->
 <!-- destaque -->
 <div id="destaque-principal" class="destaque__conteudo oculto">
   <div class="destaque__linha">
@@ -19,7 +5,6 @@
     <div class="destaque-noticia">
       <div id="noticia-principal" class="noticia-principal">
         <div class="noticia-item noticia-item_video">
-          <h2 class="sr-only">Destaque principal do portal</h2>
           <div class="noticia__imagem">
             <img
               class="img-responsive"
@@ -29,7 +14,126 @@
             />
           </div>
           <div class="noticia__titulo noticia-principal__titulo">
-            <span class="badge-aovivo">
+            <span class="badge badge-aovivo">
+              <i class="fa fa-circle" aria-hidden="true"></i> AO VIVO</span
+            >
+            <h3 class="titulo">
+              <a href="http://localhost:3000/interna.php"
+                >Suspensa análise sobre distribuição do FEFC e tempo de TV a
+                candidatos negros
+              </a>
+              <span class="sutia"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Debitis tempora atque ex officia deleniti deserunt omnis
+                nesciunt autem voluptate eum.</span
+              >
+            </h3>
+          </div>
+          <div class="icone">
+            <a
+              class="fancybox-action"
+              href="https://www.youtube.com/embed/zBek718CM2U"
+              data-type=""
+            >
+              <svg
+                class="icone-play-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                focusable="false"
+                preserveaspectratio="xMidYMid meet"
+                viewbox="0 0 448 512"
+              >
+                <path
+                  d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="noticia-secundaria">
+        <div class="noticia-item noticia-item_video">
+          <div class="noticia__imagem">
+            <img
+              class="img-responsive"
+              src="../assets/imagens/noticias-topo/noticia-principal.png"
+              alt="TPS 2019"
+              title="Participe do Teste Público de Segurança 2019! "
+            />
+          </div>
+          <div class="noticia__titulo">
+            <span class="badge badge-aovivo">
+              <i class="fa fa-circle" aria-hidden="true"></i> AO VIVO</span
+            >
+            <h3 class="titulo">
+              <a href="http://localhost:3000/interna.php"
+                >Suspensa análise sobre distribuição do FEFC e tempo de TV a
+                candidatos negros
+              </a>
+              <span class="sutia"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Debitis tempora atque ex officia deleniti deserunt omnis
+                nesciunt autem voluptate eum.</span
+              >
+            </h3>
+          </div>
+          <div class="icone">
+            <a
+              class="fancybox-action"
+              href="https://www.youtube.com/embed/zBek718CM2U"
+              data-type=""
+            >
+              <svg
+                class="icone-play-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                focusable="false"
+                preserveaspectratio="xMidYMid meet"
+                viewbox="0 0 448 512"
+              >
+                <path
+                  d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="noticia-item">
+          <div class="noticia__imagem">
+            <img
+              class="img-responsive"
+              src="../assets/imagens/noticias-topo/noticia-principal.png"
+              alt="TPS 2019"
+              title="Participe do Teste Público de Segurança 2019! "
+            />
+          </div>
+          <div class="noticia__titulo">
+            <span class="badge badge-noticia">NOTÍCIA</span>
+            <h3 class="titulo">
+              <a href="http://localhost:3000/interna.php"
+                >Atendimento especial - contatos
+              </a>
+              <span class="sutia"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Debitis tempora atque ex officia deleniti deserunt omnis
+                nesciunt autem voluptate eum.</span
+              >
+            </h3>
+          </div>
+        </div>
+        <div class="noticia-item noticia-item_video">
+          <div class="noticia__imagem">
+            <img
+              class="img-responsive"
+              src="../assets/imagens/noticias-topo/noticia-principal.png"
+              alt="TPS 2019"
+              title="Participe do Teste Público de Segurança 2019! "
+            />
+          </div>
+          <div class="noticia__titulo">
+            <span class="badge badge-aovivo">
               <i class="fa fa-circle" aria-hidden="true"></i> AO VIVO</span
             >
             <h3 class="titulo">
@@ -67,191 +171,74 @@
           </div>
         </div>
       </div>
-      <div class="noticia-secundaria">
-        <div class="noticia-item">
-          <div class="noticia-item noticia-item_video">
-            <h2 class="sr-only">Destaque principal do portal</h2>
-            <div class="noticia__imagem">
-              <img
-                class="img-responsive"
-                src="../assets/imagens/noticias-topo/noticia-principal.png"
-                alt="TPS 2019"
-                title="Participe do Teste Público de Segurança 2019! "
-              />
-            </div>
-            <div class="noticia__titulo">
-              <span class="badge-aovivo">
-                <i class="fa fa-circle" aria-hidden="true"></i> AO VIVO</span
-              >
-              <h3 class="titulo">
-                <a href="http://localhost:3000/interna.php"
-                  >Biometria: identificação do eleitor pelas digitais garante
-                  mais segurança às eleições
-                </a>
-                <span class="sutia"
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Debitis tempora atque ex officia deleniti deserunt omnis
-                  nesciunt autem voluptate eum.</span
-                >
-              </h3>
-            </div>
-            <div class="icone">
-              <a
-                class="fancybox-action"
-                href="https://www.youtube.com/embed/zBek718CM2U"
-                data-type=""
-              >
-                <svg
-                  class="icone-play-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  focusable="false"
-                  preserveaspectratio="xMidYMid meet"
-                  viewbox="0 0 448 512"
-                >
-                  <path
-                    d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="noticia-item">
-          <div class="noticia-item noticia-item_video">
-            <h2 class="sr-only">Destaque principal do portal</h2>
-            <div class="noticia__imagem">
-              <img
-                class="img-responsive"
-                src="../assets/imagens/noticias-topo/noticia-principal.png"
-                alt="TPS 2019"
-                title="Participe do Teste Público de Segurança 2019! "
-              />
-            </div>
-            <div class="noticia__titulo">
-              <span class="badge-aovivo">
-                <i class="fa fa-circle" aria-hidden="true"></i> AO VIVO</span
-              >
-              <h3 class="titulo">
-                <a href="http://localhost:3000/interna.php"
-                  >Biometria: identificação do eleitor pelas digitais garante
-                  mais segurança às eleições
-                </a>
-                <span class="sutia"
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Debitis tempora atque ex officia deleniti deserunt omnis
-                  nesciunt autem voluptate eum.</span
-                >
-              </h3>
-            </div>
-            <div class="icone">
-              <a
-                class="fancybox-action"
-                href="https://www.youtube.com/embed/zBek718CM2U"
-                data-type=""
-              >
-                <svg
-                  class="icone-play-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  focusable="false"
-                  preserveaspectratio="xMidYMid meet"
-                  viewbox="0 0 448 512"
-                >
-                  <path
-                    d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="noticia-item">
-          <div class="noticia-item noticia-item_video">
-            <h2 class="sr-only">Destaque principal do portal</h2>
-            <div class="noticia__imagem">
-              <img
-                class="img-responsive"
-                src="../assets/imagens/noticias-topo/noticia-principal.png"
-                alt="TPS 2019"
-                title="Participe do Teste Público de Segurança 2019! "
-              />
-            </div>
-            <div class="noticia__titulo">
-              <span class="badge-aovivo">
-                <i class="fa fa-circle" aria-hidden="true"></i> AO VIVO</span
-              >
-              <h3 class="titulo">
-                <a href="http://localhost:3000/interna.php"
-                  >Biometria: identificação do eleitor pelas digitais garante
-                  mais segurança às eleições
-                </a>
-                <span class="sutia"
-                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Debitis tempora atque ex officia deleniti deserunt omnis
-                  nesciunt autem voluptate eum.</span
-                >
-              </h3>
-            </div>
-            <div class="icone">
-              <a
-                class="fancybox-action"
-                href="https://www.youtube.com/embed/zBek718CM2U"
-                data-type=""
-              >
-                <svg
-                  class="icone-play-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  focusable="false"
-                  preserveaspectratio="xMidYMid meet"
-                  viewbox="0 0 448 512"
-                >
-                  <path
-                    d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- destaque noticia -->
     <!-- destaque servico -->
     <div class="destaque-servico">
-      <div class="servico-item">
-        <div class="servico-titulo">
-          <h4>Serviços ao eleitor</h4>
-          <nav>
-            <ul>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-            </ul>
-          </nav>
+      <div class="destaque-servico-card destaque-servico__servico-eleitor">
+        <div class="destaque-servico-card-header">
+          <button id="destaque-servico" class="btn btn-link">
+            <img
+              src="../../assets/imagens/home/servico-eleitor.svg"
+              alt="consulta jurídicas"
+            />
+            Serviço ao eleitor
+          </button>
         </div>
+        <ul
+          id="destaqueServico"
+          class="destaque-servico-list collapse multi-collapse"
+        >
+          <li class="destaque-servico-list__item">
+            <a href="#" data-toggle="modal" data-target="#servicoTituloEleitoral">Título eleitoral</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="#" data-toggle="modal" data-target="#servicoQuitacaoEleitoral">Certidão de quitação</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="#" data-toggle="modal" data-target="#servicoValidacaoDocumentos">Validar documentos</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="#" data-toggle="modal" data-target="#servicoSituacaoEleitoral">Situação eleitoral</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="#" data-toggle="modal" data-target="#servicoLocalVotacao">Local de votação</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="http://www.tse.jus.br/eleitor/titulo-de-eleitor/quitacao-de-multas" >Quitação de multas</a>
+          </li>
+        </ul>
       </div>
-      <div class="servico-item">
-        <div class="servico-titulo">
-          <h4>Consultas jurídicas</h4>
-          <nav>
-            <ul>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-              <li>Título eleitoral</li>
-            </ul>
-          </nav>
+      <div class="destaque-servico-card destaque-servico__consulta-juridica">
+        <div class="destaque-servico-card-header">
+          <button id="destaque-juridica" class="btn btn-link">
+            <img src="../../assets/imagens/home/consulta-juridica.svg" alt="" />
+            Consultas jurídicas
+          </button>
         </div>
+        <ul
+          id="destaqueJuridica"
+          class="destaque-servico-list collapse multi-collapse"
+        >
+          <li class="destaque-servico-list__item">
+            <a href="#" data-toggle="modal"  data-target="#consultaJurisprudencia">Jurisprudência</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="#" data-toggle="modal"  data-target="#consultaProcessosFisicos">Processos físicos</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="#" data-toggle="modal"  data-target="#consultaDje">DJE</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="https://pje.tse.jus.br:8443/pje-web/login.seam">Acesso ao PJE</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="#" data-toggle="modal"  data-target="#consultaLegislacaoCompilada">Legislação compilada</a>
+          </li>
+          <li class="destaque-servico-list__item">
+            <a href="https://pje.tse.jus.br:8443/pje-web/ConsultaPublica/listView.seam">Consulta Pública PJE</a>
+          </li>
+        </ul>
       </div>
     </div>
     <!-- destaque servico -->

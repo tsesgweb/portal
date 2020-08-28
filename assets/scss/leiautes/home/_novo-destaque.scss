@@ -14,10 +14,6 @@
           padding-top: 10px;
           padding-bottom: 10px;
         }
-
-        &:nth-child(3) {
-          // padding-right: 0;
-        }
       }
 
       @include media-breakpoint-up(lg) {
@@ -26,6 +22,11 @@
 
         &:nth-child(1) {
           padding-left: 0;
+        }
+
+        &:nth-child(2) {
+          padding-top: 0;
+          padding-bottom: 0;
         }
 
         &:nth-child(3) {
@@ -64,6 +65,7 @@
         @include list-group-item;
         font-size: 16px;
         border-color: $cinza-claro;
+        padding: 0.25rem 1rem;
 
       }
     }

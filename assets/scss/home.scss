@@ -1,9 +1,9 @@
 @import 'variaveis/config';
 @import 'variaveis/global-home';
 @import 'plugins/bootstrap';
-@import 'plugins/bootstrap';
 @import 'node_modules/bootstrap/scss/spinners';
 @import 'node_modules/bootstrap/scss/list-group';
+@import 'node_modules/bootstrap/scss/card';
 
 @import 'mixins/mixins';
 @import 'leiautes/home/geral';
@@ -26,6 +26,7 @@
 .leia-mais {
   border-radius: 1.25rem !important;
   display: block;
+
   margin: {
     left: auto;
     right: auto;

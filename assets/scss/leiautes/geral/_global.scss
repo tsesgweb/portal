@@ -1,5 +1,12 @@
-@each $color, $value in $theme-colors {
+@each $color,
+$value in $theme-colors {
   @include bg-variant('[class*="bg-#{$color}"]', $value, true);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 [class*='__linha'] {
@@ -57,12 +64,13 @@
   @include lista-grupo;
   list-style-type: none;
 
-  > li {
+  >li {
     display: block !important;
   }
 }
 
 .icone {
+
   li:before,
   p:before,
   .bt-mais-acessados:before {
@@ -126,6 +134,7 @@
 }
 
 @include media-breakpoint-up(xs) {
+
   .destaques-itens,
   .consulta-item {
     box-shadow: 8px 8px 10px -7px rgba(0, 0, 0, 0.34);
@@ -171,7 +180,8 @@
     }
   }
 
-  @each $icone-nome, $icone-content in $icones-destaques {
+  @each $icone-nome,
+  $icone-content in $icones-destaques {
     &.je-icone-#{$icone-nome} {
       &::before {
         content: $icone-content;
@@ -184,7 +194,8 @@
   }
 }
 
-@each $icone-nome, $icone-content in $icones-home {
+@each $icone-nome,
+$icone-content in $icones-home {
   .icon-#{$icone-nome} {
     &::before {
       content: $icone-content;

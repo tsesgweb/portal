@@ -1,90 +1,53 @@
+<?php
+$temas = array(
+  array("tema"=> "Eleições", "icon"=> "partidos.svg", "links"=>
+    array(
+      array("link"=> "http://www.tse.jus.br/eleicoes/eleicoes-2020/prestacao-de-contas/financiamento-coletivo", "linkname"=> "Financiamento Coletivo"),
+      array("link"=> "http://www.tse.jus.br/eleicoes/eleicoes-2020/eleicoes-2020", "linkname"=> "Eleições 2020"),
+      array("link"=> "http://www.tse.jus.br/eleicoes/eleicoes-2018/perguntas-frequentes-sobre-as-eleicoes", "linkname"=> "Perguntas frequentes")
+    )
+    ),
+  array("tema"=> "Partidos", "icon"=> "eleicoes.svg", "links"=>
+    array(
+      array("link"=> "http://www.tse.jus.br/servicos-judiciais/audiencias-publicas/audiencia-publica-resolucao-de-financas-partidarias-e-prestacao-de-contas-anual", "linkname"=> "Audiência pública"),
+      array("link"=> "http://www.tse.jus.br/partidos/contas-partidarias", "linkname"=> "Contas Partidárias"),
+      array("link"=> "http://www.tse.jus.br/partidos/filiacao-partidaria", "linkname"=> "Filiação Partidária")
+      )
+    ),
+    array("tema"=> "Processos", "icon"=> "processos.svg", "links"=>
+    array(
+      array("link"=> "http://www.tse.jus.br/servicos-judiciais/sessoes-de-julgamento/pautas-de-julgamento", "linkname"=> "Pauta"),
+      array("link"=> "http://www.tse.jus.br/servicos-judiciais/sessoes-de-julgamento/sessao-plenaria-on-line-1", "linkname"=> "Sessão Plenária ao vivo"),
+      array("link"=> "http://www.tse.jus.br/servicos-judiciais/processos/processos-julgados", "linkname"=> "Processos Julgados")
+    )
+  )
+);
+?>
 <section id="destaque-tema">
   <div class="destaque-tema__conteudo">
     <div class="destaque-tema__linha">
+      <?php foreach ($temas as $tema) :?>     
       <div class="destaque-tema-item">
         <div class="destaque-tema__card">
           <div class="destaque-tema__card-header">
             <img
-              src="../../assets/imagens/home/eleicoes.svg"
+              src="../../assets/imagens/home/<?= $tema['icon']?>"
               width="54"
               height="54"
-              alt="Eleições"
+              alt="<?= $tema['tema']?>"
             />
-            <span>Eleições</span>
+            <span><?= $tema['tema']?></span>
           </div>
           <ul class="destaque-tema__list">
-            <li class="destaque-tema__list-item">
-              <a href="" class="destaque-temas__lista_link">Cras justo odio</a>
+            <?php foreach ($tema['links'] as $link) :?>
+              <li class="destaque-tema__list-item">
+              <a href="<?= $link['link']?>" class="destaque-temas__lista_link"><?= $link['linkname']?></a>
             </li>
-            <li class="destaque-tema__list-item">
-              <a href="" class="destaque-temas__lista_link"
-                >Dapibus ac facilisis in</a
-              >
-            </li>
-            <li class="destaque-tema__list-item">
-              <a href="" class="destaque-temas__lista_link"
-                >Vestibulum at eros</a
-              >
-            </li>
+            <?php endforeach;?>
           </ul>
         </div>
       </div>
-      <div class="destaque-tema-item">
-        <div class="destaque-tema__card">
-          <div class="destaque-tema__card-header">
-            <img
-              src="../../assets/imagens/home/partidos.svg"
-              width="54"
-              height="54"
-              alt="Partidos"
-            />
-            <span>Partidos</span>
-          </div>
-          <ul class="destaque-tema__list">
-            <li class="destaque-tema__list-item">
-              <a href="" class="destaque-temas__lista_link">Cras justo odio</a>
-            </li>
-            <li class="destaque-tema__list-item">
-              <a href="" class="destaque-temas__lista_link"
-                >Dapibus ac facilisis in</a
-              >
-            </li>
-            <li class="destaque-tema__list-item">
-              <a href="" class="destaque-temas__lista_link"
-                >Vestibulum at eros</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="destaque-tema-item">
-        <div class="destaque-tema__card">
-          <div class="destaque-tema__card-header">
-            <img
-              src="../../assets/imagens/home/processos.svg"
-              width="54"
-              height="54"
-              alt="Processos"
-            />
-            <span>Processos</span>
-          </div>
-          <ul class="destaque-tema__list">
-            <li class="destaque-tema__list-item">
-              <a href="" class="destaque-temas__lista_link">Cras justo odio</a>
-            </li>
-            <li class="destaque-tema__list-item">
-              <a href="" class="destaque-temas__lista_link"
-                >Dapibus ac facilisis in</a
-              >
-            </li>
-            <li class="destaque-tema__list-item">
-              <a href="" class="destaque-temas__lista_link"
-                >Vestibulum at eros</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
