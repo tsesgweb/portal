@@ -1,34 +1,36 @@
-@import "variaveis/config";
-@import "variaveis/global-home";
-@import "plugins/bootstrap";
-@import "plugins/bootstrap";
-@import "../../node_modules/bootstrap/scss/spinners";
+@import 'variaveis/config';
+@import 'variaveis/global-home';
+@import 'plugins/bootstrap';
+@import 'node_modules/bootstrap/scss/spinners';
+@import 'node_modules/bootstrap/scss/list-group';
+@import 'node_modules/bootstrap/scss/card';
 
-@import "mixins/mixins";
-@import "leiautes/home/geral";
-@import "leiautes/home/consultas";
-@import "leiautes/home/noticias-topo";
-@import "leiautes/home/destaques-secundarios";
-@import "leiautes/home/avisos";
-@import "leiautes/home/banners";
-@import "leiautes/home/full-cards";
-@import "leiautes/home/redes-sociais";
-@import "leiautes/home/servicos";
-@import "leiautes/home/destaques-temas";
-@import "leiautes/home/redes-sociais-cards";
-@import "leiautes/home/dje";
+@import 'mixins/mixins';
+@import 'leiautes/home/geral';
+@import 'leiautes/home/consultas';
+@import 'leiautes/home/nova-home';
+@import 'leiautes/home/novo-destaque';
+@import 'leiautes/home/avisos';
+@import 'leiautes/home/banners';
+@import 'leiautes/home/full-cards';
+@import 'leiautes/home/redes-sociais';
+@import 'leiautes/home/servicos';
+@import 'leiautes/home/destaques-temas';
+@import 'leiautes/home/redes-sociais-cards';
+@import 'leiautes/home/dje';
 
 .mais-conteudo span {
-    display: none;
+  display: none;
 }
 
 .leia-mais {
-    border-radius: 1.25rem !important;
-    display: block;
-    margin: {
-        left: auto;
-        right: auto;
-        top: 6px;
-        bottom: 6px
-    }
+  border-radius: 1.25rem !important;
+  display: block;
+
+  margin: {
+    left: auto;
+    right: auto;
+    top: 6px;
+    bottom: 6px;
+  }
 }

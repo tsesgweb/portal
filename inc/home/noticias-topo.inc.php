@@ -14,7 +14,6 @@
     <div class="destaque__conteudo">
         <div class="destaque__linha">
             <!-- destaque_unico -->
-
             <section class="destaque__principal">
                 <a href="http://localhost:3000/interna.php">
                     <h2 class="sr-only">Destaque principal do portal</h2>

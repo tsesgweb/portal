@@ -36,7 +36,7 @@
   }
 }
 
-
+// para funcionar import  'node_modules/bootstrap/scss/list-group';
 @mixin list-group-horizontal {
   @extend .list-group-horizontal;
 }
@@ -45,7 +45,7 @@
   @extend .list-group-flush;
 }
 
-@mixin list-group($type:flush) {
+@mixin list-group($type: flush) {
   @extend .list-group;
 
   @if $type==flush {
@@ -61,15 +61,23 @@
   @extend .list-group-item-action;
 }
 
-@mixin list-group-item($action:false) {
+@mixin list-group-item-color($color) {
+  @extend .list-group-item-#{$color};
+}
+
+@mixin list-group-item($action: false, $color-name: null) {
   @extend .list-group-item;
 
   @if $action==true {
     @include list-group-item-action;
   }
+
+  @if $color-name !=null {
+    &:hover {
+      @include list-group-item-color($color-name);
+    }
+  }
 }
-
-
 
 @mixin nav {
   @extend .nav;
@@ -87,14 +95,14 @@
   @extend .navbar-brand;
 }
 
-@mixin navbar($color: light, $size: lg) {
-  @if $color==light {
-    @extend .navbar-#{$color};
+@mixin navbar($color-name: light, $size: lg) {
+  @if $color-name==light {
+    @extend .navbar-#{$color-name};
     background-color: $branco;
   }
 
   @else {
-    @extend .navbar-#{$color};
+    @extend .navbar-#{$color-name};
     background-color: $dark;
   }
 
@@ -181,4 +189,9 @@
 
 @mixin btn {
   @extend .btn;
+}
+
+@mixin show {
+  display: block;
+  visibility: visible;
 }
