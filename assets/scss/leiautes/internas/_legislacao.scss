@@ -112,10 +112,22 @@
     .leg-compilada-brasao {
         img {
             max-width: 100px;
+
+            @include media-breakpoint-down(xs) {
+                max-width: 70px;
+            }
         }
 
         position: absolute;
         z-index: 1;
+
+        @include media-breakpoint-down(xs) {
+            position: relative;
+            text-align: center;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            width: 100%;
+        }
     }
 
     .leg-compilada-texto {
