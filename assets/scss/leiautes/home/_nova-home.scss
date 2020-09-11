@@ -56,6 +56,12 @@ $badge-content in $badge-theme {
     @include media-breakpoint-only(xs) {
       margin-bottom: 15px;
     }
+    @include media-breakpoint-only(sm) {
+      margin-bottom: 15px;
+    }
+    @include media-breakpoint-only(md) {
+      margin-bottom: 15px;
+    }
 
     @include media-breakpoint-up(xs) {
       @include make-col-ready();
@@ -89,6 +95,15 @@ $badge-content in $badge-theme {
       @include elemento(servico-eleitor) {
         .destaque-servico-card-header {
           border-bottom: 2px solid $amarelo;
+
+          .btn {
+            &:hover,
+            &:active,
+            &:focus {
+              text-decoration: none;
+              cursor: auto;
+            }
+          }
         }
 
         .destaque-servico-list__item:hover {
@@ -118,6 +133,15 @@ $badge-content in $badge-theme {
     @include elemento(consulta-juridica) {
       .destaque-servico-card-header {
         border-bottom: 2px solid $verde;
+
+        .btn {
+          &:hover,
+          &:active,
+          &:focus {
+            text-decoration: none;
+            cursor: auto;
+          }
+        }
 
       }
 
@@ -456,7 +480,7 @@ $badge-content in $badge-theme {
 
     .noticia-item {
 
-      @include media-breakpoint-only(xs) {
+      @include media-breakpoint-down(md) {
         display: flex;
         align-items: center;
 
@@ -499,7 +523,7 @@ $badge-content in $badge-theme {
         top: 120px;
         left: 12.5px;
 
-        @include media-breakpoint-only(xs) {
+        @include media-breakpoint-down(lg) {
           display: none;
         }
       }
