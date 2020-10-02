@@ -83,10 +83,7 @@ const paths = {
       "assets/js/vendor/modernizr.js",
       "assets/js/vendor/bootstrap-datepicker.js",
     ],
-    rybena: [
-      "assets/js/vendor/rybenaDOMFull-1.5.js",
-      "assets/js/vendor/rybena-1.0.js",
-    ],
+    rybena: ["assets/js/vendor/rybena.js"],
   },
   dest: {
     all: dest,

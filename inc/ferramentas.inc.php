@@ -21,7 +21,6 @@
         </div>
     </ul>
 </div>
-<div id="acessibilidade-rybena"></div>
 <div class="navegacao__setas display-before">
     <span data-toggle="tooltip" data-placement="top" title="Subir" class="navegacao__setas_subir sumir-seta">
         <span class="sr-only">Subir página</span>
@@ -30,3 +29,4 @@
         <span class="sr-only">Descer página</span>
     </span>
 </div>
+

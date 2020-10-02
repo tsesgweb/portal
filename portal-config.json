@@ -62,15 +62,14 @@
                 "assets/js/vendor/gijgo.js",
                 "assets/js/vendor/local/messages.pt-br.js"
             ],
-            "external": [
-                "http://www.tse.jus.br/++theme++layout-2019/js/rybena.min.js",
+            "external": [                
                 "node_modules/owl.carousel/dist/owl.carousel.js",
                 "node_modules/js-cookie/src/js.cookie.js",
                 "node_modules/jquery-placeholder/jquery.placeholder.js",
                 "node_modules/clipboard/dist/clipboard.min.js"
             ],
             "rybena": [
-                "assets/js/vendor/rybena-2.0.js"
+                "assets/js/vendor/rybena.js?positionPlayer=left"
             ],
             "portal": [
                 "assets/js/novo-portal.js",
