@@ -44,6 +44,7 @@
         "clipboard": "^2.0.6",
         "font-awesome": "^4.7.0",
         "gulp-cli": "^2.3.0",
+        "gulp-filenames": "^4.0.1",
         "html5shiv": "^3.7.3",
         "jquery-placeholder": "^2.3.1",
         "jquery.scrollto": "^2.1.2",
