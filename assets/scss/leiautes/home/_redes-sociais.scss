@@ -1,8 +1,9 @@
 .redes-sociais {
   @include elemento("conteudo") {
+    margin-bottom: 15px;
     // padding-top: $global-padding-top * 2;
     // padding-bottom: $global-padding-bottom * 2;
-
+    
     .veiculos-redes {
       @include make-col-ready(0);
     }
@@ -45,28 +46,78 @@
           font-size: $font-size-sm;
 
           img {
-            width: 40%;
-            height: auto;
+            width: auto;
+            height: 46px;
           }
         }
 
         @include media-breakpoint-up(lg) {
           font-size: $font-size-base;
-          max-width: map-get($grid-breakpoints, lg);
-
           img {
-            height: 46px;
+            height: 56px;
             width: auto;
           }
         }
       }
+
+      &__linha {
+        display: flex;
+        justify-content: space-evenly;   
+        align-items: center;     
+        flex: 0 0 100%;
+      }
     }
 
     .rede-card {
-      text-align: center;
-      min-width: 20%;
+      text-align: center;      
+      padding: 0 15px;
       border-right: 1px solid $cinza-claro;
-      font-size: 1em;
+      font-size: 1em;  
+      
+      @include media-breakpoint-up(xs){
+        min-width: 80px;        
+      }
+
+      @include media-breakpoint-up(sm){             
+          min-width: 80px;                  
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {          
+            min-width: 50%;          
+          }
+          
+      }
+      @include media-breakpoint-up(sm){             
+          min-width: 100px;                  
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {          
+            min-width: 33.33%;          
+          }
+      }
+
+      @include media-breakpoint-up(md) {
+        min-width: 120px;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {          
+          min-width: 25%;          
+        }
+        
+      }
+
+      @include media-breakpoint-up(lg){
+        min-width: 140px;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {          
+          min-width: 12.5%;          
+        }
+      }
 
       &:last-child {
         border-right: none;

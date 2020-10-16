@@ -33,6 +33,18 @@
                     <span class="card-titulo">Flickr</span>
                 </a>
             </h3>
+            <h3 class="rede-card">
+                <a href="#">
+                    <span class="card-imagem"><img src="assets/imagens/redes-sociais/soundcloud.png" alt="ícone do SoundCloud"></span>
+                    <span class="card-titulo">SoundCloud</span>
+                </a>
+            </h3>
+            <h3 class="rede-card">
+                <a href="https://www.tiktok.com/@tsejus">
+                    <span class="card-imagem"><img src="assets/imagens/redes-sociais/tiktok.png" alt="ícone do TikTok"></span>
+                    <span class="card-titulo">TikTok</span>
+                </a>
+            </h3>
         </div>
     </div>
 </section>
