@@ -5,13 +5,12 @@
     "homepage": "http://www.tse.jus.br/",
     "main": "index.php",
     "scripts": {
-        "en-teste": "gulp build:en --env test",
+        "en-test": "gulp build:en --env test",
         "en-prod": "gulp build:en --env production",
-        "teste": "gulp build --env test",
+        "test": "gulp build --env test",
         "prod": "gulp build --env production",
         "build": "npm run teste && npm run prod",
-        "start": "gulp clean && gulp sass && gulp serve",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "gulp clean && gulp sass && gulp serve"       
     },
     "keywords": [
         "css",

@@ -26,7 +26,7 @@ $gulp.task('server', ['sass'], (cb) => $plugins.sequence('close', ['serve', 'sas
 //gulp build
 //gulp build --env test
 //gulp build --env production
-$gulp.task('build', (cb) => $plugins.sequence('sass', ['html', 'scripts', 'imagens', 'fonts'], cb));
+$gulp.task('build', (cb) => $plugins.sequence('sass', ['scripts', 'imagens', 'fonts', 'html'], cb));
 //Build usage:
 //gulp build:en
 //gulp build:en --env test

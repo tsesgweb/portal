@@ -2,7 +2,12 @@ var $config = require('./config'),
     $browserSync = require('browser-sync').create();
 module.exports = function(gulp, plugins) {
     return function() {
-        plugins.connectPhp.server({ stdio: 'ignore'}, () => {
+        plugins.connectPhp.server({ 
+          stdio: 'ignore',
+          base: 'pages',
+          // ini: 'php.ini',
+          debug: true,
+        }, () => {
             $browserSync.init({
                 proxy: $config.constants.apiHost,
             });
