@@ -8,8 +8,8 @@
 <?php
     if ($tags or $gestor) {
         print '<div id="coluna-lateral" class="nao-imprimir">';
-        $tags && include __DIR__ . '/tags.inc.php';
-        $gestor && include __DIR__ . '/gestor.inc.php';
+        $tags && include __DIR__ . '/widgets/tags.inc.php';
+        $gestor && include __DIR__ . '/widgets/gestor.inc.php';
         print '</div>';
     }
 ?>

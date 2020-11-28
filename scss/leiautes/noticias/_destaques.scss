@@ -21,6 +21,15 @@ $anim-speed: 0.3s;
   }
 }
 
+.header-conteudo {
+  @include make-col-ready();
+  background-color: #fff;
+
+  .noticia-titulo {
+    color: $azul;
+  }
+}
+
 .imprensa__conteudo {
   background-color: #fff;
   padding-bottom: 28px;

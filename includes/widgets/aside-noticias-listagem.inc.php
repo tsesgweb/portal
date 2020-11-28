@@ -1,5 +1,5 @@
 <?php 
-$url_mais_lidas         = 'http://www.tse.jus.br/@@get_lista_noticias';
+$url_mais_lidas         = 'https://www.tse.jus.br/@@get_lista_noticias';
 $data_mais_lidas    = file_get_contents($url_mais_lidas);
 $mais_lidas     = json_decode($data_mais_lidas);
 array_shift($mais_lidas);

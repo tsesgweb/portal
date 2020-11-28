@@ -15,7 +15,7 @@ $data           = file_get_contents($url);
 $outrasNoticias = json_decode($data);
 $outrasNoticias[5]->image_preview = null;
 $outrasNoticias[5]->video_image = null;
-$outrasNoticias[6]->image_preview = null;
+$outrasNoticias[7]->image_preview = null;
 $outrasNoticias[6]->video_image = 'https://img.youtube.com/vi/1PlnZEt797o/maxresdefault.jpg';
 $outrasNoticias[6]->video_url = 'https://www.youtube.com/watch?v=1PlnZEt797o';
 

@@ -80,7 +80,7 @@ function autoIncludeFiles($location, $type) {
         $asidenoticialistagem  && $aside='conteudo_coluna conteudo_coluna_direita aside-noticias-listagem'; 
         $asidenoticiaradio  && $aside='conteudo_coluna conteudo_coluna_direita aside-noticias-listagem'; 
         print '<!-- start:conteudo > linha --><main class="main__conteudo'.$full.'"><div class="main__linha">'; 
-        $asideinterna && include __DIR__ . '/aside-internas.inc.php';
+        $asideinterna && include __DIR__ . '/widgets/internas.inc.php';
         $destaquenoticia && include __DIR__ . '/noticias/destaques.inc.php';
         $internanoticia && include __DIR__ . '/noticias/topo-noticia.inc.php';
         print '<!-- start:conteudo?coluna--><div id="conteudo" class="conteudo '.$aside.'">';

@@ -5,10 +5,6 @@ $radioCards = [
   ['name'=> 'Notícias', 'color'=> 'verde', 'link'=> 'http://www.tse.jus.br/imprensa/noticias-tse'],
   ['name'=> 'Decisões do Plenário', 'color'=> 'vermelho', 'link'=> 'http://www.tse.jus.br/imprensa/tv-1/decisoes-do-plenario'],
 ];
-
-// echo '<pre>';
-// print_r($radioCards);
-// echo '</pre>';
 ?>
 <aside id="coluna-lateral-noticias" class="lateral nao-imprimir">
   <h2 class="sr-only">Coluna relacionada a rádio</h2>

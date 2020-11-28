@@ -65,7 +65,7 @@ const paths = {
     base: './',
     php: ['pages/**/*.php','!pages/**/*.inc.php', '!pages/internacional/**/*.php'],
     html: '**/*.html',
-    css: 'assets/css/**/*.css',
+    css: 'pages/assets/css/**/*.css',
     sass: 'scss/**/*.scss',
     img: 'pages/assets/imagens/**/*.+(png|jpg|bmp|svg)',
     fonts: 'pages/assets/fonts/**/*.+(otf|eot|svg|ttf|woff|woff2)',

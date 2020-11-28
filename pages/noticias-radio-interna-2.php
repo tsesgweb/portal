@@ -2,7 +2,7 @@
 include('config.inc.php');
 $asideinterna   = false;
 $asidenoticia   = false;
-$titulo         = 'Lei dos Partidos Políticos completa 24 anos nesta quinta (19)';
+$titulo         = 'Conexão Eleitoral: TSE inaugura exposição sobre diplomação na República brasileira';
 $compartilhar   = false;
 $tags           = false;
 $gestor         = false;
@@ -106,8 +106,8 @@ include BASE_URL . '/includes/header.inc.php';
             <?php include BASE_URL . '/includes/noticias/paragrafo-importante.inc.php';?>
             <?php include BASE_URL . '/includes/noticias/aviso.inc.php';?>
 
-        </section>
-        <?php include BASE_URL . '/includes/widgets/aside-noticias.inc.php';?>
+        </section>        
+        <?php include BASE_URL . '/includes/widgets/aside-noticias-radio.inc.php';?>
         <?php include BASE_URL . '/includes/noticias/barra-ferramentas-noticias.inc.php';?>
 
     </div>
