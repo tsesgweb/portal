@@ -10,11 +10,11 @@
                 <dt class="portletHeader">
                         <span class="portletTopLeft"></span>
                         <a
-                            href="http://adm.justicaeleitoral.jus.br/tre-rs/o-tre/a-instituicao/agenda-do-presidente/agenda_view?month:int=4&amp;year:int=2019&amp;orig_query="
+                            href="https://www.justicaeleitoral.jus.br/tre-rs/o-tre/a-instituicao/agenda-do-presidente/agenda_view?month:int=4&amp;year:int=2019&amp;orig_query="
                             rel="nofollow" title="Mês anterior" class="calendarPrev" data-month="4"
                             id="calendar-previous" data-year="2019">«</a>
                             <a
-                            href="http://adm.justicaeleitoral.jus.br/tre-rs/o-tre/a-instituicao/agenda-do-presidente/agenda_view?month:int=6&amp;year:int=2019&amp;orig_query="
+                            href="https://www.justicaeleitoral.jus.br/tre-rs/o-tre/a-instituicao/agenda-do-presidente/agenda_view?month:int=6&amp;year:int=2019&amp;orig_query="
                             rel="nofollow" title="Próximo mês" data-month="6" id="calendar-next"
                             data-year="2019">»</a>
                             <div class="dropdown">

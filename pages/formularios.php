@@ -10,7 +10,7 @@ include BASE_URL . '/includes/header.inc.php';
       <div id="conteudo">
           <div id="textoConteudo"></div>
       </div>
-      <form method="POST" name="formulario" id="formulario" enctype="multipart/form-data" action="http://adm.justicaeleitoral.jus.br/tse/eleicoes/urna-eletronica/seguranca-da-urna/pre-inscricao">
+      <form method="POST" name="formulario" id="formulario" enctype="multipart/form-data" action="https://www.justicaeleitoral.jus.br/tse/eleicoes/urna-eletronica/seguranca-da-urna/pre-inscricao">
           <div class="row">
               <div class="col-sm-12">
                   <div class="form-group">

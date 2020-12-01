@@ -1,6 +1,6 @@
 <div id="compartilhar-conteudo" class="noticia-compartilhar nao-imprimir">
     <div class="noticia-icone">
-        <a href="http://adm.justicaeleitoral.jus.br/tse/eleitor/eleitor-no-exterior/votacao-no-exterior/sendto_form" aria-label="Share this page on email" title="Share this page on email">
+        <a href="https://www.justicaeleitoral.jus.br/tse/eleitor/eleitor-no-exterior/votacao-no-exterior/sendto_form" aria-label="Share this page on email" title="Share this page on email">
             <span class="fa-stack fa-1x">
 				<i class="fa fa-circle fa-stack-2x noticia-icone-background"></i>
 				<i class="fa fa-stack-1x fa-envelope" aria-hidden="true">

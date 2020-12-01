@@ -9,7 +9,7 @@
 <ul class="list-inline pull-right hidden-xs">
     <li><a href="javascript:this.print();">[Print]</a></li>
     <li>
-        <a tabindex="0" role="button" data-toggle="popover" data-trigger="click" data-content="<a  href='http://adm.justicaeleitoral.jus.br/tse/eleitor/eleitor-no-exterior/votacao-no-exterior/download_pdf?dt=0703201709101488888603&pdf-view=paginainterna'>PDF</a>"
+        <a tabindex="0" role="button" data-toggle="popover" data-trigger="click" data-content="<a  href='https://www.justicaeleitoral.jus.br/tse/eleitor/eleitor-no-exterior/votacao-no-exterior/download_pdf?dt=0703201709101488888603&pdf-view=paginainterna'>PDF</a>"
             data-placement="bottom">[Save]</a>
     </li>
 </ul>
