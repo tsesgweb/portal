@@ -1,11 +1,16 @@
 # Passos para criação do ambiente de desenvolvimento do portal
 ## Clonar repositório
 ```
-git  clone http://git.tse.jus.br/corporativa/sgweb-portal.git portal
+git  clone https://github.com/tsesgweb/portal
+ portal
 ```
 ### Ir até a pasta do projeto
 ```
 cd portal
+```
+### Para melhor compatibilidade use o Node 10
+```
+node -v v10.XX.X
 ```
 ### Instalar dependências do projeto
 ```
