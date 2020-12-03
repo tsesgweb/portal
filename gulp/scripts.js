@@ -41,7 +41,7 @@ module.exports = (gulp, plugins) => {
       gulp
         .src(`${$config.paths.src.js}/*.htc`)
         .pipe(gulp.dest($config.paths.dest.js));
-        console.log($portal.footer.js.portal);
+        
       Promise.all([
         runScript($portal.footer.js.portal.map(path=> `pages/${path}`), "portal"),
         runScript($portal.footer.js.template.home.map(path=> `pages/${path}`), "home"),

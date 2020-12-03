@@ -14,7 +14,7 @@ switch (env) {
     dest = 'dist/test/'
     break
   case 'production':
-    dest = 'dist/production/'
+    dest = 'production/'
     min = '.min'
     break
 }
