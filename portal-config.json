@@ -36,10 +36,9 @@
         "js": {
             "ie": {
                 "9": [
-                    "assets/js/vendor/html5shiv.js",
-                    "assets/js/vendor/html5shiv-printshiv.js",
-                    "assets/js/vendor/respond.js",
-                    "ie/ie.js"
+                    "assets/js/ie/html5shiv.js",
+                    "assets/js/ie/html5shiv-printshiv.js",
+                    "assets/js/ie/respond.js"                    
                 ],
                 "8": [
                     "assets/js/vendor/ie8.polyfils.min.js"

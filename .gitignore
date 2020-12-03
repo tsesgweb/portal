@@ -30,4 +30,4 @@ test/
 yarn-error.log
 assets/css/*.css
 .DS_Store
-dist
+# dist

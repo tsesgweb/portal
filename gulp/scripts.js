@@ -47,10 +47,9 @@ module.exports = (gulp, plugins) => {
         runScript($portal.footer.js.template.home.map(path=> `pages/${path}`), "home"),
          runScript($portal.footer.js.template.internas.map(path=> `pages/${path}`), "internas"),
         runScript($portal.footer.js.vendor.map(path=> `pages/${path}`), "vendor", false, false),
-        runScript($portal.footer.js.rybena.map(path=> `pages/${path}`), "rybena", false, false),
-        runScript($portal.footer.js.external.map(path=> `pages/${path}`), "external", false),
-        runScript($portal.head.js.ie[9].map(path=> `pages/${path}`), "ie"),
+        runScript($portal.footer.js.rybena.map(path=> `pages/${path}`), "rybena", false, false),        
         runScript($portal.head.js.ie[8].map(path=> `pages/${path}`), "ie8"),
+        runScript($portal.head.js.ie[9].map(path=> `pages/${path}`), "ie"),        
         runScript($portal.head.js.head.map(path=> `pages/${path}`), "modernizr", false),
       ]);
     }

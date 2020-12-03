@@ -44,11 +44,11 @@ const htmlreplace = {
     tpl: '<!--[if lt IE 8]><link rel="stylesheet" href="%s"></link><![endif]-->'
   },
   js9: {
-    src: `js/ie/ie${min}.js`,
+    src: `js/ie${min}.js`,
     tpl: '<!--[if lt IE 9]><script src="%s"></script><![endif]-->'
   },
   js8: {
-    src: `js/ie/ie8${min}.js`,
+    src: `js/ie8${min}.js`,
     tpl: '<!--[if lt IE 8]><script src="%s"></script><![endif]-->'
   },
   jshead: `js/modernizr${min}.js`,
