@@ -8,7 +8,7 @@ let dest,
 
 switch (env) {
   case 'development':
-    dest = 'pages/'
+    dest = 'pages/assets/'
     break
   case 'test':
     dest = 'dist/test/'
@@ -28,36 +28,36 @@ const banner = [
 const htmlreplace = {
   external: '',
   cssvendor: '',
-  plugins: `/assets/css/plugins${min}.css`,
-  portal: `/assets/css/master${min}.css`,
-  plus: `/assets/css/plus${min}.css`,
-  cssinternas: `/assets/css/internas${min}.css`,
-  cssnoticias: `/assets/css/noticias${min}.css`,
-  cssbiblioteca: `/assets/css/biblioteca${min}.css`,
-  csshome: `/assets/css/home${min}.css`,
+  plugins: `css/plugins${min}.css`,
+  portal: `css/master${min}.css`,
+  plus: `css/plus${min}.css`,
+  cssinternas: `css/internas${min}.css`,
+  cssnoticias: `css/noticias${min}.css`,
+  cssbiblioteca: `css/biblioteca${min}.css`,
+  csshome: `css/home${min}.css`,
   css9: {
-    src: `/assets/css/ie${min}.css`,
+    src: `css/ie${min}.css`,
     tpl: '<!--[if lt IE 9]><link rel="stylesheet" href="%s"></link><![endif]-->'
   },
   css8: {
-    src: `/assets/css/ie8${min}.css`,
+    src: `css/ie8${min}.css`,
     tpl: '<!--[if lt IE 8]><link rel="stylesheet" href="%s"></link><![endif]-->'
   },
   js9: {
-    src: `/assets/js/ie/ie${min}.js`,
+    src: `js/ie/ie${min}.js`,
     tpl: '<!--[if lt IE 9]><script src="%s"></script><![endif]-->'
   },
   js8: {
-    src: `/assets/js/ie/ie8${min}.js`,
+    src: `js/ie/ie8${min}.js`,
     tpl: '<!--[if lt IE 8]><script src="%s"></script><![endif]-->'
   },
-  jshead: `/assets/js/modernizr${min}.js`,
-  jsvendor: `/assets/js/vendor${min}.js`,
-  jsrybena: `/assets/js/rybena${min}.js?positionPlayer=left`,
-  jsexternal: `/assets/js/external${min}.js`,
-  jsportal: `/assets/js/portal${min}.js`,
-  jshome: `/assets/js/home${min}.js`,
-  jsinternas: `/assets/js/internas${min}.js`
+  jshead: `js/modernizr${min}.js`,
+  jsvendor: `js/vendor${min}.js`,
+  jsrybena: `js/rybena${min}.js?positionPlayer=left`,
+  jsexternal: `js/external${min}.js`,
+  jsportal: `js/portal${min}.js`,
+  jshome: `js/home${min}.js`,
+  jsinternas: `js/internas${min}.js`
 }
 
 const paths = {
@@ -69,25 +69,27 @@ const paths = {
     sass: 'scss/**/*.scss',
     img: 'pages/assets/imagens/**/*.+(png|jpg|bmp|svg)',
     fonts: 'pages/assets/fonts/**/*.+(otf|eot|svg|ttf|woff|woff2)',
-    js: 'pages/assets/js',
+    js: 'assets/js',
     ieplugins: [
-      'node_modules/html5shiv/dist/html5shiv.js',
-      'node_modules/html5shiv/dist/html5shiv-printshiv.js',
-      'pages/assets/js/vendor/respond.js',
-      'node_modules/what-input/dist/lte-IE8.js',
-      'pages/assets/js/ie/*.js'
+      'assets/js/ie/html5shiv.js',
+      'assets/js/ie/html5shiv-printshiv.js',
+      'assets/js/ie/respond.js',
+      'assets/js/ie/lte-IE8.js',
+      'assets/js/ie/*.js'
     ],
     vendor: [
-      'pages/assets/js/vendor/modernizr.js',
-      'pages/assets/js/vendor/bootstrap-datepicker.js'
+      'assets/js/vendor/modernizr.js',
+      'assets/js/vendor/bootstrap-datepicker.js'
     ],
-    rybena: ['pages/assets/js/vendor/rybena.js']
+    rybena: [
+      'assets/js/vendor/rybena.js'
+    ]
   },
   dest: {
     all: dest,
-    js: `${dest}/assets/js`,
-    img: `${dest}/assets/imagens`,
-    css: `${dest}/assets/css`,
+    js: `${dest}/js`,
+    img: `${dest}/imagens`,
+    css: `${dest}/css`,
     fonts: `${dest}/fonts`,
   },
   srcen: {

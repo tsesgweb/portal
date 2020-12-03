@@ -12,8 +12,9 @@ module.exports = (gulp, plugins) => {
                 indentSize: 2,
             }))
             .pipe($config.run.js.replace ? plugins.htmlReplace($config.constants.htmlreplace, {
-                keepUnassigned: true,
-                keepBlockTags: false
+                keepUnassigned: false,
+                keepBlockTags: false,
+                resolvePaths: false                
             }) : plugins.util.noop())
             .pipe($config.run.js.replace ? plugins.replace(/(\.{1,3}\/)?(assets\/)?/gm, '') : plugins.util.noop())
             .pipe($config.run.js.replace ? plugins.replace('.php', '.html') : plugins.util.noop())

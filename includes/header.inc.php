@@ -1,49 +1,46 @@
 <?php
 function autoIncludeFiles($location, $type) {  
-    $arquivoJSON = file_get_contents(BASE_URL.'/portal-config.json');
-    $arquivoJSON = utf8_encode($arquivoJSON); 
-    $config = json_decode($arquivoJSON);       
-    foreach ($config->$location->$type as $origen => $cssorjs) {    
-        $origen === 'external' ? $path = "": $path = "/";          
-        if(!is_array($cssorjs)){             
-            foreach ($cssorjs as $chave => $chamada) {
-                print("\n<!-- build:{$type}{$chave}-->");
-                if($origen == "ie"){
-                    print("<!--[if lt IE ${chave}]>");
-                }
-                if($type == "css"){
-                    foreach ($chamada as $css) {
-                        printf('<link href="%s%s" rel="stylesheet">', $path, $css);                    
-                    }
-                }
-                if($type == "js"){
-                    foreach ($chamada as $js) {
-                        printf('<script src="%s%s"></script>', $path, $js);
-                    }
-                }
-                if($origen == "ie"){
-                    print("<![endif]-->");
-                }
-                print("<!-- endbuild-->");
-            }
-        }else{           
-            
-            if($type == "css"){
-                print "\n<!-- build:{$origen} -->";
-                foreach ($cssorjs as $key => $css) {                                    
-                    printf('<link href="%s%s" rel="stylesheet">', $path, $css);
-                }
-            }
-            if($type == "js"){
-                print "\n<!-- build:js{$origen} -->";
-                 foreach ($cssorjs as $js) {
-                    printf('<script src="%s%s"></script>', $path, $js);
-                }
-            }
-            print("<!-- endbuild -->");
-        }              
-       
-    } 
+  $arquivoJSON = file_get_contents(BASE_URL.'/portal-config.json');    
+  $config = json_decode(utf8_encode($arquivoJSON));       
+  foreach ($config->$location->$type as $origen => $cssorjs):   
+    $origen === 'external' ? $path = "": $path = "/";          
+    if(!is_array($cssorjs)):
+        foreach ($cssorjs as $chave => $chamada):
+            print("\n<!-- build:{$type}{$chave}-->");
+            if($origen == "ie"):
+                print("<!--[if lt IE ${chave}]>");
+            endif;
+            if($type == "css"):
+              foreach ($chamada as $css) :
+                  printf("\r\n".'<link href="%s%s" rel="stylesheet">', $path, $css);                    
+              endforeach;
+            endif;
+            if($type == "js"):
+              foreach ($chamada as $js):
+                  printf("\r\n".'<script src="%s%s"></script>', $path, $js);
+              endforeach;
+            endif;
+            if($origen == "ie"):
+                print("<![endif]-->");
+            endif;
+            print("\n<!-- endbuild-->");
+        endforeach;
+     else :
+        if($type == "css"):
+            print "\n<!-- build:{$origen} -->";
+            foreach ($cssorjs as $key => $css):
+                printf("\r\n".'<link href="%s%s" rel="stylesheet">', $path, $css);
+            endforeach;
+        endif;
+        if($type == "js"):
+            print "\n<!-- build:js{$origen} -->";
+            foreach ($cssorjs as $js):
+              printf("\r\n".'<script src="%s%s"></script>', $path, $js);
+            endforeach;
+        endif;
+        print("\n<!-- endbuild -->");
+    endif;
+  endforeach; 
 }
 ?>
 <!doctype html>
@@ -57,8 +54,7 @@ function autoIncludeFiles($location, $type) {
     <title><?php print $titulo;?> — Tribunal Superior Eleitoral</title>
     <meta name="description" content="">
     <?php
-    autoIncludeFiles('head','css');
-    
+    autoIncludeFiles('head','css');    
     autoIncludeFiles('head','js');
     ?>    
     

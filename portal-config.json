@@ -1,7 +1,6 @@
 {
     "head": {
-        "css": {
-            "external": [],
+        "css": {            
             "plugins": [
                 "assets/css/plugins.css"
             ],
@@ -60,14 +59,12 @@
                 "assets/js/vendor/breakpoints.js",
                 "assets/js/vendor/jquery.fancybox.min.js",
                 "assets/js/vendor/gijgo.js",
-                "assets/js/vendor/local/messages.pt-br.js"
-            ],
-            "external": [                
-                "node_modules/owl.carousel/dist/owl.carousel.js",
-                "node_modules/js-cookie/src/js.cookie.js",
-                "node_modules/jquery-placeholder/jquery.placeholder.js",
-                "node_modules/clipboard/dist/clipboard.min.js"
-            ],
+                "assets/js/vendor/local/messages.pt-br.js",
+                "assets/js/vendor/owl.carousel.min.js",
+                "assets/js/vendor/js.cookie.js",
+                "assets/js/vendor/jquery.placeholder.js",
+                "assets/js/vendor/clipboard.min.js"
+            ],            
             "rybena": [
                 "assets/js/vendor/rybena.js"
             ],
