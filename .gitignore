@@ -24,7 +24,7 @@ prod/**/*
 Thumbs.db
 **Thumbs.db
 eleicoes/
-# production/
+production/
 test/
 **.mno
 yarn-error.log
