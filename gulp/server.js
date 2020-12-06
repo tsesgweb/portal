@@ -4,9 +4,7 @@ module.exports = function(gulp, plugins) {
     return function() {
         plugins.connectPhp.server({ 
           stdio: 'ignore',
-          base: 'pages',
-          // ini: 'php.ini',
-          debug: true,
+          base: 'pages',          
         }, () => {
             $browserSync.init({
                 proxy: $config.constants.apiHost,

@@ -1,0 +1,31 @@
+.news {
+  @include card-columns;
+  column-count: 4;
+  column-gap: 1.875rem;  
+  
+  &-card {
+    @include card;
+    margin-bottom: 30px;    
+  }
+
+  &-body {
+    @include card-body;
+  }
+
+  &-img-top {      
+    @include card-img-top;    
+  }
+
+  &-text {
+    @include card-text;
+  }
+
+  &-footer {
+    @include card-footer;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
