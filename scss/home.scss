@@ -4,7 +4,6 @@
 @import 'node_modules/bootstrap/scss/spinners';
 @import 'node_modules/bootstrap/scss/list-group';
 @import 'node_modules/bootstrap/scss/card';
-
 @import 'mixins/mixins';
 @import 'leiautes/home/geral';
 @import 'leiautes/home/consultas';
@@ -18,19 +17,20 @@
 @import 'leiautes/home/destaques-temas';
 @import 'leiautes/home/redes-sociais-cards';
 @import 'leiautes/home/dje';
-
+@import 'leiautes/home/dje';
+@import 'leiautes/noticias/home-campanhas';
+@import 'leiautes/noticias/home-playlist';
 .mais-conteudo span {
-  display: none;
+    display: none;
 }
 
 .leia-mais {
-  border-radius: 1.25rem !important;
-  display: block;
-
-  margin: {
-    left: auto;
-    right: auto;
-    top: 6px;
-    bottom: 6px;
-  }
+    border-radius: 1.25rem !important;
+    display: block;
+    margin: {
+        left: auto;
+        right: auto;
+        top: 6px;
+        bottom: 6px;
+    }
 }

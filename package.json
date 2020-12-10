@@ -10,7 +10,7 @@
         "test": "gulp build --env test",
         "prod": "gulp build --env production",
         "build": "npm run teste && npm run prod",
-        "start": "gulp clean && gulp sass && gulp serve"       
+        "start": "gulp clean && gulp sass && gulp serve"
     },
     "keywords": [
         "css",

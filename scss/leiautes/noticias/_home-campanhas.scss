@@ -1,0 +1,37 @@
+#campanhas {
+    h2 {
+        @include sub-titulo;
+    }
+    .link-principal {
+        @include make-col-ready(); //iniciar a columa (antes da linha e __conteúdo)
+        @include make-col(6); // determina o temanho da columa
+        display: flex;
+        .link-principal-item {
+            cursor: pointer;
+            border-radius: 5px !important;
+        }
+    }
+    .link-secundario {
+        @include make-col-ready();
+        @include make-col(6);
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.btn-outline {
+    margin-top: 44px !important;
+    padding: 10px;
+    border: none;
+    background: none;
+    border: 1px solid $azul;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: 18px;
+    color: $azul;
+    &:hover {
+        background-color: $azul;
+        color: #fff;
+        transition: .3s;
+    }
+}

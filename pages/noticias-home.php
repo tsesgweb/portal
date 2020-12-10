@@ -2,8 +2,9 @@
 include('config.inc.php');
 $asideinterna         = false;
 $asidenoticia         = false;
-$titulo               = 'Rádio';
+$titulo               = null;
 $compartilhar         = false;
+$home                 = true;
 $tags                 = false;
 $gestor               = false;
 $maisvisitados        = false;
