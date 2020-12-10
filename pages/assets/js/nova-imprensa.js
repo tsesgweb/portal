@@ -25,42 +25,28 @@ $(window).on('load', function () {
   })
 
   // mostra painel de compartilhamento
-  $('.news-list-sharing').on('click focusin', function () {
-    $(this)
-      .closest('div')
-      .find('.news-list-sharing-overlay')
-      .addClass('news-list-sharing-overlay_active')
-  })
+  function sharingOverlay($btn, $klass, $find) {
+    $($btn).on('click focusin', function () { 
+      console.log($(this));       
+      $(this)      
+        .closest($find)
+        .find('.'+$klass+'-overlay')
+        .addClass($klass+'-overlay_active')
+    })
 
-  $('.news-list-sharing-overlay').on('mouseleave focusout', function () {
-    $(this).removeClass('news-list-sharing-overlay_active')
-  })
+    $('.'+$klass+'-overlay').on('mouseleave focusout', function () {
+      $(this).removeClass($klass+'-overlay_active')
+    })
 
-  $('.news-list-sharing-overlay__close').on('click', function () {
-    $(this)
-      .closest('div')
-      .removeClass('news-list-sharing-overlay_active')
+    $('.'+$klass+'-overlay__close').on('click', function () {
+      $(this)
+        .closest($find)
+        .removeClass($klass+'-overlay_active')
 
-    clipboard.destroy()
-  })
+      clipboard.destroy()
+    })
+  }
 
-  // mostra painel de compartilhamento
-  $('.radio-list-sharing').on('click focusin', function () {
-    $(this)
-      .closest('div')
-      .find('.radio-list-sharing-overlay')
-      .addClass('radio-list-sharing-overlay_active')
-  })
-
-  $('.radio-list-sharing-overlay').on('mouseleave focusout', function () {
-    $(this).removeClass('radio-list-sharing-overlay_active')
-  })
-
-  $('.radio-list-sharing-overlay__close').on('click', function () {
-    $(this)
-      .closest('div')
-      .removeClass('radio-list-sharing-overlay_active')
-
-    clipboard.destroy()
-  })
+  sharingOverlay('.news-btn-sharing', 'news-list-sharing', '.news-card');
+  sharingOverlay('.radio-list-sharing','radio-list-sharing', 'div');   
 })

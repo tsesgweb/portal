@@ -114,12 +114,12 @@
     }
 
     @include item(sharing-overlay) {
-      padding: 5px 15px;
+      padding: 0;
       height: 100%;
       visibility: hidden;
       display: flex;
       flex-direction: column;
-      opacity: 0;
+      opacity: 0;      
       height: 0;
 
       @include modificar(active) {
@@ -131,11 +131,11 @@
         left: 50%;
         transform: translateX(-50%);
         border-radius: $radius;
-        background-color: rgba(27, 48, 90, 0.98);
+        background-color: rgba(27, 48, 90, 0.9);
         width: 100%;
         z-index: 3;
         opacity: 1;
-        margin: 0 15px;
+        padding: 15px;
         height: 100%;
       }
 
@@ -180,10 +180,15 @@
         color: #fff;
       }
 
+      @include elemento(text) {
+        color: #5ADBFF;
+         @include responsive-font-size(12px);
+      }      
+
       @include elemento(content) {
         .header {
           color: #fff;
-          font-size: 10px;
+           @include responsive-font-size(10px);
         }
 
         .footer {

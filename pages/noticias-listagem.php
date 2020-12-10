@@ -78,7 +78,7 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';
           <?php 
           !$noticia->image_preview &&
           !$noticia->video_image &&
-          print '<span class="badge-'.$tag['badge'].' news-list-badge news-list-badge__expanded">'.$tag['name'].'</span>'; ?>
+          print '<span class="badge badge-'.$tag['badge'].' news-list-badge news-list-badge__expanded">'.$tag['name'].'</span>'; ?>
           <h3 class="news-list-title">
             <a href="<?= $noticia->url; ?>" title="<?= $noticia->title; ?>">
               <?= $noticia->title; ?>
