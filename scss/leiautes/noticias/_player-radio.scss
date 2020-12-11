@@ -1,0 +1,82 @@
+$color: #FF7541;
+#player-radio {
+  border-radius: 10px;
+  background-color: rgba($color, 0.2) ;  
+  padding: 5px 15px;
+  width: 100%;
+
+  #player-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    div {
+      margin-right: 2px;
+      margin-left: 2px;      
+    }
+  }
+
+  .valign-wrapper {    
+    display:flex;    
+    align-items:center
+  }
+
+  audio {
+    width: 100%;    
+    margin-top: 30px;
+  }
+  
+  #play-pause {
+    color: $color;
+  }
+  
+  #previous-track ,
+  #next-track {
+    background-color: $color;
+  }
+  
+  #player-controls {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  #volume-icon {
+    color: $color;
+    transform: translateY(3px);
+  }
+
+  #current-duration,
+  #total-duration {
+    @include responsive-font-size(10px);
+    color: #6B6B6B;
+  }
+  #seekbar {
+    width: 100%;
+  }
+  input[type="range"] {
+    border: none;
+    margin: 0 auto;    
+    background-color: transparent;
+    &::-webkit-slider-thumb {
+      background-color: $color;
+    }
+    &::-moz-range-thumb {
+      background-color: $color;
+    }
+    &::-ms-thumb {
+      background-color: $color;
+    }
+    &::-moz-range-progress {
+      background-color: $color;
+    }
+    &::-moz-range-track {
+      background-color: rgba($color, 0.2);
+    }
+    &::-ms-fill-lower {
+      background-color: $color;
+    }
+    &::-ms-fill-upper {
+      background-color: rgba($color, 0.2);
+    }
+  }  
+}

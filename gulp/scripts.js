@@ -1,6 +1,6 @@
 var $config = require("./config");
-var $portal = require("../portal-config.json");
 var pkg = require("../package.json");
+var $portal = require("../portal-config.json");
 var banner = [
   "/*! <%= name %> - v<%= pkg.version %> - <%= new Date().getDate() %>.<%= new Date().getMonth()+1 %>.<%= new Date().getFullYear() %> <%= new Date().getHours() %>h<%= new Date().getMinutes() %> - Copyright (c) 2018 tse.jus.br */\n",
 ].join("\n");
@@ -41,16 +41,16 @@ module.exports = (gulp, plugins) => {
       gulp
         .src(`${$config.paths.src.js}/*.htc`)
         .pipe(gulp.dest($config.paths.dest.js));
+        
       Promise.all([
-        runScript($portal.footer.js.portal, "portal"),
-        runScript($portal.footer.js.template.home, "home"),
-        runScript($portal.footer.js.template.internas, "internas"),
-        runScript($portal.footer.js.vendor, "vendor", false),
-        runScript($portal.footer.js.rybena, "rybena", false, false),
-        runScript($portal.footer.js.external, "external", false),
-        runScript($portal.head.js.ie[9], "ie"),
-        runScript($portal.head.js.ie[8], "ie8"),
-        runScript($portal.head.js.head, "modernizr", false),
+        runScript($portal.footer.js.portal.map(path=> `pages/${path}`), "portal"),
+        runScript($portal.footer.js.template.home.map(path=> `pages/${path}`), "home"),
+         runScript($portal.footer.js.template.internas.map(path=> `pages/${path}`), "internas"),
+        runScript($portal.footer.js.vendor.map(path=> `pages/${path}`), "vendor", false, false),
+        runScript($portal.footer.js.rybena.map(path=> `pages/${path}`), "rybena", false, false),        
+        runScript($portal.head.js.ie[8].map(path=> `pages/${path}`), "ie8"),
+        runScript($portal.head.js.ie[9].map(path=> `pages/${path}`), "ie"),        
+        runScript($portal.head.js.head.map(path=> `pages/${path}`), "modernizr", false),
       ]);
     }
   };

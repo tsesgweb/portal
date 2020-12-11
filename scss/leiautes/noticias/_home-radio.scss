@@ -1,0 +1,8 @@
+#radio {
+    h2 {
+        @include sub-titulo;
+    }
+    .new-title {
+        background: palegreen !important;
+    }
+}

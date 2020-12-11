@@ -114,6 +114,9 @@
 @mixin card {
   @extend .card;
 }
+@mixin card-columns {
+  @extend .card-columns;
+}
 
 @mixin card-body {
   @extend .card-body;
@@ -125,6 +128,9 @@
 
 @mixin card-img {
   @extend .card-img;
+}
+@mixin card-img-top {
+  @extend .card-img-top;
 }
 
 @mixin card-header {
