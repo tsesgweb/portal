@@ -1,4 +1,4 @@
-<div class="ready-player-<?= $key ?> player-with-accessibility">
+<div class="ready-player-<?= $key.$card->time; ?> player-with-accessibility">
     <audio crossorigin>
         <source src="<?=$card->audio; ?>" type="audio/mpeg">
     </audio>
