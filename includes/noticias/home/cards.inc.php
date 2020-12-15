@@ -12,6 +12,7 @@ $cards = [
     ],    
     'time'=> rand(1, 15),
     'video'=> null,
+    'audio'=> null,
     'url'=> '#',
   ],    
   [
@@ -25,6 +26,7 @@ $cards = [
     ],    
     'time'=> rand(1, 15),
     'video'=> null,
+    'audio'=> 'assets/files/5-dicas-para-uma-carreira-solida-como-programador.mp3',
     'url'=> '#',
   ],    
   [
@@ -33,11 +35,12 @@ $cards = [
     'description'=> 'Sessão será transmitida a partir das 9h pelo canal da JE no YouTube e pela TV Justiça',      
     'type'=> [
       'icon' => null,
-      'label'=> 'Destaque',
-      'badge'=> 'destaque',
+      'label'=> 'Rádio',
+      'badge'=> 'radio',
     ],    
     'time'=> rand(1, 15),
     'video'=> null,
+    'audio'=> 'assets/files/como-comecei.mp3',
     'url'=> '#',
   ],    
   [
@@ -51,6 +54,7 @@ $cards = [
     ],    
     'time'=> rand(1, 15),
     'video'=> null,
+    'audio'=> null,
     'url'=> '#',
   ],    
   [
@@ -64,6 +68,7 @@ $cards = [
     ],    
     'time'=> rand(1, 15),
     'video'=> null,
+    'audio'=> null,
     'url'=> '#',
   ],    
   [
@@ -77,6 +82,7 @@ $cards = [
     ],    
     'time'=> rand(1, 15),
     'video'=> 'https://www.youtube.com/watch?v=zBek718CM2U',
+    'audio'=> 'assets/files/5-dicas-para-uma-carreira-solida-como-programador.mp3',
     'url'=> '#',
   ],    
   [
@@ -90,6 +96,7 @@ $cards = [
     ],    
     'time'=> rand(1, 15),
     'video'=> null,
+    'audio'=> null,
     'url'=> '#',
   ],    
   [
@@ -103,6 +110,7 @@ $cards = [
     ],    
     'time'=> rand(1, 15),
     'video'=> null,
+    'audio'=> null,
     'url'=> '#',
   ],    
 ];

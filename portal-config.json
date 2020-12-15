@@ -62,7 +62,8 @@
                 "assets/js/vendor/owl.carousel.min.js",
                 "assets/js/vendor/js.cookie.js",
                 "assets/js/vendor/jquery.placeholder.js",
-                "assets/js/vendor/clipboard.min.js"
+                "assets/js/vendor/clipboard.min.js",
+                "assets/js/vendor/audio-player.js"
             ],            
             "rybena": [
                 "assets/js/vendor/rybena.js"
@@ -86,7 +87,8 @@
                     "assets/js/menu-lateral.js",
                     "assets/js/conteudo.js",
                     "assets/js/imprensa.js",
-                    "assets/js/nova-imprensa.js"
+                    "assets/js/nova-imprensa.js",
+                    "assets/js/player-radio.js"
                 ]
             }
         }
