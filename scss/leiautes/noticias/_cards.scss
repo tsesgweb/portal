@@ -68,9 +68,11 @@
         p {
             margin-bottom: 0;
         }
+        
         img {
-            min-width: 30px;
+          max-width: 26px;          
         }
+        
         >div button {
             padding: 0;
             &+button {
