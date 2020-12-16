@@ -21,9 +21,10 @@
         &.no-img {
             .news-title {
                 @include card-title;
-                @include responsive-font-size(16px);
+                @include responsive-font-size(26px);
+                font-family: 'Open Sans';
+                font-weight: 600;
                 color: $azul;
-                font-weight: bold;
             }
             .news-badge {
                 position: relative;
@@ -64,27 +65,24 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-
         p {
             margin-bottom: 0;
         }
-
         img {
-          min-width: 30px;          
+            min-width: 30px;
         }
-
-        > div button {
-          padding: 0;
-          
-          & + button {
-            margin-left: 5px;
-          }
-        }        
+        >div button {
+            padding: 0;
+            &+button {
+                margin-left: 5px;
+            }
+        }
         .tooltip-arrow,
-        .news-audio-download + .tooltip > .tooltip-inner,
-        .news-transcricao-download + .tooltip > .tooltip-inner {background-color: $radio;}
+        .news-audio-download+.tooltip>.tooltip-inner,
+        .news-transcricao-download+.tooltip>.tooltip-inner {
+            background-color: $radio;
+        }
     }
-
     &-btn-sharing {
         margin-right: 0;
     }

@@ -68,7 +68,7 @@ $radioCards = json_decode(json_encode((object) $radioCards), FALSE);
   <h2>Radio</h2>
     <div class="radio__linha">  
       <div class="item">
-      <div class="news">
+      <div class="news ">
       <?php
       foreach ($radioCards as $key => $card):
         include BASE_URL . '/includes/components/card.inc.php';    
