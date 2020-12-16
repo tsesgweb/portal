@@ -14,7 +14,7 @@
   
   <div class="news-body">
     <?php 
-    $card->image && 
+    $card->image &&     
       printf('<span class="news-badge badge-%s news-badge__limited">%s%s%s</span>', 
         $card->type->badge, 
         $card->type->icon, 
@@ -30,6 +30,7 @@
     <h5 class="news-title"><a href="<?= $card->url; ?>"><?=$card->title;?></a></h5>    
     <?php 
     !$card->image && 
+    !$card->audio &&
     printf('<span class="news-badge badge badge-%s news-badge__limited">%s%s%s</span>',     
     $card->type->badge, 
     $card->type->icon,
@@ -54,7 +55,7 @@
     ?>
   </div>
   <div class="news-footer">
-    <p class="news-text"><small class="text-muted"><?php $card->type->badge === 'radio' ? print('<button type="button" class="btn btn-link news-audio-download"><img src="assets/imagens/noticias/audio-download.svg" alt="icone àudio download"/> baixar audio</button>'): print $card->time. ' min de leitura';?></small></p>    
+    <?php $card->type->badge === 'radio' ? print('<div><button type="button" class="btn btn-link news-audio-download" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"><img src="assets/imagens/noticias/icon_baixar_audio.svg" alt="icone àudio download"/></button><button type="button" class="btn btn-link news-transcricao-download" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"><img src="assets/imagens/noticias/icon_transquicao.svg" alt="icone transcrição download"/></button></div>'): print '<p class="news-text"><small class="text-muted">'.$card->time. ' min de leitura</small></p>';?>   
      <button class="news-btn-sharing news-list-sharing" type="button">
       <img src="assets/imagens/noticias/share.svg" alt="compartihamento">
     </button>    

@@ -26,8 +26,7 @@ $(window).on('load', function () {
 
   // mostra painel de compartilhamento
   function sharingOverlay($btn, $klass, $find) {
-    $($btn).on('click focusin', function () { 
-      console.log($(this));       
+    $($btn).on('click focusin', function () {             
       $(this)      
         .closest($find)
         .find('.'+$klass+'-overlay')
@@ -49,4 +48,10 @@ $(window).on('load', function () {
 
   sharingOverlay('.news-btn-sharing', 'news-list-sharing', '.news-card');
   sharingOverlay('.radio-list-sharing','radio-list-sharing', 'div');   
+
+  //habilita o tooltip
+
+  $('.news-footer button').tooltip({
+    container: 'body'
+  });
 })

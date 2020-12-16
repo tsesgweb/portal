@@ -47,6 +47,7 @@ $radioCards = [
   [
     'image'=> 'https://placeimg.com/294/198/animals',
     'title'=> 'Abradep e Mackenzie serão parceiros do TSE no combate às notícias falsas',
+    'description'=> null,
     'type'=> [
       'badge'=> 'radio',
       'icon'=> null,
