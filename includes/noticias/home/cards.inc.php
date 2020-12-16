@@ -1,6 +1,6 @@
 <?php 
 $cards = new StdClass();
-$cards = [
+$cards = [  
   [
     'image'=> 'https://placeimg.com/294/198/any',
     'title'=> 'Decisões do Plenário: TSE arquiva ação contra Fernando Haddad por suposto abuso de poder político',
@@ -115,6 +115,10 @@ $cards = [
   ],    
 ];
 $cards = json_decode(json_encode((object) $cards), FALSE);
+
+// print '<pre><code>';
+// print_r($cards->radio);
+// print '</code></pre>';
 ?>
 <div class="noticias__conteudo">
   <div class="noticias__linha">
