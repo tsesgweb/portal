@@ -1,7 +1,8 @@
 <section id="mais-lidas">
   <div class="mais-lidas__conteudo">
+  <h2>Mais lidas do mês</h2>
     <div class="mais-lidas__linha">
-      <h2>Mais lidas do mês</h2>
+
     </div>
   </div>
   <div class="bg-mais-lidas">
