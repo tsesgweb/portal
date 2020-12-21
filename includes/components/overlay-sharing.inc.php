@@ -1,4 +1,4 @@
-<div class="news-list-sharing-overlay news-list-sharing-overlay_color-news">
+<div class="news-list-sharing-overlay news-list-sharing-overlay_color-<?php $noticia->badge === 'radio'? print('radio'):print('comunicado');?>">
   <button class="news-list-sharing-overlay__close">X</button>          
   <span class="news-list-sharing-overlay__text">matéria</span>
   <span class="news-list-sharing-overlay__title"><?= $noticia->title; ?></span>

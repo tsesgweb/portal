@@ -130,8 +130,7 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        border-radius: $radius;
-        background-color: rgba(27, 48, 90, 0.9);
+        border-radius: $radius;        
         width: 100%;
         z-index: 3;
         opacity: 1;
@@ -141,16 +140,15 @@
 
       @each $badge-nome,
       $badge-content in $badge-theme {
-        @include modificar(color-#{$badge-nome}) {
-          @include elemento(tag) {
+        &_color-#{$badge-nome} {                    
+          background-color: $badge-content;          
+          @if $badge-nome=='comunicado' {
+            color: rgba($badge-content, 0.8);
+          } @else {
             color: $badge-content;
-
-            @if $badge-nome=='comunicado' {
-              color: #ffffff;
-            }
-          }
+          }        
         }
-      }
+      }     
 
       @include elemento(close) {
         text-align: center;
