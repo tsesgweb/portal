@@ -4,113 +4,99 @@ $bg-badge: #E5E5E5;
 $linha: #E5E5E5;
 $bg-badge-hover: #E5E5E5;
 $color-badge: #1b305a;
-
 #mais-lidas {
-
-  .bg-mais-lidas {
-    background-color: $bg-section;
-  }
-
-  h2 {
-    @include sub-titulo;
-  }
-
-  .lista-mais-lidas {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    font-size: .8em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    padding-left: 0;
-
-
-    .item-mais-lidas {
-      flex: 0 0 calc(33% - .7em);
-      border-top: 1px solid $linha;
-      padding-bottom: .5em;
-      padding-top: .5em;
-      position: relative;
-
-      @include media-breakpoint-down(xs) {
-        flex: 0 0 calc(100%);
-      }
-
-      &:nth-child(1) {
-        @include media-breakpoint-up(xs) {
-          border-top: none;
-        }
-      }
-
-      &:nth-child(2) {
-        @include media-breakpoint-up(xs) {
-          border-top: none;
-        }
-      }
-
-      &:nth-child(3) {
-        @include media-breakpoint-up(xs) {
-          border-top: none;
-        }
-      }
-
-      &::after {
-        @include media-breakpoint-up(xs) {
-          content: '';
-          width: 1px;
-          height: 80%;
-          display: block;
-          position: absolute;
-          background-color: $linha;
-          right: 0;
-          top: 10px;
-        }
-      }
-
-      &:nth-child(3n) {
-        &::after {
-          @include media-breakpoint-up(xs) {
-            display: none;
-          }
-        }
-      }
-
-      .link-mais-lidas {
+    .bg-mais-lidas {
+        background-color: $bg-section;
+    }
+    h2 {
+        @include sub-titulo;
+    }
+    .lista-mais-lidas {
         display: flex;
-        padding-right: .5em;
-        align-items: center;
+        list-style: none;
+        flex-wrap: wrap;
+        font-size: .9em;
         padding-top: 1.5em;
         padding-bottom: 1.5em;
-        padding-left: .5em;
-        padding-right: .5em;
-        border-radius: 5px;
-        margin-left: .3em;
-        margin-right: .3em;
-
-        .badge {
-          background-color: $bg-badge;
-          border-radius: 100%;
-          margin-right: 5px;
-          padding: .8em;
-          width: 20px;
-          height: 20px;
-          font-size: 1.2em;
-          align-items: center;
-          justify-content: center;
-          display: flex;
-          font-weight: normal;
+        padding-left: 0;
+        .item-mais-lidas {
+            flex: 0 0 calc(33% - .7em);
+            border-top: 1px solid $linha;
+            padding-bottom: .5em;
+            padding-top: .5em;
+            position: relative;
+            @include media-breakpoint-down(xs) {
+                flex: 0 0 calc(100%);
+            }
+            &:nth-child(1) {
+                @include media-breakpoint-up(xs) {
+                    border-top: none;
+                }
+            }
+            &:nth-child(2) {
+                @include media-breakpoint-up(xs) {
+                    border-top: none;
+                }
+            }
+            &:nth-child(3) {
+                @include media-breakpoint-up(xs) {
+                    border-top: none;
+                }
+            }
+            &::after {
+                @include media-breakpoint-up(xs) {
+                    content: '';
+                    width: 1px;
+                    height: 80%;
+                    display: block;
+                    position: absolute;
+                    background-color: $linha;
+                    right: 0;
+                    top: 10px;
+                }
+            }
+            &:nth-child(3n) {
+                &::after {
+                    @include media-breakpoint-up(xs) {
+                        display: none;
+                    }
+                }
+            }
+            .link-mais-lidas {
+                display: flex;
+                padding-right: .5em;
+                align-items: center;
+                padding-top: 1.5em;
+                padding-bottom: 1.5em;
+                padding-left: .5em;
+                padding-right: .5em;
+                border-radius: 5px;
+                margin-left: .3em;
+                margin-right: .3em;
+                transition: all 0.3s ease;
+                .badge {
+                    background-color: $bg-badge;
+                    border-radius: 100%;
+                    margin-right: 5px;
+                    padding: .8em;
+                    width: 20px;
+                    height: 20px;
+                    font-size: 1.2em;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    font-weight: normal;
+                }
+                &:hover {
+                    background-color: $bg-lista-hover;
+                    text-decoration: none;
+                    transition: ease-in-out 0.3s;
+                    .badge {
+                        background-color: $color-badge;
+                        color: $bg-lista-hover;
+                    }
+                }
+            }
         }
-
-        &:hover {
-          background-color: $bg-lista-hover;
-          text-decoration: none;
-
-          .badge {
-            background-color: $color-badge;
-            color: $bg-lista-hover;
-          }
-        }
-      }
     }
-  }
 }

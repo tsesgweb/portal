@@ -129,6 +129,6 @@ $cards = json_decode(json_encode((object) $cards), FALSE);
       endforeach;
       ?>
     </div>
-    <a class="btn btn-azul btn-block news-btn">Veja outras notícias</a>
+    <button class="btn-outline">Veja outras notícias</button>
   </div>
 </div>

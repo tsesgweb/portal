@@ -6,9 +6,12 @@
         @include make-col-ready(); //iniciar a columa (antes da linha e __conteúdo)
         @include make-col(6); // determina o temanho da columa
         display: flex;
+        img {
+            border-radius: 5px;
+        }
         .link-principal-item {
             cursor: pointer;
-            border-radius: 5px !important;
+            padding: 5px;
         }
     }
     .link-secundario {
@@ -16,6 +19,13 @@
         @include make-col(6);
         flex-direction: row;
         justify-content: space-between;
+        .link-secundario-item {
+            cursor: pointer;
+            padding: 5px;
+            img {
+                border-radius: 5px;
+            }
+        }
     }
 }
 
