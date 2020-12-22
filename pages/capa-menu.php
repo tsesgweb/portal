@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $subnivel       = 'Capa de Menu';
 $titulo         = 'Eleitor e Eleições';
 $asideinterna   = false;

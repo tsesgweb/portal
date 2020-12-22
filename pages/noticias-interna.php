@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $asideinterna   = false;
 $asidenoticia   = false;
 $titulo         = 'Lei dos Partidos Políticos completa 24 anos nesta quinta (19)';

@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $titulo         = 'Validação de documentos';
 $asideinterna   = true;
 $tags           = true;

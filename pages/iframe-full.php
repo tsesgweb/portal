@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $subnivel       = 'iframefull';
 $titulo         = 'Certidão de quitação eleitoral';
 $ocultartitulo         = false;

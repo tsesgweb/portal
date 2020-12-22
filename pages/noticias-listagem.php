@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $asideinterna         = false;
 $asidenoticia         = false;
 $titulo               = 'Notícias';

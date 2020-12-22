@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $titulo = 'Organograma';
 $asideinterna = true;
 include BASE_URL .'/includes/header.inc.php';

@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $titulo = 'Propostas de governo dos candidatos ao cargo de Presidente da República';
 $asideinterna = true;
 $tags = true;

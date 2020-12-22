@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $titulo = 'Relatório de feedbacks';
 $asideinterna = false;
 $paginacao = true;

@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $subnivel = 'Legislação Compilada';
 $titulo = 'Legislação Compilada';
 $asideinterna = false;

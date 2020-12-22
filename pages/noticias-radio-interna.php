@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $asideinterna   = false;
 $asidenoticia   = false;
 $titulo         = 'Conexão Eleitoral: TSE inaugura exposição sobre diplomação na República brasileira';

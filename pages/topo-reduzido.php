@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $titulo = 'Topo Reduzido';
 $asideinterna = false;
 $titulo = 'Conteúdo com topo reduzido';

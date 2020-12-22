@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $subnivel= 'Legislação Compilada';
 $titulo= 'Perguntas frequentes sobre as eleições';
 $legislacao= true;

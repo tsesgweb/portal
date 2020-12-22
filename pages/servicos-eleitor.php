@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $titulo         = 'Situação Eleitoral';
 $asideinterna   = true;
 $tags           = true;

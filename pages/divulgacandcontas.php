@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $subnivel = 'Eleições 2018';
 $titulo = 'DivulgaCandContas';
 $ocultartitulo = false;

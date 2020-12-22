@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $subnivel = '';
 $titulo = 'Estatísticas 2018';
 $ocultartitulo = true;

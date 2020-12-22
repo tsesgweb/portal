@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $home = true;
 $interna = false;
 $recaptcha = false;

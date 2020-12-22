@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $subnivel = 'Galeria';
 $titulo = 'Lista';
 $asideinterna = true;

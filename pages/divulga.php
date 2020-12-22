@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $subnivel = 'Conteúdo janela';
 $titulo = 'Divulgação de Candidaturas e Contas Eleitorais';
 $asideinterna = false;

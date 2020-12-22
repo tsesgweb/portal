@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $subnivel = 'Biblioteca';
 $titulo = 'Biblioteca digital da Justiça Eleitoral';
 $asideinterna = false;

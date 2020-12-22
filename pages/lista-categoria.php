@@ -1,5 +1,5 @@
 <?php
-include('config.inc.php');
+include 'config.inc.php';
 $titulo        = 'Conteúdos da categoria "Eleitor"';
 $asideinterna  = false;
 $paginacao     = true;
