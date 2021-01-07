@@ -79,7 +79,7 @@ Breakpoints()
 })(window, document, jQuery)
 // abas bs3 to bs4
 $(function () {
-  var abas = $('.abas-personalizadas')
+  var abas = $('.abas-personalizadas, .campaigns__tabs')
   if (abas.length) {
     abas
       .find('.active')
