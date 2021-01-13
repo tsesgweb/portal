@@ -26,6 +26,18 @@
                 font: normal normal bold 20px/28px Open Sans;
                 color: $azul;
             }
+            &:before {
+                content: "\f16a";
+                font-family: "FontAwesome";
+                color: #FF0000;
+                font-size: 5rem;
+                width: 95%;
+                height: 77%;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
         .item-secundario {
             @include make-col-ready(0);
@@ -33,12 +45,15 @@
             display: flex;
             flex-direction: column;
             .item {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                &:nth-last-child(3) {
+                    padding-top: 0;
+                }
                 img {
                     border-radius: 5px;
-                    margin-bottom: 3px;
                 }
                 border-bottom: 1px solid #DCDCDC;
-                margin-bottom: 2px;
                 display: flex;
                 align-items: center;
                 &:nth-last-child(1) {
@@ -48,6 +63,18 @@
                     margin-left: 5px;
                     font: normal normal bold 14px/19px Open Sans;
                     color: $azul;
+                }
+                &:before {
+                    content: "\f16a";
+                    font-family: "FontAwesome";
+                    color: #FF0000;
+                    font-size: 2rem;
+                    width: 192px;
+                    height: 123px;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }
@@ -91,6 +118,23 @@
                 &:nth-last-child(1) {
                     border-bottom: none;
                 }
+                a {
+                    border: 1px solid greenyellow;
+                    display: flex;
+                    cursor: pointer;
+                }
+                &:before {
+                    content: "\f16a";
+                    font-family: "FontAwesome";
+                    color: #FF0000;
+                    font-size: 3rem;
+                    width: 192px;
+                    height: 123px;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
         .item-principal-2 {
@@ -109,6 +153,59 @@
                 justify-content: baseline;
                 padding: 15px;
                 color: $azul;
+            }
+        }
+        .item-secundario-2 {
+            @include make-col-ready();
+            @include make-col(8);
+            display: flex;
+            flex-direction: column;
+            .item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid #DCDCDC;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                p {
+                    margin-left: 5px;
+                    font: normal normal 18px/25px Open Sans;
+                    color: $azul;
+                }
+                &:nth-last-child(1) {
+                    border-bottom: none;
+                }
+                &:before {
+                    content: "\f16a";
+                    font-family: "FontAwesome";
+                    color: #FF0000;
+                    font-size: 3rem;
+                    width: 192px;
+                    height: 123px;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .item-principal-3 {
+            @include make-col-ready(0);
+            @include make-col(4);
+            display: flex;
+            flex-direction: column;
+            background: #616C88;
+            border-radius: 5px;
+            img {
+                border-radius: 5px;
+            }
+            p {
+                display: flex;
+                align-items: baseline;
+                justify-content: baseline;
+                padding: 15px;
+                color: #fff;
             }
         }
         .item-secundario-2 {
