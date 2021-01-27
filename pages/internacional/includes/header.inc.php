@@ -76,7 +76,7 @@
     <div class="topo">
       <div class="logo">
         <h1 class="logo-titulo sr-only">Superior Electoral Court</h1>
-        <a class="logo-tribunal" href="index.php" title="Tribunal Superior Eleitoral"><img src="../assets/imagens/internacional/logo-tse.png" alt="Logo tribunal">
+        <a class="logo-tribunal" href="index.php" title="Tribunal Superior Eleitoral"><img src="assets/imagens/internacional/logo-tse.png" alt="Logo tribunal">
         
         </a>
         <p class="logo-descricao">The Court of Democracy</p>
@@ -104,7 +104,7 @@
       </div>
       <div id="campanhas-diversas">
         <div class="campanha-laco">
-          <img src="../assets/imagens/nov_azul.png" alt="Campanha novembro azul">
+          <img src="assets/imagens/nov_azul.png" alt="Campanha novembro azul">
         </div>
       </div>
     </div>

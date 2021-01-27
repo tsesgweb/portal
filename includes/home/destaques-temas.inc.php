@@ -6,7 +6,7 @@
                 <div class="destaque-temas__conteudo">
                     <div class="destaque-temas__linha">
                         <div class="destaque-temas__card_bloco-imagem">
-                            <img src="../assets/imagens/destaques-eleitor.png" width="54" height="54" class="card-img destaque-temas__card_imagem" alt="Eleições">
+                            <img src="assets/imagens/destaques-eleitor.png" width="54" height="54" class="card-img destaque-temas__card_imagem" alt="Eleições">
                             <h3 class="destaque-temas__card_titulo-imagem">Eleições</h3>
                         </div>
                         <div class="destaque-temas__card_texto">

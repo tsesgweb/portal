@@ -3,7 +3,7 @@
     <div class="menu__conteudo">
         <div class="menu__linha">
             <h1 class="titulo-principal"><a class="menu__logo" href="/" title="Tribunal Superior Eleitoral">
-                    <img src="../assets/imagens/logos/tse.png" alt="logo Tribunal Superior Eleitoral">
+                    <img src="assets/imagens/logos/tse.png" alt="logo Tribunal Superior Eleitoral">
                     <span class="menu__logo_oculto">Tribunal Superior Eleitoral - O Tribunal da democracia</span>
                 </a></h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navegacaoResposiva" aria-controls="navegacaoResposiva" aria-label="Menu responsivo">

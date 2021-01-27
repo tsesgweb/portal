@@ -53,7 +53,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="http://www.tse.jus.br/transparencia/acesso-a-informacao/acesso-a-informacao" class="transparencia_link" data-toggle="tooltip" data-placement="botton" title="" target="_self" data-original-title="Acesso à informação">
-                            <img src="../assets/imagens/footer/acesso-informacao.png" alt="Imagem acesso à Informação">
+                            <img src="assets/imagens/footer/acesso-informacao.png" alt="Imagem acesso à Informação">
                         </a>
                     </li>
                 </ul>

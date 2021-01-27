@@ -8,7 +8,7 @@
           <div class="noticia__imagem">
             <img
               class="img-responsive"
-              src="../assets/imagens/noticias-topo/noticia-principal.png"
+              src="assets/imagens/noticias-topo/noticia-principal.png"
               alt="TPS 2019"
               title="Participe do Teste Público de Segurança 2019! "
             />
@@ -57,7 +57,7 @@
           <div class="noticia__imagem">
             <img
               class="img-responsive"
-              src="../assets/imagens/noticias-topo/noticia-principal.png"
+              src="assets/imagens/noticias-topo/noticia-principal.png"
               alt="TPS 2019"
               title="Participe do Teste Público de Segurança 2019! "
             />
@@ -104,7 +104,7 @@
           <div class="noticia__imagem">
             <img
               class="img-responsive"
-              src="../assets/imagens/noticias-topo/noticia-principal.png"
+              src="assets/imagens/noticias-topo/noticia-principal.png"
               alt="TPS 2019"
               title="Participe do Teste Público de Segurança 2019! "
             />
@@ -127,7 +127,7 @@
           <div class="noticia__imagem">
             <img
               class="img-responsive"
-              src="../assets/imagens/noticias-topo/noticia-principal.png"
+              src="assets/imagens/noticias-topo/noticia-principal.png"
               alt="TPS 2019"
               title="Participe do Teste Público de Segurança 2019! "
             />
@@ -179,7 +179,7 @@
         <div class="destaque-servico-card-header">
           <button id="destaque-servico" class="btn btn-link">
             <img
-              src="../../assets/imagens/home/servico-eleitor.svg"
+              src="assets/imagens/home/servico-eleitor.svg"
               alt="consulta jurídicas"
             />
             Serviço ao eleitor
@@ -212,7 +212,7 @@
       <div class="destaque-servico-card destaque-servico__consulta-juridica">
         <div class="destaque-servico-card-header">
           <button id="destaque-juridica" class="btn btn-link">
-            <img src="../../assets/imagens/home/consulta-juridica.svg" alt="" />
+            <img src="assets/imagens/home/consulta-juridica.svg" alt="" />
             Consultas jurídicas
           </button>
         </div>

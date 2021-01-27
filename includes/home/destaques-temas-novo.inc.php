@@ -31,7 +31,7 @@ $temas = array(
         <div class="destaque-tema__card">
           <div class="destaque-tema__card-header">
             <img
-              src="../../assets/imagens/home/<?= $tema['icon']?>"
+              src="assets/imagens/home/<?= $tema['icon']?>"
               width="54"
               height="54"
               alt="<?= $tema['tema']?>"

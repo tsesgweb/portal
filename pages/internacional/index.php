@@ -131,7 +131,7 @@ include BASE_URL . '/includes/header.inc.php';
                             <!-- Audio -->
                             <!-- <a href="https://www.youtube.com/embed/hNJ6Rbtv1gs" data-fancybox>
                                                 <figure class="je-icone je-icone-audio je-icone-4x">
-                                                    <img class="img-responsive" src="../assets/imagens/fundo-audio.png" alt="teste noticia 1">
+                                                    <img class="img-responsive" src="assets/imagens/fundo-audio.png" alt="teste noticia 1">
                                                 </figure>
                                             </a> -->
                             <h3>
@@ -144,7 +144,7 @@ include BASE_URL . '/includes/header.inc.php';
                         <article id="noticia-2" class="noticia-auxiliar">
                             <a href="#" class="visible-xs">
                                 <figure>
-                                    <img class="img-responsive" src="../assets/imagens/spinner.gif" data-src="http://www.tse.jus.br/imagens/fotos/preparacao-de-ambiente-para-tps-em-27-11-2017-1511786694169/image_large" alt="teste noticia 1">
+                                    <img class="img-responsive" src="assets/imagens/spinner.gif" data-src="http://www.tse.jus.br/imagens/fotos/preparacao-de-ambiente-para-tps-em-27-11-2017-1511786694169/image_large" alt="teste noticia 1">
                                 </figure>
                             </a>
                             <h4>
@@ -162,7 +162,7 @@ include BASE_URL . '/includes/header.inc.php';
                         <article id="noticia-4" class="noticia-auxiliar">
                             <a href="https://www.youtube.com/embed/hNJ6Rbtv1gs" data-fancybox class="visible-xs">
                                 <figure class="je-icone je-icone-audio je-icone-4x">
-                                    <img class="img-responsive" src="../assets/imagens/spinner.gif" data-src="../assets/imagens/fundo-audio.png" alt="teste noticia 1">
+                                    <img class="img-responsive" src="assets/imagens/spinner.gif" data-src="assets/imagens/fundo-audio.png" alt="teste noticia 1">
                                 </figure>
                             </a>
                             <h4>
@@ -189,7 +189,7 @@ include BASE_URL . '/includes/header.inc.php';
                 <div id="banner-internacional">
                     <a href="http://english.tse.jus.br/electronic-voting/the-biometrical-system-in-brazil" title="Biometric system">
                         <figure>
-                            <img class="img-responsive" alt="Biometric system" src="../assets/imagens/internacional/banner-biometric-system.png" />
+                            <img class="img-responsive" alt="Biometric system" src="assets/imagens/internacional/banner-biometric-system.png" />
                         </figure>
                     </a>
                 </div>

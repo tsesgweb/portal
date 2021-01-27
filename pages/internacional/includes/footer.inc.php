@@ -69,7 +69,7 @@
                <div class="text-center espaco-imagem">
                   <h2 class="sr-only">Ouvidoria do tribunal</h2>
                   <a href="#" class="btn btn-block btn-outline-default">
-                  <img src="../assets/imagens/call-center-icon.png" alt="Icone do Fale conosco" />Contact us</a>
+                  <img src="assets/imagens/call-center-icon.png" alt="Icone do Fale conosco" />Contact us</a>
                </div>
             </section> -->
          </div>
