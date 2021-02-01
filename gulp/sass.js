@@ -4,7 +4,7 @@ var pkg = require("../package.json");
 
 var banner = [
   "/*! <%= name %> - v<%= pkg.version %> - <%= new Date().getDate() %>.<%= new Date().getMonth()+1 %>.<%= new Date().getFullYear() %> <%= new Date().getHours() %>h<%= new Date().getMinutes() %> - Copyright (c) 2018 tse.jus.br */\n",
-].join("\n");
+].join("");
 module.exports = (gulp, plugins) => {
   return () => {
     gulp
@@ -44,14 +44,14 @@ module.exports = (gulp, plugins) => {
             ])
           : plugins.util.noop()
       )
-      .pipe(
-        $config.run.banner.signature
-          ? plugins.header(banner, {
-              pkg,
-              name: "CSS",
-            })
-          : plugins.util.noop()
-      )
+      // .pipe(
+      //   $config.run.banner.signature
+      //     ? plugins.header(banner, {
+      //         pkg,
+      //         name: "css",
+      //       })
+      //     : plugins.util.noop()
+      // )
       .pipe(
         $config.run.css.minify
           ? plugins.rename({
