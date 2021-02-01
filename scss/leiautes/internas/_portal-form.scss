@@ -47,6 +47,14 @@ $font_2: sans-serif !important;
 #formulario {
     input ~ label {
         font-weight: normal !important;
+
+        @media (min-width:300px) {
+               min-width: 300px
+            }
+        
+        @media (min-width:576px) {
+                min-width: 600px
+            }
     }
 
     input[type="submit"] {
