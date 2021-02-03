@@ -1,4 +1,4 @@
-<aside id="coluna-lateral-interna" class="mobile-active">
+<aside id="coluna-lateral-interna" class="mobile-active alinhar-interna">
     <nav id="menu-lateral" class="nao-imprimir">
         <h3>Eleitor</h3>
         <div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-lateral-res" aria-expanded="false" id="ui-collapse-143"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>

@@ -351,6 +351,9 @@ $margin: 1.3%;
 
 #coluna-lateral-interna {
   @include colunas;
+
+  &.alinhar-interna { margin-left: 0; }
+
 }
 
 .conteudo {
