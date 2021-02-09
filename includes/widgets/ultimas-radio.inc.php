@@ -1,12 +1,18 @@
-<?php 
-
+<?php
 $ultimasRadio = [
-  ['title'=>
-'Confira as principais alterações legislativas nas regras eleitorais que valerão
-para o pleito de 2020', 'image'=> 'https://placeimg.com/80/80/tech'], ['title'=>
-'Biometria já alcançou mais de 78% do eleitorado brasileiro', 'image'=>
-'https://placeimg.com/80/80/people'], ['title'=> 'Saiba como emitir a guia para
-quitação de multa eleitoral', 'image'=> 'https://placeimg.com/80/80/nature'] ];
+  [
+    'title'=> 'Confira as principais alterações legislativas nas regras eleitorais que valerão para o pleito de 2020', 
+    'image'=> 'https://placeimg.com/80/80/tech',
+  ], 
+  [
+    'title'=> 'Biometria já alcançou mais de 78% do eleitorado brasileiro', 
+    'image'=>'https://placeimg.com/80/80/people',
+  ],
+  [
+    'title'=> 'Saiba como emitir a guia para quitação de multa eleitoral', 
+    'image'=> 'https://placeimg.com/80/80/nature',
+    ] 
+];
 ?>
 <div class="portletWrapper">
   <div class="lateral__ultimas">

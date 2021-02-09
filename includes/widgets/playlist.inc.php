@@ -6,13 +6,12 @@ $radioCards = [
   ['name'=> 'Decisões do Plenário', 'color'=> 'vermelho', 'link'=> 'http://www.tse.jus.br/imprensa/tv-1/decisoes-do-plenario'],
 ];
 ?>
-
-
 <div class="portletWrapper">
-<div class="radio-lista radio-lista-<?= $card['color'] ?>">
-    <div class="radio-lista-body"><a href="<?= $card['link']?>" class="btn btn-link stretched-link">
-    <?= $card['name'] ?>
-    </a>
+  <div class="radio-lista radio-lista-<?= $card['color'] ?>">
+    <div class="radio-lista-body">
+      <a href="<?= $card['link']?>" class="btn btn-link stretched-link">
+        <?= $card['name'] ?>
+      </a>
     </div>
   </div>
 </div>	
