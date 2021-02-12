@@ -14,6 +14,6 @@ module.exports = function(gulp, plugins) {
         gulp.watch($config.paths.src.js + '/*.js', ['jshint']).on('change', $browserSync.reload);
         gulp.watch($config.paths.src.css).on('change', $browserSync.reload);
         gulp.watch($config.paths.src.php).on('change', $browserSync.reload);
-        gulp.watch($config.paths.src.base + '/inc/**/*.php').on('change', $browserSync.reload);
+        gulp.watch($config.paths.src.base + '/**/*.php').on('change', $browserSync.reload);
     };
 };

@@ -1,3 +1,4 @@
+#coluna-lateral-noticias,
 #aside-noticias {
   @include make-col-ready();
   @include make-col(3);
@@ -8,35 +9,6 @@
   }
 
   .lateral {
-    @include elemento(mais-lidas) {
-      @include item(header) {
-        @include card-header;
-        background-color: #fff;
-        border-bottom: none;
-      }
-
-      @include item (title) {
-        @include titulo-noticias($azul);
-        font-size: 1.3rem;
-        font-weight: bold;
-        line-height: 1.5;
-        margin-bottom: 0;
-        padding-bottom: 0;
-        display: flex;
-        align-items: center;
-
-        &::before {
-          content: "";
-          width: 12px;
-          height: 12px;
-          background: #47C77D;
-          margin-right: 8px;
-        }
-      }
-
-      margin-bottom: 30px;
-    }
-
 
     @include elemento(gestor) {
       @include card;
@@ -100,6 +72,35 @@
         }
       }
     }
+
+    @include elemento(mais-lidas) {
+      @include item(header) {
+        @include card-header;
+        background-color: #fff;
+        border-bottom: none;
+      }
+
+      @include item (title) {
+        @include titulo-noticias($azul);
+        font-size: 1.3rem;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          background: #47C77D;
+          margin-right: 8px;
+        }
+      }
+
+      margin-bottom: 30px;
+    }
   }
 
   .temas-tag {
@@ -108,6 +109,7 @@
     .tags {
       list-style: none;
       margin-top: 20px;
+      padding-left: 0;
 
       .tag {
         display: inline-block;

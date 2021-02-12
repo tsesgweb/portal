@@ -6,8 +6,24 @@
   padding-bottom: 5px;
   border-radius: 5px;
 
+  @include media-breakpoint-only(xs) {
+    &__linha {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
   &-lista {
     @include list-group(horizontal);
+
+    @include media-breakpoint-up(xs) {
+      flex-direction: column;            
+    }
+    
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+    }
+
     border-radius: 5px;
     justify-content: space-around;    
     
@@ -34,6 +50,11 @@
 
       &:nth-child(1) {
         align-items: center;
+
+        @include media-breakpoint-only(xs) {
+          align-items: start;
+          margin-bottom: 10px;
+        }
         
         img {
           margin-left: 5px;

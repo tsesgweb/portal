@@ -107,7 +107,7 @@ include BASE_URL . '/includes/header.inc.php';
             <?php include BASE_URL . '/includes/noticias/aviso.inc.php';?>
 
         </section> 
-        <?php include BASE_URL . '/includes/widgets/aside-noticias-radio.inc.php';?>       
+        <?php include BASE_URL . '/includes/widgets/aside-noticias-radio.inc.php';?>
         <?php include BASE_URL . '/includes/noticias/barra-ferramentas-noticias.inc.php';?>
     </div>
 </div>

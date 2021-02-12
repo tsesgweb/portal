@@ -8,7 +8,7 @@ $radioCards = [
 ?>
 <aside id="coluna-lateral-noticias" class="<?php $destaquenoticia ? print 'listagem' :print 'lateral' ;?> nao-imprimir">
   <h2 class="sr-only">Coluna relacionada a rádio</h2>
-  <?php $internanoticia && include __DIR__ . '/ultimas-radio.inc.php';?>  
+  <?php include __DIR__ . '/ultimas-radio.inc.php';?>  
   <?php foreach ($radioCards as $card) : ?>
 	  <div class="portletWrapper">
       <div class="radio-lista radio-lista-<?= $card['color'] ?>">
@@ -19,6 +19,6 @@ $radioCards = [
         </div>
      </div>	
   <?php  endforeach ?>
-  <?php $internanoticia && include __DIR__ . '/tags.inc.php';?>  
-  <?php $internanoticia && include __DIR__ . '/gestor-noticia.inc.php';?>  
+  <?php include __DIR__ . '/navegue-por-temas.inc.php';?>  
+  <?php include __DIR__ . '/gestor-noticia.inc.php';?>  
 </aside>
