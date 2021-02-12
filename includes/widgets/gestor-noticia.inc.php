@@ -1,4 +1,3 @@
-
 <div class="portletWrapper">
   <div class="lateral__gestor">
     <header class="lateral__gestor-header">

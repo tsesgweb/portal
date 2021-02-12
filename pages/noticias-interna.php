@@ -76,6 +76,9 @@ include BASE_URL . '/includes/header.inc.php';
                         gratuita no rádio e na televisão. O desempenho eleitoral exigido das legendas partidárias será
                         aplicado de forma gradual e alcançará seu ápice nas eleições de 2030, conforme previsto na EC nº
                         97/2017.</p>
+                        <?php include BASE_URL . '/includes/noticias/galeria-texto.inc.php';?>
+                        <?php include BASE_URL . '/includes/noticias/texto-com-imagem.inc.php';?>
+
                     <h3 id="titulo-4">Coligações</h3>
                     <p>A EC nº 97 também vedou, a partir de 2020, a celebração de coligações nas eleições proporcionais
                         para a Câmara dos Deputados, Câmara Legislativa, assembleias legislativas e câmaras municipais.

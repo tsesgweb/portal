@@ -1,18 +1,18 @@
 $(document).ready(function () {
   //Barra progressão
   // Verificar o script abaixo que ocorre o erro pois não acha o id barra-progressao
-  // $(function () {
-  //     window.onscroll = function () {
-  //         myFunction()
-  //     };
+  $(function () {
+      window.onscroll = function () {
+          myFunction()
+      };
 
-  //     function myFunction() {
-  //         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  //         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  //         var scrolled = (winScroll / height) * 100;
-  //         document.getElementById("barra-progressao").style.width = scrolled + "%";
-  //     }
-  // });
+      function myFunction() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("barra-progressao").style.width = scrolled + "%";
+      }
+  });
 
   //Titulo da página dentro da imagem
   $(function () {

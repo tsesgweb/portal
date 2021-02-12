@@ -39,21 +39,21 @@
     text = $titulopagina;
     url = $url;
     message = encodeURIComponent(text) + " - " + url;
-    whatsapp_url = $isMobile.any()
-      ? "whatsapp://send?text=" + message
-      : "https://web.whatsapp.com/send?text=" + message;
+    whatsapp_url = $isMobile.any() ?
+      "whatsapp://send?text=" + message :
+      "https://web.whatsapp.com/send?text=" + message;
     window.location.href = whatsapp_url;
     e.preventDefault();
   });
 
   // Compartilhar facebook
-  $(".compartilhar_facebook").click(function (e) {
+  $(".compartilhar_facebook").on('click', function (e) {
     window.open(
       "http://www.facebook.com/share.php?u=" +
-        $url +
-        "&t=" +
-        $titulopagina +
-        "",
+      $url +
+      "&t=" +
+      $titulopagina +
+      "",
       "Compartilhar via facebook",
       $tamanhoTela
     );
@@ -80,17 +80,16 @@
     .click(function (event) {
       if (
         location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
         location.hostname == this.hostname
       ) {
         var target = $(this.hash);
-        target = target.length
-          ? target
-          : $("[name=" + this.hash.slice(1) + "]");
+        target = target.length ?
+          target :
+          $("[name=" + this.hash.slice(1) + "]");
         if (target.length) {
           event.preventDefault();
-          $("html, body").animate(
-            {
+          $("html, body").animate({
               scrollTop: target.offset().top,
             },
             1000,
@@ -189,4 +188,53 @@
       ".dropdown-anos"
     );
   }
+
+  //Galeria dentro do conteúdo
+
+  (function () {
+
+    $('.carousel-galeria-conteudo .item').each(function (index, value) {
+      $(this).attr("posicao", index + 1);
+    });
+
+    var owl = $('.carousel-galeria-conteudo');
+    owl.owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      items: 1,
+      dots: false,
+      navText: ["", ""]
+    });
+
+    $('.owl-item:not(.cloned) [data-fancybox="galeria_imagem_conteudo"]').fancybox({
+      loop: true,
+    });
+
+    $('.ampliar-imagem-atual a').on('click', function () {
+      var imagem_ativa_galeria = $(".owl-item.active img").attr("src");
+      var legenda_ativa_galeria = $(".owl-item.active img").attr("alt");
+
+      $.fancybox.open({
+        src: imagem_ativa_galeria,
+        opts: {
+          caption: legenda_ativa_galeria,
+        }
+
+      });
+
+    });
+
+    var total_itens = $('.owl-item:not(.cloned)').length;
+    $(".barra-galeria .quantidade-img .contagem .total").html(total_itens);
+
+    owl.on('change.owl.carousel', function (e) {
+
+      setTimeout(function () {
+        var posicao = $(".owl-item.active .item").attr("posicao");
+        $(".barra-galeria .quantidade-img .contagem .atual").html(posicao);
+      }, 500);
+
+    });
+  })();
 })(jQuery);

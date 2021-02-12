@@ -31,5 +31,8 @@
         <?php include __DIR__ . '/relacionadas.inc.php';?>
     </div>
 
+    <div class="lateral">
+        <?php $internanoticia && include __DIR__ . '/gestor-noticia.inc.php';?>  
+    </div>
 
 </aside>
