@@ -55,7 +55,7 @@
     ?>
   </div>
   <div class="news-footer">
-    <?php $card->type->badge === 'radio' ? print('<div><button type="button" class="btn btn-link news-audio-download" data-toggle="tooltip" data-placement="bottom" title="Baixar '.rand(1, 99).'MB"><img src="assets/imagens/noticias/icon_baixar_audio.svg" alt="icone àudio download"/></button><button type="button" class="btn btn-link news-transcricao-download" data-toggle="tooltip" data-placement="bottom" title="Transquição de audio"><img src="assets/imagens/noticias/icon_transquicao.svg" alt="icone transcrição download"/></button></div>'): print '<p class="news-text"><small class="text-muted">'.$card->time. ' min de leitura</small></p>';?>   
+    <?php $card->type->badge === 'radio' ? print('<div><button type="button" class="btn btn-link news-audio-download" data-toggle="tooltip" data-placement="bottom" title="Baixar '.rand(1, 99).'MB"><img src="assets/imagens/noticias/icon_baixar_audio.svg" alt="icone àudio download"/></button><button type="button" class="btn btn-link news-transcricao-download" data-toggle="tooltip" data-placement="bottom" title="Transcrição de audio"><img src="assets/imagens/noticias/icon_transquicao.svg" alt="icone transcrição download"/></button></div>'): print '<p class="news-text"><small class="text-muted">'.$card->time. ' min de leitura</small></p>';?>   
      <button class="news-btn-sharing news-list-sharing" type="button">
       <img src="assets/imagens/noticias/share.svg" alt="compartihamento">
     </button>    

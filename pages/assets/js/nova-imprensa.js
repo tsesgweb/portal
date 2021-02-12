@@ -46,6 +46,7 @@ $(window).on('load', function () {
     })
   }
 
+  sharingOverlay('.news-list-sharing', 'news-list-sharing', '.news-list-col-8');
   sharingOverlay('.news-btn-sharing', 'news-list-sharing', '.news-card');
   sharingOverlay('.radio-list-sharing', 'radio-list-sharing', 'div');
 
