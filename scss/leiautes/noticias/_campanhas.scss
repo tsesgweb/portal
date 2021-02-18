@@ -43,7 +43,14 @@
 
   @include elemento(cards) {
     @include make-col-ready();
-    @include make-col(12);
+    
+    
+    @include media-breakpoint-up(xs){
+      @include make-col(12);
+    }
+    @include media-breakpoint-up(lg){
+      @include make-col(12);
+    }
 
     &-detail {      
       h5 {
@@ -70,7 +77,14 @@
   @include elemento(detail) {
     @include make-row(0);
     @include make-col-ready(0);
-    @include make-col(12);
+  
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+  
+    @include media-breakpoint-up(lg) {
+      @include make-col(12);
+    }
 
     margin-bottom: 50px;
 
@@ -84,7 +98,14 @@
 
   @include elemento(spot) {
     @include make-col-ready();
-    @include make-col(6);
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+
     display: flex;
     flex-direction: column;
 
@@ -100,8 +121,16 @@
   }
   
   @include elemento(tab) {
-    @include make-col-ready();
-    @include make-col(6);    
+    @include make-col-ready();    
+    @include media-breakpoint-up(xs) {
+      margin-top: 20px;
+      @include make-col(12);    
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+      @include make-col(6);    
+    }
   }
 
   @include elemento(tabs) {  
