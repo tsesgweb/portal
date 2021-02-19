@@ -68,11 +68,9 @@
         p {
             margin-bottom: 0;
         }
-        
         img {
-          max-width: 26px;          
+            max-width: 26px;
         }
-        
         >div button {
             padding: 0;
             &+button {
@@ -164,7 +162,7 @@
         content: "\f16a";
         font-family: $font-icone;
         font-size: 4rem;
-        color: rgba($azul, 0.8);
+        color: rgba(red, 0.8);
         width: 50%;
         height: 50%;
         // background-color: orange;
@@ -174,5 +172,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: .6s ease;
+    }
+    &:hover {
+        &::after {
+            width: 55%;
+            height: 55%;
+        }
     }
 }

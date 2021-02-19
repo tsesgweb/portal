@@ -4,19 +4,19 @@
   <div class="tv__linha">
 
     <div class="item-principal">
-      <img class="img-fluid" src="https://picsum.photos/706/378?random=9" alt="Imagem">
-      <p><a href="#">Começou hoje a janela partidária para vereadores que desejam
+      <a href="https://www.youtube.com/watch?v=zBek718CM2U" class="fancybox-action icone-play"><img class="img-fluid" src="https://picsum.photos/706/378?random=9" alt="Imagem"></a>
+      <p><a class="fancybox-action" href="https://www.youtube.com/watch?v=zBek718CM2U">Começou hoje a janela partidária para vereadores que desejam
         mudar de partido para concorrer nas eleições de outubro</a></p>
     </div>
 
     <div class="item-secundario">
       <div class="item">
-        <img class="img-fluid" src="https://picsum.photos/196/105?random=4" alt="Imagem">
-        <p><a href="#">Decisões do Plenário: TSE arquiva ação contra Fernando Haddad por suposto abuso de poder político</a></p>
+        <img class="fancybox-action" class="img-fluid" src="https://picsum.photos/196/105?random=4" alt="Imagem">
+        <p><a  class="fancybox-action" href="#">Decisões do Plenário: TSE arquiva ação contra Fernando Haddad por suposto abuso de poder político</a></p>
       </div>
 
       <div class="item">
-        <img class="img-fluid" src="https://picsum.photos/196/105?random=5" alt="Imagem">
+        <a href=#><img class="img-fluid" src="https://picsum.photos/196/105?random=5" alt="Imagem"></a>
         <p><a href="#">YouTube do TSE já tem 90 mil inscritos</a></p>
       </div>
       <div class="item">
