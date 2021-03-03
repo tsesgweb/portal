@@ -45,6 +45,12 @@
                     <span class="card-titulo">TikTok</span>
                 </a>
             </h3>
+            <h3 class="rede-card">
+                <a href="https://br.linkedin.com/company/tsejus">
+                    <span class="card-imagem"><img src="assets/imagens/redes-sociais/linkedin.png" alt="ícone do LinkedIn"></span>
+                    <span class="card-titulo">LinkedIn</span>
+                </a>
+            </h3>
         </div>
     </div>
 </section>

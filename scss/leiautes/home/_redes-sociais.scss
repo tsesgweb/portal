@@ -62,7 +62,7 @@
 
       &__linha {
         display: flex;
-        justify-content: space-evenly;   
+        justify-content: center;   
         align-items: center;     
         flex: 0 0 100%;
       }
@@ -110,7 +110,7 @@
       }
 
       @include media-breakpoint-up(lg){
-        min-width: 140px;
+        min-width: 135px;
         &:nth-child(1),
         &:nth-child(2),
         &:nth-child(3),
