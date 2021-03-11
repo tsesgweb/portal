@@ -1,0 +1,91 @@
+.cookies {
+  background-color: #1f345d;
+  bottom: 0;
+  color: #fff;
+  font-size: 1.2em;
+  left: 0;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 9999999;
+
+  animation-name: subir-div;
+  animation-duration: 2s;
+
+  @include media-breakpoint-down(xs) {
+    padding: 1em;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .titulo {
+    @include make-col(12);
+    margin-bottom: 10px;
+
+    h3 {
+      display: flex;
+      align-items: center;
+
+      button {
+          background-color: none;
+          border: none;
+      }
+      
+      .duvida {
+        color: #fbda5a;
+        border-radius: 100%;
+        border: 1px solid #fbda5a;
+        width: 14px;
+        height: 14px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 9px;
+        margin-left: 10px
+      }
+    }
+  }
+
+  .texto {
+    @include make-col(9);
+
+    @include media-breakpoint-down(sm) {
+      @include make-col(12);
+    }
+  }
+
+  .botao {
+    @include make-col(3);
+
+    @include media-breakpoint-down(sm) {
+      @include make-col(12);
+
+      button {
+        float: right;
+      }
+    }
+
+    button {
+      background-color: #fbda5a;
+      color: #ad521f;
+    }
+  }
+
+  @keyframes subir-div {
+    0% {
+      bottom: -1000px;
+    }
+
+    100% {
+      bottom: 0px;
+    }
+  }
+}

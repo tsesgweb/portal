@@ -140,6 +140,7 @@
     </div>
 </div>
 
+<!-- <?php include __DIR__ . '/widgets/cookies.inc.php'; ?> -->
 <!-- start:scripts -->
 <?php autoIncludeFiles('footer', 'js'); ?>
 <!-- end:scripts -->
