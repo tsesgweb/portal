@@ -2,8 +2,8 @@
   <div class="cookies__conteudo">
     <div class="cookies__linha">
       <div class="titulo">
-        <h3>Cookies <span class="duvida">?</span></h3>
-        
+        <h3>Cookies <span class="duvida">? <span class="texto-duvida sr-only">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></span></h3>
+
       </div>
       <div class="texto">
         <p>Estamos guardando estatísticas de visitas para melhorar sua experiência de navegação. <br> Ao continuar, você

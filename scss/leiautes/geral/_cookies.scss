@@ -35,10 +35,10 @@
       align-items: center;
 
       button {
-          background-color: none;
-          border: none;
+        background-color: none;
+        border: none;
       }
-      
+
       .duvida {
         color: #fbda5a;
         border-radius: 100%;
@@ -49,7 +49,26 @@
         justify-content: center;
         align-items: center;
         font-size: 9px;
-        margin-left: 10px
+        margin-left: 10px;
+        position: relative;
+        cursor: pointer;
+
+        .texto-duvida {
+          position: absolute;
+          background-color: #fbda5a;
+          color: #1f345d;
+          font-size: 1.5em;
+          border: 1px solid #ad521f;
+          padding: .5em;
+          top: -5px;
+          left: 20px;
+          width: 500px;
+          cursor: default;
+
+          @include media-breakpoint-down(sm) {
+            width: 180px;
+          }
+        }
       }
     }
   }
@@ -87,5 +106,22 @@
     100% {
       bottom: 0px;
     }
+  }
+
+  @keyframes descer-div {
+    0% {
+      bottom: 0px;
+    }
+
+    100% {
+      bottom: -1000px;
+    }
+  }
+
+  &.fechar-box-cookies {
+    bottom: -1000px;
+
+    animation-name: descer-div;
+    animation-duration: 3s;
   }
 }
