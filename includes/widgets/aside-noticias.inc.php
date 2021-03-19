@@ -1,4 +1,4 @@
-<aside id="aside-noticias" class="nao-imprimir">
+<aside id="aside-noticias" class="<?php $asidenoticialistagem && print('lateral');?> nao-imprimir">
     <div class="lateral__mais-lidas">
         <h2 class="sr-only">Relacionadas</h2>
         <div class="lateral__mais-lidas-header">
