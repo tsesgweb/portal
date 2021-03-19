@@ -46,6 +46,7 @@ module.exports = (gulp, plugins) => {
         runScript($portal.footer.js.portal.map(path=> `pages/${path}`), "portal"),
         runScript($portal.footer.js.template.home.map(path=> `pages/${path}`), "home"),
          runScript($portal.footer.js.template.internas.map(path=> `pages/${path}`), "internas"),
+         runScript($portal.footer.js.template.exposicao.map(path=> `pages/${path}`), "exposicao"),
         runScript($portal.footer.js.vendor.map(path=> `pages/${path}`), "vendor", false, false),
         runScript($portal.footer.js.rybena.map(path=> `pages/${path}`), "rybena", false, false),        
         runScript($portal.head.js.ie[8].map(path=> `pages/${path}`), "ie8"),
