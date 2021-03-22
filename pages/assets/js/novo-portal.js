@@ -1,5 +1,5 @@
-Breakpoints()
-;(function ($) {
+Breakpoints();
+(function ($) {
   // ToolTips rodape
   $(
     '.rodape [data-toggle="tooltip"], .transparencia [data-toggle="tooltip"], .mapa-acesso-botao'
@@ -13,7 +13,7 @@ Breakpoints()
         trigger: 'focus',
         placement: 'bottom',
         container: 'body'
-      })      
+      })
   } else {
     var $blocoGestor = $('#gestor-responsavel, .noticia-gestor')
 
@@ -28,8 +28,8 @@ Breakpoints()
       $('.gestor-sem-formatacao').toggle()
     })
   }
-})(jQuery)
-;(function () {
+})(jQuery);
+(function () {
   if (typeof Cookies !== 'function') {
     console.log('Cookies not found')
   } else {
@@ -40,9 +40,9 @@ Breakpoints()
     var $srcLogo = $($htmlLogo).attr('src')
     var logoMobile = function () {
       var $src =
-        Cookies.get('contraste') == 'on'
-          ? $srcLogo.replace('.png', '-inverse.png')
-          : $srcLogo.replace('.png', '.png')
+        Cookies.get('contraste') == 'on' ?
+        $srcLogo.replace('.png', '-inverse.png') :
+        $srcLogo.replace('.png', '.png')
       logo.replaceWith(function () {
         return $('<img />', {
           src: $src,
@@ -53,9 +53,9 @@ Breakpoints()
     }
     var logoDesktop = function () {
       var $src =
-        Cookies.get('contraste') == 'on'
-          ? $srcLogo.replace('.png', '-inverse.png')
-          : $srcLogo.replace('-inverse.png', '.png')
+        Cookies.get('contraste') == 'on' ?
+        $srcLogo.replace('.png', '-inverse.png') :
+        $srcLogo.replace('-inverse.png', '.png')
       logo.replaceWith(function () {
         return $('<img />', {
           src: $src,
@@ -100,7 +100,8 @@ $(function () {
   }
 })
 // focus on search input menu
-;(function ($) {
+;
+(function ($) {
   $('.busca_fechar').on('click', function () {
     $('.menu__dropdown.busca').on('hide.bs.dropdown', function () {
       $(this).removeClass('show')
@@ -136,7 +137,8 @@ $('#SE_NomeTituloEleitor').on('keyup blur', function () {
 
 // Placeholder IE
 if (typeof jQuery.fn.placeholder === 'function') {
-  ;(function () {
+  ;
+  (function () {
     if (
       typeof Moderniz === undefined &&
       Modernizr.placeholder === undefined &&
@@ -171,8 +173,8 @@ $(function () {
       $('.mobile-search').detach()
     }
   })
-})
-;(function ($) {
+});
+(function ($) {
   $('#contraste').on('click', function (e) {
     if (Cookies.get('contraste') === null) {
       Cookies.set('contraste', 'on', {
@@ -221,7 +223,7 @@ setInterval(function () {
   }
 }, 250)
 
-function hasScrolled (selector) {
+function hasScrolled(selector) {
   var navbarHeight = $(selector).outerHeight()
   var klass = selector.replace('.', '')
   var st = $(this).scrollTop()
@@ -248,7 +250,8 @@ function hasScrolled (selector) {
   lastScrollTop = st
 }
 
-;(function ($) {
+;
+(function ($) {
   var mapaSearch = $('#mapa-search')
   var mapa = $('.mapa-acesso-botao')
   var aviso = $('.aviso')
@@ -268,8 +271,7 @@ function hasScrolled (selector) {
   mapa.click(function (e) {
     mapaCollapse.collapse('toggle')
 
-    $('html, body').animate(
-      {
+    $('html, body').animate({
         scrollTop: $(document).height() - 120
       },
       500
@@ -318,8 +320,8 @@ function hasScrolled (selector) {
     mapaPesquisaForm.removeClass('aberto').addClass('fechado')
     mapaSearch.val('')
   })
-})(jQuery)
-;(function ($) {
+})(jQuery);
+(function ($) {
   $('[accesskey="3"]').on('keyup', function () {
     $('.dropdown-menu.sub-menu ')
       .addClass('show')
@@ -350,4 +352,32 @@ function hasScrolled (selector) {
       var $replaced = $self.attr('src').replace('-hover.png', '.png')
       $self.attr('src', $replaced)
     })
+
+  //Cookies - Política de privacidade
+
+  //Verificar se o usuário já concordou com os termos
+
+  function verificar_resposta(nome_cookie) {
+    var resposta = Cookies.get(nome_cookie);
+
+    if (resposta == "concordo") {
+      $(".cookies").addClass("sr-only");
+    }
+
+    // console.log(resposta);
+  }
+
+  verificar_resposta("politica-de-privacidade");
+
+  //Abrir e fechar dúvida
+  $(".cookies .duvida").on('click', function () {
+    $(this).find(".texto-duvida").toggleClass("sr-only");
+  });
+
+  //Gravar cookie e descer box
+  $(".cookies .botao button").on('click', function () {
+    $(this).closest(".cookies").addClass("fechar-box-cookies");
+    Cookies.set('politica-de-privacidade', 'concordo', { expires: 30 });
+  });
+
 })(jQuery)
