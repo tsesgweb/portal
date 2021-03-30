@@ -34,6 +34,7 @@ const htmlreplace = {
   cssinternas: `css/internas${min}.css`,
   cssnoticias: `css/noticias${min}.css`,
   cssbiblioteca: `css/biblioteca${min}.css`,
+  cssexposicao: `css/exposicao${min}.css`,
   csshome: `css/home${min}.css`,
   css9: {
     src: `css/ie${min}.css`,
@@ -57,7 +58,8 @@ const htmlreplace = {
   jsexternal: `js/external${min}.js`,
   jsportal: `js/portal${min}.js`,
   jshome: `js/home${min}.js`,
-  jsinternas: `js/internas${min}.js`
+  jsinternas: `js/internas${min}.js`,
+  jsexposicao: `js/exposicao${min}.js`,
 }
 
 const paths = {
@@ -69,7 +71,7 @@ const paths = {
     sass: 'scss/**/*.scss',
     img: 'pages/assets/imagens/**/*.+(png|jpg|bmp|svg)',
     fonts: 'pages/assets/fonts/**/*.+(otf|eot|svg|ttf|woff|woff2)',
-    js: 'assets/js',
+    js: 'pages/assets/js',
     ieplugins: [
       'assets/js/ie/html5shiv.js',
       'assets/js/ie/html5shiv-printshiv.js',

@@ -83,12 +83,33 @@
   @extend .nav;
 }
 
+@mixin nav-tabs {
+  @extend .nav-tabs;
+}
 @mixin nav-item {
   @extend .nav-item;
 }
 
 @mixin nav-link {
   @extend .nav-link;
+}
+@mixin tab-pane {
+  @extend .tab-pane;
+}
+@mixin tab-content {
+  @extend .tab-content;
+}
+
+@mixin active {
+  @extend .active;
+}
+
+@mixin fade {
+  @extend .fade;
+}
+
+@mixin show {
+  @extend .show;
 }
 
 @mixin navbar-brand {

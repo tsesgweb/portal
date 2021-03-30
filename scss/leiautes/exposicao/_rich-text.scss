@@ -1,0 +1,41 @@
+.panel,
+.timeline {
+  @include elemento('rich-text') {    
+    h1 {
+      @include responsive-font-size(54px);
+      font-family: "Open Sans";
+    }
+
+    h2 {
+      @include responsive-font-size(36px);
+      font-family: "Open Sans";
+    }
+
+    h3 {
+      @include responsive-font-size(24px);
+      font-family: "Open Sans";
+    }
+
+    h4 {
+      @include responsive-font-size(16px);
+      font-family: "Open Sans";
+      font-weight: bold;
+
+    }
+
+    p {
+      @include responsive-font-size(16px);
+      font-family: "Open Sans";
+      font-weight: normal;
+      line-height: 22px;
+      margin-bottom: 0;
+
+      & + p {        
+        margin-bottom: 24px;
+      }
+    }
+    small {
+      @include responsive-font-size(14px);
+    }
+  }
+}
