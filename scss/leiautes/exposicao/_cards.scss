@@ -1,0 +1,170 @@
+.cards { 
+  .card-galeria { 
+     
+    .card {
+      margin-bottom: $card-columns-margin;
+    }
+
+    @include media-breakpoint-up(sm) {
+      column-count: $card-columns-count;
+      column-gap: $card-columns-gap;
+      orphans: 1;
+      widows: 1;
+
+      .card {
+        display: inline-block; // Don't let them vertically span multiple columns
+        width: 100%; // Don't let their width change
+      }
+    }
+
+    &[data-columns="2"] {
+      column-count: 2;      
+    }
+    &[data-columns="3"] {
+      column-count: 3;
+    }
+    &[data-columns="4"] {
+      column-count: 4;
+    }
+    &[data-columns="5"] {
+      column-count: 5;
+    }
+  }
+
+  .card-mosaico {    
+    display: grid;   
+
+    &[data-columns="2"] {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    &[data-columns="3"] {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+    &[data-columns="4"] {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;   }
+    &[data-columns="5"] {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+  } 
+  .card {     
+    border-radius: 8.7px;      
+    margin-bottom: 15px;
+
+    .card-top {
+      padding: 15px;
+
+      img {
+        @include img-fluid;
+        border-radius: $radius;
+      }
+    }  
+    
+    .card-header {
+      background-color: transparent;
+      border-bottom: none;
+      padding-top: 0;
+      padding-bottom: 10px;
+
+      @include responsive-font-size(10px);
+    }
+
+    .card-title {
+      @include responsive-font-size(15px);
+      color:$azul;
+      font-weight: bold;
+    }
+
+    .card-subtitle {
+      @include responsive-font-size(15px);
+      color:$azul;
+      font-weight: bold;
+    }
+
+    .card-body {
+      padding-top: 0;
+    }
+  }
+
+  .card-carousel {
+    .owl-nav {
+      position: relative;
+      bottom: 100%;
+      left: 0;
+      right: 0;     
+
+      .owl-prev,
+      .owl-next {
+        position: absolute;        
+        bottom: 0;
+        top: 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 154.875px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background-repeat: no-repeat;    
+          background-color: $azul;
+          background-position: center center;          
+        } 
+      }
+
+      .owl-prev {
+        left: -4%;
+
+        &::after {
+          background-image: url("#{$path_img}/exposicao/prev-arrow-branco.svg");          
+        }
+      }
+
+      .owl-next {        
+        right: -1%;
+
+        &::after {
+          background-image: url("#{$path_img}/exposicao/next-arrow-branco.svg");      
+        }
+      }
+    }
+  }  
+
+   @each $name,
+  $color in $theme-colors {    
+    &.card-theme-#{$name} {
+      .card-carousel {     
+        .owl-prev,
+        .owl-next {
+          &::after {
+            @if $name == 'azul' {
+              background-color: $amarelo;              
+            } @else {
+              background-color: $azul;              
+            }            
+          }
+        }
+        .owl-next::after {          
+          @if $name == 'azul' {
+            background-image: url("#{$path_img}/exposicao/next-arrow-azul.svg"); 
+          } @else {
+            background-image: url("#{$path_img}/exposicao/next-arrow-branco.svg"); 
+          }
+        } 
+        .owl-prev::after {
+          @if $name == 'azul' {            
+            background-image: url("#{$path_img}/exposicao/prev-arrow-azul.svg"); 
+          }@else {
+            background-image: url("#{$path_img}/exposicao/prev-arrow-branco.svg"); 
+          }
+        } 
+      }   
+    }
+  }  
+}

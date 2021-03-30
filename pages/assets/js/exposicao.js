@@ -9,42 +9,19 @@
     if($bgImage !== undefined) {
       $self.css({backgroundImage: 'url('+$bgImage+')'});
     }   
-  })
-
-  // var carouselPanelOne = $('.panel__control-navigation');  
-
-  // carouselPanelOne.each(function(key, value){
-  //   var $self = $(this);
-  //   $self.children('.panel__rich-text').not(':eq(0)').hide();
-  //   $self.children('.panel__rich-text').eq(0).addClass('active');
-    
-  //   var btn = $self.parent().find('.btn');
-
-  //   btn.on('click', function(){
-  //     $self.find('.panel__rich-text').each(function(keyp, valuep){
-  //       console.log(valuep, keyp);
-  //     })
-
-  //     if($self.find('.panel__rich-text').hasClass('active')){
-  //       var $next = $self.find('.panel__rich-text').next();
-
-  //       // console.log($next);
-  //     }
-  //   })
-  // })  
+  })  
 })(jQuery);
 (function(){
   var panelCarousel = $('.panel__carousel');
   
+  
   panelCarousel.addClass('owl-carousel owl-theme');
-
-  panelCarousel.each(function(){
+  
+  panelCarousel.each(function(){    
     var $panelSelf = $(this);
     var $nextButton = $panelSelf.closest('.panel__control-navigation').find('.btn-next');      
-    var $prevButton = $panelSelf.closest('.panel__control-navigation').find('.btn-prev');      
-    
-    $panelSelf.focus();
-
+    var $prevButton = $panelSelf.closest('.panel__control-navigation').find('.btn-prev');          
+      
     $nextButton.each(function() {      
       var $btnSelf = $(this);
       $btnSelf.on('click', function(){        
@@ -58,7 +35,7 @@
         $panelSelf.trigger('prev.owl.carousel');        
       })
     })  
-
+    
     $panelSelf.on('changed.owl.carousel', function(event){      
       var $self = $(this);
       var $progress = $(this).closest('.panel__control-navigation').find('.panel__status-bg-color');      
@@ -74,9 +51,9 @@
       } else if (item === 1){        
         $prevButton.hide();
       } else  {
-         $prevButton.show();
-         $nextButton.show();
-       }      
+        $prevButton.show();
+        $nextButton.show();
+      }      
 
       $self.closest('.panel').focus().one('keyup', function(event){
         if(event.key === undefined) return;
@@ -97,11 +74,7 @@
     nav: false,
     dots: false, 
     rtl: false, 
-    autoWidth: false,  
-    // stagePadding: 10,
-    // margin: 70,    
-    // onInitialize: callbackCarousel,
-    onChange: callbackCarousel,
+    autoWidth: false,     
     responsive: {
       1140: {
         items:1
@@ -116,21 +89,48 @@
         owl.trigger('prev.owl.carousel');
     }
     e.preventDefault();
-});
+  });
 
-  function callbackCarousel(event) {
-    // Provided by the core
-    var element   = event.target;         // DOM element, in this example .owl-carousel
-    var name      = event.type;           // Name of the event, in this example dragged
-    var namespace = event.namespace;      // Namespace of the event, in this example owl.carousel
-    var items     = event.item.count;     // Number of items
-    var item      = event.item.index;     // Position of the current item
-    // Provided by the navigation plugin
-    var pages     = event.page.count;     // Number of pages
-    var page      = event.page.index;     // Position of the current page
-    var size      = event.page.size;      // Number of items per page
-
-    // console.log(item, pages);
-}
   
-})(jQuery)
+  
+})(jQuery);
+
+(function(){
+  var timelineNav = $('.timeline-nav a');
+
+  timelineNav.on('click',function(event){
+    // event.preventDefault();
+    $(this).tab('show');
+  });  
+
+})(jQuery);
+(function(){
+  var cardCarousel  = $('.card-carousel');
+  var qtd           = cardCarousel.data('columns');
+  var padding       = cardCarousel.closest('.cards').data('padding');
+  var totalItems    = qtd !== undefined ? qtd : 4;
+
+  cardCarousel.addClass('owl-carousel owl-theme');
+  
+  cardCarousel.owlCarousel({    
+    items: totalItems,        
+    dots: false,
+    navText: ['<span class="sr-only">Anterior</span>','<span class="sr-only">Próximo</span>'],    
+    nav: true,
+    stagePadding: padding ? padding : 0,    
+    margin: 15,
+    responsive: {
+      0: {
+        items: 1,
+        
+      },
+      768: {
+        items: totalItems / 2,        
+      },
+      1140: {
+        items: totalItems,
+      }
+    }
+  }); 
+
+})(jQuery);

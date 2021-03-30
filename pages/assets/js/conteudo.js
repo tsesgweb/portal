@@ -75,6 +75,7 @@
     .not('.abas-personalizadas a[href*="#"]')
     .not('.nav-tabs a[href*="#"]')
     .not('[data-toggle="collapse"]')
+    .not('[data-toggle="tab"]')
     .not("a.mapa-acesso-botao")
     .not("a.sr-only-focusable")
     .click(function (event) {
