@@ -4,40 +4,16 @@
   </div>
 
   <div class="owl-carousel carousel-faixa-tv">
-    <div class="item" data-merge="1">
+    <div class="item fechado" data-merge="1">
       <div class="apresentacao-card">
         <div class="imagem-card">
-          <img src="https://picsum.photos/id/1005/250/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
+          <img src="https://picsum.photos/id/1005/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
           <h3>Conexão Eleitoral</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
-        </div>
-        <div class="dias-semana">
-          <table>
-            <thead>
-              <tr>
-                <th>SEG</th>
-                <th>TER</th>
-                <th>QUA</th>
-                <th>QUI</th>
-                <th>SEX</th>
-                <th>SAB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>19h30</td>
-                <td>21h00</td>
-                <td>11h30</td>
-                <td>21h00</td>
-                <td>04h30</td>
-                <td>11h30</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
       <div class="conteudo-card">
@@ -85,40 +61,16 @@
       </div>
       <div class="fechar"></div>
     </div>
-    <div class="item" data-merge="1">
+    <div class="item fechado" data-merge="1">
       <div class="apresentacao-card">
         <div class="imagem-card">
-          <img src="https://picsum.photos/id/1006/250/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
+          <img src="https://picsum.photos/id/1006/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
           <h3>Conexão Eleitoral</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
-        </div>
-        <div class="dias-semana">
-          <table>
-            <thead>
-              <tr>
-                <th>SEG</th>
-                <th>TER</th>
-                <th>QUA</th>
-                <th>QUI</th>
-                <th>SEX</th>
-                <th>SAB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>19h30</td>
-                <td>21h00</td>
-                <td>11h30</td>
-                <td>21h00</td>
-                <td>04h30</td>
-                <td>11h30</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
       <div class="conteudo-card">
@@ -166,40 +118,16 @@
       </div>
       <div class="fechar"></div>
     </div>
-    <div class="item" data-merge="1">
+    <div class="item fechado" data-merge="1">
       <div class="apresentacao-card">
         <div class="imagem-card">
-          <img src="https://picsum.photos/id/1014/250/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
+          <img src="https://picsum.photos/id/1014/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
           <h3>Conexão Eleitoral</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
-        </div>
-        <div class="dias-semana">
-          <table>
-            <thead>
-              <tr>
-                <th>SEG</th>
-                <th>TER</th>
-                <th>QUA</th>
-                <th>QUI</th>
-                <th>SEX</th>
-                <th>SAB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>19h30</td>
-                <td>21h00</td>
-                <td>11h30</td>
-                <td>21h00</td>
-                <td>04h30</td>
-                <td>11h30</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
       <div class="conteudo-card">
@@ -247,40 +175,16 @@
       </div>
       <div class="fechar"></div>
     </div>
-    <div class="item" data-merge="1">
+    <div class="item fechado" data-merge="1">
       <div class="apresentacao-card">
         <div class="imagem-card">
-          <img src="https://picsum.photos/id/1008/250/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
+          <img src="https://picsum.photos/id/1008/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
           <h3>Conexão Eleitoral</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
-        </div>
-        <div class="dias-semana">
-          <table>
-            <thead>
-              <tr>
-                <th>SEG</th>
-                <th>TER</th>
-                <th>QUA</th>
-                <th>QUI</th>
-                <th>SEX</th>
-                <th>SAB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>19h30</td>
-                <td>21h00</td>
-                <td>11h30</td>
-                <td>21h00</td>
-                <td>04h30</td>
-                <td>11h30</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
       <div class="conteudo-card">
@@ -328,40 +232,16 @@
       </div>
       <div class="fechar"></div>
     </div>
-    <div class="item" data-merge="1">
+    <div class="item fechado" data-merge="1">
       <div class="apresentacao-card">
         <div class="imagem-card">
-          <img src="https://picsum.photos/id/1010/250/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
+          <img src="https://picsum.photos/id/1010/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
           <h3>Conexão Eleitoral</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
-        </div>
-        <div class="dias-semana">
-          <table>
-            <thead>
-              <tr>
-                <th>SEG</th>
-                <th>TER</th>
-                <th>QUA</th>
-                <th>QUI</th>
-                <th>SEX</th>
-                <th>SAB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>19h30</td>
-                <td>21h00</td>
-                <td>11h30</td>
-                <td>21h00</td>
-                <td>04h30</td>
-                <td>11h30</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
       <div class="conteudo-card">
@@ -409,40 +289,16 @@
       </div>
       <div class="fechar"></div>
     </div>
-    <div class="item" data-merge="1">
+    <div class="item fechado" data-merge="1">
       <div class="apresentacao-card">
         <div class="imagem-card">
-          <img src="https://picsum.photos/id/1011/250/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
+          <img src="https://picsum.photos/id/1011/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
           <h3>Conexão Eleitoral</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
-        </div>
-        <div class="dias-semana">
-          <table>
-            <thead>
-              <tr>
-                <th>SEG</th>
-                <th>TER</th>
-                <th>QUA</th>
-                <th>QUI</th>
-                <th>SEX</th>
-                <th>SAB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>19h30</td>
-                <td>21h00</td>
-                <td>11h30</td>
-                <td>21h00</td>
-                <td>04h30</td>
-                <td>11h30</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
       <div class="conteudo-card">
@@ -490,40 +346,16 @@
       </div>
       <div class="fechar"></div>
     </div>
-    <div class="item" data-merge="1">
+    <div class="item fechado" data-merge="1">
       <div class="apresentacao-card">
         <div class="imagem-card">
-          <img src="https://picsum.photos/id/1012/250/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
+          <img src="https://picsum.photos/id/1012/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
           <h3>Conexão Eleitoral</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
-        </div>
-        <div class="dias-semana">
-          <table>
-            <thead>
-              <tr>
-                <th>SEG</th>
-                <th>TER</th>
-                <th>QUA</th>
-                <th>QUI</th>
-                <th>SEX</th>
-                <th>SAB</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>19h30</td>
-                <td>21h00</td>
-                <td>11h30</td>
-                <td>21h00</td>
-                <td>04h30</td>
-                <td>11h30</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
       <div class="conteudo-card">

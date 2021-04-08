@@ -59,13 +59,51 @@ $(window).on('load', function () {
   //Carousel TV
 
   var $owl = $('.carousel-faixa-tv');
+  var $owl_item = $('.carousel-faixa-tv .item');
+
+  var tamanho_cards_fechado;
+  var tamanho_cards_aberto;
+
+  var xs = window.matchMedia("(min-width: 0px) and (max-width: 576px)");
+  var sm = window.matchMedia("(min-width: 577px) and (max-width: 768px)");
+  var md = window.matchMedia("(min-width: 769px) and (max-width: 992px)");
+  var lg = window.matchMedia("(min-width: 993px) and (max-width: 1199px)");
+  var xl = window.matchMedia("(min-width: 1200px)");
+
+  if (xs.matches) {
+    // console.log("xs");
+    var tamanho_cards_fechado = 300;
+    var tamanho_cards_aberto = 300;
+  } else if (sm.matches) {
+    // console.log("sm");
+    var tamanho_cards_fechado = 310;
+    var tamanho_cards_aberto = 500;
+  } else if (md.matches) {
+    // console.log("md");
+    var tamanho_cards_fechado = 330;
+    var tamanho_cards_aberto = 700;
+  } else if (lg.matches) {
+    // console.log("lg");
+    var tamanho_cards_fechado = 350;
+    var tamanho_cards_aberto = 900;
+  } else if (xl.matches) {
+    // console.log("xl");
+    var tamanho_cards_fechado = 370;
+    var tamanho_cards_aberto = tamanho_cards_fechado * 3;
+  }
+
+  var tamanho_cards_fechado_px = tamanho_cards_fechado + "px";
+  var tamanho_cards_aberto_px = tamanho_cards_aberto + "px";
+
+  $owl_item.each(function () {
+    $(this).css("width", tamanho_cards_fechado_px);
+  });
 
   function settings_carousel_faixa() {
 
     $owl.children().each(function (index) {
       $(this).attr('data-position', index);
     });
-
 
     $('.carousel-faixa-tv').owlCarousel({
       loop: true,
@@ -75,6 +113,7 @@ $(window).on('load', function () {
       nav: true,
       margin: 10,
       navText: ["", ""],
+      autoWidth: true,
       responsive: {
         0: {
           items: 1,
@@ -107,18 +146,18 @@ $(window).on('load', function () {
 
   function click_abrir_cards(posicao) {
 
-    var item_carousel = $(".carousel-faixa-tv .item");
-
     $(".control-cft .posicao").text(posicao);
     var posicao_guardada = $(".control-cft .posicao").text();
     $owl.trigger('destroy.owl.carousel');
-    $(".carousel-faixa-tv .item").attr("data-merge", "1");
-    $(".carousel-faixa-tv .item").removeClass("item-aberto");
-    $(".carousel-faixa-tv .item").eq(posicao_guardada).attr("data-merge", "3");
-    $(".carousel-faixa-tv .item").eq(posicao_guardada).addClass("item-aberto");
-    $(".carousel-faixa-tv .item").eq(posicao_guardada).prependTo('.carousel-faixa-tv');
+    $owl_item.css("width", tamanho_cards_fechado_px);
+    $owl_item.removeClass("item-aberto");
+    $owl_item.addClass("fechado");
+    $owl_item.eq(posicao_guardada).css("width", tamanho_cards_aberto_px);
+    $owl_item.eq(posicao_guardada).addClass("item-aberto");
+    $owl_item.eq(posicao_guardada).removeClass("fechado");
+    $owl_item.eq(posicao_guardada).prependTo('.carousel-faixa-tv');
 
-    $(".carousel-faixa-tv .item").each(function (index, e) {
+    $owl_item.each(function (index, e) {
       $(this).attr("data-position", index);
     });
 
@@ -129,40 +168,41 @@ $(window).on('load', function () {
 
   function click_fechar_card() {
     $owl.trigger('destroy.owl.carousel');
-    $(".carousel-faixa-tv .item").attr("data-merge", "1");
-    $(".carousel-faixa-tv .item").each(function (index, e) {
+    $owl_item.css("width", "350px");
+    $owl_item.each(function (index, e) {
       $(this).attr("data-position", index);
     });
-    
+
     settings_carousel_faixa();
-    // $(".carousel-faixa-tv .owl-item.center .item").removeClass("item-aberto");
   }
-  
+
   settings_carousel_faixa();
-  
-  
+
   $(document).on('click', '.owl-item > div', function (e) {
-    
+
     var posicao_click = $(this).attr("data-position");
     var situacao_item = $(this).hasClass("item-aberto");
-    
+
+    $this = $(this);
+
     if (!situacao_item) {
-      
+
       var $speed = 300;
-      $owl.trigger('to.owl.carousel', [$(this).data('position'), $speed]);
-      
+      $owl.trigger('to.owl.carousel', [$this.data('position'), $speed]);
+
       setTimeout(function () {
         click_abrir_cards(posicao_click);
       }, 700);
-      
+
       return false;
     }
   });
-  
+
   $(".carousel-faixa-tv .item .fechar").on('click', function () {
-    
+
     $(this).closest(".item").removeClass("item-aberto");
-    
+    $(this).closest(".item").addClass("fechado");
+
     setTimeout(function () {
       click_fechar_card();
     }, 100);

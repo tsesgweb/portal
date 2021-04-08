@@ -24,268 +24,158 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
 
     .owl-item {
       >div {
-        min-height: 100%;
-        height: 500px;
         background-color: $azul;
         border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        height: 500px;
+        min-height: 100%;
         overflow: hidden;
+        padding-right: 10px;
         position: relative;
-        cursor: pointer;
 
-        .apresentacao-card {
-          .imagem-card {
-            display: block;
-
-            @include media-breakpoint-down(lg) {
-              display: flex;
-              justify-content: center;
-            }
-
-            img {
-              width: 100%;
-              transition: all 1s;
-              opacity: .6;
-              position: absolute;
-              height: 100%;
-
-              @include media-breakpoint-down(lg) {
-                max-width: 250px;
-              }
-
-              &:hover {
-                width: 110%;
-                transition: all 1s;
-                opacity: 1;
-                height: 110%;
-
-                @include media-breakpoint-down(xs) {
-                  width: 100%;
-                  height: 100%;
-                }
-              }
-            }
-          }
-
-          .titulo-card {
-            display: none;
-          }
-
-          .texto {
-            display: none;
-          }
-
-          .dias-semana {
-            display: none;
-          }
+        @include media-breakpoint-down(xs) {
+          flex-direction: column;
+          height: 100%;
+          padding-right: 0;
         }
 
-        .conteudo-card {
-          display: none;
+        @include media-breakpoint-down(sm) {
+          height: 100%;
         }
 
-        .fechar {
-          display: none;
+        @include media-breakpoint-down(md) {
+          height: 100%;
         }
 
-        &.item-aberto {
-          overflow: initial;
-          cursor: auto;
-          display: flex;
-          padding: .2em;
-          color: $branco;
-
-          @include media-breakpoint-down(lg) {
-            height: 100%;
-          }
-
-          @include media-breakpoint-down(xs) {
-            display: block;
-          }
-
-          a {
-            color: $branco;
-          }
+        @include media-breakpoint-down(lg) {
+          height: 100%;
+        }
+        
+        
+        &.fechado {
+          cursor: pointer;
 
           .apresentacao-card {
-            width: 35%;
-            padding-right: 10px;
-
-            @include media-breakpoint-down(xs) {
-              width: 100%;
-              padding-right: 0;
-            }
+            display: block;
 
             .imagem-card {
-              height: 45%;
-              overflow: hidden !important;
-              position: relative;
-              width: 100%;
-              border-radius: 5px;
-
-              @include media-breakpoint-down(xs) {
-                width: 100%;
-                height: 250px;
-              }
 
               img {
-                width: 100%;
-                height: max-content;
-                top: 50%;
-                opacity: 1;
-                margin-top: -250px;
-
-                @include media-breakpoint-down(xs) {
-                  width: 250px;
-                }
+                height: 500px;
+                transition: all .2s;
+                width: 370px;
 
                 &:hover {
-                  width: 100%;
-                  height: max-content;
-
-                  @include media-breakpoint-down(xs) {
-                    width: 250px;
-                  }
+                  height: 110%;
+                  transition: all .2s;
+                  width: 110%;
                 }
               }
-
-
             }
 
             .titulo-card {
-              display: block;
-              text-transform: uppercase;
-              text-align: center;
-              position: relative;
-
-              h3 {
-                font-size: 1.4em;
-                margin-top: 30px;
-                margin-bottom: 40px;
-                font-weight: bold;
-              }
-
-              &::after {
-                content: "";
-                width: 60px;
-                height: 5px;
-                display: block;
-                background-color: $azul-claro;
-                border-radius: 3px;
-                position: absolute;
-                left: 50%;
-                bottom: -15px;
-                margin-left: -30px;
-              }
+              display: none;
             }
 
             .texto {
-              display: block;
-              padding: .5em;
-
-              p {
-                font-size: .9em;
-                margin: 0;
-              }
-            }
-
-            .dias-semana {
-              display: block;
-              margin-top: 10px;
-
-              @media (min-width: 576px) and (max-width: 992px) {
-                table {
-                  width: 100%;
-                }
-
-                thead {
-                  width: 50%;
-                  float: left;
-                }
-
-                thead th {
-                  display: block;
-                  text-align: left;
-                }
-
-                thead th:before {
-                  content: attr(data-th);
-                  display: block;
-                  text-align: left;
-                }
-
-                thead th::before {
-                  content: attr(data-th);
-                  display: none;
-                }
-
-
-                tbody {
-                  width: 50%;
-                  float: left;
-                }
-
-                tbody td {
-                  display: block;
-                  text-align: left;
-                  height: 26px;
-                }
-
-                tbody td:before {
-                  content: attr(data-th);
-                  display: block;
-                  text-align: left;
-                }
-
-                tbody td::before {
-                  content: attr(data-th);
-                  display: none;
-                }
-              }
-
-              table {
-                border-collapse: separate;
-                border-spacing: 5px;
-                width: 100%;
-
-                tr {
-                  margin-top: 10px;
-
-                  th {
-                    text-align: center;
-                  }
-
-                  td {
-                    background-color: $azul-intermediario;
-                    font-size: 10px;
-                    padding: 4px;
-                    border-radius: 5px;
-                    text-align: center;
-                  }
-                }
-              }
+              display: none;
             }
           }
 
           .conteudo-card {
-            display: block;
-            width: 65%;
-            padding: 10px 0 10px 10px;
+            display: none;
+          }
+        }
+
+        &.item-aberto {
+          .apresentacao-card {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-right: 10px;
+            max-width: 370px;
+            padding: 1em;
             position: relative;
+            color: $branco;
 
             @include media-breakpoint-down(xs) {
-              width: 100%;
-              padding-left: 0;
+              justify-content: center;
+              margin-right: 0;
+              max-width: 300px;
+              padding-top: 40px;
+            }
+
+            @include media-breakpoint-down(sm) {
+              justify-content: flex-start;
+            }
+    
+            @include media-breakpoint-down(md) {
+              justify-content: flex-start;
+            }
+    
+            @include media-breakpoint-down(lg) {
+              justify-content: flex-start;
+            }
+
+            .imagem-card {
+              left: 0;
+              position: absolute;
+              top: 0;
+
+              img {
+                opacity: .2;
+              }
+            }
+
+            .titulo-card,
+            .texto {
+              display: block;
+              padding-bottom: 2.5em;
+              position: relative;
+              z-index: 1;
+
+              @include media-breakpoint-down(xs) {
+                padding-bottom: 1em;
+              }
+            }
+
+            .titulo-card {
+              @include sub-titulo;
+              color: $branco;
+              margin: 0;
+            }
+
+          }
+
+          .conteudo-card {
+            color: $branco;
+            display: flex;
+            flex-direction: column;
+            font-size: .9em;
+            font-style: italic;
+            justify-content: space-around;
+            padding: 10px 0 10px 10px;
+            position: relative;
+            
+            @include media-breakpoint-down(xs) {
+              padding: 10px;
+            }
+
+            a {
+              color: $branco;
             }
 
             &::before {
+              background-color: $azul-claro;
               content: "";
               display: block;
-              position: absolute;
-              width: 1px;
-              background-color: $azul-claro;
               height: 90%;
               left: 0;
+              position: absolute;
               top: 25px;
+              width: 1px;
 
               @include media-breakpoint-down(xs) {
                 display: none;
@@ -299,9 +189,6 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
             }
 
             .lista-ultimos-videos {
-              display: flex;
-              flex-wrap: wrap;
-              margin-bottom: 0;
 
               .media {
                 align-items: center;
@@ -370,17 +257,366 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
 
           .fechar {
             position: absolute;
-            right: -7px;
-            top: -7px;
+            right: 7px;
+            top: 7px;
             background-image: url($fechar);
             background-repeat: no-repeat;
             background-position: center;
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             cursor: pointer;
             display: block;
           }
         }
+
+
+
+        // .apresentacao-card {
+        //   .imagem-card {
+        //     display: block;
+
+        //     @include media-breakpoint-down(lg) {
+        //       display: flex;
+        //       justify-content: center;
+        //     }
+
+        //     img {
+        //       width: 100%;
+        //       transition: all 1s;
+        //       opacity: .6;
+        //       position: absolute;
+        //       height: 100%;
+
+        //       @include media-breakpoint-down(lg) {
+        //         max-width: 370px;
+        //       }
+
+        //       &:hover {
+        //         width: 110%;
+        //         transition: all 1s;
+        //         opacity: 1;
+        //         height: 110%;
+
+        //         @include media-breakpoint-down(xs) {
+        //           width: 100%;
+        //           height: 100%;
+        //         }
+        //       }
+        //     }
+        //   }
+
+        //   .titulo-card {
+        //     display: none;
+        //   }
+
+        //   .texto {
+        //     display: none;
+        //   }
+
+        //   .dias-semana {
+        //     display: none;
+        //   }
+        // }
+
+        // .conteudo-card {
+        //   display: none;
+        // }
+
+        // .fechar {
+        //   display: none;
+        // }
+
+        // &.item-aberto {
+        //   overflow: initial;
+        //   cursor: auto;
+        //   display: flex;
+        //   padding: .5em;
+        //   color: $branco;
+
+        //   @include media-breakpoint-down(lg) {
+        //     height: 100%;
+        //   }
+
+        //   @include media-breakpoint-down(xs) {
+        //     display: block;
+        //   }
+
+        //   a {
+        //     color: $branco;
+        //   }
+
+        //   .apresentacao-card {
+        //     width: 35%;
+        //     padding-right: 10px;
+
+        //     @include media-breakpoint-down(xs) {
+        //       width: 100%;
+        //       padding-right: 0;
+        //     }
+
+        //     .imagem-card {
+        //       display: block;
+        //       position: absolute;
+        //       width: 100%;
+
+        //       @include media-breakpoint-down(xs) {
+        //         width: 100%;
+        //         height: 250px;
+        //       }
+
+        //       img {
+        //         width: 370px;
+        //         height: max-content;
+        //         opacity: .3;
+        //         max-width: 100%;
+
+        //         @include media-breakpoint-down(xs) {
+        //           width: 250px;
+        //         }
+
+        //         &:hover {
+        //           width: 100%;
+        //           height: max-content;
+
+        //           @include media-breakpoint-down(xs) {
+        //             width: 250px;
+        //           }
+        //         }
+        //       }
+
+
+        //     }
+
+        //     .titulo-card {
+        //       display: block;
+        //       text-transform: uppercase;
+        //       text-align: center;
+        //       position: relative;
+
+        //       h3 {
+        //         font-size: 1.4em;
+        //         margin-top: 30px;
+        //         margin-bottom: 40px;
+        //         font-weight: bold;
+        //       }
+
+        //       &::after {
+        //         content: "";
+        //         width: 60px;
+        //         height: 5px;
+        //         display: block;
+        //         background-color: $azul-claro;
+        //         border-radius: 3px;
+        //         position: absolute;
+        //         left: 50%;
+        //         bottom: -15px;
+        //         margin-left: -30px;
+        //       }
+        //     }
+
+        //     .texto {
+        //       display: block;
+        //       padding: .5em;
+
+        //       p {
+        //         font-size: .9em;
+        //         margin: 0;
+        //       }
+        //     }
+
+        //     .dias-semana {
+        //       display: block;
+        //       margin-top: 10px;
+
+        //       @media (min-width: 576px) and (max-width: 992px) {
+        //         table {
+        //           width: 100%;
+        //         }
+
+        //         thead {
+        //           width: 50%;
+        //           float: left;
+        //         }
+
+        //         thead th {
+        //           display: block;
+        //           text-align: left;
+        //         }
+
+        //         thead th:before {
+        //           content: attr(data-th);
+        //           display: block;
+        //           text-align: left;
+        //         }
+
+        //         thead th::before {
+        //           content: attr(data-th);
+        //           display: none;
+        //         }
+
+
+        //         tbody {
+        //           width: 50%;
+        //           float: left;
+        //         }
+
+        //         tbody td {
+        //           display: block;
+        //           text-align: left;
+        //           height: 26px;
+        //         }
+
+        //         tbody td:before {
+        //           content: attr(data-th);
+        //           display: block;
+        //           text-align: left;
+        //         }
+
+        //         tbody td::before {
+        //           content: attr(data-th);
+        //           display: none;
+        //         }
+        //       }
+
+        //       table {
+        //         border-collapse: separate;
+        //         border-spacing: 5px;
+        //         width: 100%;
+
+        //         tr {
+        //           margin-top: 10px;
+
+        //           th {
+        //             text-align: center;
+        //           }
+
+        //           td {
+        //             background-color: $azul-intermediario;
+        //             font-size: 10px;
+        //             padding: 4px;
+        //             border-radius: 5px;
+        //             text-align: center;
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+
+        //   .conteudo-card {
+        //     display: block;
+        //     width: 65%;
+        //     padding: 10px 0 10px 10px;
+        //     position: relative;
+
+        //     @include media-breakpoint-down(xs) {
+        //       width: 100%;
+        //       padding-left: 0;
+        //     }
+
+        //     &::before {
+        //       content: "";
+        //       display: block;
+        //       position: absolute;
+        //       width: 1px;
+        //       background-color: $azul-claro;
+        //       height: 90%;
+        //       left: 0;
+        //       top: 25px;
+
+        //       @include media-breakpoint-down(xs) {
+        //         display: none;
+        //       }
+        //     }
+
+        //     .titulo {
+        //       h4 {
+        //         font-size: 1em;
+        //       }
+        //     }
+
+        //     .lista-ultimos-videos {
+        //       display: flex;
+        //       flex-wrap: wrap;
+        //       margin-bottom: 0;
+
+        //       .media {
+        //         align-items: center;
+        //         margin: .4em 0;
+        //         background-color: $azul-intermediario;
+        //         border-radius: 5px;
+        //         padding: 5px;
+        //         flex: 0 0 calc(100%);
+
+        //         @include media-breakpoint-down(lg) {
+        //           align-items: center;
+        //           flex-direction: column;
+        //           text-align: center;
+        //         }
+
+        //         .play {
+        //           position: relative;
+        //           display: flex;
+        //           justify-content: center;
+        //           align-items: center;
+
+        //           &::before {
+        //             content: "";
+        //             position: absolute;
+        //             width: 45px;
+        //             height: 45px;
+        //             display: block;
+        //             background-image: url($play);
+        //             background-repeat: no-repeat;
+        //             background-size: 45px 45px;
+        //             background-position: center;
+        //           }
+        //         }
+
+        //         .img {
+        //           margin-right: .5em;
+        //           width: 140px;
+        //           height: 110px;
+        //           border-radius: 5px;
+        //           overflow: hidden;
+
+        //           @include media-breakpoint-down(lg) {
+        //             margin-right: 0;
+        //             margin-bottom: 1em;
+        //           }
+        //         }
+
+        //         .titulo {
+        //           font-size: 1em;
+        //           font-weight: bold;
+        //         }
+
+        //         .texto {
+        //           font-size: .8em;
+        //         }
+        //       }
+        //     }
+
+        //     .playlist-completa {
+        //       p {
+        //         font-size: .8em;
+        //         margin-bottom: 0;
+        //       }
+        //     }
+        //   }
+
+        //   .fechar {
+        //     position: absolute;
+        //     right: -7px;
+        //     top: -7px;
+        //     background-image: url($fechar);
+        //     background-repeat: no-repeat;
+        //     background-position: center;
+        //     width: 25px;
+        //     height: 25px;
+        //     cursor: pointer;
+        //     display: block;
+        //   }
+        // }
       }
 
 
