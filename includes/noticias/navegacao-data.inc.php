@@ -55,11 +55,11 @@
       <div class="form-group">
         <label for="dias-noticias" class="sr-only">últimos 15 dias</label><select class="form-control"
           id="dias-noticias" name="mes">
-          <option value="">últimos 15 dias</option>
-          <option>últimos 30 dias</option>
-          <option>últimos 45 dias</option>
-          <option>últimos 90 dias</option>
-          <option>últimos 120 dias</option>
+          <option value="">segunda, 02</option>
+          <option>terça, 03</option>
+          <option>quarta, 04</option>
+          <option>quinta, 05</option>
+          <option>sexta, 06</option>
         </select>
       </div>
       <button class="btn btn-primary" type="submit" name="formData"><span>Pesquisar</span></button>

@@ -37,6 +37,7 @@ $noticias = [
           <h3 class="noticia-listagem_title"><a href="http://"><?= $value['title'];?></a>
           </h3>
           <p class="noticia-listagem_description"><?= $value['description']?></p>
+        
         </div>
       </article>
       <?php } ?>

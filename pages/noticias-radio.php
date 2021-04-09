@@ -16,6 +16,7 @@ $outrasNoticias       = json_decode($data);
 $porcentagem = 0;
 include BASE_URL . '/includes/header.inc.php';
 include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
+
 <div id="radio-list" class="radio-list">
   <?php  
     foreach ($outrasNoticias as $key => $noticia) :        
@@ -30,6 +31,7 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
   ?>
   <article class="radio-list-card">
     <div class="radio-list-row">
+     
       <?php
       if ($noticia->image_preview  || $noticia->video_image) :
       ?>
@@ -48,6 +50,8 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
             <?php if(!$noticia->video_image): ?>
           </a>
           <?php endif; ?>
+          <time class="time"
+            datetime="<?= "{$ano}-{$mes}-{$dia} {$hora}:{$min}" ?>"><?= $data_final; ?> | <?= $hora_final?></time>
       </div>
       <?php endif; ?>
       <div class="radio-list-col-<?php $noticia->image_preview || $noticia->video_image ? print '8': print '12';?>">
@@ -56,16 +60,20 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
             <a href="<?= $noticia->url; ?>" title="<?= $noticia->title; ?>">
               <?= $noticia->title; ?>
             </a>
+            
           </h3>
+          
           <p class="radio-list-description">
             <?= $noticia->description; ?>
           </p>
-          <div class="radio-progress-player"><span style="width: <?= $porcentagem ?>%"></span></div>
+          
         </div>        
         <footer class="radio-list-footer">     
-        <button class="radio-list-play" type="button">
-            <img src="assets/imagens/noticias/play.svg" alt="">
-        </button>     
+        <div class="ready-player-<?= $key.$card->time; ?> player-with-accessibility">
+    <audio crossorigin>
+        <source src="<?=$card->audio; ?>" type="audio/mpeg">
+    </audio>
+</div>
         <button class="radio-list-view" type="button">
             <img src="assets/imagens/noticias/view.svg" alt="">
         </button>     
@@ -75,8 +83,7 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
           <button class="radio-list-sharing" type="button">
             <img src="assets/imagens/noticias/share.svg" alt="">
           </button>
-          <time class="time"
-            datetime="<?= "{$ano}-{$mes}-{$dia} {$hora}:{$min}" ?>"><?= $data_final; ?> | <?= $hora_final?></time>
+
         </footer>
         <div
           class="radio-list-sharing-overlay radio-list-sharing-overlay__active radio-list-sharing-overlay_color-radio">
