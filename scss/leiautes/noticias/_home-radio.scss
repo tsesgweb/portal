@@ -6,4 +6,24 @@
     .new-title {
         background: palegreen !important;
     }
+
+}
+
+#radio-list {
+    .radio-list-card {
+       .time {
+           color: #1b305a;
+           font-size: .8em;
+           margin-left: 5px;
+           margin-top: 10px;
+       }
+
+       .radio-list-footer {
+           .green-audio-player {
+               margin-right: 10px;
+               max-width: 300px;
+               padding: 0 10px;
+           }
+       }
+    }
 }

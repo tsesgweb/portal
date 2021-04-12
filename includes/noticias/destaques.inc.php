@@ -36,7 +36,14 @@ $noticias = [
           <span class="noticia-listagem_badge badge-<?= $value['tag']?>"><?= $value['tag'];?></span>
           <h3 class="noticia-listagem_title"><a href="http://"><?= $value['title'];?></a>
           </h3>
-          <p class="noticia-listagem_description"><?= $value['description']?></p>
+          
+          <p class="noticia-listagem_description">
+            <span class="ready-player-<?= $key.$card->time; ?> player-with-accessibility">
+            <audio crossorigin>
+              <source src="<?=$card->audio; ?>" type="audio/mpeg">
+            </audio>
+          </span>
+        </p>
         
         </div>
       </article>

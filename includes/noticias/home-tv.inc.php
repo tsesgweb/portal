@@ -88,29 +88,28 @@
         </div>
       </div>
       <hr>
-
       <div class="programas-semanais__linha">
-        <div class="item-principal-3">
-            <img src="assets/imagens/noticias/capa-decisoes.png" alt="">
-            <p>Editado em formato de revista eletrônica, traz as
-              principais decisões e ações do TSE e dos TREs. lorem20</p>
-        </div>
+        <div class="item-principal-2">
+            <img src="https://picsum.photos/id/1005/370/500" alt="">
+                    </div>
         <div class="item-secundario-2">
           <div class="item">
-              <img class="img-fluid" src="assets/imagens/noticias/minicapa-desicoes.png" alt="">
+              <img class="img-fluid" src="assets/imagens/noticias/minicapa-vcsabia.png" alt="">
               <p>A urna eletrônica tem mais de trinta barreiras de segurança.</p>
           </div>
           <div class="item">
-              <img class="img-fluid"  src="assets/imagens/noticias/minicapa-desicoes.png" alt="">
+              <img class="img-fluid"  src="assets/imagens/noticias/minicapa-vcsabia.png" alt="">
               <p>Você sabia que a Justiça Eleitoral tem outras funções além de organizar as eleições? 
                 Confira no interprograma Você Sabia desta semana.</p>
           </div>
           <div class="item">
-              <img src="assets/imagens/noticias/minicapa-desicoes.png" alt="">
+              <img src="assets/imagens/noticias/minicapa-vcsabia.png" alt="">
               <p>Você sabia que há uma série de exigências legais para a criação de um partido político? Confira no interprograma Você Sabia desta semana.</p>
           </div>
+          <button class="btn-out-line">Ver playlist completa</button>
         </div>
       </div>
+      
     </div>
   </section>
   

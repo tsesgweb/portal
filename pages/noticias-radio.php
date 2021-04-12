@@ -31,11 +31,11 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
   ?>
   <article class="radio-list-card">
     <div class="radio-list-row">
-     
+
       <?php
       if ($noticia->image_preview  || $noticia->video_image) :
       ?>
-      <div class="radio-list-col-4">        
+      <div class="radio-list-col-4">
         <?php if(!$noticia->video_image): ?>
         <a href="<?= $noticia->url; ?>" title="<?= $noticia->title; ?>">
           <?php else: ?>
@@ -50,36 +50,36 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
             <?php if(!$noticia->video_image): ?>
           </a>
           <?php endif; ?>
-          <time class="time"
-            datetime="<?= "{$ano}-{$mes}-{$dia} {$hora}:{$min}" ?>"><?= $data_final; ?> | <?= $hora_final?></time>
+          <time class="time" datetime="<?= "{$ano}-{$mes}-{$dia} {$hora}:{$min}" ?>"><?= $data_final; ?> |
+            <?= $hora_final?></time>
       </div>
       <?php endif; ?>
       <div class="radio-list-col-<?php $noticia->image_preview || $noticia->video_image ? print '8': print '12';?>">
-        <div class="radio-list-content">          
+        <div class="radio-list-content">
           <h3 class="radio-list-title">
             <a href="<?= $noticia->url; ?>" title="<?= $noticia->title; ?>">
               <?= $noticia->title; ?>
             </a>
-            
+
           </h3>
-          
+
           <p class="radio-list-description">
             <?= $noticia->description; ?>
           </p>
-          
-        </div>        
-        <footer class="radio-list-footer">     
-        <div class="ready-player-<?= $key.$card->time; ?> player-with-accessibility">
-    <audio crossorigin>
-        <source src="<?=$card->audio; ?>" type="audio/mpeg">
-    </audio>
-</div>
-        <button class="radio-list-view" type="button">
+
+        </div>
+        <footer class="radio-list-footer">
+          <div class="ready-player-<?= $key.$card->time; ?> player-with-accessibility">
+            <audio crossorigin>
+              <source src="<?=$card->audio; ?>" type="audio/mpeg">
+            </audio>
+          </div>
+          <button class="radio-list-view" type="button">
             <img src="assets/imagens/noticias/view.svg" alt="">
-        </button>     
-        <button class="radio-list-download" type="button">
+          </button>
+          <button class="radio-list-download" type="button">
             <img src="assets/imagens/noticias/download.svg" alt="">
-        </button>     
+          </button>
           <button class="radio-list-sharing" type="button">
             <img src="assets/imagens/noticias/share.svg" alt="">
           </button>
@@ -87,7 +87,7 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
         </footer>
         <div
           class="radio-list-sharing-overlay radio-list-sharing-overlay__active radio-list-sharing-overlay_color-radio">
-          <button class="radio-list-sharing-overlay__close">X</button>          
+          <button class="radio-list-sharing-overlay__close">X</button>
           <span class="radio-list-sharing-overlay__title"><?= $noticia->title; ?></span>
           <span class="radio-list-sharing-overlay__content">
             <div class="header">
