@@ -218,6 +218,14 @@
   @extend .btn;
 }
 
+@mixin btn-link {
+  @extend .btn-link;
+}
+
+@mixin btn-block {
+  @extend .btn-block;
+}
+
 @mixin show {
   display: block;
   visibility: visible;

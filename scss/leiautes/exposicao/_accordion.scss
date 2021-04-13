@@ -1,0 +1,51 @@
+.accordion {
+  width: 100%;
+
+  @include elemento('card') {
+    @include card;
+  }
+
+  @include elemento('card-header') {
+    @include card-header;
+    text-align-last: left;
+    padding-top: 0;
+    padding-bottom: 0;
+  }  
+  
+  @include elemento('card-title') {
+    margin: 0;
+  }
+
+  @include elemento('card-btn') {
+    @include btn;
+    @include btn-link;
+    @include btn-block;  
+    
+    &[aria-expanded]::after {      
+      @include responsive-font-size(26px);
+      float: right;
+      margin-right: -15px; 
+      line-height: 15px;  
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;   
+      background-color: $azul;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &[aria-expanded="false"]::after {
+      content: "+";      
+    }
+    &[aria-expanded="true"]::after {
+      content: "-";      
+    }
+  }
+
+  @include elemento('card-body') {
+    @include card-body;
+  }
+  
+  
+}

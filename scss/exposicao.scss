@@ -3,7 +3,10 @@
 @import "mixins/mixins";
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/card";
+@import "node_modules/bootstrap/scss/buttons";
 @import "leiautes/exposicao/panel";
 @import "leiautes/exposicao/cards";
 @import "leiautes/exposicao/timeline";
 @import "leiautes/exposicao/rich-text";
+@import "leiautes/exposicao/accordion";
