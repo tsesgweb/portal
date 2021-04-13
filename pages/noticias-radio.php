@@ -15,6 +15,7 @@ $data                 = file_get_contents($url);
 $outrasNoticias       = json_decode($data);
 $porcentagem = 0;
 include BASE_URL . '/includes/header.inc.php';
+include BASE_URL . '/includes/noticias/titulo-descricao-categorias.inc.php';
 include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
 
 <div id="radio-list" class="radio-list">

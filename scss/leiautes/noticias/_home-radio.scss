@@ -1,29 +1,44 @@
 #radio {
-    h2 {
-        @include sub-titulo;
-    }
-    
-    .new-title {
-        background: palegreen !important;
-    }
+  h2 {
+    @include sub-titulo;
+  }
+
+  .new-title {
+    background: palegreen !important;
+  }
 
 }
 
 #radio-list {
-    .radio-list-card {
-       .time {
-           color: #1b305a;
-           font-size: .8em;
-           margin-left: 5px;
-           margin-top: 10px;
-       }
-
-       .radio-list-footer {
-           .green-audio-player {
-               margin-right: 10px;
-               max-width: 300px;
-               padding: 0 10px;
-           }
-       }
+  .radio-list-card {
+    .time {
+      color: #1b305a;
+      font-size: .8em;
+      margin-left: 5px;
+      margin-top: 10px;
     }
+
+    .radio-list-footer {
+      .green-audio-player {
+        margin-right: 10px;
+        max-width: 300px;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.titulo-descricao-categorias-radio {
+  margin-bottom: 30px;
+
+  h2 {
+    @include sub-titulo;
+    font-size: 2em !important;
+    font-weight: normal !important;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: .95em !important;
+  }
 }
