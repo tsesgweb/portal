@@ -1,9 +1,13 @@
-<section id="panel" class="panel" <?php $theme && printf('data-bg-color="%s"', $theme);?>>
+<?php
+$theme = 'verde';
+$full  = true;
+?>
+<section id="panel" class="panel panel__align-left" <?php $full && $theme && printf('data-bg-color="%s"', $theme);?>>
   <div class="panel__conteudo_full">
-    <div class="panel__conteudo">
+    <div class="panel__conteudo" <?php !$full && $theme && printf('data-bg-color="%s"', $theme);?>>
       <div class="panel__linha">
         <div class="panel__content">          
-          <div class="timeline <?php $theme &&  printf('timeline-%s', $theme);?>">    
+          <div class="timeline <?php $theme &&  printf('timeline__theme-%s', $theme);?>">    
             <nav class="timeline-nav">
               <ul class="nav" role="tablist">                
                 <?php 

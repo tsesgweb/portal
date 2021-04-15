@@ -1,15 +1,15 @@
-.accordion {
-  width: 100%;
-
+.accordion {    
+  min-width: 100%;
   @include elemento('card') {
     @include card;
+    background-color: darken($cinza-claro, 7.5%);
   }
 
   @include elemento('card-header') {
-    @include card-header;
+    @include card-header;    
     text-align-last: left;
     padding-top: 0;
-    padding-bottom: 0;
+    padding-bottom: 0;    
   }  
   
   @include elemento('card-title') {
@@ -19,33 +19,34 @@
   @include elemento('card-btn') {
     @include btn;
     @include btn-link;
-    @include btn-block;  
-    
-    &[aria-expanded]::after {      
-      @include responsive-font-size(26px);
+    @include btn-block;         
+    font-weight: bold;
+
+    &[aria-expanded]::after {            
       float: right;
       margin-right: -15px; 
       line-height: 15px;  
       width: 30px;
       height: 30px;
-      border-radius: 50%;   
-      background-color: $azul;
+      border-radius: 50%;         
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: $font-icone;
+      color: $azul;
+      background-color: $cinza-claro;
     }
 
     &[aria-expanded="false"]::after {
-      content: "+";      
+      content: "\f067";      
     }
     &[aria-expanded="true"]::after {
-      content: "-";      
+      content: "\f068";      
     }
   }
 
   @include elemento('card-body') {
     @include card-body;
-  }
-  
-  
+    background-color: $cinza-claro;
+  }   
 }

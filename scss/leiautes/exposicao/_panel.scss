@@ -26,6 +26,10 @@
    
   }
 
+  @include elemento('conteudo') {
+   border-radius: $radius;  
+  } 
+  
   @include elemento('content') {
    @include make-row(0);
    width: 100%;   
@@ -65,6 +69,11 @@
       text-align: left;
     } 
 
+    @include modificar('bg') {
+      background-color: $branco;                     
+      color: $azul;
+    }
+
     .btn-next,
     .btn-prev {
       &::after {
@@ -78,23 +87,7 @@
         background-repeat: no-repeat;
         background-position: center center;        
       }  
-    }
-
-    @each $name, 
-    $color in $theme-colors {    
-      .btn-next.btn-color-#{$name} {
-        &::after {
-          border-color: $color;
-          background-image: url('#{$path-img}/exposicao/next-arrow-#{$name}.svg');
-        }
-      }
-      .btn-prev.btn-color-#{$name} {
-        &::after {
-          border-color: $color;
-          background-image: url('#{$path-img}/exposicao/prev-arrow-#{$name}.svg');
-        }
-      }
-    } 
+    }    
   }
 
   @include elemento('media'){
@@ -157,30 +150,7 @@
     display: block;
     height: 100%;
     border-radius: $radius;
-  }
-
-  @each $name,
-  $color in $theme-colors {    
-    &[data-color=#{$name}] {
-      color: $color;      
-    }    
-    &[data-bg-color=#{$name}] {
-      background-color: $color;      
-    }    
-    
-    [data-bg-color=#{$name}] {
-      border-radius: $radius;
-      background-color: $color;      
-    } 
-        
-    [data-color=#{$name}] {      
-        color: $color;
-    }
-
-    .btn-color-#{$name} {
-      color: $color;
-    }
-  } 
+  }  
 
   @include elemento('header') {
     .subtitle {
