@@ -171,3 +171,4 @@ include BASE_URL."/includes/exposicao/panel.inc.php";
 
 include BASE_URL."/includes/exposicao/timeline.inc.php";
 include_once BASE_URL."/includes/exposicao/accordion.inc.php";
+include_once BASE_URL."/includes/exposicao/iframe.inc.php";

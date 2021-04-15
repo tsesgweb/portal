@@ -1,0 +1,9 @@
+.iframe-expo {
+  @extend .embed-responsive,.embed-responsive-21by9;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  
+  .iframe-expo-item {
+    @extend .embed-responsive-item;
+  }
+}

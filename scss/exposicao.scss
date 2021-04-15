@@ -5,11 +5,13 @@
 @import "node_modules/bootstrap/scss/transitions";
 @import "node_modules/bootstrap/scss/card";
 @import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/utilities/embed";
 @import "leiautes/exposicao/panel";
 @import "leiautes/exposicao/cards";
 @import "leiautes/exposicao/timeline";
 @import "leiautes/exposicao/rich-text";
 @import "leiautes/exposicao/accordion";
+@import "leiautes/exposicao/iframe";
 
 // sempre por último para fazer o replace
 @import "leiautes/exposicao/themes";
