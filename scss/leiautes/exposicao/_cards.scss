@@ -1,4 +1,7 @@
 .cards { 
+  @include make-row(0);
+  width: 100%; 
+
   .card-galeria { 
      
     .card {
@@ -134,37 +137,5 @@
         }
       }
     }
-  }  
-
-   @each $name,
-  $color in $theme-colors {    
-    &.card-theme-#{$name} {
-      .card-carousel {     
-        .owl-prev,
-        .owl-next {
-          &::after {
-            @if $name == 'azul' {
-              background-color: $amarelo;              
-            } @else {
-              background-color: $azul;              
-            }            
-          }
-        }
-        .owl-next::after {          
-          @if $name == 'azul' {
-            background-image: url("#{$path_img}/exposicao/next-arrow-azul.svg"); 
-          } @else {
-            background-image: url("#{$path_img}/exposicao/next-arrow-branco.svg"); 
-          }
-        } 
-        .owl-prev::after {
-          @if $name == 'azul' {            
-            background-image: url("#{$path_img}/exposicao/prev-arrow-azul.svg"); 
-          }@else {
-            background-image: url("#{$path_img}/exposicao/prev-arrow-branco.svg"); 
-          }
-        } 
-      }   
-    }
-  }  
+  }     
 }

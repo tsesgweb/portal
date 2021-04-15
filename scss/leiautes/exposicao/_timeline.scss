@@ -1,9 +1,7 @@
 .timeline { 
   @include make-row(0);
 
-  @include item("nav") { 
-    // @include nav;   
-    // @include nav-tabs;   
+  @include item("nav") {     
     @include make-col-ready();
     @include media-breakpoint-up(lg) {
       @include make-col(3);
@@ -67,35 +65,6 @@
 
     }    
   }
-
-  @each $name,
-  $color in $theme-colors {                
-    @include item($name) {   
-      a.timeline-link.active::after {               
-        @if $name=='azul' {
-          background-color: $amarelo;        
-        } @else {
-          background-color: $azul;
-        }                        
-      }  
-      
-      a.timeline-link {
-        @if $name=='azul' {
-          color: $amarelo;
-        } @else {
-          color: $azul ;
-        }        
-      }   
-      
-      .timeline__content {
-        @if $name == 'azul' {
-          color: $branco;
-        } @else {
-          color: $azul;
-        }
-      }
-    }    
-  } 
 
   @include elemento("content") {
     @include tab-content;

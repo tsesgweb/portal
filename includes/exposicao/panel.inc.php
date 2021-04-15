@@ -4,25 +4,6 @@
 // print('</pre>');
 $count = 1;
 foreach ($config as $key => $panel) :
-  $bgColor = $panel['bg'];
-  $theme = $panel['theme'];
-  switch ($theme) {
-    case 'azul':
-      $color = $panel['bg'] === 'azul' ? 'branco': 'azul';      
-      $action = 'amarelo';      
-      break;
-      case 'amarelo':
-        case   'verde':
-          $color = $panel['bg'] === 'amarelo' || 'verde' ? 'azul': 'branco';      
-          $action = 'azul';
-          break;      
-          default:
-          $color = 'azul';      
-      $action = 'azul';
-      break;
-  } 
-  
-
 ?>
 <section 
   id="panel-<?=$key+1;?>"
@@ -30,19 +11,17 @@ foreach ($config as $key => $panel) :
   class="panel <?php $panel['align'] && printf('panel_align-%s', $panel['align']);?>" <?php 
   $panel['img'] && printf('data-bg-img="%s"', $panel['img']);
   $panel['full'] && printf('data-bg-color="%s"', $panel['theme']);  
-  printf('data-color="%s"', $color);  
+  printf('data-color="%s"', $panel['text']);  
   ?>
   >
   <div class="panel__conteudo_full">    
-    <div class="panel__conteudo" <?php !$panel['full'] && !$panel['img'] && $panel['bg'] && printf("data-bg-color='%s'", $panel['theme']);?>>    
+    <div class="panel__conteudo" <?php !$panel['full'] && !$panel['img'] && printf("data-bg-color='%s'", $panel['theme']);?>>    
       <div class="panel__linha">              
         <div class="panel__content">
           <?php $panel['align'] === 'right' && $panel['media'] && include BASE_URL .'/includes/exposicao/media.inc.php'; ?>
           <?php !$panel['media'] && $panel['header'] && include BASE_URL .'/includes/exposicao/header.inc.php'; ?>
           <div 
-          class="panel__control-navigation<?php $panel['one'] && print(' panel__control-navigation_one');?>" 
-          data-color="<?=$panel['text']?>" 
-          data-bg-color="<?=$panel['bg'];?>">
+          class="panel__control-theme-<?=$theme;?> panel__control-navigation<?php $panel['one'] && print(' panel__control-navigation_one');?><?php $panel['bg'] && print(' panel__control-navigation_bg');?>">
             <div class="panel__carousel">                                        
               <?php                
               if(!$panel['media'] && !$panel['align']):

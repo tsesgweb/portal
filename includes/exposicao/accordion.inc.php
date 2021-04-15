@@ -8,23 +8,21 @@ $accordions =  [
   ["title"=> "6", "description"=> "Descrição 6"],
   ["title"=> "7", "description"=> "Descrição 7"],
 ];
-
-$full = true;
-$theme = "verde";
-$color = "branco";
-$bg = "azul";
+$full   = true;
+$theme  = "verde";
+$bg     = "verde";
 ?>
 <section id="panel" class="panel" <?php $full && printf('data-bg-color="%s"', $bg);?>>
   <div class="panel__conteudo_full">
     <div class="panel__conteudo" <?php !$full && printf('data-bg-color="%s"', $bg);?>>
       <div class="panel__linha">
         <div class="panel__content">            
-          <div class="accordion" id="accordionPanel">
+          <div class="accordion accordion__theme-<?=$theme;?>" id="accordionPanel">
             <?php foreach ($accordions as $key => $accordion) :?>                          
-            <div class="accordion__card" data-bg-color="<?=$theme;?>" data-color="<?=$color;?>">
+            <div class="accordion__card">
               <div class="accordion__card-header" id="heading-<?=$key;?>">
                 <h2 class="accordion__card-title">
-                  <button class="accordion__card-btn" type="button" data-toggle="collapse" data-target="#collapse-<?=$key?>" aria-expanded="<?php $key === 0 ? print('true'): print('false');?>" aria-controls="collapse-<?=$key?>" data-color="<?=$color;?>">
+                  <button class="accordion__card-btn" type="button" data-toggle="collapse" data-target="#collapse-<?=$key?>" aria-expanded="<?php $key === 0 ? print('true'): print('false');?>" aria-controls="collapse-<?=$key?>">
                     Collapsible Group Item #<?=$key?>
                   </button>
                 </h2>
