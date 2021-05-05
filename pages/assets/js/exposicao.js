@@ -99,7 +99,7 @@
   var timelineNav = $('.timeline-nav a');
 
   timelineNav.on('click',function(event){
-    // event.preventDefault();
+    event.preventDefault();
     $(this).tab('show');
   });  
 
@@ -122,7 +122,8 @@
     responsive: {
       0: {
         items: 1,
-        
+        nav: false,
+        dots: true,
       },
       768: {
         items: totalItems / 2,        
@@ -133,4 +134,33 @@
     }
   }); 
 
+})(jQuery);
+(function(){
+  var nav = $('.timeline-nav');
+  var navLink = nav.find('.timeline-link');
+  var subLink = nav.find('.timeline-link + .timeline-link');
+  var content = $('.timeline__content .timeline-pane');
+  Breakpoints.on('xs', {
+    enter: function() {    
+    nav.hide();
+    
+    content.each(function(index, value){
+      var $self = $(this);
+      subLink.addClass('timeline-pane__sublink').eq(index);
+      var $navs = navLink.clone().addClass('timeline-pane__link').eq(index);
+      
+      $self.closest('.timeline__content').addClass('timeline__content-link').attr('role', 'tablist');
+      $self.before($navs);
+    });
+    },
+    leave: function() {
+      $('.timeline__content-link a').remove();
+      $('.timeline__content').removeClass('timeline__content-link');
+      nav.show();
+    }
+});
+  
+    
+  
+  
 })(jQuery);

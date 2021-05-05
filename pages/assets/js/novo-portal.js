@@ -34,7 +34,7 @@ Breakpoints();
     console.log('Cookies not found')
   } else {
     var logo = $('.menu__logo > img')
-
+    if(logo){ return;}
     var $htmlLogo = logo.clone().prop('outerHTML')
 
     var $srcLogo = $($htmlLogo).attr('src')
@@ -208,11 +208,11 @@ $(function () {
 })(jQuery, Cookies)
 
 // Hide Header on on scroll down
-var didScroll
-var lastScrollTop = 0
-var delta = 5
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
 
-$(window).scroll(function (event) {
+$(window).on('scroll', function (event) {
   didScroll = true
 })
 

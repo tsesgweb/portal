@@ -38,7 +38,7 @@ $color in $theme-colors {
         &::after {          
           background-color: $color;
         }
-      }
+      }      
       .owl-next::after {          
         @if $name == 'azul' {
           border: 1px solid $branco;
@@ -54,21 +54,26 @@ $color in $theme-colors {
         }@else {
           background-image: url("#{$path_img}/exposicao/prev-arrow-azul.svg"); 
         }
-      }       
+      } 
+      
+      .owl-dots .owl-dot {        
+        &.active span {
+          background-color: $color;
+        }
+        span {
+          background-color: lighten($color, 25%);
+        }
+      }
     }   
   }
   //end cards
 
   //start panel
-  // .panel__control-navigation-theme-#{$name} {
-  //   .panel__status-bg-color {
-  //     @if $name == azul {
-  //       background-color: $branco;
-  //     }@else {
-  //       background-color: $azul;
-  //     }
-  //   } 
-  // }  
+  .panel__control-theme-#{$name} {
+    .panel__rich-text-container .panel__rich-text + .panel__rich-text {
+      // border-left-color: $color;
+    }
+  }  
   //end panel
   
   //start timeline
@@ -94,6 +99,15 @@ $color in $theme-colors {
         color: $branco;
       } @else {
         color: $azul;
+      }
+      &-link {                     
+        a.timeline-link.active::after {
+          @if $name == 'azul' {
+            background-color: $branco;
+          } @else {
+            background-color: $azul;
+          }  
+        }
       }
     }
   }  

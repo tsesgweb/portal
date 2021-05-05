@@ -82,12 +82,7 @@ $timeline = [
         'title' => '<h1>Bertha Lutz (1894-1976)</h1>', 
         'media' => null,
         'description'=> '<h2>O voto feminino ainda é atacado pelos conservadores do passado.</h2><h3>Esse ataque faz-nos sorrir: se agora a mulher não vencer, vencerá amanhã.</h3><p>Em 1922, a bióloga feminista Bertha Lutz criou a Federação Brasileira pelo Progresso Feminino. No ano de 1933, à véspera da eleição, dentre todas as 19 candidatas, ela era a favorita para uma vaga na Constituinte. Tornou-se a primeira suplente do Partido Autonomista, tendo atuado como parlamentar até a instalação do Estado Novo. Contribuiu com projetos nas áreas de educação, trabalho, saúde e ciência, sempre em defesa dos direitos das mulheres.</p>',          
-      ],
-      [
-        'title' => '<h1>Conteúdo tab 1 - 2</h1>', 
-        'media' => null,
-        'description'=> '<p>desc 1 - 2</p>'
-      ],
+      ],      
     ],     
   ],
   [

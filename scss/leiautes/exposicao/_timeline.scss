@@ -73,7 +73,9 @@
       @include make-col(9);
     }
 
-    
+    @include item(link) {
+      border-left: 1px solid #78797B;
+    }    
   }
   
   @include item("pane") {
@@ -109,6 +111,35 @@
 
       @include not('.active') {
         display: none;
+      }
+    }
+
+    @include elemento(link) {  
+      position: relative;
+      border-radius: 0;
+      text-align: left;
+      &.active {
+        font-weight: bold;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: 13px;
+        width: 15px;
+        height: 15px;
+        background-color: #78797B;
+        border-radius: 50%;        
+      }
+    }
+    @include elemento("sublink") {  
+      @extend .timeline-pane__link;
+
+      &::after {        
+        width: 7.5px;
+        height: 7.5px;            
+        left: -5px;
       }
     }
   }

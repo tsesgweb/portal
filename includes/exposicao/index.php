@@ -44,7 +44,7 @@ $config = [
 ];
 $config[0]['content']['description'] = 'Quarta-feira, 3 de maio de 1933. Assim, no meio de uma semana ordinária, ocorreu o primeiro ensaio democrático do país. Nesta data foi realizada a primeira eleição organizada pela Justiça Eleitoral – ramo especializado do Poder Judiciário criado com a função precípua de administrar os pleitos em todos os seus níveis, do alistamento à apuração. O sufrágio, pela primeira vez na história nacional, ocorria sem o cabresto do voto a descoberto. E, ineditamente, as mulheres participaram da eleição votando e sendo votadas.<br/> Não obstante emprega-se a palavra ensaio, pois este foi um de poucos pleitos realizados sob a égide da Justiça Eleitoral em sua breve primeira fase (1932-1937). Ensaio porque, apesar da importante inclusão feminina, menos de 4% da população votou em 1933. Por fim, o termo é justificado pela ocorrência ainda de fraudes eleitorais (apesar de se ter, pela primeira vez, o Estado de fato as combatendo).<br />Portanto, entre a exaltação ufanista ou a sobrevaloração dos problemas, fica-se com os fatos: a primeira eleição realizada pela recém-criada Justiça Eleitoral foi um marco na democracia do país e, ao mesmo tempo, enfrentou percalços diversos, em todas as fases do processo. O marco histórico jamais é perfeito, insuscetível a críticas. Ao contrário, é necessário ';
 $config[0]['content']['repeat'] = 10;
-include_once BASE_URL."/includes/exposicao/panel.inc.php";
+include BASE_URL."/includes/exposicao/panel.inc.php";
 
 $type     = 'carousel';
 $mozaic   = false;
@@ -53,7 +53,7 @@ $columns  = 4;
 $full     = true;
 $theme    = 'verde';
 $bg       = 'default';
-include_once BASE_URL."/includes/exposicao/cards.inc.php";
+include BASE_URL."/includes/exposicao/cards.inc.php";
 
 $config = [
    [
@@ -62,14 +62,14 @@ $config = [
     "media"   => null,
     "header"  => null,
     "theme"   => "azul",
-    "text"    => 'branco',
+    "text"    => 'amarelo',
     "bg"      => false,
     "align"   => null,
     "full"    => true,
     "content" => $conteudo,
   ],   
 ];
-$config[0]['content']['repeat'] = 2;
+$config[0]['content']['repeat'] = 5;
 include BASE_URL."/includes/exposicao/panel.inc.php";
 
 $type     = 'carousel';
@@ -170,5 +170,5 @@ $config[1]['theme'] = 'verde';
 include BASE_URL."/includes/exposicao/panel.inc.php";
 
 include BASE_URL."/includes/exposicao/timeline.inc.php";
-include_once BASE_URL."/includes/exposicao/accordion.inc.php";
-include_once BASE_URL."/includes/exposicao/iframe.inc.php";
+include BASE_URL."/includes/exposicao/accordion.inc.php";
+include BASE_URL."/includes/exposicao/iframe.inc.php";

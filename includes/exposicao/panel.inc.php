@@ -21,7 +21,10 @@ foreach ($config as $key => $panel) :
           <?php $panel['align'] === 'right' && $panel['media'] && include BASE_URL .'/includes/exposicao/media.inc.php'; ?>
           <?php !$panel['media'] && $panel['header'] && include BASE_URL .'/includes/exposicao/header.inc.php'; ?>
           <div 
-          class="panel__control-theme-<?=$theme;?> panel__control-navigation<?php $panel['one'] && print(' panel__control-navigation_one');?><?php $panel['bg'] && print(' panel__control-navigation_bg');?>">
+          class="panel__control-navigation          
+          <?php $panel['one'] && print(' panel__control-navigation_one ');?>
+          <?php $panel['bg'] && print(' panel__control-navigation_bg ');?>
+          panel__theme-<?=$theme;?>">
             <div class="panel__carousel">                                        
               <?php                
               if(!$panel['media'] && !$panel['align']):
