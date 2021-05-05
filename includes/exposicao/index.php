@@ -1,5 +1,6 @@
 <?php require('conteudo.php');?>
 <?php
+$theme = 'default';
 $header = [
     "section"     => "<h4>Núcleo</h4>",
     "title"       => "<h2>Eleição de 1933</h2>",
