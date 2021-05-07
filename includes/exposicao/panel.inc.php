@@ -6,8 +6,7 @@ $count = 1;
 foreach ($config as $key => $panel) :
 ?>
 <section 
-  id="panel-<?=$key+1;?>"
-  tabindex="<?=$key;?>"
+  id="panel-<?=$key+1;?>"  
   class="panel <?php $panel['align'] && printf('panel_align-%s', $panel['align']);?>" <?php 
   $panel['img'] && printf('data-bg-img="%s"', $panel['img']);
   $panel['full'] && printf('data-bg-color="%s"', $panel['theme']);  
@@ -28,7 +27,7 @@ foreach ($config as $key => $panel) :
             <div class="panel__carousel">                                        
               <?php                
               if(!$panel['media'] && !$panel['align']):
-                if($panel['content']['repeat'] > 1):              
+                if($panel['content']['repeat'] >= 1):              
                   print('<div class="panel__rich-text-container">');
                   include BASE_URL .'/includes/exposicao/intro.inc.php';
                   for ($i=0; $i < $panel['content']['repeat']; $i++):                    
@@ -45,7 +44,7 @@ foreach ($config as $key => $panel) :
               endif;
               ?>              
             </div>
-            <?php $panel['content']['repeat'] > 1 && include BASE_URL.'/includes/exposicao/navigation.inc.php';?>
+            <?php $panel['content']['repeat'] >= 1 && include BASE_URL.'/includes/exposicao/navigation.inc.php';?>
           </div>              
           <?php $panel['align'] === 'left' && $panel['media'] && include BASE_URL .'/includes/exposicao/media.inc.php'; ?>
         </div>

@@ -3,7 +3,7 @@ $header = [
     "section"     => "Núcleo",
     "title"       => "Eleição de 1933",
     "subtitle"    => "início de uma nova era",
-    "description" => "Aqui estou, Senhores, em obediência a um preceito do vosso Regimento e, ainda, para corresponder à gentileza da homenagem que o ilustre Sr. Ministro da Justiça quis prestar ao Tribunal Superior de Justiça Eleitoral, que tenho a honra de presidir. [...] Minha missão aqui é muito simples. Consiste, apenas, em receber os diplomas, dar-lhes o destino conveniente e presidir a eleição do vosso Presidente efetivo. Srs. Representantes do Povo na Assembleia Nacional Constituinte, tenho a honra de apresentar-vos as minhas atenciosas saudações.",      
+    "description" => "Aqui estou <a href='#'>Senhores</a>, em obediência a um preceito do vosso Regimento e, ainda, para corresponder à gentileza da homenagem que o ilustre Sr. Ministro da Justiça quis prestar ao Tribunal Superior de Justiça Eleitoral, que tenho a honra de presidir. [...] Minha missão aqui é muito simples. Consiste, apenas, em receber os diplomas, dar-lhes o destino conveniente e presidir a eleição do vosso Presidente efetivo. Srs. Representantes do Povo na Assembleia Nacional Constituinte, tenho a honra de apresentar-vos as minhas atenciosas saudações.",      
 ];
 
 $conteudo = [

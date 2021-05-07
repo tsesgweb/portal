@@ -12,12 +12,18 @@ $color in $theme-colors {
   // start all 
   &[data-color=#{$name}],
   [data-color=#{$name}] {
-    color: $color;      
+    color: $color;     
+    a {
+      color: $color; 
+      text-decoration: underline;
+      font-weight: bolder;
+    }  
   }    
 
   &[data-bg-color=#{$name}],
   [data-bg-color=#{$name}] {
-    background-color: $color;      
+    background-color: $color;    
+     
   }
   .btn-next.btn-color-#{$name}::after {    
     border-color: $color;

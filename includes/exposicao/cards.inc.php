@@ -14,7 +14,7 @@
                 <?php !$desc && printf('<div class="card-header">%s</div>', $card['data']); ?> 
                 <div class="card-body">
                   <?php $mozaic ? printf('<h4 class="card-title"><a href="#%s">%s</a></h4>', $key, $card['title']) : printf('<p class="card-subtitle"><a href="#%s">%s</a></p>',$key, $card['title']);?>                                
-                  <?php $desc && printf('<p>%s</p>', $card['desc']); ?>               
+                  <?php $desc && printf('<div class="card-descricao">%s</div>', $card['desc']); ?>               
                 </div>                
               </div>
               <?php endforeach; ?>

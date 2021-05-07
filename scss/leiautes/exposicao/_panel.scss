@@ -33,13 +33,7 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-
-  @include elemento('linha') {
-    // margin-top: 25px;
-    // margin-bottom: 25px;
-   
-  }
-
+  
   @include elemento('conteudo') {
    border-radius: $radius;  
   } 
@@ -47,6 +41,10 @@
   @include elemento('content') {
    @include make-row(0);
    width: 100%;   
+   
+   @include item('intro') {
+    padding: 15px;
+   }
   } 
 
   @include elemento('title') {
@@ -132,7 +130,7 @@
   }
   @include elemento('rich-text-container') {
     @include make-row(0);
-    div {
+    div:not(.panel__descricao) {
       @include make-col-ready();
       @include media-breakpoint-up(lg) {
         @include make-col(6);        

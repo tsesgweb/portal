@@ -9,9 +9,9 @@
     if($bgImage !== undefined) {
       $self.css({backgroundImage: 'url('+$bgImage+')'});
     }   
-  })  
+  });  
 })(jQuery);
-(function(){
+(function($) {
   var panelCarousel = $('.panel__carousel');
   
   
@@ -45,27 +45,26 @@
       var total     = (item  / items)  * 100;
       
       $progress.css({width: total + '%'})
-
+      
+      // console.log(item, items, total);
       if(item === items) {
-        $nextButton.hide();        
-      } else if (item === 1){        
-        $prevButton.hide();
+        $nextButton.hide();      
+      }else if (item === 1) {                
+        $prevButton.hide();             
       } else  {
-        $prevButton.show();
         $nextButton.show();
+        $prevButton.show();
       }      
 
-      $self.closest('.panel').focus().one('keyup', function(event){
-        if(event.key === undefined) return;
-        if(event.key === 'ArrowRight'){          
-          $panelSelf.trigger('next.owl.carousel');
-        } else if(event.key === 'ArrowLeft') {          
-          $panelSelf.trigger('prev.owl.carousel');
-        } else {
-          $panelSelf.trigger('refresh.owl.carousel')
-        }
-      })
-       
+      // $self.closest('.panel').on('keyup click mouseover ', function(event){  
+                    
+      //   if(event.key === undefined) return;
+      //   if(event.key === 'ArrowRight') {          
+      //     $panelSelf.trigger('next.owl.carousel');
+      //   } else if(event.key === 'ArrowLeft') {          
+      //     $panelSelf.trigger('prev.owl.carousel');
+      //   }
+      // })       
     })
   })  
 
@@ -74,6 +73,8 @@
     nav: false,
     dots: false, 
     rtl: false, 
+    // touchDrag: false,
+    mouseDrag: false,
     autoWidth: false,     
     responsive: {
       1140: {
@@ -104,17 +105,17 @@
   });  
 
 })(jQuery);
-(function(){
+(function($){
   var cardCarousel  = $('.card-carousel');
   var qtd           = cardCarousel.data('columns');
   var padding       = cardCarousel.closest('.cards').data('padding');
-  var totalItems    = qtd !== undefined ? qtd : 4;
+  var totalItems    = qtd !== undefined || null ? qtd : 4;
 
   cardCarousel.addClass('owl-carousel owl-theme');
   
   cardCarousel.owlCarousel({    
     items: totalItems,        
-    dots: false,
+    dots: true,
     navText: ['<span class="sr-only">Anterior</span>','<span class="sr-only">Próximo</span>'],    
     nav: true,
     stagePadding: padding ? padding : 0,    
@@ -135,7 +136,7 @@
   }); 
 
 })(jQuery);
-(function(){
+(function($){
   var nav = $('.timeline-nav');
   var navLink = nav.find('.timeline-link');
   var subLink = nav.find('.timeline-link + .timeline-link');
@@ -158,9 +159,8 @@
       $('.timeline__content').removeClass('timeline__content-link');
       nav.show();
     }
-});
-  
-    
-  
-  
+  });  
+})(jQuery);
+(function($) {  
+  $('.iframe-expo').closest('.panel__conteudo').removeClass('panel__conteudo').addClass('panel__conteudo_full')
 })(jQuery);

@@ -55,6 +55,10 @@
       & + .timeline-link {
         margin-left: 10px;
 
+        &.active {
+          font-weight: bold;
+        }   
+        
         &::after {
           width: 7px;
           height: 7px;
