@@ -1,7 +1,4 @@
 <?php
-// print('<pre>');
-// print_r($config[0]);
-// print('</pre>');
 $count = 1;
 foreach ($config as $key => $panel) :
 ?>
@@ -22,8 +19,8 @@ foreach ($config as $key => $panel) :
           <div 
           class="panel__control-navigation          
           <?php $panel['one'] && print(' panel__control-navigation_one ');?>
-          <?php $panel['bg'] && print(' panel__control-navigation_bg ');?>
-          panel__theme-<?=$theme;?>">
+          <?php $panel['bg'] && print(' panel__control-navigation_bg');?>
+          panel__theme-<?=$theme;?>">          
             <div class="panel__carousel">                                        
               <?php                
               if(!$panel['media'] && !$panel['align']):

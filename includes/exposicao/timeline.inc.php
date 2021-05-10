@@ -6,6 +6,11 @@ $full  = true;
   <div class="panel__conteudo_full">
     <div class="panel__conteudo">
       <div class="panel__linha">
+        <div class="panel__content panel__align-right">
+          <div class="panel__edit-button">
+            <a href="#" title=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+          </div>
+        </div>
         <div class="panel__content" <?php !$full && $theme && printf('data-bg-color="%s"', $theme);?>>          
           <div class="timeline <?php $theme &&  printf('timeline__theme-%s', $theme);?>">    
             <nav class="timeline-nav">

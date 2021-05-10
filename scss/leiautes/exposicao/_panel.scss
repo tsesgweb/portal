@@ -42,7 +42,7 @@
    @include make-row(0);
    width: 100%;   
    
-   @include item('intro') {
+   &.panel__content-intro {
     padding: 15px;
    }
   } 
@@ -83,7 +83,13 @@
 
     @include modificar('bg') {
       background-color: $branco;                     
-      color: $azul;
+      color: $azul;  
+          
+      a {
+        color: $azul;
+        font-weight: bold;
+        text-decoration: underline;
+      }
     }
 
     .btn-next,
@@ -102,7 +108,7 @@
     }    
   }
 
-  @include elemento('media'){
+  @include elemento('media') {    
     padding: 15px;
     @include make-col-ready();
     @include media-breakpoint-up(lg) {
@@ -113,6 +119,24 @@
     @include elemento('img') {
       @include img-fluid;
       border-radius: $radius;
+    }    
+  }
+
+  [data-fancybox] {
+    @include icone;      
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+    .panel-icone { 
+      @extend .icone-play-icon;     
+      width: 50px;
+      position: absolute;
+      z-index: 30;
+
+      &:hover {
+        width: 70px;
+      }
     }
   }
 

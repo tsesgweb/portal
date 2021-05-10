@@ -1,7 +1,7 @@
 <?php
 function autoIncludeFiles($location, $type) {  
   $arquivoJSON = file_get_contents(BASE_URL.'/portal-config.json');    
-  $config = json_decode(utf8_encode($arquivoJSON));       
+  $config = json_decode($arquivoJSON);       
   foreach ($config->$location->$type as $origen => $cssorjs):   
     $origen === 'external' ? $path = "": $path = "/";          
     if(!is_array($cssorjs)):

@@ -41,20 +41,22 @@
       var $progress = $(this).closest('.panel__control-navigation').find('.panel__status-bg-color');      
       
       var items     = event.item.count;     // Number of items
+      var itemc     = event.item.index;     // Position of the current item      
       var item      = event.item.index + 1;     // Position of the current item      
+      var size      = event.page.size;     // Position of the current item      
       var total     = (item  / items)  * 100;
       
-      $progress.css({width: total + '%'})
-      
-      // console.log(item, items, total);
+      $progress.css({width: total + '%'});
+            
       if(item === items) {
         $nextButton.hide();      
-      }else if (item === 1) {                
+        $prevButton.show();      
+      } else if (item <= 1) {       
         $prevButton.hide();             
       } else  {
         $nextButton.show();
         $prevButton.show();
-      }      
+      }  
 
       // $self.closest('.panel').on('keyup click mouseover ', function(event){  
                     
