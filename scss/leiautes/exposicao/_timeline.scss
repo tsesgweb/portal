@@ -26,7 +26,7 @@
       list-style: none;
       position: relative;   
       padding-left: 30px;  
-
+      width: 100%;
                  
       [aria-selected="true"] {
         @include active;

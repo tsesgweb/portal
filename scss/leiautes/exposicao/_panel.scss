@@ -84,6 +84,7 @@
     @include modificar('bg') {
       background-color: $branco;                     
       color: $azul;  
+      border-radius: $radius;
           
       a {
         color: $azul;

@@ -9,8 +9,8 @@ $accordions =  [
   ["title"=> "7", "description"=> "Descrição 7"],
 ];
 $full   = true;
-$theme  = "verde";
-$bg     = "verde";
+$theme  = "azul";
+$bg     = "azul";
 ?>
 <section id="panel" class="panel" <?php $full && printf('data-bg-color="%s"', $bg);?>>
   <div class="panel__conteudo_full">

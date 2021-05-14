@@ -6,7 +6,7 @@
   panel.each(function(){
     var $self = $(this);
     var $bgImage = $self.data('bg-img');    
-    if($bgImage !== undefined) {
+    if($bgImage !== undefined || $bgImage !== null) {
       $self.css({backgroundImage: 'url('+$bgImage+')'});
     }   
   });  
@@ -163,6 +163,6 @@
     }
   });  
 })(jQuery);
-(function($) {  
-  $('.iframe-expo').closest('.panel__conteudo').removeClass('panel__conteudo').addClass('panel__conteudo_full')
-})(jQuery);
+// (function($) {  
+//   $('.iframe-expo').closest('.panel__conteudo').removeClass('panel__conteudo').addClass('panel__conteudo_full')
+// })(jQuery);
