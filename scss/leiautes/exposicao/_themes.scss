@@ -11,12 +11,11 @@ $theme-colors: (
 $color in $theme-colors {  
   // start all 
   &[data-color=#{$name}],
-  [data-color=#{$name}] {
-    color: $color;     
+  [data-color=#{$name}] {       
+    color: $color;  
+
     a {
-      color: $color; 
-      text-decoration: underline;
-      font-weight: bolder;
+      color: $color;      
     }  
   }    
 
@@ -25,15 +24,23 @@ $color in $theme-colors {
     background-color: $color;    
      
   }
+
   .btn-next.btn-color-#{$name}::after {    
     border-color: $color;
-    background-image: url('#{$path-img}/exposicao/next-arrow-#{$name}.svg');    
+    background-image: url('#{$path-img}/exposicao/next-arrow-#{$name}.svg');        
   }
-  
+
   .btn-prev.btn-color-#{$name}::after {     
     border-color: $color;
     background-image: url('#{$path-img}/exposicao/prev-arrow-#{$name}.svg');    
+  } 
+
+  .btn.btn-go-back.btn-color-#{$name}::after {       
+    @extend .btn-next;
+    background-image: url('#{$path-img}/exposicao/go-back-#{$name}.svg');       
   }
+  
+    
   // end all
   
   //start cards  

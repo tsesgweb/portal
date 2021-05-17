@@ -1,4 +1,14 @@
 .panel {
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  a {
+    text-decoration: underline;
+    font-weight: bolder;
+  }
+
   @include media-breakpoint-up(xs) {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -15,10 +25,7 @@
     padding-top: 35px;
     padding-bottom: 35px;
   }
-  outline: none;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  
   
   @include modificar('align-center') {
     text-align: center;
@@ -35,7 +42,7 @@
   }
   
   @include elemento('conteudo') {
-   border-radius: $radius;  
+   
   } 
   
   @include elemento('content') {
@@ -93,6 +100,7 @@
       }
     }
 
+    .btn-go-back,
     .btn-next,
     .btn-prev {
       &::after {
@@ -106,7 +114,7 @@
         background-repeat: no-repeat;
         background-position: center center;        
       }  
-    }    
+    }  
   }
 
   @include elemento('media') {    
@@ -148,11 +156,6 @@
     } 
   }
   
-  @include elemento('rich-text') {
-    @include not(':first-child') {
-      // display: none;      
-    }
-  }
   @include elemento('rich-text-container') {
     @include make-row(0);
     div:not(.panel__descricao) {

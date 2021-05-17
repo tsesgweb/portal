@@ -12,52 +12,59 @@
   });  
 })(jQuery);
 (function($) {
-  var panelCarousel = $('.panel__carousel');
-  
+  var panelCarousel = $('.panel__carousel');  
   
   panelCarousel.addClass('owl-carousel owl-theme');
   
   panelCarousel.each(function(){    
-    var $panelSelf = $(this);
-    var $nextButton = $panelSelf.closest('.panel__control-navigation').find('.btn-next');      
-    var $prevButton = $panelSelf.closest('.panel__control-navigation').find('.btn-prev');          
-      
+    var $panelSelf    = $(this);
+    var $nextButton   = $panelSelf.closest('.panel__control-navigation').find('.btn-next');      
+    var $prevButton   = $panelSelf.closest('.panel__control-navigation').find('.btn-prev');          
+    var $goBackButton = $panelSelf.closest('.panel__control-navigation').find('.btn-go-back');          
+    
     $nextButton.each(function() {      
-      var $btnSelf = $(this);
-      $btnSelf.on('click', function(){        
+      $(this).on('click', function(){        
         $panelSelf.trigger('next.owl.carousel');        
-      })
+      });
     });
 
     $prevButton.each(function() {      
-      var $btnSelf = $(this);
-      $btnSelf.on('click', function(){        
+      $(this).on('click', function(){        
+        $goBackButton.hide();
+        $nextButton.show();
         $panelSelf.trigger('prev.owl.carousel');        
-      })
-    })  
+      });
+    });
+
+    $goBackButton.each(function(){
+      $(this).on('click', function() {          
+        $(this).hide();
+        $nextButton.show();
+        $panelSelf.trigger('to.owl.carousel', 0);      
+      });
+    });
     
-    $panelSelf.on('changed.owl.carousel', function(event){      
-      var $self = $(this);
+    $panelSelf.on('changed.owl.carousel', function(event) {            
       var $progress = $(this).closest('.panel__control-navigation').find('.panel__status-bg-color');      
       
-      var items     = event.item.count;     // Number of items
-      var itemc     = event.item.index;     // Position of the current item      
-      var item      = event.item.index + 1;     // Position of the current item      
-      var size      = event.page.size;     // Position of the current item      
+      var items     = event.item.count;     // Number of items      
+      var item      = event.item.index + 1;     // Position of the current item            
       var total     = (item  / items)  * 100;
       
       $progress.css({width: total + '%'});
-            
-      if(item === items) {
-        $nextButton.hide();      
-        $prevButton.show();      
-      } else if (item <= 1) {       
-        $prevButton.hide();             
+      
+      if(item === items) {        
+        $nextButton.hide();        
+        $prevButton.show();          
+        $goBackButton.show();     
+      } else if (item <= 1) {            
+        $goBackButton.hide();                                                
+        $prevButton.hide(); 
       } else  {
         $nextButton.show();
-        $prevButton.show();
-      }  
-
+        $prevButton.show();                              
+      }
+      
       // $self.closest('.panel').on('keyup click mouseover ', function(event){  
                     
       //   if(event.key === undefined) return;
@@ -66,8 +73,12 @@
       //   } else if(event.key === 'ArrowLeft') {          
       //     $panelSelf.trigger('prev.owl.carousel');
       //   }
-      // })       
-    })
+      // })   
+      
+      
+    });
+
+    
   })  
 
   panelCarousel.owlCarousel({
