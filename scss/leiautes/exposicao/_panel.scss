@@ -27,12 +27,15 @@
   }
   
   
-  @include modificar('align-center') {
+  @include modificar('align-center') {    
     text-align: center;
+    justify-content: center;
   }
+  
   
   @include modificar('align-right') {
     text-align: right;
+    justify-content: flex-end;
   } 
   
   @include modificar('bg-img'){
@@ -41,9 +44,6 @@
     background-position: center center;
   }
   
-  @include elemento('conteudo') {
-   
-  } 
   
   @include elemento('content') {
    @include make-row(0);
@@ -51,6 +51,18 @@
    
    &.panel__content-intro {
     padding: 15px;
+   }
+
+   &.panel__align-center {
+     justify-content: center;
+   }
+
+   &.panel__align-left {
+     justify-content: flex-start;
+   }
+   
+   &.panel__align-right {
+     justify-content: flex-end;
    }
   } 
 
@@ -89,9 +101,9 @@
     } 
 
     @include modificar('bg') {
-      background-color: $branco;                     
       color: $azul;  
       border-radius: $radius;
+      background-color: $branco;                     
           
       a {
         color: $azul;
@@ -142,7 +154,7 @@
       width: 50px;
       position: absolute;
       z-index: 30;
-
+      
       &:hover {
         width: 70px;
       }

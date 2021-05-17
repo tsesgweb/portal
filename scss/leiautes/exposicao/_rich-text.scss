@@ -35,5 +35,13 @@
     small {
       @include responsive-font-size(14px);
     }
+
+    ol li {
+      list-style: decimal;
+      display: list-item;
+    }
+    ul li {
+      display: list-item;
+    }
   }
 }

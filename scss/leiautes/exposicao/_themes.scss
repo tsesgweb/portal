@@ -7,6 +7,21 @@ $theme-colors: (
   'cinza': $cinza,  
   'cinza-claro': $cinza-claro,  
 );
+
+@mixin local-icon($color) {
+  .panel-icone {
+      path {
+      color:$color;
+      fill: $color;
+      stroke: darken($color, 15%)!important;
+
+      & + path {        
+        fill: $color;
+        }
+    }
+  } 
+}
+
 @each $name,
 $color in $theme-colors {  
   // start all 
@@ -40,11 +55,13 @@ $color in $theme-colors {
     background-image: url('#{$path-img}/exposicao/go-back-#{$name}.svg');       
   }
   
-    
+     
   // end all
   
   //start cards  
   .cards.card-theme-#{$name} {
+    @include local-icon($color);
+
     .card-carousel {     
       .owl-prev,
       .owl-next {
@@ -85,12 +102,13 @@ $color in $theme-colors {
   .panel__control-theme-#{$name} {
     .panel__rich-text-container .panel__rich-text + .panel__rich-text {
       // border-left-color: $color;
-    }
+    }    
   }  
   //end panel
   
   //start timeline
-  .timeline__theme-#{$name} {   
+  .timeline__theme-#{$name} {  
+    @include local-icon($color); 
     a.timeline-link.active::after {               
       @if $name=='azul' {
         background-color: $amarelo;        
@@ -128,16 +146,17 @@ $color in $theme-colors {
 
   //start accordion
   .accordion__theme-#{$name} {
-  .accordion__card,
-  .accordion__card-body,
-  .accordion__card-btn::after {
-    background-color: lighten($color, 18%);              
-  }
+    @include local-icon($color);
+    .accordion__card,
+    .accordion__card-body,
+    .accordion__card-btn::after {
+      background-color: lighten($color, 18%);              
+    }
 
-  .accordion__card-header {
-    background-color: darken($color, 9%);                      
-  }  
-  .accordion__card-btn {
+    .accordion__card-header {
+      background-color: darken($color, 9%);                      
+    }  
+    .accordion__card-btn {
       &,
       &::after {
           @if $name == azul {
