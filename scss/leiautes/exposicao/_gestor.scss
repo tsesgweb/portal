@@ -1,0 +1,6 @@
+.panel-gestor {
+  margin-top: 15px;
+  @include elemento('content') {
+    min-width: 100%;
+  }
+}
