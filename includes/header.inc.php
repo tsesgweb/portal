@@ -63,7 +63,7 @@ function autoIncludeFiles($location, $type) {
 <body class="site-tse">    
     <?php $ferramentas && include __DIR__ . '/ferramentas.inc.php';?>
     <?php include __DIR__ . '/topo-acessibilidade.inc.php';?>
-    <?php #include __DIR__ . '/menu.inc.php';?>
+    <?php include __DIR__ . '/menu.inc.php';?>
     <!-- start: global module -->    
     <?php 
     !$home && $breadcrumb && include __DIR__ . '/breadcrumb.inc.php';
