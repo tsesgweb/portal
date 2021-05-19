@@ -1,6 +1,8 @@
 .panel,
+.card,
 .timeline {
-  @include elemento('rich-text') {  
+  @include elemento('rich-text') {
+    
     h1,h2,h3,h4,h5,h6, p {
       font-family: "Open Sans";
     }  
@@ -43,5 +45,12 @@
     ul li {
       display: list-item;
     }
+
+    * li {
+      display: list-item;
+    }
+  }
+  .card-descricao {
+    @extend .panel__rich-text;
   }
 }

@@ -11,9 +11,9 @@ foreach ($config as $key => $panel) :
   ?>
   >
   <div class="panel__conteudo_full">    
-    <div class="panel__conteudo" <?php !$panel['full'] && !$panel['img'] && printf("data-bg-color='%s'", $panel['theme']);?>>    
+    <div class="panel__conteudo">    
       <div class="panel__linha">              
-        <div class="panel__content">
+        <div class="panel__content" <?php !$panel['full'] && !$panel['img'] && printf("data-bg-color='%s'", $panel['theme']);?>>
           <?php $panel['align'] === 'right' && $panel['media'] && include BASE_URL .'/includes/exposicao/media.inc.php'; ?>
           <?php !$panel['media'] && $panel['header'] && include BASE_URL .'/includes/exposicao/header.inc.php'; ?>
           <div 
