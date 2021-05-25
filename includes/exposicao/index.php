@@ -1,5 +1,5 @@
 <?php require('conteudo.php');
-echo '<div data-spy="scroll" data-target="#sidebar" data-offset="0">';
+// echo '<div data-spy="scroll" data-target="#sidebar" data-offset="0">';
 include BASE_URL."/includes/exposicao/menu.inc.php";
 $theme = 'default';
 $header = [
@@ -76,4 +76,4 @@ include BASE_URL."/includes/exposicao/timeline.inc.php";
 include BASE_URL."/includes/exposicao/accordion.inc.php";
 include BASE_URL."/includes/exposicao/iframe.inc.php";
 include BASE_URL."/includes/exposicao/gestor.inc.php";
-echo '</div>';
+// echo '</div>';
