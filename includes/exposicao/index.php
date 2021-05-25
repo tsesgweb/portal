@@ -1,5 +1,6 @@
-<?php require('conteudo.php');?>
-<?php
+<?php require('conteudo.php');
+echo '<div data-spy="scroll" data-target="#sidebar" data-offset="0">';
+include BASE_URL."/includes/exposicao/menu.inc.php";
 $theme = 'default';
 $header = [
     "section"     => "<h4>Núcleo</h4>",
@@ -54,87 +55,8 @@ $columns  = 4;
 $full     = true;
 $theme    = 'verde';
 $bg       = 'default';
+
 include BASE_URL."/includes/exposicao/cards.inc.php";
-
-$config = [
-   [
-    "img"     => null, 
-    "one"     => true,
-    "media"   => null,
-    "header"  => null,
-    "theme"   => "azul",
-    "text"    => 'amarelo',
-    "bg"      => false,
-    "align"   => null,
-    "full"    => true,
-    "content" => $conteudo,
-  ],   
-];
-$config[0]['content']['repeat'] = 5;
-include BASE_URL."/includes/exposicao/panel.inc.php";
-
-$type     = 'carousel';
-$mozaic   = false;
-$desc     = false;
-$columns  = 5;
-$full     = true;
-$theme    = 'amarelo';
-$bg       = 'azul';
-include BASE_URL."/includes/exposicao/cards.inc.php";
-
-$config = [
-  [
-    "img"     => null, 
-    "one"     => true,
-    "media"   => null,
-    "header"  => null,
-    "theme"   => "azul",
-    "text"    => 'default',
-    "bg"      => false,
-    "align"   => null,
-    "full"    => false,
-    "content" => $conteudo,
-  ],   
-];
-
-include BASE_URL."/includes/exposicao/panel.inc.php";
-$config = [
-  [
-    "img"     => null, 
-    "one"     => true,
-    "media"   => null,
-    "header"  => null,
-    "theme"   => "verde",
-    "text"    => 'azul',
-    "bg"      => false,
-    "align"   => null,
-    "full"    => true,
-    "content" => $conteudo,
-  ],   
-  [
-    "img"     => null, 
-    "one"     => true,
-    "media"   => null,
-    "header"  => null,
-    "theme"   => "verde",
-    "text"    => 'azul',
-    "bg"      => false,
-    "align"   => 'center',
-    "full"    => true,
-    "content" => $conteudo,
-  ],   
-];
-$config[0]['content']['section'] = '<h4>Núcleo 4</h4>';
-$config[0]['content']['title'] = '<h2>Eleições 1993</h2>';
-$config[0]['content']['subtitle'] = '<h3><strong> a primeira realizada pela Justiça Eleitoral</strong></h3>';
-
-$config[1]['content']['section'] = null;
-$config[1]['content']['title'] = '<h2>Voto feminino</h2>';
-$config[1]['content']['subtitle'] = '<h3><strong>as primeiras candidatas</strong></h3>';
-$config[1]['content']['repeat'] = 0;
-
-include BASE_URL."/includes/exposicao/panel.inc.php";
-
 $type     = 'mosaico';
 $mozaic   = true;
 $desc     = true;
@@ -142,16 +64,6 @@ $columns  = 4;
 $full     = true;
 $theme    = 'verde';
 include BASE_URL."/includes/exposicao/cards.inc.php";
-
-$config[1]['content']['section'] = null;
-$config[1]['content']['title'] = '<h2>Acervo</h2>';
-$config[1]['content']['subtitle'] = '<h3><strong>Um passeio na história</strong></h3>';
-$config[1]['content']['description'] = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas faucibus faucibus tortor nulla lectus tellus egestas vulputate. Phasellus ut purus elit sodales sem amet aliquet aliquet. Ornare quis id id aliquam nibh nibh dictum justo. Quisque commodo erat sit odio.</p>';
-$config[1]['content']['repeat'] = 0;
-$config[1]['full'] = true;
-$config[1]['theme'] = 'amarelo';
-include BASE_URL."/includes/exposicao/panel.inc.php";
-
 $type     = 'galeria';
 $mozaic   = false;
 $desc     = false;
@@ -160,17 +72,8 @@ $full     = true;
 $theme    = 'default';
 $bg       = 'amarelo';
 include BASE_URL."/includes/exposicao/cards.inc.php";
-
-$config[1]['content']['section'] = null;
-$config[1]['content']['title'] = '<h2>Linha do tempo</h2>';
-$config[1]['content']['subtitle'] = '<h3><strong>Um passeio na história</strong></h3>';
-$config[1]['content']['description'] = null;
-$config[1]['content']['repeat'] = 0;
-$config[1]['full'] = true;
-$config[1]['theme'] = 'verde';
-include BASE_URL."/includes/exposicao/panel.inc.php";
-
 include BASE_URL."/includes/exposicao/timeline.inc.php";
 include BASE_URL."/includes/exposicao/accordion.inc.php";
 include BASE_URL."/includes/exposicao/iframe.inc.php";
 include BASE_URL."/includes/exposicao/gestor.inc.php";
+echo '</div>';

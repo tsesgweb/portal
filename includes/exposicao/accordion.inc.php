@@ -12,7 +12,7 @@ $full   = true;
 $theme  = "azul";
 $bg     = "azul";
 ?>
-<section id="panel" class="panel" <?php $full && printf('data-bg-color="%s"', $bg);?>>
+<section id="panel-accodion" class="panel" <?php $full && printf('data-bg-color="%s"', $bg);?>>
   <div class="panel__conteudo_full">
     <div class="panel__conteudo">
       <div class="panel__linha">

@@ -1,4 +1,4 @@
-<section id="panel" class="panel" <?php $full && printf('data-bg-color="%s"', $bg);?>>
+<section id="panel-card-<?=$type;?>" class="panel" <?php $full && printf('data-bg-color="%s"', $bg);?>>
   <div class="panel__conteudo_full">
     <div class="panel__conteudo">
       <div class="panel__linha">

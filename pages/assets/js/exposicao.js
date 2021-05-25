@@ -1,61 +1,69 @@
-(function($) {
+(function ($) {
   // setar imagem de fundo na section
 
   var panel = $('.panel');
 
-  panel.each(function() {
+  panel.each(function () {
     var $self = $(this);
     var $bgImage = $self.data('bg-img');
 
     if ($bgImage) {
       $self.css({
-        backgroundImage: 'url(' + $bgImage + ')'
+        backgroundImage: 'url(' + $bgImage + ')',
       });
     }
   });
 })(jQuery);
-(function($) {
+(function ($) {
   var panelCarousel = $('.panel__carousel');
 
   panelCarousel.addClass('owl-carousel owl-theme');
 
-  panelCarousel.each(function() {
+  panelCarousel.each(function () {
     var $panelSelf = $(this);
-    var $nextButton = $panelSelf.closest('.panel__control-navigation').find('.btn-next');
-    var $prevButton = $panelSelf.closest('.panel__control-navigation').find('.btn-prev');
-    var $goBackButton = $panelSelf.closest('.panel__control-navigation').find('.btn-go-back');
+    var $nextButton = $panelSelf
+      .closest('.panel__control-navigation')
+      .find('.btn-next');
+    var $prevButton = $panelSelf
+      .closest('.panel__control-navigation')
+      .find('.btn-prev');
+    var $goBackButton = $panelSelf
+      .closest('.panel__control-navigation')
+      .find('.btn-go-back');
 
-    $nextButton.each(function() {
-      $(this).on('click', function() {
+    $nextButton.each(function () {
+      $(this).on('click', function () {
         $panelSelf.trigger('next.owl.carousel');
       });
     });
 
-    $prevButton.each(function() {
-      $(this).on('click', function() {
+    $prevButton.each(function () {
+      $(this).on('click', function () {
         $goBackButton.hide();
         $nextButton.show();
         $panelSelf.trigger('prev.owl.carousel');
       });
     });
 
-    $goBackButton.each(function() {
-      $(this).on('click', function() {
+    $goBackButton.each(function () {
+      $(this).on('click', function () {
         $(this).hide();
         $nextButton.show();
         $panelSelf.trigger('to.owl.carousel', 0);
       });
     });
 
-    $panelSelf.on('changed.owl.carousel', function(event) {
-      var $progress = $(this).closest('.panel__control-navigation').find('.panel__status-bg-color');
+    $panelSelf.on('changed.owl.carousel', function (event) {
+      var $progress = $(this)
+        .closest('.panel__control-navigation')
+        .find('.panel__status-bg-color');
 
-      var items = event.item.count; // Number of items      
-      var item = event.item.index + 1; // Position of the current item            
+      var items = event.item.count; // Number of items
+      var item = event.item.index + 1; // Position of the current item
       var total = (item / items) * 100;
 
       $progress.css({
-        width: total + '%'
+        width: total + '%',
       });
 
       if (item === items) {
@@ -70,21 +78,17 @@
         $prevButton.show();
       }
 
-      // $self.closest('.panel').on('keyup click mouseover ', function(event){  
+      // $self.closest('.panel').on('keyup click mouseover ', function(event){
 
       //   if(event.key === undefined) return;
-      //   if(event.key === 'ArrowRight') {          
+      //   if(event.key === 'ArrowRight') {
       //     $panelSelf.trigger('next.owl.carousel');
-      //   } else if(event.key === 'ArrowLeft') {          
+      //   } else if(event.key === 'ArrowLeft') {
       //     $panelSelf.trigger('prev.owl.carousel');
       //   }
-      // })   
-
-
+      // });
     });
-
-
-  })
+  });
 
   panelCarousel.owlCarousel({
     items: $(this).data('carousel-more') ? 2 : 1,
@@ -96,35 +100,32 @@
     autoWidth: false,
     responsive: {
       1140: {
-        items: 1
-      }
-    }
-  })
+        items: 1,
+      },
+    },
+  });
 
-  panelCarousel.on('mousewheel', '.owl-stage', function(e) {
+  panelCarousel.on('mousewheel', '.owl-stage', function (e) {
     if (e.deltaY > 0) {
       owl.trigger('next.owl.carousel');
     } else {
       owl.trigger('prev.owl.carousel');
     }
+
     e.preventDefault();
   });
-
-
-
 })(jQuery);
 
-(function() {
+(function () {
   var timelineNav = $('.timeline-nav a');
 
-  timelineNav.on('click', function(event) {
+  timelineNav.on('click', function (event) {
     event.preventDefault();
     $(this).tab('show');
   });
-
 })(jQuery);
 
-(function($) {
+(function ($) {
   var cardCarousel = $('.card-carousel');
   var qtd = cardCarousel.data('columns');
   var padding = cardCarousel.closest('.cards').data('padding');
@@ -135,7 +136,10 @@
   cardCarousel.owlCarousel({
     items: totalItems,
     dots: true,
-    navText: ['<span class="sr-only">Anterior</span>', '<span class="sr-only">Próximo</span>'],
+    navText: [
+      '<span class="sr-only">Anterior</span>',
+      '<span class="sr-only">Próximo</span>',
+    ],
     nav: true,
     stagePadding: padding ? padding : 0,
     margin: 15,
@@ -150,33 +154,64 @@
       },
       1140: {
         items: totalItems,
-      }
-    }
+      },
+    },
   });
-
 })(jQuery);
-(function($) {
+(function ($) {
   var nav = $('.timeline-nav');
   var navLink = nav.find('.timeline-link');
   var subLink = nav.find('.timeline-link + .timeline-link');
   var content = $('.timeline__content .timeline-pane');
   Breakpoints.on('xs', {
-    enter: function() {
+    enter: function () {
       nav.hide();
 
-      content.each(function(index, value) {
+      content.each(function (index, value) {
         var $self = $(this);
         subLink.addClass('timeline-pane__sublink').eq(index);
         var $navs = navLink.clone().addClass('timeline-pane__link').eq(index);
 
-        $self.closest('.timeline__content').addClass('timeline__content-link').attr('role', 'tablist');
+        $self
+          .closest('.timeline__content')
+          .addClass('timeline__content-link')
+          .attr('role', 'tablist');
         $self.before($navs);
       });
     },
-    leave: function() {
+    leave: function () {
       $('.timeline__content-link a').remove();
       $('.timeline__content').removeClass('timeline__content-link');
       nav.show();
+    },
+  });
+})(jQuery);
+
+(function () {
+  $('#buttonCollapse').on('click', function () {
+    $('#sidebar').toggleClass('active');
+    $(this).toggleClass('active');
+  });
+})(jQuery);
+
+(function () {
+  $(window).on('scroll', function () {
+    var scrollDistance = $(window).scrollTop();
+
+    if (scrollDistance >= 85) {
+      $('#sidebar').css({ top: 0 });
+      $('#buttonCollapse').css({ top: '1%' });
+    } else {
+      $('#sidebar').css({ top: 'inherit' });
+      $('#buttonCollapse').css({ top: '10%' });
     }
+    // Assign active class to nav links while scolling
+    $('.panel').each(function (i) {
+      console.log($(this).position().top);
+      if ($(this).position().top <= scrollDistance + 8) {
+        $('.sidebar dt.active').removeClass('active');
+        $('.sidebar dt').eq(i).addClass('active');
+      }
+    });
   });
 })(jQuery);

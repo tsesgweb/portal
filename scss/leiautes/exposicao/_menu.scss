@@ -1,0 +1,218 @@
+$menu-size: 576px;
+
+.panel__sidebar {
+  font-family: 'Open sans';
+  #sidebar {
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    height: 100vh;
+    min-width: $menu-size;
+    max-width: 33.33%;
+    color: #fff;
+    transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+    transform-origin: bottom left;
+    border-left: 2px solid darken($azul, 15%);
+    background: rgba($azul, 1.0);
+    box-shadow: 0px -7px 36px rgba(22, 48, 88, 0.23),
+      0px -1.56354px 8.04107px rgba(22, 48, 88, 0.137105),
+      0px -0.465507px 2.39404px rgba(22, 48, 88, 0.0928953);
+
+    .sidebar__header {
+      padding: 20px;
+      background: darken($azul, 15%);
+
+      h3 {
+        @include responsive-font-size(20px);
+      }
+    }
+
+    .sidebar__navigation {
+      list-style: none;
+      padding: 20px 50px 15px;
+
+      & + .sidebar__navigation {
+        border-top: 1px solid lighten($azul, 15%);
+      }
+    }
+
+    &.active {
+      margin-right: -$menu-size;
+      transform: rotateY(0deg);
+    }
+
+    .sidebar__navigation {
+      text-align: right;
+
+      > hr {
+        border-color: #fafafa;
+        opacity: 15%;
+      }
+
+      @include item('item') {
+        &:nth-of-type(1) {
+          a {
+            color: $branco;
+            font-weight: bold;
+          }
+        }
+
+        &.active {
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          align-content: center;
+          align-items: center;
+
+          > a {
+            color: $amarelo;
+            font-weight: bold;
+          }
+
+          &::after {
+            content: url('#{$path-img}/exposicao/arrow-left.svg');
+            font-family: $font-icone;
+            position: absolute;
+            right: -35px;
+            justify-self: center;
+          }
+        }
+      }
+
+      @include item('sub-item') {
+        color: #fafafa;
+        padding: 5px;
+
+        a {
+          @include responsive-font-size(16px);
+        }
+      }
+
+      @include item('link') {
+        @include responsive-font-size(20px);
+        color: #fff;
+
+        &:hover {
+          color: darken(#fff, 15%);
+        }
+      }
+    }
+  }
+
+  a[aria-expanded='true'] {
+    color: #fff;
+    // background: #6d7fcc;
+  }
+  a[data-toggle='collapse'] {
+    position: relative;
+  }
+  .dropdown-toggle {
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+  }
+
+  #buttonCollapse {
+    @include btn;
+    @include btn-link;
+    position: fixed;
+    right: 1%;
+    top: 10%;
+    z-index: 200;
+    width: 48px;
+    height: 48px;
+    background: $azul;
+    border: 2px solid $branco;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px -12px 69px rgba(6, 25, 55, 0.44),
+      0px -2.68036px 15.4121px rgba(6, 25, 55, 0.262287),
+      0px -0.798012px 4.58857px rgba(6, 25, 55, 0.177713);
+
+    span {
+      width: 80%;
+      height: 2px;
+      margin: 0 auto;
+      display: block;
+      background: #fafafa;
+      transition: all 0.5s cubic-bezier(0.81, -0.33, 0.345, 1.375);
+      transition-delay: 0.2s;
+
+      &:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+      &:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+      }
+    }
+
+    .navbar-btn {
+      box-shadow: none;
+      outline: none !important;
+      border: none;
+    }
+    &.active {
+      span {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    #sidebar {
+      min-width: 100%;
+      margin-left: -$menu-size;
+      transform: rotateY(0deg);
+      &.active {
+        margin-left: 0;
+        transform: none;
+      }
+    }
+
+    #buttonCollapse {
+      span {
+        &:first-of-type {
+            transform: rotate(45deg) translate(2px, 2px);
+          }
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+          &:last-of-type {
+            transform: rotate(-45deg) translate(1px, -1px);
+          }
+      }
+
+      &.active {
+        span {
+          margin: 0 auto;
+
+          &:first-of-type {
+          transform: none;
+          opacity: 1;
+          margin: 5px auto;
+        }
+        &:nth-of-type(2) {
+          transform: none;
+          opacity: 1;
+          margin: 5px auto;
+        }
+        &:last-of-type {
+          transform: none;
+          opacity: 1;
+          margin: 5px auto;
+        }
+          
+        }
+      }
+    }
+  }
+}

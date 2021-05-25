@@ -1,19 +1,19 @@
-.timeline { 
+.timeline {
   @include make-row(0);
 
-  @include item("nav") {     
+  @include item('nav') {
     @include make-col-ready();
     @include media-breakpoint-up(lg) {
       @include make-col(3);
     }
 
-    padding-left: 0;   
+    padding-left: 0;
 
-    &::after { 
+    &::after {
       content: '';
       position: absolute;
       width: 2px;
-      background-color: #78797B;
+      background-color: #78797b;
       top: 0;
       bottom: 0;
       right: 0;
@@ -24,18 +24,18 @@
     li.timeline-item {
       @include nav-item;
       list-style: none;
-      position: relative;   
-      padding-left: 30px;  
+      position: relative;
+      padding-left: 30px;
       width: 100%;
-                 
-      [aria-selected="true"] {
+
+      [aria-selected='true'] {
         @include active;
         &::after {
           background-color: $azul;
         }
       }
-    }  
-    
+    }
+
     a.timeline-link {
       @include nav-link;
       position: relative;
@@ -45,32 +45,31 @@
         position: absolute;
         width: 16px;
         height: 16px;
-        left: -20px;                        
+        left: -20px;
         top: 16px;
-        background-color: #78797B;        
+        background-color: #78797b;
         border-radius: 50%;
         z-index: 1;
-      } 
+      }
 
       & + .timeline-link {
         margin-left: 10px;
 
         &.active {
           font-weight: bold;
-        }   
-        
+        }
+
         &::after {
           width: 7px;
           height: 7px;
           top: 20px;
           left: 0;
-        }        
+        }
       }
-
-    }    
+    }
   }
 
-  @include elemento("content") {
+  @include elemento('content') {
     @include tab-content;
     @include make-col-ready(0);
     @include media-breakpoint-up(lg) {
@@ -78,35 +77,35 @@
     }
 
     @include item(link) {
-      border-left: 1px solid #78797B;
-    }    
+      border-left: 1px solid #78797b;
+    }
   }
-  
-  @include item("pane") {
+
+  @include item('pane') {
     @include tab-pane;
 
-    .timeline__rich-text {        
-        @include make-col-ready();
-        @include media-breakpoint-up(lg) {
-          @include make-col(12);
-          align-items: center;
-        }
+    .timeline__rich-text {
+      @include make-col-ready();
+      @include media-breakpoint-up(lg) {
+        @include make-col(12);
+        align-items: center;
       }
+    }
 
     &.has-media {
       @include make-row(0);
       display: flex;
       justify-content: center;
-      align-items: center; 
+      align-items: center;
 
       .panel__media {
         @include make-col-ready();
         @include media-breakpoint-up(lg) {
           @include make-col(4);
         }
-      }  
+      }
 
-      .timeline__rich-text {                  
+      .timeline__rich-text {
         @include make-col-ready();
         @include media-breakpoint-up(lg) {
           @include make-col(8);
@@ -118,7 +117,7 @@
       }
     }
 
-    @include elemento(link) {  
+    @include elemento(link) {
       position: relative;
       border-radius: 0;
       text-align: left;
@@ -127,22 +126,22 @@
       }
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         left: -8px;
         top: 13px;
         width: 15px;
         height: 15px;
-        background-color: #78797B;
-        border-radius: 50%;        
+        background-color: #78797b;
+        border-radius: 50%;
       }
     }
-    @include elemento("sublink") {  
+    @include elemento('sublink') {
       @extend .timeline-pane__link;
 
-      &::after {        
+      &::after {
         width: 7.5px;
-        height: 7.5px;            
+        height: 7.5px;
         left: -5px;
       }
     }

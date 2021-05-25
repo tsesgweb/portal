@@ -2,10 +2,10 @@
 $theme = 'verde';
 $full  = true;
 ?>
-<section id="panel" class="panel panel__align-left" <?php $full && $theme && printf('data-bg-color="%s"', $theme);?>>
+<section id="panel-timeline" class="panel panel__align-left" <?php $full && $theme && printf('data-bg-color="%s"', $theme);?>>
   <div class="panel__conteudo_full">
     <div class="panel__conteudo">
-      <div class="panel__linha">
+      <div class="panel__linha">            
         <div class="panel__content panel__align-right">
           <div class="panel__edit-button">
             <a href="#" title=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
