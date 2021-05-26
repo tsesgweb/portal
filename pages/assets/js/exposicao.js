@@ -190,7 +190,7 @@
 (function () {
   $('#buttonCollapse').on('click', function () {
     $('#sidebar').toggleClass('active');
-    $(this).toggleClass('active');
+    $(this).toggleClass('active');    
   });
 })(jQuery);
 
@@ -206,12 +206,20 @@
       $('#buttonCollapse').css({ top: '10%' });
     }
     // Assign active class to nav links while scolling
-    $('.panel').each(function (i) {
-      console.log($(this).position().top);
+    $('.panel').each(function (i) {      
       if ($(this).position().top <= scrollDistance + 8) {
         $('.sidebar dt.active').removeClass('active');
         $('.sidebar dt').eq(i).addClass('active');
       }
     });
   });
+})(jQuery);
+
+(function () {
+  if (Breakpoints.is('xs')) {
+    $('.sidebar__navigation-link').on('click', $('.sidebar__navigation-link'),  function() {            
+        $('#buttonCollapse').toggleClass('active'); 
+        $('#sidebar').bind().toggleClass('active');
+    });
+  }
 })(jQuery);

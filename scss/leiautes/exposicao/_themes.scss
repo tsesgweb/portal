@@ -9,6 +9,14 @@ $theme-colors: (
 );
 
 @mixin local-icon($color) {
+  [data-fancybox] {
+    &:hover .panel-icone.panel-icone-photo {
+      display: block;
+    }
+    .panel-icone.panel-icone-photo {
+      display: none;
+    }
+  }
   .panel-icone {
     &.panel-icone-photo:nth-child(2) {
       path {

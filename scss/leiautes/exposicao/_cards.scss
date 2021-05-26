@@ -23,7 +23,7 @@
       }
     }
     .card {
-      margin-bottom: $card-columns-margin;
+      margin-bottom: $card-columns-margin;      
     }
 
     @include media-breakpoint-up(sm) {

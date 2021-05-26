@@ -145,7 +145,15 @@
     justify-content: center;
     align-items: center;
 
+    &:hover .panel-icone.panel-icone-photo {
+      display: block;
+    }
+
     .panel-icone {
+      &.panel-icone-photo {
+        display: none;
+      }
+
       @extend .icone-play-icon;
       width: 50px;
       position: absolute;
