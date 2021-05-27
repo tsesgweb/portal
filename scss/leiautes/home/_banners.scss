@@ -81,7 +81,7 @@ $altura-maxima: 550px;
             font-size: 0.875rem;
             color: $branco;
             margin-top: 10px;
-            line-height: 0;
+            line-height: 25px;
           }
           width: 100%;
           @include media-breakpoint-up(lg) {

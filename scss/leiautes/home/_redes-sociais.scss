@@ -199,6 +199,21 @@
       }
     }
   }
+
+  .nav-item {
+    margin-bottom: 15px;
+
+    @include media-breakpoint-down(xs) {
+      flex: inherit !important;
+      margin-right: 5px;
+    }
+  }
+
+  .nav {
+    @include media-breakpoint-down(xs) {
+      justify-content: center;
+    }
+  }
 }
 
 // Ajuste dos botões leia mais dos cards REDES SOCIAIS
