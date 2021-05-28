@@ -14,15 +14,17 @@
           >início de uma nova era</a
         >
       </dt>
-      <dd class="sidebar__navigation-sub-item">
-        <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
-      </dd>
-      <dd class="sidebar__navigation-sub-item">
-        <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
-      </dd>
-      <dd class="sidebar__navigation-sub-item">
-        <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
-      </dd>
+      <div class="sidebar__navigation-subs">
+        <dd class="sidebar__navigation-sub-item">
+          <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
+        </dd>
+        <dd class="sidebar__navigation-sub-item">
+          <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
+        </dd>
+        <dd class="sidebar__navigation-sub-item">
+          <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
+        </dd>
+      </div>
     </dl>
     <dl class="sidebar__navigation">
       <dt class="sidebar__navigation-item">
@@ -42,21 +44,21 @@
           >Mosaico</a
         >
       </dt>
-      <dd class="sidebar__navigation-sub-item">
-        <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
-      </dd>
-      <dd class="sidebar__navigation-sub-item">
-        <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
-      </dd>
-      <dd class="sidebar__navigation-sub-item">
-        <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
-      </dd>
+      <div class="sidebar__navigation-subs">
+        <dd class="sidebar__navigation-sub-item">
+          <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
+        </dd>
+        <dd class="sidebar__navigation-sub-item">
+          <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
+        </dd>
+        <dd class="sidebar__navigation-sub-item">
+          <a class="sidebar__navigation-link" href="#panel-1">Go to carousel</a>
+        </dd>
+      </div>
     </dl>
     <dl class="sidebar__navigation">
       <dt class="sidebar__navigation-item">
-        <a class="sidebar__navigation-link" href="#panel-card-galeria"
-          >Galeria</a
-        >
+        <a class="sidebar__navigation-link" href="#panel-card-galeria">Galeria</a>
       </dt>
     </dl>
   </nav>

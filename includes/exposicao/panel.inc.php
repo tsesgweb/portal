@@ -12,7 +12,15 @@ foreach ($config as $key => $panel) :
   >
   <div class="panel__conteudo_full">    
     <div class="panel__conteudo">    
-      <div class="panel__linha">              
+      <div class="panel__linha">
+        <?php if($key === 1): ?>
+          <div class="panel__content panel__content-intro" data-bg-color="azul" data-color="default">
+          <div class="panel__rich-text panel__intro">
+          <h2 class="panel_align-left">Exposição Painel 02</h2>
+          <div class="panel__descricao"><p>Exposição Painel 02 descrição</p></div>
+          </div>
+        </div>
+        <?php endif; ?>
         <div class="panel__content" <?php !$panel['full'] && !$panel['img'] && printf("data-bg-color='%s'", $panel['theme']);?>>
           <?php $panel['align'] === 'right' && $panel['media'] && include BASE_URL .'/includes/exposicao/media.inc.php'; ?>
           <?php !$panel['media'] && $panel['header'] && include BASE_URL .'/includes/exposicao/header.inc.php'; ?>

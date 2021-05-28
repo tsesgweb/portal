@@ -39,7 +39,7 @@ $config = [
     "theme"   => 'azul',
     "text"    => 'default',
     "bg"      => false,
-    "align"   => 'right',
+    "align"   => 'left',
     "full"    => false,
     "content" => $conteudo,
   ],  
