@@ -1,7 +1,8 @@
 <div class="panel__media">
-  <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox>
-    <img src="https://placeimg.com/590/590/tech" alt="Texto de media" class="panel__media__img">
-    <!-- Play -->
+  <figure class="panel__media__figure panel__media__figure_has-caption">
+    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox>
+      <img src="https://placeimg.com/590/590/tech" alt="Texto de media" class="panel__media__img">
+       <!-- Play -->
   <!-- <svg class="panel-icone panel-icone-video" width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="52" cy="52" r="41"/>
     <circle opacity="0.5" cx="52" cy="52" r="52"/>
@@ -25,5 +26,8 @@
     <path d="M28.5967 25.011H21.3424" stroke-width="2.13" stroke-miterlimit="10"/>
   </svg> -->
    <!-- Photo -->
-  </a>
+    </a>
+    <figcaption class="panel__media__caption">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit vero libero non numquam nisi, obcaecati soluta vel modi provident maiores quisquam aspernatur consequuntur quam minima ex distinctio consequatur. Autem, alias.</figcaption>
+  </figure>
+
 </div>
