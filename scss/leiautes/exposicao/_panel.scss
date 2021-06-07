@@ -110,9 +110,36 @@
       
     }
 
+    @include elemento('caption') {      
+      @include responsive-font-size('12px');      
+      width: 100%;
+      background-color: $cinza-claro;
+      text-align: left;
+      color: $azul;
+      padding: 5px 15px;     
+    }
+
     @include elemento('img') {
-      @include img-fluid;
-      border-radius: $radius;
+      @include img-fluid;  
+      border-radius: $radius;   
+    }
+
+    @include elemento('figure') {      
+      display: flex;
+      flex-direction: column; 
+
+       @include modificar('has-caption') {
+        .panel__media__img {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          border-top-left-radius: $radius;
+          border-top-right-radius: $radius;
+        }
+        .panel__media__caption {
+          border-bottom-left-radius: $radius;
+          border-bottom-right-radius: $radius;
+        }
+      }
     }
   }
 

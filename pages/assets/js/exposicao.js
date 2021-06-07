@@ -49,7 +49,8 @@
       // console.log(item, items, total);
       if(item === items) {
         $nextButton.hide();      
-      }else if (item === 1) {                
+        $prevButton.show();      
+      }else if (item <= 1) {       
         $prevButton.hide();             
       } else  {
         $nextButton.show();
@@ -162,5 +163,7 @@
   });  
 })(jQuery);
 (function($) {  
-  $('.iframe-expo').closest('.panel__conteudo').removeClass('panel__conteudo').addClass('panel__conteudo_full')
+  // if($('.panel__media').find('figcaption').length) {
+  //   $('.panel__media').addClass('has-caption');
+  // }
 })(jQuery);
