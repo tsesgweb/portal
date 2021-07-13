@@ -162,7 +162,8 @@ $altura-maxima: 550px;
     }
     .banners__thumbnail-slider {
       @include media-breakpoint-up(md) {
-        width: 1000px margin auto;
+        width: 1000px;
+        margin: auto;
       }
       border-bottom: 0;
       text-align: center;
