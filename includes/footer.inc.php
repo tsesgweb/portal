@@ -79,19 +79,28 @@
                         <div class="redes-sociais">
                             <ul class="nav nav-fill justify-content-end">
                                 <li class="nav-item">
-                                    <a class="nav-link icon icon-twitter" data-toggle="tooltip" data-placement="top" title="Acessar o Twitter" href="https://twitter.com/tsejusbr" target="_blank" rel="nofollow"><span class="sr-only">Twitter</span></a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link icon icon-facebook" data-toggle="tooltip" data-placement="top" title="Acessar o Facebook" href="https://www.facebook.com/TSEJus" target="_blank" rel="nofollow"><span class="sr-only">Facebook</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link icon icon-flickr" data-toggle="tooltip" data-placement="top" title="Acessar o Flickr" href="https://www.flickr.com/photos/144801833@N06/" target="_blank" rel="nofollow"><span class="sr-only">Flickr</span></a>
+                                    <a class="nav-link icon icon-twitter" data-toggle="tooltip" data-placement="top" title="Acessar o Twitter" href="https://twitter.com/tsejusbr" target="_blank" rel="nofollow"><span class="sr-only">Twitter</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link icon icon-instagram" data-toggle="tooltip" data-placement="top" title="Acessar o Instagram" href="https://www.instagram.com/tsejus" target="_blank" rel="nofollow"><span class="sr-only">Instagram</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link icon icon-youtube" data-toggle="tooltip" data-placement="top" title="Acessar o Youtube" href="https://www.youtube.com/user/justicaeleitoral" target="_blank" rel="nofollow"><span class="sr-only">Youtube</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link icon icon-flickr" data-toggle="tooltip" data-placement="top" title="Acessar o Flickr" href="https://www.flickr.com/photos/144801833@N06/" target="_blank" rel="nofollow"><span class="sr-only">Flickr</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link icon icon-soundcloud" data-toggle="tooltip" data-placement="top" title="Acessar o SoundCloud" href="#" target="_blank" rel="nofollow"><span class="sr-only">SoundCloud</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link icon icon-tiktok" data-toggle="tooltip" data-placement="top" title="Acessar o TikTok" href="https://www.tiktok.com/@tsejus" target="_blank" rel="nofollow"><span class="sr-only">TikTok</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link icon icon-linkedin" data-toggle="tooltip" data-placement="top" title="Acessar o LinkedIn" href="https://br.linkedin.com/company/tsejus" target="_blank" rel="nofollow"><span class="sr-only">LinkedIn</span></a>
                                 </li>
                             </ul>
                         </div>
