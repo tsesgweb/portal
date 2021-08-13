@@ -15,7 +15,7 @@ array_shift($mais_lidas);
 				foreach ($mais_lidas as $key => $noticia): ?>
 					<div class="item-carousel">
 						<div class="item-count"><span><?= $key+1; ?></span></div>
-						<p><a href="<?= $noticia->url; ?>"><?= $noticia->titulo?></a></p>
+						<p><a href="<?= $noticia->url; ?>"><?= $noticia->title?></a></p>
 					</div>
 					<?php 
 					if($count++ % 3 === 0 && count($mais_lidas) >= $count):?>
