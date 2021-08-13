@@ -1,65 +1,65 @@
-$(window).on('load', function () {
+$(window).on("load", function () {
   // inicia o plugin de copia do link da matéria
-  var clipboard = new ClipboardJS('.news-list-sharing-clipboard')
+  new ClipboardJS(".news-list-sharing-clipboard");
+  new ClipboardJS(".radio-list-sharing-clipboard");
 
-  var noticiaListaCardImgOverlay = $('.noticia-listagem_card-img-overlay')
+  var noticiaListaCardImgOverlay = $(".noticia-listagem_card-img-overlay");
 
   noticiaListaCardImgOverlay.each(function () {
-    var $self = $(this)
-    var noticiaListaDescricao = $self.find('.noticia-listagem_description')
+    var $self = $(this);
+    var noticiaListaDescricao = $self.find(".noticia-listagem_description");
 
     $self
-      .on('mouseover', function () {
-        noticiaListaDescricao.addClass('exibir')
+      .on("mouseover", function () {
+        noticiaListaDescricao.addClass("exibir");
       })
-      .on('mouseleave', function () {
-        noticiaListaDescricao.removeClass('exibir')
-      })
-  })
+      .on("mouseleave", function () {
+        noticiaListaDescricao.removeClass("exibir");
+      });
+  });
 
   // inicializa novo carousel  do bloco de mais lidas
-  $('.lateral__mais-lidas-body').owlCarousel({
+  $(".lateral__mais-lidas-body").owlCarousel({
     loop: true,
     autoHeight: true,
-    items: 1
-  })
+    items: 1,
+  });
 
   // mostra painel de compartilhamento
   function sharingOverlay($btn, $klass, $find) {
-    $($btn).on('click focusin', function () {
+    $($btn).on("click focusin", function () {
       $(this)
         .closest($find)
-        .find('.' + $klass + '-overlay')
-        .addClass($klass + '-overlay_active')
-    })
+        .find("." + $klass + "-overlay")
+        .addClass($klass + "-overlay_active");
+    });
 
-    $('.' + $klass + '-overlay').on('mouseleave focusout', function () {
-      $(this).removeClass($klass + '-overlay_active')
-    })
+    $("." + $klass + "-overlay").on("mouseleave focusout", function () {
+      $(this).removeClass($klass + "-overlay_active");
+    });
 
-    $('.' + $klass + '-overlay__close').on('click', function () {
+    $("." + $klass + "-overlay__close").on("click", function () {
       $(this)
         .closest($find)
-        .removeClass($klass + '-overlay_active')
-
-      clipboard.destroy()
-    })
+        .removeClass($klass + "-overlay_active");
+    });
   }
 
-  sharingOverlay('.news-list-sharing', 'news-list-sharing', '.news-list-col-8');
-  sharingOverlay('.news-btn-sharing', 'news-list-sharing', '.news-card');
-  sharingOverlay('.radio-list-sharing', 'radio-list-sharing', 'div');
+  sharingOverlay(".news-list-sharing", "news-list-sharing", "div");
+  sharingOverlay(".news-list-sharing", "news-list-sharing", ".news-list-col-8");
+  sharingOverlay(".news-btn-sharing", "news-list-sharing", ".news-card");
+  sharingOverlay(".radio-list-sharing", "radio-list-sharing", "div");
 
   //habilita o tooltip
 
-  $('.news-footer button').tooltip({
-    container: 'body'
+  $(".news-footer button").tooltip({
+    container: "body",
   });
 
   //Carousel TV
 
-  var $owl = $('.carousel-faixa-tv');
-  var $owl_item = $('.carousel-faixa-tv .item');
+  var $owl = $(".carousel-faixa-tv");
+  var $owl_item = $(".carousel-faixa-tv .item");
 
   var tamanho_cards_fechado;
   var tamanho_cards_aberto;
@@ -100,12 +100,11 @@ $(window).on('load', function () {
   });
 
   function settings_carousel_faixa() {
-
     $owl.children().each(function (index) {
-      $(this).attr('data-position', index);
+      $(this).attr("data-position", index);
     });
 
-    $('.carousel-faixa-tv').owlCarousel({
+    $(".carousel-faixa-tv").owlCarousel({
       loop: true,
       merge: true,
       center: true,
@@ -118,44 +117,43 @@ $(window).on('load', function () {
         0: {
           items: 1,
           autoHeight: true,
-          mergeFit: true
+          mergeFit: true,
         },
         576: {
           items: 2,
           autoHeight: true,
-          mergeFit: true
+          mergeFit: true,
         },
         768: {
           items: 3,
           autoHeight: true,
-          mergeFit: true
+          mergeFit: true,
         },
         992: {
           items: 4,
           autoHeight: true,
-          mergeFit: true
+          mergeFit: true,
         },
         1200: {
           items: 5,
           autoHeight: true,
-          mergeFit: false
-        }
-      }
+          mergeFit: false,
+        },
+      },
     });
   }
 
   function click_abrir_cards(posicao) {
-
     $(".control-cft .posicao").text(posicao);
     var posicao_guardada = $(".control-cft .posicao").text();
-    $owl.trigger('destroy.owl.carousel');
+    $owl.trigger("destroy.owl.carousel");
     $owl_item.css("width", tamanho_cards_fechado_px);
     $owl_item.removeClass("item-aberto");
     $owl_item.addClass("fechado");
     $owl_item.eq(posicao_guardada).css("width", tamanho_cards_aberto_px);
     $owl_item.eq(posicao_guardada).addClass("item-aberto");
     $owl_item.eq(posicao_guardada).removeClass("fechado");
-    $owl_item.eq(posicao_guardada).prependTo('.carousel-faixa-tv');
+    $owl_item.eq(posicao_guardada).prependTo(".carousel-faixa-tv");
 
     $owl_item.each(function (index, e) {
       $(this).attr("data-position", index);
@@ -167,7 +165,7 @@ $(window).on('load', function () {
   }
 
   function click_fechar_card() {
-    $owl.trigger('destroy.owl.carousel');
+    $owl.trigger("destroy.owl.carousel");
     $owl_item.css("width", "350px");
     $owl_item.each(function (index, e) {
       $(this).attr("data-position", index);
@@ -178,17 +176,15 @@ $(window).on('load', function () {
 
   settings_carousel_faixa();
 
-  $(document).on('click', '.owl-item > div', function (e) {
-
+  $(document).on("click", ".owl-item > div", function (e) {
     var posicao_click = $(this).attr("data-position");
     var situacao_item = $(this).hasClass("item-aberto");
 
     $this = $(this);
 
     if (!situacao_item) {
-
       var $speed = 300;
-      $owl.trigger('to.owl.carousel', [$this.data('position'), $speed]);
+      $owl.trigger("to.owl.carousel", [$this.data("position"), $speed]);
 
       setTimeout(function () {
         click_abrir_cards(posicao_click);
@@ -198,8 +194,7 @@ $(window).on('load', function () {
     }
   });
 
-  $(".carousel-faixa-tv .item .fechar").on('click', function () {
-
+  $(".carousel-faixa-tv .item .fechar").on("click", function () {
     $(this).closest(".item").removeClass("item-aberto");
     $(this).closest(".item").addClass("fechado");
 
@@ -209,7 +204,4 @@ $(window).on('load', function () {
 
     return false;
   });
-
-
-
 });
