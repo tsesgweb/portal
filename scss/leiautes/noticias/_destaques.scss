@@ -59,6 +59,7 @@ $anim-speed: 0.3s;
 .noticia-listagem {
   @include modificar(destaque) {
     @include make-row(0);
+    width: 100%;
 
     @include media-breakpoint-only(xs) {
       padding-top: 15px;
@@ -120,6 +121,11 @@ $anim-speed: 0.3s;
     }
   }
 
+  @include modificar(card-item) {
+    padding: 30px 28px;
+    height: 100%;      
+  }
+
   @include modificar(badge) {
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -174,6 +180,13 @@ $anim-speed: 0.3s;
       padding: 0 .5em;
     }
   }
+
+    @include modificar(card-item) { 
+      .noticia-listagem_title a,
+      .noticia-listagem_description {
+        color: $cinza;
+      }
+    }
 }
 
 .noticias,
