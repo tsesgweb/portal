@@ -106,13 +106,13 @@
             text-align: center;
         }
         #compartilhar-conteudo .fa {
-            border-color: #fff;
+            border-color: $branco;
             width: inherit;
             height: inherit;
             &:hover {
                 background-color: $azul;
                 border-color: transparent;
-                color: #fff;
+                color: $branco;
             }
         }
     }

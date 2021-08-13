@@ -166,7 +166,7 @@
         width: 16px;
         height: 16px;
         color: $azul;
-        background-color: #fff;
+        background-color: $branco;
         border-radius: 50%;
         border: none;
         font-size: 10px;
@@ -178,7 +178,7 @@
       }
 
       @include elemento(title) {
-        color: #fff;
+        color: $branco;
       }
 
       @include elemento(text) {
@@ -188,7 +188,7 @@
 
       @include elemento(content) {
         .header {
-          color: #fff;
+          color: $branco;
            @include responsive-font-size(10px);
         }
 
@@ -216,7 +216,7 @@
               }
 
               @if $badge-nome=='comunicado' {
-                color: #fff;
+                color: $branco;
 
                 &:hover {
                   color: lighten(#fff, 10%);
@@ -309,7 +309,7 @@
       font-size: 1rem;
       font-family: $font-descriptions;
       line-height: $line-height-base;
-      color: #6b6b6b;
+      color: $cinza;
 
       @include media-breakpoint-only(xs) {
         display: none;
@@ -335,7 +335,7 @@
 
       display: flex;
       margin-right: 10px;
-      background-color: #fff;
+      background-color: $branco;
       width: 26px;
       height: 26px;
       border-radius: 50%;
@@ -412,5 +412,5 @@
 }
 
 .btn-radio {
-  color: #fff;
+  color: $branco;
 }

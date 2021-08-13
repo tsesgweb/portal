@@ -138,7 +138,7 @@
 @mixin uiColors($selector: '.u-colors', $child: '.u-color', $child-bg: '.u-color-bg', $child-background: '.u-color-background', $child-text: '.u-color-text', $child-txt: '.u-color-txt', $child-text: '.u-color-text', $child-bd: '.u-color-bd', $child-border: '.u-color-border') {
     #{$selector}> :nth-child(45n + 1) #{$child} {
         background-color: #2a6160;
-        color: #fff;
+        color: $branco;
     }
     #{$selector}> :nth-child(45n + 1) #{$child-bg},
     #{$selector}> :nth-child(45n + 1) #{$child-background} {
@@ -154,7 +154,7 @@
     }
     #{$selector}> :nth-child(45n + 2) #{$child} {
         background-color: #478a76;
-        color: #fff;
+        color: $branco;
     }
     #{$selector}> :nth-child(45n + 2) #{$child-bg},
     #{$selector}> :nth-child(45n + 2) #{$child-background } {

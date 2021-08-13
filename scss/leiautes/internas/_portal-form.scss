@@ -5,7 +5,7 @@ $color_mine_shaft_approx: #333;
 $concrete: #f2f2f2;
 $color_celeste_approx: #ccc;
 $color_fuscous_gray_approx: #555;
-$white: #fff;
+$white: $branco;
 $color_cornflower_blue_approx: #66afe9;
 $black_7_5: rgba(0, 0, 0, 0.075);
 $color_cornflower_blue_60_approx: rgba(102, 175, 233, 0.6);
@@ -184,7 +184,7 @@ $font_2: sans-serif !important;
                 transform: scale(1);
                 
                 background: $color_niagara_approx;
-                border: 1px solid #fff;
+                border: 1px solid $branco;
                 content: "" !important;
                 left: 3px;
                 height: 11px;
@@ -252,7 +252,7 @@ $font_2: sans-serif !important;
                 transform: scale(0);
                 
                 background: $color_niagara_approx;
-                border: 1px solid #fff;
+                border: 1px solid $branco;
                 content: "" !important;
                 left: 3px;
                 height: 11px;
@@ -306,7 +306,7 @@ $font_2: sans-serif !important;
                 
                 
                 background: $color_niagara_approx;
-                border: 1px solid #fff;
+                border: 1px solid $branco;
                 border-radius: 10px;
                 content: "";
                 height: 11px;
@@ -382,7 +382,7 @@ $font_2: sans-serif !important;
                 transform: scale(0);
                 
                 background: $color_niagara_approx;
-                border: 1px solid #fff;
+                border: 1px solid $branco;
                 border-radius: 10px;
                 content: "";
                 height: 11px;

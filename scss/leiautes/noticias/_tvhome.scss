@@ -8,7 +8,7 @@
     padding-bottom: 30px;
   }
   .tv__conteudo {
-    background-color: #fff;
+    background-color: $branco;
     border-radius: 5px;
     padding-bottom: 50px;
   }
@@ -88,7 +88,7 @@
         align-items: baseline;
         // justify-content: baseline;
         padding: 15px;
-        color: #fff;
+        color: $branco;
       }
     }
     .item-secundario-1 {
@@ -139,7 +139,7 @@
         transition: 0.6s ease;
         &:hover {
           background-color: $azul;
-          color: #fff;
+          color: $branco;
         }
       }
     }
@@ -208,7 +208,7 @@
         align-items: baseline;
         // justify-content: baseline;
         padding: 15px;
-        color: #fff;
+        color: $branco;
       }
     }
     .item-secundario-2 {
@@ -237,7 +237,7 @@
         transition: 0.6s ease;
         &:hover {
           background-color: $azul;
-          color: #fff;
+          color: $branco;
         }
       }
     }

@@ -63,7 +63,7 @@ $border-width: 1px;
                     text-decoration: none;
 
                     &.nav-link {
-                        background-color: #fff;
+                        background-color: $branco;
                         border: none;
 
                         &:not(.active) {

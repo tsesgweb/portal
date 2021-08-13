@@ -45,7 +45,7 @@
 
 .t-Region-bodyWrap {
     .je-titulo-personalizado {
-        background-color: #fff;
+        background-color: $branco;
         line-height: 0;
         .js-je-titulo-padrao {
             text-transform: none;
@@ -60,7 +60,7 @@
     .t-Region-headerItems--title {
         h2 {
             @include breakpoint(lg, md) {
-                background-color: #fff;
+                background-color: $branco;
             }
         }
     }

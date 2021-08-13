@@ -22,7 +22,7 @@ $anim-speed: 0.3s;
 
 .header-conteudo {
   @include make-col-ready();
-  background-color: #fff;
+  background-color: $branco;
 
   .noticia-titulo {
     color: $azul;
@@ -30,7 +30,7 @@ $anim-speed: 0.3s;
 }
 
 .imprensa__conteudo {
-  background-color: #fff;
+  background-color: $branco;
   padding-bottom: 28px;
 
   @include media-breakpoint-only(xs) {
@@ -157,7 +157,7 @@ $anim-speed: 0.3s;
   }
 
   @include modificar(description) {
-    color: #fff;
+    color: $branco;
     font-size: 1rem;
     font-family: $font-descriptions;
     max-height: 0;

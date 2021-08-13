@@ -78,7 +78,7 @@ $cor: $cinza-claro;
         .a-Menu-inner {
             &:focus,
             &:hover {
-                background-color: #fff;
+                background-color: $branco;
                 color: $brand-primary;
             }
         }

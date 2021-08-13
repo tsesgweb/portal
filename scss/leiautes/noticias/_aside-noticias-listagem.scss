@@ -2,7 +2,7 @@
   .portletWrapper {
     // padding-left: 15px;
     // padding-right: 15px;
-    background-color: #fff;
+    background-color: $branco;
     padding-bottom: 15px;
   }
 
@@ -25,7 +25,7 @@
 
       @include item(header) {
         @include card-header;
-        background-color: #fff;
+        background-color: $branco;
         border-bottom: none;
         padding: 5px 0 0 0;
       }
@@ -223,7 +223,7 @@
     @include titulo-noticias($azul);
     padding: 0;
     font-size: 20px;
-    background-color: #fff;
+    background-color: $branco;
     border-bottom-width: 3px;
     border-bottom-style: solid;
     border-bottom-color: #f5f5f5;

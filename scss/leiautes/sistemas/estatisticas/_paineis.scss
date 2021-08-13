@@ -6,10 +6,10 @@
 .je-painel-secundario {
     .t-BadgeList-item {
         &:nth-child(45n + 1) {
-            border-right: 4px solid #fff;
+            border-right: 4px solid $branco;
         }
         &:nth-child(45n + 2) {
-            border-left: 4px solid #fff;
+            border-left: 4px solid $branco;
         }
     }
     .t-BadgeList-wrap {

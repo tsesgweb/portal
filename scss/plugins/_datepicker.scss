@@ -317,10 +317,10 @@ ul.gj-list-md {
 .gj-picker {
     position: absolute;
     z-index: 1203;
-    background-color: #fff;
+    background-color: $branco;
 
     .selected {
-        color: #fff;
+        color: $branco;
     }
 }
 
@@ -691,7 +691,7 @@ ul.gj-list-md {
 /** Material Design **/
 
 .gj-dialog-md {
-    background-color: #FFF;
+    background-color: $branco;
     overflow: hidden;
     border: none;
     box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
@@ -905,7 +905,7 @@ table.gj-grid-bootstrap {
     white-space: nowrap;
     font-size: 13px;
     font-family: $font-family;
-    background-color: #fff;
+    background-color: $branco;
 
     td:first-of-type {
         padding-left: 24px;
@@ -1356,7 +1356,7 @@ span.gj-grid-column-resizer {
             }
 
             [role="right-icon"] {
-                background-color: #fff;
+                background-color: $branco;
 
                 button {
                     border: 0px;
@@ -1508,7 +1508,7 @@ ul.gj-list li {
     color: #333;
 
     &.active {
-        color: #fff;
+        color: $branco;
     }
 
     &.disabled {
@@ -1523,7 +1523,7 @@ ul.gj-list li {
     color: #212529;
 
     &.active {
-        color: #fff;
+        color: $branco;
     }
 
     &.disabled {
@@ -1682,7 +1682,7 @@ ul {
     }
 
     span {
-        background: #fff;
+        background: $branco;
         display: block;
         content: " ";
         width: 18px;
@@ -1764,7 +1764,7 @@ ul {
 
             /* Indigo A200 */
             &:after {
-                color: #FFF;
+                color: $branco;
                 background-color: #536DFE;
                 /* Indigo A200 */
                 position: absolute;
@@ -2384,7 +2384,7 @@ ul {
         }
 
         &.selected.gj-cursor-pointer div {
-            color: #fff;
+            color: $branco;
             background-color: #204d74;
             border-color: #122b40;
             border-radius: 4px;
@@ -2855,7 +2855,7 @@ ul {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        color: #fff;
+        color: $branco;
         text-align: center;
         background-color: #e9ecef;
         height: 2px;
@@ -2873,7 +2873,7 @@ ul {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        color: #fff;
+        color: $branco;
         text-align: center;
         height: 2px;
         background-color: #536DFE;

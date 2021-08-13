@@ -6,11 +6,11 @@
       border-color: #f5f5f5;
       border-radius: $radius;
       padding: 0;
-      color: silver;
+      color: $cinza;
 
       @include item(header) {
         @include card-header;
-        background-color: #fff;
+        background-color: $branco;
         border-bottom: none;
         padding: 0 15px;
       }
@@ -67,7 +67,7 @@
     @include elemento(mais-lidas) {
       @include item(header) {
         @include card-header;
-        background-color: #fff;
+        background-color: $branco;
         border-bottom: none;
       }
 

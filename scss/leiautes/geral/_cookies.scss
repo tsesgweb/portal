@@ -1,7 +1,7 @@
 .cookies {
   background-color: #1f345d;
   bottom: 0;
-  color: #fff;
+  color: $branco;
   font-size: 1.2em;
   left: 0;
   padding-bottom: 1.5rem;
@@ -18,7 +18,7 @@
   }
 
   a {
-    color: #fff;
+    color: $branco;
     text-decoration: underline;
     font-weight: bold;
 
@@ -59,7 +59,7 @@
           background-color: #fbda5a;
           color: #1f345d;
           font-size: 1.5em;
-          border: 1px solid #fff;
+          border: 1px solid $branco;
           padding: .5em;
           top: -5px;
           left: 20px;

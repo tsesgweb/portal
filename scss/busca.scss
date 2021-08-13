@@ -2,7 +2,7 @@
 #top-search-box input,
 .bottom-search-box input {
     max-width: 500px;
-    background-color: #fff;
+    background-color: $branco;
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 0;
@@ -21,12 +21,12 @@
 #suggestion_form input[type="submit"] {
     background-color: $brand-primary;
     border-color: transparent;
-    color: #fff;
+    color: $branco;
     -moz-user-select: none;    
     background-image: none;
     border: 1px solid transparent;
     border-radius: 0;
-    color: #fff;
+    color: $branco;
     cursor: pointer;
     display: inline-block;
     font-size: 15px;
@@ -125,7 +125,7 @@ div.result-item {
     text-decoration: none;
     &[ctype="nav.next"] {
         background-color: $brand-primary;
-        color: #fff;
+        color: $branco;
         text-transform: uppercase;
         padding: 6px 12px;
     }
