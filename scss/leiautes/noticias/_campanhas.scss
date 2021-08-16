@@ -27,7 +27,7 @@
 
   @include elemento(card-description) {    
     @include responsive-font-size(18px);
-    color: #6B6B6B;
+    color: $cinza;
     font-family: $font-family;
     
   } 
@@ -116,7 +116,7 @@
 
     .muted-text {
       @include responsive-font-size(20px);
-      color: #6B6B6B;
+      color: $cinza;
     }
   }
   

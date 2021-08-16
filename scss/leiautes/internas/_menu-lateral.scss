@@ -40,7 +40,7 @@ $border-ativo: 4px solid $theme-color-secundario;
 
             &.has-submenu.menu-lateral-item_ativo {
                 &:hover {
-                    background-color: #fff;
+                    background-color: $branco;
                 }
 
                 >.menu-lateral-item-link {

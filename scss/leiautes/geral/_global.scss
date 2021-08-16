@@ -35,7 +35,7 @@ $value in $theme-colors {
 [class*='_oculto'] {
   @include sr-only();
   @include sr-only-focusable();
-  color: #fff;
+  color: $branco;
 }
 
 [class*='_botao'],

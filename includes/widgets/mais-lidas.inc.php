@@ -1,7 +1,6 @@
 <?php
-$url_mais_lidas         = 'https://www.tse.jus.br/@@get_lista_noticias';
-$data_mais_lidas    = file_get_contents($url_mais_lidas);
-$mais_lidas     = json_decode($data_mais_lidas);
+$data_mais_lidas = file_get_contents(BASE_URL."/includes/noticias/conteudo.json");
+$mais_lidas = json_decode($data_mais_lidas);
 array_shift($mais_lidas);
 ?>
 <div class="portletWrapper">
@@ -16,7 +15,7 @@ array_shift($mais_lidas);
 				foreach ($mais_lidas as $key => $noticia): ?>
 					<div class="item-carousel">
 						<div class="item-count"><span><?= $key+1; ?></span></div>
-						<p><a href="<?= $noticia->url; ?>"><?= $noticia->titulo?></a></p>
+						<p><a href="<?= $noticia->url; ?>"><?= $noticia->title?></a></p>
 					</div>
 					<?php 
 					if($count++ % 3 === 0 && count($mais_lidas) >= $count):?>

@@ -10,12 +10,14 @@ $maisvisitados        = false;
 $paginacao            = false;
 $destaquenoticia      = true;
 $asidenoticiaradio    = true;
-$url                  = 'https://www.tse.jus.br/@@get_lista_noticias_categoria?subject=Elei%C3%A7%C3%B5es%20(2020)&sort=date%3AD%3AL%3Ad1';
-$data                 = file_get_contents($url);
+$data                 = file_get_contents(BASE_URL."/includes/noticias/conteudo.json");
 $outrasNoticias       = json_decode($data);
+$outrasNoticias[1]->image_preview = '';
+$outrasNoticias[5]->image_preview = '';
 $porcentagem = 0;
+
 include BASE_URL . '/includes/header.inc.php';
-include BASE_URL . '/includes/noticias/titulo-descricao-categorias.inc.php';
+// include BASE_URL . '/includes/noticias/titulo-descricao-categorias.inc.php';
 include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
 
 <div id="radio-list" class="radio-list">
@@ -61,18 +63,16 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
             <a href="<?= $noticia->url; ?>" title="<?= $noticia->title; ?>">
               <?= $noticia->title; ?>
             </a>
-
           </h3>
-
           <p class="radio-list-description">
             <?= $noticia->description; ?>
           </p>
 
         </div>
         <footer class="radio-list-footer">
-          <div class="ready-player-<?= $key.$card->time; ?> player-with-accessibility">
+          <div class="ready-player-<?= $key.$noticia->time; ?> player-with-accessibility">
             <audio crossorigin>
-              <source src="<?=$card->audio; ?>" type="audio/mpeg">
+              <source src="<?=$noticia->audio_url; ?>" type="audio/mpeg">
             </audio>
           </div>
           <button class="radio-list-view" type="button">

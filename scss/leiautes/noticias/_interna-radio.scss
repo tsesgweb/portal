@@ -12,7 +12,7 @@
 
   @include item(descricao) {
     font-size: 20px;
-    color: #6b6b6b;
+    color: $cinza;
   }
 
   @include item(imagem) {

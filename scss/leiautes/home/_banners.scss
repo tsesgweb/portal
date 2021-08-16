@@ -87,11 +87,11 @@ $altura-maxima: 550px;
           @include media-breakpoint-up(lg) {
             width: 920px;
             font-size: 2em;
-            color: #fff;
+            color: $branco;
           }
           font-size: 1em;
           font-family: "Merriweather", sans-serif;
-          color: #fff;
+          color: $branco;
           padding-bottom: 20px;
           margin: 0 auto;
         }
@@ -99,7 +99,7 @@ $altura-maxima: 550px;
           width: 100%;
           font-size: 0.9em;
           font-family: "Open Sans", sans-serif;
-          color: #fff;
+          color: $branco;
           border-top: 1px #787a79 solid;
           border-bottom: 1px #787a79 solid;
           padding: 5px;
@@ -111,7 +111,7 @@ $altura-maxima: 550px;
             font-size: 1rem;
             line-height: 1.4rem;
             padding: 20px;
-            color: #fff;
+            color: $branco;
           }
           @include media-breakpoint-only(xs) {
             @include make-col(12);
@@ -122,7 +122,7 @@ $altura-maxima: 550px;
           }
         }
         .item__link {
-          background-color: #fff;
+          background-color: $branco;
           color: #333333;
           border: none;
           border-radius: 7px;

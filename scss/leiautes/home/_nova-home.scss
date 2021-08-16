@@ -125,7 +125,7 @@ $badge-content in $badge-theme {
 
         &,
         a {
-          color: #fff;
+          color: $branco;
           background-color: $verde;
         }
 
@@ -137,7 +137,7 @@ $badge-content in $badge-theme {
           height: 17px;
           display: inline-block;
           vertical-align: middle;
-          color: #fff;
+          color: $branco;
           filter: brightness(100);
         }
 
@@ -147,8 +147,8 @@ $badge-content in $badge-theme {
     @include item(card) {
       @include card;
       border: 0;
-      border-left: 10px solid #fff;
-      border-right: 10px solid #fff;
+      border-left: 10px solid $branco;
+      border-right: 10px solid $branco;
       border-radius: $radius;
 
       &+.destaque-servico-card {
@@ -158,7 +158,7 @@ $badge-content in $badge-theme {
 
     @include item(card-header) {
       @include card-header;
-      background-color: #fff;
+      background-color: $branco;
       font-size: 18px;
       color: $cinza-escuro;
 
@@ -246,7 +246,7 @@ $badge-content in $badge-theme {
     }
 
     @include elemento(itens) {
-      background-color: #fff;
+      background-color: $branco;
       padding: 0 20px;
 
       hr {
@@ -266,7 +266,7 @@ $badge-content in $badge-theme {
         font-size: 14px;
         font-weight: bold;
         color: $theme-color;
-        background-color: #fff;
+        background-color: $branco;
         margin-right: 5px;
         margin-left: 5px;
         border-radius: $radius;
@@ -327,7 +327,7 @@ $badge-content in $badge-theme {
 
     @include elemento(titulo) {
       position: absolute;
-      color: #fff;
+      color: $branco;
       transition: 0.6s;
       padding-right: 15px;
       padding-left: 15px;
@@ -391,7 +391,7 @@ $badge-content in $badge-theme {
 
         a {
 
-          color: #fff;
+          color: $branco;
           text-decoration: none;
           transition: 0.4s;
 
@@ -411,7 +411,7 @@ $badge-content in $badge-theme {
           opacity: 0;
           display: block;
           transition: 0.4s;
-          color: #fff;
+          color: $branco;
           text-shadow: 2px 2px 4px black, 0 0 1em $cinza, 0 0 0.2em $cinza;
         }
       }
@@ -461,7 +461,7 @@ $badge-content in $badge-theme {
         align-items: center;
 
         min-height: 62px;
-        background-color: #fff;
+        background-color: $branco;
 
         &:nth-child(2) {
           border-top: 1px solid $cinza-claro;
@@ -477,8 +477,8 @@ $badge-content in $badge-theme {
       @include media-breakpoint-up(xs) {
         @include make-col-ready(0);
         @include make-col(12);
-        border-right: 10px solid #fff;
-        border-left: 10px solid #fff;
+        border-right: 10px solid $branco;
+        border-left: 10px solid $branco;
       }
 
       @include media-breakpoint-up(lg) {
@@ -508,7 +508,7 @@ $badge-content in $badge-theme {
         // @include titulo-noticias;
         font-size: 14px;
         padding: 5px 10px;
-        background-color: #fff;
+        background-color: $branco;
         border-bottom-left-radius: $radius;
         border-bottom-right-radius: $radius;
 
@@ -596,7 +596,7 @@ $badge-content in $badge-theme {
       &:hover {
         font-weight: 600;
         background: $verde;
-        color: #fff;
+        color: $branco;
 
         img {
           filter: contrast(10%) brightness(200%);

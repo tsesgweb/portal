@@ -9,7 +9,7 @@ $menu-size: 576px;
     height: 100vh;
     min-width: $menu-size;
     max-width: 33.33%;
-    color: #fff;
+    color: $branco;
     transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
     transform-origin: bottom left;
     border-left: 2px solid darken($azul, 15%);
@@ -90,7 +90,7 @@ $menu-size: 576px;
 
       @include item('link') {
         @include responsive-font-size(20px);
-        color: #fff;
+        color: $branco;
 
         &:hover {
           color: darken(#fff, 15%);
@@ -100,7 +100,7 @@ $menu-size: 576px;
   }
 
   a[aria-expanded='true'] {
-    color: #fff;
+    color: $branco;
     // background: #6d7fcc;
   }
   a[data-toggle='collapse'] {

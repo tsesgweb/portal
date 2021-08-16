@@ -10,15 +10,13 @@ $maisvisitados        = false;
 $paginacao            = false;
 $destaquenoticia      = true;
 $asidenoticialistagem = true;
-$url            = 'https://www.tse.jus.br/@@get_lista_noticias_categoria?subject=Tribunal%20Superior%20Eleitoral&sort=date%3AD%3AL%3Ad1';
-$data           = file_get_contents($url);
+$data = file_get_contents(BASE_URL."/includes/noticias/conteudo.json");
 $outrasNoticias = json_decode($data);
 $outrasNoticias[5]->image_preview = null;
 $outrasNoticias[5]->video_image = null;
 $outrasNoticias[7]->image_preview = null;
 $outrasNoticias[6]->video_image = 'https://img.youtube.com/vi/1PlnZEt797o/maxresdefault.jpg';
 $outrasNoticias[6]->video_url = 'https://www.youtube.com/watch?v=1PlnZEt797o';
-
 $tags = array(
   array("icon"=> "<i class='fa fa-circle' aria-hidden='true'></i> ","letter"=> null, "badge"=>"aovivo", "name"=> "Ao Vivo"), 
   array("icon"=> null,"letter"=> "E", "badge"=>"evento", "name"=>"Evento"), 

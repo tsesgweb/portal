@@ -1,5 +1,5 @@
 .noticias-home-topo {
-    background-color: #fff;
+    background-color: $branco;
     width: 100%;
     margin-top: 10px;
     padding-top: 5px;
@@ -69,7 +69,7 @@
             }
             .fa,
             p {
-                color: #6B6B6B;
+                color: $cinza;
                 &,
                 a {
                     @include responsive-font-size(14px);

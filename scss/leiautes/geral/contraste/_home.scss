@@ -34,7 +34,7 @@ body.contraste {
         .bagde,
         .badge-pill {
             background: black;
-            color: #fff;
+            color: $branco;
         }
     }
     .noticia__botoes {
@@ -256,13 +256,13 @@ body.contraste {
     }
     #button-addon1 {
         background: $dark-color;
-        color: #fff;
+        color: $branco;
         .fa-search {
             background: none !important;
             color: #fff !important;
         }
         &:hover {
-            color: #fff;
+            color: $branco;
         }
     }
     .card-footer {

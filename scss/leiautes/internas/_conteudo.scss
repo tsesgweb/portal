@@ -136,12 +136,12 @@
   .fa {
     border-radius: 50%;
     background: $branco;
-    border: 1px solid #6b6b6b;
+    border: 1px solid $cinza;
     width: 32px;
     height: 32px;
 
     &::before {
-      color: #6b6b6b;
+      color: $cinza;
     }
 
     &:hover {
