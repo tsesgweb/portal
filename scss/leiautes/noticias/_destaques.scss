@@ -119,11 +119,33 @@ $anim-speed: 0.3s;
     &:hover {
       transition: transform 0.2s;
     }
+
+    .noticia-listagem_description {
+      color: $branco;
+      font-size: 1rem;
+      font-family: $font-descriptions;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .2s ease-out;
+
+      &.exibir {
+        max-height: 200px;
+        transition: max-height .2s ease-in;
+      }
+
+      .green-audio-player {
+        background-color: rgba($color: #fff, $alpha: .9);
+        padding: 0 .5em;
+      }
+    }
   }
 
   @include modificar(card-item) {
-    padding: 30px 28px;
+    padding: 15px;
+    width: 100%;
+    border-radius: $radius;
     height: 100%;      
+    background-color: #fff;
   }
 
   @include modificar(badge) {
@@ -160,33 +182,14 @@ $anim-speed: 0.3s;
         line-height: 16px;
       }
     }
-  }
+  }  
 
-  @include modificar(description) {
-    color: $branco;
-    font-size: 1rem;
-    font-family: $font-descriptions;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .2s ease-out;
-
-    &.exibir {
-      max-height: 200px;
-      transition: max-height .2s ease-in;
-    }
-
-    .green-audio-player {
-      background-color: rgba($color: #fff, $alpha: .9);
-      padding: 0 .5em;
+  @include modificar(card-item) { 
+    .noticia-listagem_title a,
+    .noticia-listagem_description {
+      color: $cinza;
     }
   }
-
-    @include modificar(card-item) { 
-      .noticia-listagem_title a,
-      .noticia-listagem_description {
-        color: $cinza;
-      }
-    }
 }
 
 .noticias,
