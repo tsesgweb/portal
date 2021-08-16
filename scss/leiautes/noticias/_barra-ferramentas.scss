@@ -6,6 +6,9 @@ $verde: #47C77D;
 
 #barra-ferramentas-noticias {
     .links {
+        display: flex;
+        align-items: center;
+        height: 100%;
         .sumario {
             display: none;
             height: 50px;
@@ -33,6 +36,7 @@ $verde: #47C77D;
 
         .paginacao {
             button {
+                background-color: #f2f1f1;
                 border: none;
                 padding: 0 20px;
                 position: relative;
@@ -119,6 +123,7 @@ $verde: #47C77D;
             justify-content: center;
 
             .compartilhar {
+                background-color: #f2f1f1;
                 background-image: url($compartilhar);
                 background-position: center;
                 background-repeat: no-repeat;
@@ -159,6 +164,7 @@ $verde: #47C77D;
                 @include make-col-ready();
                 @include make-col(6);
                 background-image: url($imprimir);
+                background-color: #f2f1f1;
 
                 @include media-breakpoint-only(xs) {
                     display: none;
@@ -169,6 +175,7 @@ $verde: #47C77D;
                 @include make-col-ready();
                 @include make-col(6);
                 background-image: url($download);
+                background-color: #f2f1f1;
 
                 @include media-breakpoint-only(xs) {
                     @include make-col(12);

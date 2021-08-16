@@ -18,6 +18,228 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
   }
 
   .carousel-faixa-tv {
+
+    .overlay-conteudo {
+      height: 500px;
+      position: absolute;
+      top: 0; 
+      width: 100%;
+      top: 10px;
+
+      .overlay {
+        display: block;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 99998;
+        opacity: .6;
+      }
+    }
+
+    .conteudo-carousel {
+      background-color: $azul;
+      z-index: 99999;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: #26394d 0px 20px 30px -10px;
+      display: flex;
+      flex-direction: row;
+      min-height: 100%;
+      padding-right: 10px;
+
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+        padding-right: 0;
+      }
+      .apresentacao-card {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-right: 10px;
+        max-width: 370px;
+        padding: 1em;
+        position: relative;
+        color: $branco;
+        width: 100%;
+
+        @include media-breakpoint-down(xs) {
+          justify-content: center;
+          margin-right: 0;
+          max-width: 250px;
+          padding-top: 40px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          justify-content: flex-start;
+          max-width: 250px;
+        }
+
+        @include media-breakpoint-down(md) {
+          justify-content: flex-start;
+          max-width: 250px;
+        }
+
+        @include media-breakpoint-down(lg) {
+          justify-content: flex-start;
+        }
+
+        .imagem-card {
+          left: 0;
+          position: absolute;
+          top: 0;
+
+          img {
+            opacity: .2 !important;
+          }
+        }
+
+        .titulo-card,
+        .texto {
+          display: block;
+          padding-bottom: 2.5em;
+          position: relative;
+          z-index: 1;
+
+          @include media-breakpoint-down(xs) {
+            padding-bottom: 1em;
+          }
+        }
+
+        .titulo-card {
+          @include sub-titulo;
+          color: $branco;
+          margin: 0;
+
+          h3 {
+            text-align: center;
+          }
+        }
+
+      }
+
+      .conteudo-card {
+        color: $branco;
+        display: flex;
+        flex-direction: column;
+        font-size: .9em;
+        justify-content: space-around;
+        padding: 10px 0 10px 10px;
+        position: relative;
+
+        @include media-breakpoint-down(xs) {
+          padding: 10px;
+        }
+
+        a {
+          color: $branco;
+        }
+
+        &::before {
+          background-color: $azul-claro;
+          content: "";
+          display: block;
+          height: 90%;
+          left: 0;
+          position: absolute;
+          top: 25px;
+          width: 1px;
+
+          @include media-breakpoint-down(xs) {
+            display: none;
+          }
+        }
+
+        .titulo {
+          h4 {
+            font-size: 1em;
+            font-weight: bold;
+          }
+        }
+
+        .lista-ultimos-videos {
+
+          .media {
+            align-items: center;
+            margin: .4em 0;
+            background-color: $azul-intermediario;
+            border-radius: 5px;
+            padding: 5px;
+            flex: 0 0 calc(100%);
+
+            @include media-breakpoint-down(sm) {
+              align-items: center;
+              flex-direction: column;
+              text-align: center;
+            }
+
+            .play {
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 45px;
+                height: 45px;
+                display: block;
+                background-image: url($play);
+                background-repeat: no-repeat;
+                background-size: 45px 45px;
+                background-position: center;
+              }
+            }
+
+            .img {
+              margin-right: .5em !important;
+              width: 140px;
+              height: 110px;
+              border-radius: 5px;
+              overflow: hidden;
+
+              @include media-breakpoint-down(md) {
+                margin-right: 0;
+                margin-bottom: 1em;
+              }
+            }
+
+            .titulo {
+              font-size: 1em;
+              font-weight: bold;
+            }
+
+            .texto {
+              font-size: .8em;
+            }
+          }
+        }
+
+        .playlist-completa {
+          &.p {
+            font-weight: bold;
+            font-size: .8em;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .fechar {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        background-image: url($fechar);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        display: block;
+      }
+    }
+
     .owl-stage-outer {
       padding-top: 10px;
     }
@@ -31,27 +253,7 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
         height: 500px;
         min-height: 100%;
         overflow: hidden;
-        padding-right: 10px;
         position: relative;
-
-        @include media-breakpoint-down(xs) {
-          flex-direction: column;
-          height: 100%;
-          padding-right: 0;
-        }
-
-        @include media-breakpoint-down(sm) {
-          height: 100%;
-        }
-
-        @include media-breakpoint-down(md) {
-          height: 100%;
-        }
-
-        @include media-breakpoint-down(lg) {
-          height: 100%;
-        }
-
 
         &.fechado {
           cursor: pointer;
@@ -87,187 +289,6 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
             display: none;
           }
         }
-
-        &.item-aberto {
-          .apresentacao-card {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            margin-right: 10px;
-            max-width: 370px;
-            padding: 1em;
-            position: relative;
-            color: $branco;
-
-            @include media-breakpoint-down(xs) {
-              justify-content: center;
-              margin-right: 0;
-              max-width: 300px;
-              padding-top: 40px;
-            }
-
-            @include media-breakpoint-down(sm) {
-              justify-content: flex-start;
-            }
-
-            @include media-breakpoint-down(md) {
-              justify-content: flex-start;
-            }
-
-            @include media-breakpoint-down(lg) {
-              justify-content: flex-start;
-            }
-
-            .imagem-card {
-              left: 0;
-              position: absolute;
-              top: 0;
-
-              img {
-                opacity: .2;
-              }
-            }
-
-            .titulo-card,
-            .texto {
-              display: block;
-              padding-bottom: 2.5em;
-              position: relative;
-              z-index: 1;
-
-              @include media-breakpoint-down(xs) {
-                padding-bottom: 1em;
-              }
-            }
-
-            .titulo-card {
-              @include sub-titulo;
-              color: $branco;
-              margin: 0;
-            }
-
-          }
-
-          .conteudo-card {
-            color: $branco;
-            display: flex;
-            flex-direction: column;
-            font-size: .9em;
-            font-style: italic;
-            justify-content: space-around;
-            padding: 10px 0 10px 10px;
-            position: relative;
-
-            @include media-breakpoint-down(xs) {
-              padding: 10px;
-            }
-
-            a {
-              color: $branco;
-            }
-
-            &::before {
-              background-color: $azul-claro;
-              content: "";
-              display: block;
-              height: 90%;
-              left: 0;
-              position: absolute;
-              top: 25px;
-              width: 1px;
-
-              @include media-breakpoint-down(xs) {
-                display: none;
-              }
-            }
-
-            .titulo {
-              h4 {
-                font-size: 1em;
-              }
-            }
-
-            .lista-ultimos-videos {
-
-              .media {
-                align-items: center;
-                margin: .4em 0;
-                background-color: $azul-intermediario;
-                border-radius: 5px;
-                padding: 5px;
-                flex: 0 0 calc(100%);
-
-                @include media-breakpoint-down(lg) {
-                  align-items: center;
-                  flex-direction: column;
-                  text-align: center;
-                }
-
-                .play {
-                  position: relative;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-
-                  &::before {
-                    content: "";
-                    position: absolute;
-                    width: 45px;
-                    height: 45px;
-                    display: block;
-                    background-image: url($play);
-                    background-repeat: no-repeat;
-                    background-size: 45px 45px;
-                    background-position: center;
-                  }
-                }
-
-                .img {
-                  margin-right: .5em;
-                  width: 140px;
-                  height: 110px;
-                  border-radius: 5px;
-                  overflow: hidden;
-
-                  @include media-breakpoint-down(lg) {
-                    margin-right: 0;
-                    margin-bottom: 1em;
-                  }
-                }
-
-                .titulo {
-                  font-size: 1em;
-                  font-weight: bold;
-                }
-
-                .texto {
-                  font-size: .8em;
-                }
-              }
-            }
-
-            .playlist-completa {
-              p {
-                font-size: .8em;
-                margin-bottom: 0;
-              }
-            }
-          }
-
-          .fechar {
-            position: absolute;
-            right: 7px;
-            top: 7px;
-            background-image: url($fechar);
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            display: block;
-          }
-        }
       }
     }
 
@@ -297,6 +318,13 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
         margin-left: 20px;
       }
     }
+  }
+
+  .btn-outline {
+    display: flex;
+    justify-self: center;
+    margin-bottom: 70px;
+    margin-top: 20px !important;
   }
 
 }

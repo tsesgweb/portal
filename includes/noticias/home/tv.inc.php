@@ -10,7 +10,7 @@
           <img src="https://picsum.photos/id/1005/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
-          <h3>Conexão Eleitoral</h3>
+          <h3>Conexão Eleitoral 1</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
@@ -67,7 +67,7 @@
           <img src="https://picsum.photos/id/1006/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
-          <h3>Conexão Eleitoral</h3>
+          <h3>Conexão Eleitoral 2</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
@@ -124,7 +124,7 @@
           <img src="https://picsum.photos/id/1014/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
-          <h3>Conexão Eleitoral</h3>
+          <h3>Conexão Eleitoral 3</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
@@ -181,7 +181,7 @@
           <img src="https://picsum.photos/id/1008/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
-          <h3>Conexão Eleitoral</h3>
+          <h3>Conexão Eleitoral 5 4</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
@@ -238,7 +238,7 @@
           <img src="https://picsum.photos/id/1010/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
-          <h3>Conexão Eleitoral</h3>
+          <h3>Conexão Eleitoral 5</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
@@ -295,7 +295,7 @@
           <img src="https://picsum.photos/id/1011/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
-          <h3>Conexão Eleitoral</h3>
+          <h3>Conexão Eleitoral 6</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
@@ -352,7 +352,7 @@
           <img src="https://picsum.photos/id/1012/370/500" alt="Conexão Eleitoral" title="Conexão Eleitoral">
         </div>
         <div class="titulo-card">
-          <h3>Conexão Eleitoral</h3>
+          <h3>Conexão Eleitoral 7</h3>
         </div>
         <div class="texto">
           <p>Editado em formato de revista eletrônica, traz as principais decisões e ações do TSE e dos TREs.</p>
@@ -405,9 +405,11 @@
     </div>
   </div>
 
-  <div class="control-cft sr-only">
+  <!-- <div class="control-cft sr-only">
     <span class="posicao"></span>
-  </div>
+  </div> -->
 
+
+  <button class="btn-outline">Saiba tudo sobre os nossos programas de TV</button>
 
 </section>

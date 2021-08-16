@@ -38,12 +38,10 @@ $noticias = [
           </h3>
           
           <p class="noticia-listagem_description">
-            <span class="ready-player-<?= $key.$card->time; ?> player-with-accessibility">
-            <audio crossorigin>
-              <source src="<?=$card->audio; ?>" type="audio/mpeg">
-            </audio>
-          </span>
-        </p>
+            <a href="http://" class="noticia-listagem_description_link">
+              <?= $value['description'];?>
+            </a>
+          </p>
         
         </div>
       </article>

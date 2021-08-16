@@ -168,11 +168,22 @@ $anim-speed: 0.3s;
       max-height: 200px;
       transition: max-height .2s ease-in;
     }
-
+    
     .green-audio-player {
       background-color: rgba($color: #fff, $alpha: .9);
       padding: 0 .5em;
     }
+    
+    @include modificar(link){
+      color: #fff;
+      text-align: left;
+      padding-left: 0;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+    
   }
 }
 
