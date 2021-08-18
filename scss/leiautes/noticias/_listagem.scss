@@ -335,6 +335,7 @@
 
       display: flex;
       margin-right: 10px;
+      margin-left: 10px;
       background-color: $branco;
       width: 26px;
       height: 26px;
@@ -343,7 +344,7 @@
     }
 
     @include item(download) {
-      @extend .#{$name}-list-sharing;
+      @extend .#{$name}-list-sharing;      
     }
 
     @include item(play) {

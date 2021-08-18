@@ -60,12 +60,20 @@
     border-radius: 5px 5px 0px 0px;
   }
 
+  &.no-caption {
+    img {
+      border-radius: 5px;
+    }
+  }
+  
+
   .descricao-img-principal {
     background-color: #def8ff;
     color: #1B305A;
     font-size: .8em;
     padding: 7px;
     text-align: left;
+    border-radius: 0 0 5px 5px;
   }
 
   .video {
