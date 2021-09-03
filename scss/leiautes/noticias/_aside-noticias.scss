@@ -123,3 +123,156 @@
     }
   }
 }
+
+#coluna-lateral-noticias {
+  &.ancora-sem-conteudo {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    margin: 0;
+    max-width: 100%;
+    padding: 15px;
+
+    .portletWrapper {
+      flex: 1;
+
+      .mini-banners,
+      .lateral__ultimas,
+      .lateral__gestor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 10px;
+      }
+
+      .lateral__ultimas {
+        flex-direction: row;
+
+        @include media-breakpoint-only(xs) {
+          flex-direction: column;
+        }
+
+        .lateral__ultimas-header {
+          border-bottom: 1px solid #ebebeb;
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+          width: 100%;
+        }
+
+        .lateral__ultimas-items {
+          border-top: none;
+          flex: 1;
+          flex-direction: column;
+
+          .ultimas-imagem {
+            img {
+              max-width: 100%;
+            }
+          }
+
+          .ultimas-titulo {
+            padding: 10px;
+          }
+        }
+      }
+
+      .mini-banners {
+        @include media-breakpoint-only(xs) {
+          flex-direction: column;
+        }
+
+        .radio-lista {
+          flex: 1 1 25%;
+          max-width: 24.1%;
+          @include media-breakpoint-only(md) {
+            max-width: 23.9%;
+          }
+          @include media-breakpoint-only(sm) {
+            flex: 1 1 33%;
+            max-width: 32%;
+          }
+          @include media-breakpoint-only(xs) {
+            flex: 1 1 100%;
+            max-width: 100%;
+          }
+        }
+      }
+
+      .lateral__mais-lidas,
+      .lateral__gestor {
+        margin-bottom: 0;
+        border: none;
+      }
+
+      .lateral__mais-lidas {
+        padding-left: 0;
+        
+          h3 {
+            border-bottom: 1px solid #ebebeb;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+          }
+      }
+
+      .lateral__gestor {
+
+        margin-bottom: 50px;
+
+        .lateral__gestor-header {
+          padding-left: 0;
+          width: 100%;
+
+          .lateral__gestor-title {
+            border-bottom: 1px solid #ebebeb;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+          }
+        }
+        .lateral__gestor-informacao {
+          border: none;
+          flex: 1;
+          flex-direction: column;
+
+          .gestor-titulo {
+            width: 100%;
+            display: inline-block;
+        }
+
+          .gestor-item {
+            border: none;
+            display: inline-block;
+            width: 33%;
+            padding: 10px;
+
+            @include media-breakpoint-down(md) {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+#ordernar-elementos {
+  #coluna-lateral-noticias {
+    order: 0;
+  }
+
+  #texto-conteudo {
+    order: 1;
+    max-width: 100%;
+    flex: 0 0 100%;
+    
+    .aviso-ascom {
+      min-height: 105px;
+    }
+  }
+
+  #barra-ferramentas-noticias {
+    order: 3;
+  }
+}

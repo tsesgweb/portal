@@ -380,5 +380,22 @@ $(window).on("load", function () {
   // });
 
 
+  // Adicionar class na coluna lateral quando não tiver conteúdo na página
+  // Ordena os elementos
+  // Coloca os banners dentro de uma div
+  
+  (function() {
+    const ancora = $("#ancora-1");
+    if(ancora) {
+      const conteudo = ancora.html();
+      if (conteudo == "") {
+
+        $("#conteudo #coluna-lateral-noticias").addClass("ancora-sem-conteudo");
+        $("#conteudo .noticia__linha").attr("id","ordernar-elementos");
+        $(".portletWrapper > .radio-lista").wrapAll("<div class='mini-banners'></div>")
+
+      }
+    }
+  }());
 
 });
