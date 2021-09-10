@@ -1,5 +1,3 @@
-
-
 <div id="playlist">
   <div class="playlist__conteudo">
     <div class="sub-titulo">
@@ -7,33 +5,31 @@
     </div>
     <div class="playlist__linha">
       <div class="playlist-item">
-      <div class="item-01">
-        Notícias
+        <div class="item-01">
+          Notícias
+        </div>
       </div>
-    </div>
       <div class="playlist-item">
-      <div class="item-02">
-        Conexão Eleitoral
+        <div class="item-02">
+          Conexão Eleitoral
+        </div>
       </div>
-    </div>
       <div class="playlist-item">
-      <div class="item-03">
-        Decisões do Plenário
+        <div class="item-03">
+          Decisões do Plenário
+        </div>
       </div>
-    </div>
       <div class="playlist-item">
-      <div class="item-04">
-        Por dentro da Justiça Eleitoral
+        <div class="item-04">
+          Por dentro da Justiça Eleitoral
+        </div>
       </div>
+      <div class="playlist-item">
+        <div class="item-05">
+          Teste de playlist
+        </div>
+      </div>
+      <button class="btn-outline">Saiba tudo sobre a nossa rádio</button>
     </div>
-    <button class="btn-outline">Saiba tudo sobre a nossa rádio</button>
-
-    </div>
-    
   </div>
-  
 </div>
-
-
-
-      <!-- <?php include BASE_URL.'/includes/widgets/aside-noticias-radio.inc.php';?> -->

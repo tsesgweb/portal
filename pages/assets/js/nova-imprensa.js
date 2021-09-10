@@ -399,3 +399,47 @@ $(window).on("load", function () {
   }());
 
 });
+
+(function() {
+  var playlistCarousel = $('.playlist__linha');
+
+  if(playlistCarousel.find('.playlist-item').length > 4) {  
+  playlistCarousel
+    .find('.playlist-item')
+    .css({'min-width': '100%'});
+
+  playlistCarousel
+  .find('.btn-outline')
+  .insertAfter('.playlist__linha')
+  .wrap('<div class="playlist__linha"/>');
+
+  playlistCarousel.addClass('owl-carousel owl-theme')
+  
+  playlistCarousel.owlCarousel({   
+    items: 4,     
+    responsive: {
+        0: {
+          items: 1,
+          autoHeight: true,
+          mergeFit: true
+        },
+        576: {
+          items: 2,
+          autoHeight: true,
+        },
+        768: {
+          items: 3,
+          autoHeight: true,
+        },
+        992: {
+          items: 4,
+          autoHeight: true,
+        },
+        1200: {
+          items: 4,
+          autoHeight: true,
+        }
+      }
+    });
+  }
+})();
