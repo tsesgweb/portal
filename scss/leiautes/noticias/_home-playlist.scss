@@ -64,5 +64,23 @@
                 transition: .3s;
             }
         }
+        .item-05, 
+        .item-09 {
+          @extend .item-01;
+        }
+
+        .item-06,
+        .item-10 {
+          @extend .item-02;
+        }
+        .item-07,
+        .item-11 {
+          @extend .item-03;
+        }
+        .item-08,
+        .item-12 {
+          @extend .item-04;
+        }
+
     }
 }
