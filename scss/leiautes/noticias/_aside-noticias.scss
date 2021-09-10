@@ -1,5 +1,5 @@
-#coluna-lateral-noticias,
-#aside-noticias {
+#aside-noticias,
+#coluna-lateral-noticias {
   .lateral {
     @include elemento(gestor) {
       @include card;
@@ -123,7 +123,7 @@
     }
   }
 }
-
+#aside-noticias,
 #coluna-lateral-noticias {
   &.ancora-sem-conteudo {
     display: flex;
@@ -258,6 +258,7 @@
 }
 
 #ordernar-elementos {
+  #aside-noticias,
   #coluna-lateral-noticias {
     order: 0;
   }

@@ -7,7 +7,7 @@ $radioCards = [
   ['name'=> 'Decisões do Plenário', 'color'=> '', 'link'=> 'http://www.tse.jus.br/imprensa/tv-1/decisoes-do-plenario'],
 ];
 ?>
-<aside id="coluna-lateral-noticias" class="<?php $destaquenoticia ? print 'listagem' :print 'lateral' ;?> nao-imprimir">
+<aside id="aside-noticias" class="<?php $destaquenoticia ? print 'listagem' :print 'lateral' ;?> nao-imprimir">
   <h2 class="sr-only">Coluna relacionada a rádio</h2>
   <div class="portletWrapper">
     <div class="lateral__ultimas">
