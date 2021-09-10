@@ -4,4 +4,10 @@
    @include make-col-offset(1);
    @include make-col(3);
  }
+
+ &.listagem {        
+    @include make-col-offset(0);
+    padding-right: 15px;
+    background-color: $branco;
+  }
 }
