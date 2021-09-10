@@ -131,8 +131,10 @@
 
       .ultimas-imagem {
         margin: 0;
+        min-width: 25%;
         img {
           border-radius: $radius;
+          @include img-fluid;
         }
       }
       .ultimas-titulo {

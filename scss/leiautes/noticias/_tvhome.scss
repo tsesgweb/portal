@@ -37,6 +37,12 @@
       @include make-col(5);
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      
+      @include media-breakpoint-only(lg) {
+        margin-bottom: 48px;
+      }
+
       .item {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -56,7 +62,8 @@
           border-bottom: none;
         }
         p {
-          margin-left: 5px;
+          margin-left: 10px;
+          margin-bottom: 0;
           font: normal normal bold 14px/19px Open Sans;
           color: $azul;
         }

@@ -341,15 +341,20 @@ $margin: 1.3%;
 #aside-noticias {
   @include colunas;
   
+  &.no-margin {
+    margin-left: 0;
+    margin-right: 0;
+  }
   &.listagem {        
     @include make-col-offset(0);
     padding-right: 15px;
     background-color: $branco;
   }
-  &.alinhar-interna { margin-left: 0; }
+  &.alinhar-interna { margin-left: 0!important; }
 }
 
 .conteudo {
+  width: 100%;
   @include modificar('coluna') {        
     @include modificar('esquerda') {
       padding-top: 7px;

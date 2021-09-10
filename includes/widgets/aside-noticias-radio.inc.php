@@ -4,6 +4,7 @@ $radioCards = [
   ['name'=> 'Por dentro da Justiça Eleitoral', 'color'=> 'amarelo', 'link'=> 'http://www.tse.jus.br/justica-eleitoral'],
   ['name'=> 'Notícias', 'color'=> 'verde', 'link'=> 'http://www.tse.jus.br/imprensa/noticias-tse'],
   ['name'=> 'Decisões do Plenário', 'color'=> 'vermelho', 'link'=> 'http://www.tse.jus.br/imprensa/tv-1/decisoes-do-plenario'],
+  ['name'=> 'Decisões do Plenário', 'color'=> '', 'link'=> 'http://www.tse.jus.br/imprensa/tv-1/decisoes-do-plenario'],
 ];
 ?>
 <aside id="coluna-lateral-noticias" class="<?php $destaquenoticia ? print 'listagem' :print 'lateral' ;?> nao-imprimir">
