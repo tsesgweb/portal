@@ -19,6 +19,8 @@ $theme-radio :(
 }
 .radio {
   @include item('lista') {
+    margin-bottom: 15px;
+    
     @include card;
     border: none;
     background: url('#{$path_img}/noticias/sound.svg') repeat-x padding-box bottom center;
