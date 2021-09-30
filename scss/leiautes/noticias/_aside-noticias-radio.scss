@@ -4,26 +4,24 @@ $verde: #20ab6f;
 $vermelho: #e07a5f;
 $link-color: #873c42;
 
-
-$theme-radio :(
-  (verde-escuro $verde-escuro  $branco),    
+$theme-radio: (
+  (verde-escuro $verde-escuro $branco),
   (amarelo $amarelo $link-color),
   (verde $verde $branco),
-  (vermelho $vermelho $link-color),
-  );
-  
+  (vermelho $vermelho $link-color)
+);
+
 @for $i from 1 to 12 {
-  $pages: (
-      $i
-  )  
+  $pages: ($i);
 }
 .radio {
-  @include item('lista') {
+  @include item("lista") {
     margin-bottom: 15px;
-    
+
     @include card;
     border: none;
-    background: url('#{$path_img}/noticias/sound.svg') repeat-x padding-box bottom center;
+    background: url("#{$path_img}/noticias/sound.svg") repeat-x padding-box
+      bottom center;
     display: flex;
     justify-items: center;
     align-content: center;
@@ -36,7 +34,7 @@ $theme-radio :(
     @include media-breakpoint-up(lg) {
       min-height: 225px;
     }
-    
+
     a {
       color: $branco;
       font-size: 20px;
@@ -47,15 +45,15 @@ $theme-radio :(
         text-decoration: none;
         opacity: 0.8;
       }
-    }  
+    }
 
     @for $i from 1 through 12 {
-      $name : $i;
+      $name: $i;
 
-      @if($i <= 9) {
-        $name: '0' + $i;
+      @if ($i <= 9) {
+        $name: "0" + $i;
       }
-      
+
       @if $i == 1 or $i == 5 or $i == 9 {
         @include item($name) {
           background-color: $verde-escuro;
@@ -65,7 +63,7 @@ $theme-radio :(
         }
       }
 
-      @if $i == 2 or $i == 6  or $i == 10 {
+      @if $i == 2 or $i == 6 or $i == 10 {
         @include item($name) {
           background-color: $amarelo;
           a {
@@ -74,7 +72,7 @@ $theme-radio :(
         }
       }
 
-      @if $i == 3 or $i == 7  or $i == 11 {
+      @if $i == 3 or $i == 7 or $i == 11 {
         @include item($name) {
           background-color: $verde;
           a {
@@ -83,7 +81,7 @@ $theme-radio :(
         }
       }
 
-      @if $i == 4 or $i == 8  or $i == 12 {
+      @if $i == 4 or $i == 8 or $i == 12 {
         @include item($name) {
           background-color: $vermelho;
           a {
@@ -92,19 +90,19 @@ $theme-radio :(
         }
       }
     }
-   
+
     @each $name, $bg, $link in $theme-radio {
       @include item($name) {
-        background-color: $bg;     
+        background-color: $bg;
 
         a {
           color: $link;
         }
       }
-    }        
+    }
   }
 
-  @include item('lista-body') {
+  @include item("lista-body") {
     @include card-body;
     text-align: center;
   }

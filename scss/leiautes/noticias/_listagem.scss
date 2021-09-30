@@ -31,11 +31,14 @@
     }
 
     @include item(col-4) {
-      @include media-breakpoint-up(xs) {}
+      @include media-breakpoint-up(xs) {
+      }
 
-      @include media-breakpoint-up(sm) {}
+      @include media-breakpoint-up(sm) {
+      }
 
-      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(md) {
+      }
 
       @include media-breakpoint-up(lg) {
         @include make-col(4);
@@ -51,9 +54,11 @@
         padding-right: 0;
       }
 
-      @include media-breakpoint-up(sm) {}
+      @include media-breakpoint-up(sm) {
+      }
 
-      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(md) {
+      }
 
       @include media-breakpoint-up(lg) {
         @include make-col(8);
@@ -68,9 +73,11 @@
         padding-right: 0;
       }
 
-      @include media-breakpoint-up(sm) {}
+      @include media-breakpoint-up(sm) {
+      }
 
-      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(md) {
+      }
 
       @include media-breakpoint-up(lg) {
         @include make-col(12);
@@ -122,7 +129,7 @@
       visibility: hidden;
       display: flex;
       flex-direction: column;
-      opacity: 0;      
+      opacity: 0;
       height: 0;
 
       @include modificar(active) {
@@ -133,7 +140,7 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        border-radius: $radius;        
+        border-radius: $radius;
         width: 100%;
         z-index: 3;
         opacity: 1;
@@ -141,17 +148,16 @@
         height: 100%;
       }
 
-      @each $badge-nome,
-      $badge-content in $badge-theme {
-        &_color-#{$badge-nome} {                    
-          background-color: $badge-content;          
-          @if $badge-nome=='comunicado' {
+      @each $badge-nome, $badge-content in $badge-theme {
+        &_color-#{$badge-nome} {
+          background-color: $badge-content;
+          @if $badge-nome== "comunicado" {
             color: rgba($badge-content, 0.8);
           } @else {
             color: $badge-content;
-          }        
+          }
         }
-      }     
+      }
 
       @include elemento(close) {
         text-align: center;
@@ -182,14 +188,14 @@
       }
 
       @include elemento(text) {
-        color: #5ADBFF;
-         @include responsive-font-size(12px);
-      }      
+        color: #5adbff;
+        @include responsive-font-size(12px);
+      }
 
       @include elemento(content) {
         .header {
           color: $branco;
-           @include responsive-font-size(10px);
+          @include responsive-font-size(10px);
         }
 
         .footer {
@@ -204,8 +210,7 @@
           }
         }
 
-        @each $badge-nome,
-        $badge-content in $badge-theme {
+        @each $badge-nome, $badge-content in $badge-theme {
           @include modificar(color-#{$badge-nome}) {
             @include elemento(footer) {
               color: $badge-content;
@@ -215,7 +220,7 @@
                 color: lighten($badge-content, 10%);
               }
 
-              @if $badge-nome=='comunicado' {
+              @if $badge-nome== "comunicado" {
                 color: $branco;
 
                 &:hover {
@@ -226,8 +231,7 @@
           }
         }
 
-        @each $badge-nome,
-        $badge-content in $badge-theme {
+        @each $badge-nome, $badge-content in $badge-theme {
           @include modificar(color-#{$badge-nome}_icons) {
             #compartilhar-conteudo .fa {
               &:hover {
@@ -295,10 +299,10 @@
     }
 
     @include item(title) {
-      @include titulo-noticias($azul);      
-      @include responsive-font-size(20);      
+      @include titulo-noticias($azul);
+      @include responsive-font-size(20);
       line-height: $line-height-base;
-      @include media-breakpoint-only(xs) {        
+      @include media-breakpoint-only(xs) {
         margin-bottom: 0;
         line-height: 5px;
       }
@@ -344,7 +348,7 @@
     }
 
     @include item(download) {
-      @extend .#{$name}-list-sharing;      
+      @extend .#{$name}-list-sharing;
     }
 
     @include item(play) {
@@ -378,7 +382,7 @@
 }
 
 @include listagem(radio) {
-  @include item('footer') {
+  @include item("footer") {
     @include media-breakpoint-only(xs) {
       display: block;
     }
@@ -390,9 +394,8 @@
     // display: none;
     height: 5px;
     position: relative;
-    background: #E5E5E5;
+    background: #e5e5e5;
     border-radius: $radius;
-
 
     span {
       display: block;
@@ -406,10 +409,7 @@
       position: relative;
       overflow: hidden;
     }
-
   }
-
-
 }
 
 .btn-radio {

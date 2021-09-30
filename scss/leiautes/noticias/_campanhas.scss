@@ -1,64 +1,62 @@
 .campaigns {
-   @include elemento(card) {
-    @include card; 
-    padding: 10px;   
-    border: 0.5px solid #E5E5E5;
-  }  
+  @include elemento(card) {
+    @include card;
+    padding: 10px;
+    border: 0.5px solid #e5e5e5;
+  }
 
   @include elemento(card-header) {
     @include responsive-font-size(26px);
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 10px;
-    padding-top: 8px;   
+    padding-top: 8px;
     color: $azul;
     font-weight: bold;
-  }  
+  }
 
   @include elemento(card-img-top) {
     @include img-fluid;
     border-radius: 5px;
-  }  
+  }
 
   @include elemento(card-body) {
     padding-top: 10px;
     padding-bottom: 10px;
-  } 
+  }
 
-  @include elemento(card-description) {    
+  @include elemento(card-description) {
     @include responsive-font-size(18px);
     color: $cinza;
     font-family: $font-family;
-    
-  } 
+  }
 }
-.campaigns {  
-  margin-top: 20px;  
-  
-  @include elemento(linha) {    
+.campaigns {
+  margin-top: 20px;
+
+  @include elemento(linha) {
     border-radius: 10px;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     min-height: 350px;
   }
 
   @include elemento(cards) {
     @include make-col-ready();
-    
-    
-    @include media-breakpoint-up(xs){
+
+    @include media-breakpoint-up(xs) {
       @include make-col(12);
     }
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
       @include make-col(12);
     }
 
-    &-detail {      
+    &-detail {
       h5 {
-        @include responsive-font-size(18px);        
+        @include responsive-font-size(18px);
         color: $azul;
         &::before {
-          content: '';   
-          display: inline-block;       
+          content: "";
+          display: inline-block;
           width: 10px;
           height: 10px;
           background-color: $verde;
@@ -70,18 +68,18 @@
   @include elemento(card-columns) {
     @include card-columns;
     margin-top: 20px;
-  } 
+  }
 }
 
 .campaigns {
   @include elemento(detail) {
     @include make-row(0);
     @include make-col-ready(0);
-  
+
     @include media-breakpoint-up(xs) {
       @include make-col(12);
     }
-  
+
     @include media-breakpoint-up(lg) {
       @include make-col(12);
     }
@@ -119,21 +117,21 @@
       color: $cinza;
     }
   }
-  
+
   @include elemento(tab) {
-    @include make-col-ready();    
+    @include make-col-ready();
     @include media-breakpoint-up(xs) {
       margin-top: 20px;
-      @include make-col(12);    
+      @include make-col(12);
     }
 
     @include media-breakpoint-up(lg) {
       margin-top: 0;
-      @include make-col(6);    
+      @include make-col(6);
     }
   }
 
-  @include elemento(tabs) {  
+  @include elemento(tabs) {
     justify-content: space-between;
     border: 2px solid #707070;
     border-radius: 5px;
@@ -142,24 +140,23 @@
     .nav-item {
       background-color: transparent;
 
-      .nav-link {        
+      .nav-link {
         border-radius: 5px;
         line-height: 1rem;
-        
+
         &,
         &:hover {
           border: none;
-          
         }
 
         &:hover,
         &.active {
-          background-color: #47C77D;
+          background-color: #47c77d;
         }
       }
     }
   }
-  
+
   .tab-content {
     .btn {
       float: right;

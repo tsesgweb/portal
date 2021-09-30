@@ -39,6 +39,7 @@
   @include item(autor) {
     color: #bdbdbd;
   }
+  
   @include item(data) {
     color: #bdbdbd;
   }
@@ -52,6 +53,7 @@
 
   .aviso-icone {
     padding-right: 15px;
+
     img {
       background-color: #ffde57;
       border-radius: 50%;

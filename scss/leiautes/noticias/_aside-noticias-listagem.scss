@@ -1,7 +1,5 @@
 #aside-noticias {
   .portletWrapper {
-    // padding-left: 15px;
-    // padding-right: 15px;
     background-color: $branco;
     padding-bottom: 15px;
   }
@@ -41,7 +39,7 @@
         align-items: center;
 
         &::before {
-          content: '';
+          content: "";
           width: 10px;
           height: 10px;
           background: #47c77d;
@@ -229,22 +227,10 @@
     border-bottom-width: 3px;
     border-bottom-style: solid;
     border-bottom-color: #f5f5f5;
-
-    // @include modificar(amarelo) {
-    //   border-bottom-color: #FFDE57;
-    // }
-
-    // @include modificar(verde) {
-    //   border-bottom-color: #47C77D;
-    // }
-
-    // @include modificar(azul) {
-    //   border-bottom-color: #5ADBFF;
-    // }
   }
 
   @include item(list-group) {
-    @include list-group('flush');
+    @include list-group("flush");
   }
 
   @include item(list-group-item) {

@@ -1,11 +1,11 @@
 #aside-noticias {
- @include make-col-ready(0);
- @include media-breakpoint-up(xs) {
-   @include make-col-offset(1);
-   @include make-col(3);
- }
+  @include make-col-ready(0);
+  @include media-breakpoint-up(xs) {
+    @include make-col-offset(1);
+    @include make-col(3);
+  }
 
- &.listagem {        
+  &.listagem {
     @include make-col-offset(0);
     padding-right: 15px;
     background-color: $branco;

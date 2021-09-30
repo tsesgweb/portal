@@ -1,5 +1,6 @@
 #tv {
   margin-top: 10px;
+
   h2 {
     @include sub-titulo;
     padding: 0;
@@ -7,38 +8,45 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
   .tv__conteudo {
     background-color: $branco;
     border-radius: 5px;
     padding-bottom: 50px;
   }
+
   .tv__linha {
-    @include make-col-ready(0); //iniciar a columa (antes da linha e __conteúdo)
+    @include make-col-ready(0); 
     display: flex;
+
     .item-principal {
       @include make-col-ready();
       @include make-col(7);
+
       img.img-fluid {
         border-radius: 5px;
         @include img-fluid;
       }
+
       p {
         margin-left: 5px;
         font: normal normal bold 20px/28px Open Sans;
         color: $azul;
       }
+
       .icone-play {
         background-color: gold;
         color: gold;
       }
     }
+
     .item-secundario {
       @include make-col-ready(0);
       @include make-col(5);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
+
       @include media-breakpoint-only(lg) {
         margin-bottom: 48px;
       }
@@ -46,9 +54,11 @@
       .item {
         padding-top: 5px;
         padding-bottom: 5px;
+
         &:nth-last-child(3) {
           padding-top: 0;
         }
+
         img {
           @include img-fluid;
           max-width: 160px;
@@ -58,15 +68,18 @@
         border-bottom: 1px solid #dcdcdc;
         display: flex;
         align-items: center;
+        
         &:nth-last-child(1) {
           border-bottom: none;
         }
+
         p {
           margin-left: 10px;
           margin-bottom: 0;
           font: normal normal bold 14px/19px Open Sans;
           color: $azul;
         }
+
         &:before {
           content: "\f16a";
           font-family: "FontAwesome";
@@ -82,47 +95,55 @@
       }
     }
   }
+
   .programas-semanais__linha {
     @include make-col-ready();
     display: flex;
+
     .item-principal-1 {
       @include make-col-ready(0);
       @include make-col(4);
       display: flex;
       flex-direction: column;
+
       p {
         display: flex;
-        align-items: baseline;
-        // justify-content: baseline;
+        align-items: baseline;        
         padding: 15px;
         color: $branco;
       }
     }
+
     .item-secundario-1 {
       @include make-col-ready();
       @include make-col(8);
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+
       .item {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding-bottom: 5px;
+
         p {
           margin-left: 5px;
           font: normal normal 18px/25px Open Sans;
           color: $azul;
         }
+
         &:nth-last-child(1) {
           border-bottom: none;
         }
+
         a {
           border: 1px solid greenyellow;
           display: flex;
           cursor: pointer;
         }
+
         &:before {
           content: "\f16a";
           font-family: "FontAwesome";
@@ -136,6 +157,7 @@
           align-items: center;
         }
       }
+
       button {
         padding: 8px 16px;
         font-size: 18px;
@@ -150,6 +172,7 @@
         }
       }
     }
+
     .item-principal-2 {
       @include make-col-ready(0);
       @include make-col(4);
@@ -157,35 +180,41 @@
       flex-direction: column;
       background: #f4b601;
       border-radius: 5px;
+
       img {
         border-radius: 5px;
       }
+
       p {
         display: flex;
-        align-items: baseline;
-        // justify-content: baseline;
+        align-items: baseline;        
         padding: 15px;
         color: $azul;
       }
     }
+
     .item-secundario-2 {
       @include make-col-ready();
       @include make-col(8);
       display: flex;
       flex-direction: column;
+
       .item {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
         p {
           margin-left: 5px;
           font: normal normal 18px/25px Open Sans;
           color: $azul;
         }
+
         &:nth-last-child(1) {
           border-bottom: none;
         }
+
         &:before {
           content: "\f16a";
           font-family: "FontAwesome";
@@ -207,33 +236,39 @@
       flex-direction: column;
       background: #616c88;
       border-radius: 5px;
+
       img {
         border-radius: 5px;
       }
+
       p {
         display: flex;
         align-items: baseline;
-        // justify-content: baseline;
+        
         padding: 15px;
         color: $branco;
       }
     }
+
     .item-secundario-2 {
       @include make-col-ready();
       @include make-col(8);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
       .item {
         display: flex;
         flex-direction: row;
         align-items: center;
+
         p {
           margin-left: 5px;
           font: normal normal 18px/25px Open Sans;
           color: $azul;
         }
       }
+
       button {
         padding: 8px 16px;
         font-size: 18px;
@@ -242,6 +277,7 @@
         border-radius: 5px;
         border: 1px solid $azul;
         transition: 0.6s ease;
+        
         &:hover {
           background-color: $azul;
           color: $branco;

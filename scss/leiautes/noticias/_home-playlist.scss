@@ -4,102 +4,101 @@ $verde: #20ab6f;
 $vermelho: #e07a5f;
 $link-color: #873c42;
 #playlist {
-    h2 {
-        @include sub-titulo;
-    }
-    button {
-        margin: 0 auto;
-        margin-bottom: 44px;
-    }
-    .playlist-item {
-        @include make-col-ready(); //iniciar a columa (antes da linha e __conteúdo)
-        @include make-col(3);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;        
+  h2 {
+    @include sub-titulo;
+  }
+  button {
+    margin: 0 auto;
+    margin-bottom: 44px;
+  }
+  .playlist-item {
+    @include make-col-ready(); //iniciar a columa (antes da linha e __conteúdo)
+    @include make-col(3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
 
-        .item-01 {
-            background: url('#{$path_img}/noticias/sound.svg') repeat-x padding-box bottom center;
-            background-color: $verde-escuro;
-            width: 100%;
-            height: 200px;
-            padding: 5px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            line-height: 36px;
-            font-weight: bold;
-            text-align: center;
-            letter-spacing: 0.12px;
-            font-family: 'Open Sans';
-            font-weight: bold;
-            color: $branco;
-            cursor: pointer;
+    .item-01 {
+      background: url("#{$path_img}/noticias/sound.svg") repeat-x padding-box
+        bottom center;
+      background-color: $verde-escuro;
+      width: 100%;
+      height: 200px;
+      padding: 5px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 0.12px;
+      font-family: "Open Sans";
+      font-weight: bold;
+      color: $branco;
+      cursor: pointer;
 
-            &:hover {
-                filter: brightness(.9);
-                transition: .3s;
-                color: $branco;
-            }
-        }
-        .item-02 {
-            @extend .item-01;
-            background-color: $amarelo;
-            color: $link-color;           
-        }
-        .item-03 {
-            @extend .item-01;
-            background-color: $verde;
-                      
-        }
-        .item-04 {
-            @extend .item-01;
-            background-color: $vermelho;
-            color: $link-color;
-            
-            &:hover {
-                color: $link-color;              
-            }
-        }
-        .item-05, 
-        .item-09 {
-          @extend .item-01;
-        }
-
-        .item-06,
-        .item-10 {
-          @extend .item-02;
-        }
-        .item-07,
-        .item-11 {
-          @extend .item-03;
-        }
-        .item-08,
-        .item-12 {
-          @extend .item-04;
-        }
-
-    }
-
-    .owl-dot {      
-      span {
-        background-color: $azul;             
-        
-        &:hover {
-          opacity: 0.5;
-        }
+      &:hover {
+        filter: brightness(0.9);
+        transition: 0.3s;
+        color: $branco;
       }
     }
-    .owl-dot.active {      
-      span {
-        background-color: $amarelo;             
-        
-        &:hover {
-          opacity: 0.5;
-        }
+    .item-02 {
+      @extend .item-01;
+      background-color: $amarelo;
+      color: $link-color;
+    }
+    .item-03 {
+      @extend .item-01;
+      background-color: $verde;
+    }
+    .item-04 {
+      @extend .item-01;
+      background-color: $vermelho;
+      color: $link-color;
+
+      &:hover {
+        color: $link-color;
       }
     }
+    .item-05,
+    .item-09 {
+      @extend .item-01;
+    }
+
+    .item-06,
+    .item-10 {
+      @extend .item-02;
+    }
+    .item-07,
+    .item-11 {
+      @extend .item-03;
+    }
+    .item-08,
+    .item-12 {
+      @extend .item-04;
+    }
+  }
+
+  .owl-dot {
+    span {
+      background-color: $azul;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  .owl-dot.active {
+    span {
+      background-color: $amarelo;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
