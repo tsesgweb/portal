@@ -50,6 +50,7 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
         flex-direction: column;
         padding-right: 0;
       }
+
       .apresentacao-card {
         align-items: center;
         display: flex;
@@ -156,6 +157,11 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
         }
 
         .lista-ultimos-videos {
+          display: flex;
+          flex-flow: wrap;
+          height: 100%;
+          margin: 0;
+
           .media {
             align-items: center;
             margin: 0.4em 0;
@@ -163,6 +169,10 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
             border-radius: 5px;
             padding: 5px;
             flex: 0 0 calc(100%);
+
+            .media-body {
+              padding-left: 10px;
+            }
 
             @include media-breakpoint-down(sm) {
               align-items: center;
@@ -190,7 +200,6 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
             }
 
             .img {
-              margin-right: 0.5em !important;
               width: 140px;
               height: 110px;
               border-radius: 5px;
@@ -241,7 +250,7 @@ $fechar: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csv
     }
 
     .owl-item {
-      > div {
+      >div {
         background-color: $azul;
         border-radius: 5px;
         display: flex;
