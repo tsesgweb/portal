@@ -165,7 +165,7 @@ $aspas_fecha: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%
     .noticia-icone {
         @include media-breakpoint-only(xs) {
             display: none;
-        }
+        }               
     }
 
     .noticia-cabecalho {
@@ -274,4 +274,11 @@ $aspas_fecha: "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%
         }
 
     }
+}
+
+.template-audioradio {
+  .compartilhar-barra-ferramentas .noticia-icone {
+    display: flex;
+    justify-content: space-between;
+  }
 }

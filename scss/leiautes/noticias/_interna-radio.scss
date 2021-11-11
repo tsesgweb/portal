@@ -66,4 +66,65 @@
     border-left: 1px solid #ffde57;
     color: #1b305a;
   }
+
+  
+}
+.template-audioradio {  
+  .lateral__ultimas-header,
+  .mini-banners__header {
+    @extend .lateral__mais-lidas-header;
+    padding-left: 0!important;
+    border-bottom: 0!important;
+    padding-bottom: 0!important;
+    margin-bottom: 0!important;
+  }
+  .lateral__ultimas-title,
+  .mini-banners__title {
+    @extend .lateral__mais-lidas-title;
+  }
+  .mini-banners__title {
+    margin-bottom: 15px!important;
+  }
+  
+  .ultimas-imagem {
+    
+    img {
+      border-radius: $radius;
+      @include img-fluid;
+    }
+  }
+
+  .mini-banners {
+    position: relative;
+    
+    .owl-nav {
+      margin-top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+      width: 100%;
+      position: absolute;
+      bottom: 55%;
+      
+      .owl-prev,
+      .owl-next {  
+        span {
+          font-size: 5rem;
+          line-height: 1.5;
+          color: $cinza;
+        }
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    .owl-dots {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      
+    }
+  }
 }

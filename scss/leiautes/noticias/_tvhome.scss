@@ -21,7 +21,13 @@
 
     .item-principal {
       @include make-col-ready();
-      @include make-col(7);
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+      
+      @include media-breakpoint-up(lg) {
+        @include make-col(7);
+      }
 
       img.img-fluid {
         border-radius: 5px;
@@ -29,6 +35,7 @@
       }
 
       p {
+        padding-top: 5px;
         margin-left: 5px;
         font: normal normal bold 20px/28px Open Sans;
         color: $azul;
@@ -42,10 +49,19 @@
 
     .item-secundario {
       @include make-col-ready(0);
-      @include make-col(5);
+
+      @include media-breakpoint-up(xs) {
+        @include make-col(12);
+      }
+
+      @include media-breakpoint-up(lg) {
+        @include make-col(5);
+      }
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      max-height: 468px;
 
       @include media-breakpoint-only(lg) {
         margin-bottom: 48px;
@@ -177,8 +193,7 @@
       @include make-col-ready(0);
       @include make-col(4);
       display: flex;
-      flex-direction: column;
-      background: #f4b601;
+      flex-direction: column;      
       border-radius: 5px;
 
       img {
@@ -260,12 +275,19 @@
       .item {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: self-start;
+        justify-content: flex-start;
+
+        img {
+          border-radius: $radius;
+          max-width: 192px;
+        }
 
         p {
-          margin-left: 5px;
+          margin-left: 15px;
           font: normal normal 18px/25px Open Sans;
           color: $azul;
+          text-align: left;
         }
       }
 
