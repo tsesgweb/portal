@@ -1,3 +1,4 @@
+#coluna-lateral-noticias,
 #aside-noticias {
   .portletWrapper {
     background-color: $branco;
@@ -252,4 +253,16 @@
       font-weight: bold;
     }
   }
+}
+
+.template-audioradio {
+  .ultimas-imagem {
+    max-width: 25%;
+  }
+  .ancora-sem-conteudo {
+    .ultimas-imagem {
+      max-width: 100%;
+    }
+  }
+
 }

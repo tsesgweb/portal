@@ -1,3 +1,4 @@
+#coluna-lateral-noticias,
 #aside-noticias {
   @include make-col-ready(0);
   @include media-breakpoint-up(xs) {

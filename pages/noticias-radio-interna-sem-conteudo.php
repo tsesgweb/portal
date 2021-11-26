@@ -77,50 +77,63 @@ include BASE_URL . '/includes/header.inc.php';
       <div class="portletWrapper"
         data-portlethash="706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f706f7274616c6a652f7473652f696d7072656e73612f726164696f0a70726f6772616d6173"
         id="portletwrapper-706c6f6e652e7269676874636f6c756d6e0a636f6e746578740a2f706f7274616c6a652f7473652f696d7072656e73612f726164696f0a70726f6772616d6173">
+        <header class="mini-banners__header">
+          <h4 class="mini-banners__title">
+            Playlist
+          </h4>
+        </header>
         <div class="portletWrapper">
-          <header class="mini-banners__header">
-            <h4 class="mini-banners__title">
-              Playlist
-            </h4>
-          </header>
-          <div class="mini-banners">
-            <div class="radio-lista radio-lista-01">
-              <div class="radio-lista-body"><a class="btn btn-link stretched-link"
-                  href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=diario-das-eleicoes">
-                  Diário das Eleições
-                </a></div>
-            </div>
-            <div class="radio-lista radio-lista-02">
-              <div class="radio-lista-body"><a class="btn btn-link stretched-link"
-                  href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=conexao-eleitoral">
-                  Conexão eleitoral
-                </a></div>
-            </div>
-            <div class="radio-lista radio-lista-03">
-              <div class="radio-lista-body"><a class="btn btn-link stretched-link"
-                  href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=por-dentro-da-justica-eleitoral">
-                  Por dentro da Justiça Eleitoral
-                </a></div>
-            </div>
-            <div class="radio-lista radio-lista-04">
-              <div class="radio-lista-body"><a class="btn btn-link stretched-link"
-                  href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=sessao-plenaria">
-                  Sessão Plenária
-                </a></div>
-            </div>
-            <div class="radio-lista radio-lista-05">
-              <div class="radio-lista-body"><a class="btn btn-link stretched-link"
-                  href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=teste-de-programa">
-                  Teste de programa
-                </a></div>
+          <div class="radio-lista radio-lista-01">
+            <div class="radio-lista-body">
+              <a class="btn btn-link stretched-link"
+                href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=diario-das-eleicoes">
+                Diário das Eleições
+              </a>
             </div>
           </div>
         </div>
-
-
-
-
+        <div class="portletWrapper">
+          <div class="radio-lista radio-lista-02">
+            <div class="radio-lista-body">
+              <a class="btn btn-link stretched-link"
+                href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=conexao-eleitoral">
+                Conexão eleitoral
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portletWrapper">
+          <div class="radio-lista radio-lista-03">
+            <div class="radio-lista-body">
+              <a class="btn btn-link stretched-link"
+                href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=por-dentro-da-justica-eleitoral">
+                Por dentro da Justiça Eleitoral
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portletWrapper">
+          <div class="radio-lista radio-lista-04">
+            <div class="radio-lista-body">
+              <a class="btn btn-link stretched-link"
+                href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=sessao-plenaria">
+                Sessão Plenária
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="portletWrapper">
+          <div class="radio-lista radio-lista-05">
+            <div class="radio-lista-body">
+              <a class="btn btn-link stretched-link"
+                href="https://portalhomologa.tse.jus.br/tse/imprensa/radio?program=teste-de-programa">
+                Teste de programa
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
     </aside>
     <?php include BASE_URL . '/includes/noticias/barra-ferramentas-noticias.inc.php';?>
   </div>
