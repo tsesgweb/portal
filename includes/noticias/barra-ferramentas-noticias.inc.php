@@ -10,16 +10,16 @@
           <button class="proximo"><span class="titulo">Próximo</span></button>
         </div>
         <div class="tempo-leitura">8 min de leitura</div>
-        <div class="media">
-        <div class="dropdown">
-          <button class="compartilhar dropdown-toggle" type="button" id="compartilhar-barra-ferramentas" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Compartilhar</span>
-          </button>
-          <div class="dropdown-menu compartilhar-barra-ferramentas" aria-labelledby="compartilhar-barra-ferramentas">
-            <?php include BASE_URL . '/includes/share-icones.inc.php';?>
+        <div class="media template-audioradio">
+          <div class="dropdown">
+            <button class="compartilhar dropdown-toggle" type="button" id="compartilhar-barra-ferramentas"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Compartilhar</span>
+            </button>
+            <div class="dropdown-menu compartilhar-barra-ferramentas " aria-labelledby="compartilhar-barra-ferramentas">
+              <?php include BASE_URL . '/includes/share-icones.inc.php';?>
+            </div>
           </div>
-</div>
         </div>
         <div class="eventos-pagina">
           <button type="button" class="imprimir" onclick="window.print()"><span class="sr-only">Imprimir</span></button>

@@ -23,28 +23,31 @@
 
         <ul class="list-unstyled lista-ultimos-videos">
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
             <div class="media-body">
-              <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão título
+              <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
+                  título
                   cancelado</a></h5>
               <p class="texto">Você vai .</p>
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
             <div class="media-body">
-              <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão título
+              <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
+                  título
                   cancelado</a></h5>
               <p class="texto">Você vai .</p>
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
             <div class="media-body">
-              <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão título
+              <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
+                  título
                   cancelado</a></h5>
               <p class="texto">Você vai .</p>
             </div>
@@ -74,8 +77,8 @@
 
         <ul class="list-unstyled lista-ultimos-videos">
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -85,8 +88,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -96,8 +99,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -131,8 +134,8 @@
 
         <ul class="list-unstyled lista-ultimos-videos">
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -142,8 +145,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -153,8 +156,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -188,8 +191,8 @@
 
         <ul class="list-unstyled lista-ultimos-videos">
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -199,8 +202,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -210,8 +213,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -245,8 +248,8 @@
 
         <ul class="list-unstyled lista-ultimos-videos">
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -256,8 +259,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -267,8 +270,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -302,8 +305,8 @@
 
         <ul class="list-unstyled lista-ultimos-videos">
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -313,8 +316,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -324,8 +327,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -359,8 +362,8 @@
 
         <ul class="list-unstyled lista-ultimos-videos">
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=1" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -370,8 +373,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/200?random=2" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
@@ -381,8 +384,8 @@
             </div>
           </li>
           <li class="media">
-            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action play"><img class="img"
-                src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
+            <a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" data-fancybox class="fancybox-action play"><img
+                class="img" src="https://picsum.photos/200/300?random=3" alt="Lorem Ipsum"></a>
             <div class="media-body">
               <h5 class="titulo"><a href="https://www.youtube.com/watch?v=cs0JasFp0Y4" class="fancybox-action">Conexão
                   Eleitoral mostra que eleitores faltosos podem ter o título
