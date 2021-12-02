@@ -26,8 +26,8 @@ $(window).on("load", function () {
   });
 
   // mostra painel de compartilhamento
-  function sharingOverlay($btn, $klass, $find) {
-    $($btn).on("click focusin", function () {
+  function sharingOverlay($btn, $klass, $find, $element) {
+    $($element).on("click focusin", $btn, function () {
       $(this)
         .closest($find)
         .find("." + $klass + "-overlay")
@@ -45,10 +45,10 @@ $(window).on("load", function () {
     });
   }
 
-  sharingOverlay(".news-list-sharing", "news-list-sharing", "div");
-  sharingOverlay(".news-list-sharing", "news-list-sharing", ".news-list-col-8");
-  sharingOverlay(".news-btn-sharing", "news-list-sharing", ".news-card");
-  sharingOverlay(".radio-list-sharing", "radio-list-sharing", "div");
+  sharingOverlay(".news-list-sharing", "news-list-sharing", "div", "div");
+  sharingOverlay(".news-list-sharing", "news-list-sharing", ".news-list-col-8", "div");
+  sharingOverlay(".news-btn-sharing", "news-list-sharing", ".news-card", ".news-footer");
+  sharingOverlay(".radio-list-sharing", "radio-list-sharing", "div", ".radio-list-footer");
 
   //habilita o tooltip
 
