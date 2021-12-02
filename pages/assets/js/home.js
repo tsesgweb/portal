@@ -34,4 +34,31 @@ $(document).ready(function () {
       },
     });
   })();
+
+  (function () {
+
+    setTimeout(function () {
+      const servicos = $(".destaque-servico").outerHeight();
+      const altura_padrao = 697.8;
+      const diferenca = 24;
+      
+      const linhas_diferentes = (servicos - altura_padrao) / diferenca;
+            
+      Breakpoints.on('lg xl', {
+        enter: function () {
+          $(".noticia-secundaria").addClass("linha-" + linhas_diferentes);
+        },
+        leave: function () {
+          $(".noticia-secundaria").removeClass("linha-" + linhas_diferentes);
+        }
+      });
+    }, 3000);
+    
+
+    
+
+
+
+
+  })();
 });

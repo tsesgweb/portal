@@ -543,6 +543,42 @@ $badge-content in $badge-theme {
     .icone {
       bottom: 40% !important;
     }
+
+    &.linha-1 {
+      .noticia__titulo {
+        .titulo {
+          font-size: 16px;
+          height: 103px;
+          padding-top: 16px;
+          padding-bottom: 16px;
+        }
+      }
+    }
+
+    &.linha-2 {
+      .noticia__titulo {
+        .titulo {
+          font-size: 16px;
+          height: 127px;
+          padding-top: 28px;
+          padding-bottom: 28px;
+        }
+      }
+    }
+
+    &.linha-3,
+    &.linha-4,
+    &.linha-5,
+    &.linha-6 {
+      .noticia__titulo {
+        .titulo {
+          font-size: 16px;
+          height: 151px;
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+      }
+    }
   }
 
   @include elemento(itens) {

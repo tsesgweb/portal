@@ -155,17 +155,17 @@
             <a href="#" data-toggle="modal" data-target="#consultaProcessosFisicos">Processos físicos</a>
           </li>
           <li class="destaque-servico-list__item">
-            <a href="#" data-toggle="modal" data-target="#consultaDje">DJE</a>
+            <a href="#" data-toggle="modal" data-target="#consultaDje">Diário da Justiça Eletrônico - DJE</a>
           </li>
           <li class="destaque-servico-list__item">
-            <a href="https://pje.tse.jus.br:8443/pje-web/login.seam">Acesso ao PJE</a>
+            <a href="https://pje.tse.jus.br:8443/pje-web/login.seam">Acesso ao PJe</a>
           </li>
           <li class="destaque-servico-list__item">
             <a href="#" data-toggle="modal" data-target="#consultaLegislacaoCompilada">Legislação compilada</a>
           </li>
           <li class="destaque-servico-list__item">
-            <a href="https://pje.tse.jus.br:8443/pje-web/ConsultaPublica/listView.seam">Consulta Pública PJE</a>
-          </li>
+            <a href="https://pje.tse.jus.br:8443/pje-web/ConsultaPublica/listView.seam">Consulta PJe</a>
+          </li> 
         </ul>
       </div>
     </div>
