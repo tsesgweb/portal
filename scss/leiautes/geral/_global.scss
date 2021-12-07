@@ -13,7 +13,7 @@ $value in $theme-colors {
   @include make-row();
 }
 
-[class$='__conteudo'] {
+[class*='__conteudo'] {
   @include make-container();
   @include make-container-max-widths();
 }

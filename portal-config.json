@@ -67,10 +67,7 @@
                 "assets/js/vendor/jquery.placeholder.js",
                 "assets/js/vendor/clipboard.min.js",
                 "assets/js/vendor/audio-player.js"                
-            ],            
-            "rybena": [
-                "assets/js/vendor/rybena.js"
-            ],
+            ],                     
             "portal": [
                 "assets/js/novo-portal.js",
                 "assets/js/botoes-ferramentas.js",

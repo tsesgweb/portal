@@ -5,12 +5,12 @@
       class="ferramentas__botao ferramentas__botoes_acessibilidade">
       <span class="sr-only">Acessibilidade</span>
     </li>
-    <li id="contraste" data-toggle="tooltip" data-placement="top" title="Alto contraste preto"
-      class="ferramentas__botao ferramentas__botoes_contraste">
-      <span class="sr-only">Contraste</span>
-    </li>
     <li id="custom-rybena-div">
       <ul>
+        <li data-toggle="tooltip" data-placement="top" title="Acessibilidades adicionais"
+          class="ferramentas__botao ferramentas__botoes_vision btn-rybena-vision">
+          <span class="sr-only">Rybená acessibilidades adicionais</span>
+        </li>
         <li data-toggle="tooltip" data-placement="top" title="Libras"
           class="ferramentas__botao ferramentas__botoes_libras btn-rybena-sign-language">
           <span class="sr-only">Rybená Libras</span>

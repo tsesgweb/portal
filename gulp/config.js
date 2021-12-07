@@ -1,33 +1,33 @@
-const _ = require('lodash')
-const pkg = require('../package.json')
-const gutil = require('gulp-util')
-const env = gutil.env.env || 'development'
-const header = require('gulp-header')
+const _ = require("lodash");
+const pkg = require("../package.json");
+const gutil = require("gulp-util");
+const env = gutil.env.env || "development";
+const header = require("gulp-header");
 let dest,
-  min = ''
+  min = "";
 
 switch (env) {
-  case 'development':
-    dest = 'pages/assets/'
-    break
-  case 'test':
-    dest = 'dist/test/'
-    break
-  case 'production':
-    dest = 'production/'
-    min = '.min'
-    break
+  case "development":
+    dest = "pages/assets/";
+    break;
+  case "test":
+    dest = "dist/test/";
+    break;
+  case "production":
+    dest = "production/";
+    min = ".min";
+    break;
 }
 
 const banner = [
-  '/**',
-  ' * <%= pkg.author %> - v<%= pkg.version %>',
-  ' */'
-].join('\n');
+  "/**",
+  " * <%= pkg.author %> - v<%= pkg.version %>",
+  " */",
+].join("\n");
 
 const htmlreplace = {
-  external: '',
-  cssvendor: '',
+  external: "",
+  cssvendor: "",
   plugins: `css/plugins${min}.css`,
   portal: `css/master${min}.css`,
   plus: `css/plus${min}.css`,
@@ -38,54 +38,55 @@ const htmlreplace = {
   csshome: `css/home${min}.css`,
   css9: {
     src: `css/ie${min}.css`,
-    tpl: '<!--[if lt IE 9]><link rel="stylesheet" href="%s"></link><![endif]-->'
+    tpl: '<!--[if lt IE 9]><link rel="stylesheet" href="%s"></link><![endif]-->',
   },
   css8: {
     src: `css/ie8${min}.css`,
-    tpl: '<!--[if lt IE 8]><link rel="stylesheet" href="%s"></link><![endif]-->'
+    tpl: '<!--[if lt IE 8]><link rel="stylesheet" href="%s"></link><![endif]-->',
   },
   js9: {
     src: `js/ie${min}.js`,
-    tpl: '<!--[if lt IE 9]><script src="%s"></script><![endif]-->'
+    tpl: '<!--[if lt IE 9]><script src="%s"></script><![endif]-->',
   },
   js8: {
     src: `js/ie8${min}.js`,
-    tpl: '<!--[if lt IE 8]><script src="%s"></script><![endif]-->'
+    tpl: '<!--[if lt IE 8]><script src="%s"></script><![endif]-->',
   },
   jshead: `js/modernizr${min}.js`,
   jsvendor: `js/vendor${min}.js`,
-  jsrybena: `js/rybena${min}.js?positionPlayer=left`,
   jsexternal: `js/external${min}.js`,
   jsportal: `js/portal${min}.js`,
   jshome: `js/home${min}.js`,
   jsinternas: `js/internas${min}.js`,
   jsexposicao: `js/exposicao${min}.js`,
-}
+};
 
 const paths = {
   src: {
-    base: './',
-    php: ['pages/**/*.php','!pages/**/*.inc.php', '!pages/internacional/**/*.php'],
-    html: '**/*.html',
-    css: 'pages/assets/css/**/*.css',
-    sass: 'scss/**/*.scss',
-    img: 'pages/assets/imagens/**/*.+(png|jpg|bmp|svg)',
-    fonts: 'pages/assets/fonts/**/*.+(otf|eot|svg|ttf|woff|woff2)',
-    js: 'pages/assets/js',
+    base: "./",
+    php: [
+      "pages/**/*.php",
+      "!pages/**/*.inc.php",
+      "!pages/internacional/**/*.php",
+    ],
+    html: "**/*.html",
+    css: "pages/assets/css/**/*.css",
+    sass: "scss/**/*.scss",
+    img: "pages/assets/imagens/**/*.+(png|jpg|bmp|svg)",
+    fonts: "pages/assets/fonts/**/*.+(otf|eot|svg|ttf|woff|woff2)",
+    js: "pages/assets/js",
     ieplugins: [
-      'assets/js/ie/html5shiv.js',
-      'assets/js/ie/html5shiv-printshiv.js',
-      'assets/js/ie/respond.js',
-      'assets/js/ie/lte-IE8.js',
-      'assets/js/ie/*.js'
+      "assets/js/ie/html5shiv.js",
+      "assets/js/ie/html5shiv-printshiv.js",
+      "assets/js/ie/respond.js",
+      "assets/js/ie/lte-IE8.js",
+      "assets/js/ie/*.js",
     ],
     vendor: [
-      'assets/js/vendor/modernizr.js',
-      'assets/js/vendor/bootstrap-datepicker.js'
+      "assets/js/vendor/modernizr.js",
+      "assets/js/vendor/bootstrap-datepicker.js",
     ],
-    rybena: [
-      'assets/js/vendor/rybena.js'
-    ]
+    rybena: ["assets/js/vendor/rybena.js"],
   },
   dest: {
     all: dest,
@@ -95,38 +96,38 @@ const paths = {
     fonts: `${dest}/fonts`,
   },
   srcen: {
-    php: 'en/*.php',
+    php: "en/*.php",
     img: [
-      'assets/imagens/internacional/*.+(png|jpg|bmp)',
-      'assets/imagens/*.+(png|jpg|bmp)'
-    ]
+      "assets/imagens/internacional/*.+(png|jpg|bmp)",
+      "assets/imagens/*.+(png|jpg|bmp)",
+    ],
   },
   desten: {
-    all: dest + 'internacional/',
-    js: dest + 'internacional/js',
-    img: dest + 'internacional/imagens/',
-    css: dest + 'internacional/css/',
-    fonts: dest + 'internacional/fonts/'
-  }
-}
+    all: dest + "internacional/",
+    js: dest + "internacional/js",
+    img: dest + "internacional/imagens/",
+    css: dest + "internacional/css/",
+    fonts: dest + "internacional/fonts/",
+  },
+};
 const constants = {
   default: {
-    apiHost: '127.0.0.1:8000',
-    htmlreplace: {}
+    apiHost: "127.0.0.1:8000",
+    htmlreplace: {},
   },
   development: {
-    apiHost: '127.0.0.1:8000',
-    htmlreplace: {}
+    apiHost: "127.0.0.1:8000",
+    htmlreplace: {},
   },
   test: {
-    apiHost: '127.0.0.1:8000/' + dest,
-    htmlreplace: htmlreplace
+    apiHost: "127.0.0.1:8000/" + dest,
+    htmlreplace: htmlreplace,
   },
   production: {
-    apiHost: 'http://webhomologa.tse.jus.br/portal',
-    htmlreplace: htmlreplace
-  }
-}
+    apiHost: "http://webhomologa.tse.jus.br/portal",
+    htmlreplace: htmlreplace,
+  },
+};
 const run = {
   default: {
     imagemin: false,
@@ -135,23 +136,23 @@ const run = {
       concat: false,
       minify: false,
       rename: false,
-      replace: false
+      replace: false,
     },
     css: {
       autoprefix: false,
       cssminify: false,
       maps: true,
       minify: false,
-      rename: false
+      rename: false,
     },
-    sass: 'compact',
+    sass: "compact",
     html: false,
     scripts: false,
     fonts: false,
     imagens: false,
     banner: {
-      signature: false
-    }
+      signature: false,
+    },
   },
   development: {
     imagemin: false,
@@ -160,23 +161,23 @@ const run = {
       concat: false,
       minify: false,
       rename: false,
-      replace: false
+      replace: false,
     },
     css: {
       autoprefix: false,
       cssminify: false,
       maps: true,
       minify: false,
-      rename: false
+      rename: false,
     },
-    sass: 'expanded',
+    sass: "expanded",
     html: false,
     scripts: false,
     fonts: false,
     imgs: false,
     banner: {
-      signature: false
-    }
+      signature: false,
+    },
   },
   test: {
     imagemin: true,
@@ -185,23 +186,23 @@ const run = {
       concat: true,
       minify: false,
       rename: true,
-      replace: true
+      replace: true,
     },
     css: {
       autoprefix: true,
       cssminify: true,
       maps: false,
       minify: false,
-      rename: true
+      rename: true,
     },
-    sass: 'nested',
+    sass: "nested",
     html: true,
     scripts: true,
     fonts: true,
     imgs: true,
     banner: {
-      signature: true
-    }
+      signature: true,
+    },
   },
   production: {
     imagemin: true,
@@ -210,16 +211,16 @@ const run = {
       concat: true,
       minify: true,
       rename: true,
-      replace: true
+      replace: true,
     },
     css: {
       autoprefix: true,
       cssminify: true,
       maps: false,
       minify: true,
-      rename: true
+      rename: true,
     },
-    sass: 'compressed',
+    sass: "compressed",
     html: true,
     scripts: true,
     fonts: true,
@@ -227,14 +228,14 @@ const run = {
     banner: {
       signature: true,
       logo: header(banner, {
-        pkg: pkg
-      })
-    }
-  }
-}
+        pkg: pkg,
+      }),
+    },
+  },
+};
 
-const runOpts = _.merge({}, run.default, run[env])
-const constantsOpts = _.merge({}, constants.default, constants[env])
-module.exports.paths = paths
-module.exports.constants = constantsOpts
-module.exports.run = runOpts
+const runOpts = _.merge({}, run.default, run[env]);
+const constantsOpts = _.merge({}, constants.default, constants[env]);
+module.exports.paths = paths;
+module.exports.constants = constantsOpts;
+module.exports.run = runOpts;

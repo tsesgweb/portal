@@ -1,5 +1,5 @@
 <!-- destaque -->
-<div id="destaque-principal" class="destaque__conteudo oculto">
+<div id="destaque-principal" class="destaque__conteudo">
   <div class="destaque__linha">
     <!-- destaque noticia -->
     <div class="destaque-noticia">
@@ -165,7 +165,7 @@
           </li>
           <li class="destaque-servico-list__item">
             <a href="https://pje.tse.jus.br:8443/pje-web/ConsultaPublica/listView.seam">Consulta PJe</a>
-          </li> 
+          </li>
         </ul>
       </div>
     </div>
@@ -199,9 +199,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16.489" height="14.632" viewBox="0 0 16.489 14.632">
               <defs>
                 <style>
-                  .a {
-                    fill: #1b305a;
-                  }
+                .a {
+                  fill: #1b305a;
+                }
                 </style>
               </defs>
               <g transform="translate(-2.923 -111.1)">
@@ -225,9 +225,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="14.667" height="14.667" viewBox="0 0 14.667 14.667">
               <defs>
                 <style>
-                  .a {
-                    fill: #1b305a;
-                  }
+                .a {
+                  fill: #1b305a;
+                }
                 </style>
               </defs>
               <g transform="translate(-46 -37)">
@@ -247,9 +247,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
               <defs>
                 <style>
-                  .a {
-                    fill: #1b305a;
-                  }
+                .a {
+                  fill: #1b305a;
+                }
                 </style>
               </defs>
               <g transform="translate(-122 -133)">

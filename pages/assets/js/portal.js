@@ -134,102 +134,102 @@ var jq = jQuery.noConflict();
     });
 })();
 //Contraste do portal
-if (typeof Cookies == "function") {
-  (function () {
-    //Contraste dos portais ativar/desativar
-    //Plugin necessários: jscookies
-    //Troca da logo quando ativado o contraste
-    var alterarLogo = function () {
-      var $com,
-        $sem,
-        $logo = jq(".logo-tribunal").find("img"),
-        $src = $logo.attr("src");
-      if ($src.indexOf("-inverse.png") < 0) {
-        $com = $src.replace(".png", "-inverse.png");
-      } else {
-        $sem = $src.replace("-inverse.png", ".png");
-      }
-      return "on" == Cookies.get("contraste")
-        ? $logo.attr("src", $com)
-        : $logo.attr("src", $sem);
-    };
+// if (typeof Cookies == "function") {
+//   (function () {
+//     //Contraste dos portais ativar/desativar
+//     //Plugin necessários: jscookies
+//     //Troca da logo quando ativado o contraste
+//     var alterarLogo = function () {
+//       var $com,
+//         $sem,
+//         $logo = jq(".logo-tribunal").find("img"),
+//         $src = $logo.attr("src");
+//       if ($src.indexOf("-inverse.png") < 0) {
+//         $com = $src.replace(".png", "-inverse.png");
+//       } else {
+//         $sem = $src.replace("-inverse.png", ".png");
+//       }
+//       return "on" == Cookies.get("contraste")
+//         ? $logo.attr("src", $com)
+//         : $logo.attr("src", $sem);
+//     };
 
-    var alterarReCaptcha = function () {
-      var $com,
-        $sem,
-        $iframe,
-        $corAtual,
-        $recaptcha = jq(
-          "#captcha-consulta-quitacao,#captcha-consulta-situacao,#captcha-consulta-local,#captcha-consulta-quitacao,#captcha-valida-quitacao,#captcha-feedback"
-        );
-      $recaptcha.each(function () {
-        var $self = jq(this);
-        if ($self.find("iframe").length) {
-          $iframe = $self.find("iframe");
-          $corAtual = $self
-            .find("iframe")
-            .attr("src")
-            .match(/theme=(.*?)&/)
-            .pop();
-          if ($corAtual === "light") {
-            $attr = $self
-              .find("iframe")
-              .attr("src")
-              .replace(/theme=(.*?)&/, "theme=dark&");
-          } else {
-            $attr = $self
-              .find("iframe")
-              .attr("src")
-              .replace(/theme=(.*?)&/, "theme=light&");
-          }
-          $iframe.attr("src", $attr);
-        }
-      });
-    };
+//     var alterarReCaptcha = function () {
+//       var $com,
+//         $sem,
+//         $iframe,
+//         $corAtual,
+//         $recaptcha = jq(
+//           "#captcha-consulta-quitacao,#captcha-consulta-situacao,#captcha-consulta-local,#captcha-consulta-quitacao,#captcha-valida-quitacao,#captcha-feedback"
+//         );
+//       $recaptcha.each(function () {
+//         var $self = jq(this);
+//         if ($self.find("iframe").length) {
+//           $iframe = $self.find("iframe");
+//           $corAtual = $self
+//             .find("iframe")
+//             .attr("src")
+//             .match(/theme=(.*?)&/)
+//             .pop();
+//           if ($corAtual === "light") {
+//             $attr = $self
+//               .find("iframe")
+//               .attr("src")
+//               .replace(/theme=(.*?)&/, "theme=dark&");
+//           } else {
+//             $attr = $self
+//               .find("iframe")
+//               .attr("src")
+//               .replace(/theme=(.*?)&/, "theme=light&");
+//           }
+//           $iframe.attr("src", $attr);
+//         }
+//       });
+//     };
 
-    jq(".contraste > a").on("click", function (e) {
-      if (Cookies.get("contraste") === null) {
-        Cookies.set("contraste", "on", {
-          expires: 7,
-        });
-        jq("body").addClass("contraste");
-        alterarLogo();
-        alterarReCaptcha();
-        e.preventDefault();
-        // return false;
-      } else {
-        if (Cookies.get("contraste") == "on") {
-          Cookies.set("contraste", "off", {
-            expires: 7,
-          });
-          // Cookies.remove('contraste');
-          jq("body").removeClass("contraste");
-          alterarLogo();
-          alterarReCaptcha();
+//     jq(".contraste > a").on("click", function (e) {
+//       if (Cookies.get("contraste") === null) {
+//         Cookies.set("contraste", "on", {
+//           expires: 7,
+//         });
+//         jq("body").addClass("contraste");
+//         alterarLogo();
+//         alterarReCaptcha();
+//         e.preventDefault();
+//         // return false;
+//       } else {
+//         if (Cookies.get("contraste") == "on") {
+//           Cookies.set("contraste", "off", {
+//             expires: 7,
+//           });
+//           // Cookies.remove('contraste');
+//           jq("body").removeClass("contraste");
+//           alterarLogo();
+//           alterarReCaptcha();
 
-          e.preventDefault();
-          // return false;
-        } else {
-          Cookies.set("contraste", "on");
-          jq("body").addClass("contraste");
-          alterarLogo();
-          alterarReCaptcha();
+//           e.preventDefault();
+//           // return false;
+//         } else {
+//           Cookies.set("contraste", "on");
+//           jq("body").addClass("contraste");
+//           alterarLogo();
+//           alterarReCaptcha();
 
-          e.preventDefault();
-          // return false;
-        }
-      }
-    });
-    if (Cookies.get("contraste") == "on") {
-      jq("body").addClass("contraste");
-      alterarLogo();
-      alterarReCaptcha();
-      // return false;
-    }
-  })();
-} else {
-  console.log("jsCookies not found.");
-}
+//           e.preventDefault();
+//           // return false;
+//         }
+//       }
+//     });
+//     if (Cookies.get("contraste") == "on") {
+//       jq("body").addClass("contraste");
+//       alterarLogo();
+//       alterarReCaptcha();
+//       // return false;
+//     }
+//   })();
+// } else {
+//   console.log("jsCookies not found.");
+// }
 //Função para adicionar a class espaco-topo na body
 if (typeof ResponsiveBootstrapToolkit == "object") {
   (function (jq, document, window, viewport) {

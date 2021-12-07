@@ -177,6 +177,24 @@
             margin-right: .2rem;
         }
 
+        @include modificar (vision) {
+          @extend .background-botoes;
+          background-image: url('#{$path_img}/botoes/vision.svg');
+          background-size: 100%;
+
+          &:hover {
+              background-image: url('#{$path_img}/botoes/vision-hover.svg');
+          }
+
+          &:before {
+              @extend .before-botoes;
+              left: -4px;
+          }
+
+          margin-left: .2rem;
+          margin-right: .2rem;
+      }
+
         @include modificar (libras) {
             @extend .background-botoes;
             background-image: url('#{$path_img}/botoes/rybena-gesto.png');
