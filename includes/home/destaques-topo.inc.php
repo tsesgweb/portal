@@ -158,7 +158,7 @@
             <a href="#" data-toggle="modal" data-target="#consultaDje">Diário da Justiça Eletrônico - DJE</a>
           </li>
           <li class="destaque-servico-list__item">
-            <a href="https://pje.tse.jus.br:8443/pje-web/login.seam">Acesso ao PJe</a>
+            <a href="https://pje.tse.jus.br:8443/pje-web/login.seam">Acesso ao Processo Judicial Eletrônico (PJe) </a>
           </li>
           <li class="destaque-servico-list__item">
             <a href="#" data-toggle="modal" data-target="#consultaLegislacaoCompilada">Legislação compilada</a>
