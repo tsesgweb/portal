@@ -28,9 +28,10 @@ function destaqueTituloHandler() {
         bottom: "-" + sutiaHeight + "px",
       });
     });
+
 }
 $(document).ready(function () {
-  destaqueTituloHandler();
+  const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
 });
 $(window).on("load", function () {
   // destaqueTituloHandler();
@@ -77,9 +78,9 @@ $(window).on("load", function () {
 
 Breakpoints.on("md lg", {
   enter: function () {
-    destaqueTituloHandler();
+    const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
   },
   leave: function () {
-    destaqueTituloHandler();
+    const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
   },
 });

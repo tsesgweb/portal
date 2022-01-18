@@ -27,6 +27,7 @@ $(window).on('load', function () {
           bottom: '-' + sutiaHeight + 'px',
         });
       });
+
   }
 
   // ajuste automatico do badge do destaque secundário
@@ -44,14 +45,14 @@ $(window).on('load', function () {
     });
   }
 
-  destaqueTituloHandler();
+  const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
   destaqueSecundarioHandler();
   window.resizeEvt;
   $(window).bind('resize load', $(this), function () {
     clearTimeout(window.resizeEvt);
     window.resizeEvt = setTimeout(function () {
       // code to do after window is resized
-      destaqueTituloHandler();
+      const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
       destaqueSecundarioHandler();
     }, 250);
   });
@@ -166,14 +167,14 @@ $(window).on('load', function () {
     enter: function () {
       handlerCarrousel(false);
       imagemPosition(destaquePrincipal.innerHeight());
-      destaqueTituloHandler();
+      const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
     },
     leave: function () {
       handlerCarrousel(true);
       imagemPosition(
         destaquePrincipal.parent('.destaque__linha').innerHeight()
       );
-      destaqueTituloHandler();
+      const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
     },
   });
   $('.fancybox-action').fancybox({
