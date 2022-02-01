@@ -145,8 +145,9 @@ $altura-maxima: 550px;
     position: relative;
     bottom: 270px;
     max-width: 1140px;
-    display: block;
-    margin: auto;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
     .owl-dot {
       &.active {
         span {
@@ -162,7 +163,7 @@ $altura-maxima: 550px;
     }
     .banners__thumbnail-slider {
       @include media-breakpoint-up(md) {
-        width: 1000px;
+        width: 1140px;
         margin: auto;
       }
       border-bottom: 0;
@@ -173,7 +174,7 @@ $altura-maxima: 550px;
         list-style: none;
       }
       .thumbnail__item {
-        margin: 15px;
+        margin: 0;
         display: inherit;
         text-align: center;
         .item__figure {
