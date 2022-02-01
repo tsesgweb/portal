@@ -37,20 +37,43 @@ $(document).ready(function () {
 
   (function () {
     setTimeout(function () {
-      var servicos = $(".destaque-servico").outerHeight();
-      var altura_padrao = 697.8;
-      var diferenca = 24;
+      // var servicos = $(".destaque-servico").outerHeight();
+      // var altura_padrao = 697.8;
+      // var diferenca = 24;
 
-      var linhas_diferentes = (servicos - altura_padrao) / diferenca;
+      // var linhas_diferentes = (servicos - altura_padrao) / diferenca;
+
+      // Breakpoints.on("lg xl", {
+      //   enter: function () {
+      //     $(".noticia-secundaria").addClass("linha-" + linhas_diferentes);
+      //   },
+      //   leave: function () {
+      //     $(".noticia-secundaria").removeClass("linha-" + linhas_diferentes);
+      //   },
+      // });
+
+      var itemLista = $(".destaque-servico .destaque-servico-list__item");
+      var linhaQuebrada = 0;
+
+      itemLista.each(function(a ,b){
+          var altura = $(this).height();
+  
+          if (altura > 24) {
+            linhaQuebrada += + 1;
+          }
+  
+      });
 
       Breakpoints.on("lg xl", {
         enter: function () {
-          $(".noticia-secundaria").addClass("linha-" + linhas_diferentes);
+          $(".noticia-secundaria").addClass("linha-" + linhaQuebrada);
         },
         leave: function () {
-          $(".noticia-secundaria").removeClass("linha-" + linhas_diferentes);
+          $(".noticia-secundaria").removeClass("linha-" + linhaQuebrada);
         },
       });
-    }, 0);
+  
+    }, 3000);
+
   })();
 });
