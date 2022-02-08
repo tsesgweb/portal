@@ -28,7 +28,7 @@
     margin: 30px 0 30px 0;
   }
   .cards-social-media__linha {
-    @include make-row();
+    @include make-row(0);
   }
   .cards-conteudo {
     video {
@@ -119,12 +119,7 @@
         color: $card-color;
       }
       .card-header {
-        background: url("#{$path_img}/icon-social-media-#{$card-name}.png")
-          no-repeat
-          left
-          5%
-          top
-          81%;
+        background: url("#{$path_img}/icon-social-media-#{$card-name}.png") no-repeat left 5% top 81%;
       }
     }
   }
