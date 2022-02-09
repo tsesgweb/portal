@@ -28,10 +28,9 @@ function destaqueTituloHandler() {
         bottom: "-" + sutiaHeight + "px",
       });
     });
-
 }
 $(document).ready(function () {
-  const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
+  var carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
 });
 $(window).on("load", function () {
   // destaqueTituloHandler();
@@ -78,9 +77,9 @@ $(window).on("load", function () {
 
 Breakpoints.on("md lg", {
   enter: function () {
-    const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
+    var carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
   },
   leave: function () {
-    const carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
+    var carregar_destaques = setTimeout(destaqueTituloHandler, 1500);
   },
 });
