@@ -10,7 +10,12 @@
         </a>
       </h3>
       <h3 class="rede-card">
-        <a href="#">
+        <a href=https://twitter.com/intent/tweet?text=TSE promove tuitaço para incentivar participação dos jovens nas
+          Eleições
+          2022&url=https://www.tse.jus.br/imprensa/noticias-tse/2022/Marco/tse-promove-tuitaco-para-incentivar-participacao-dos-jovens-nas-eleicoes-2022"
+          target="_blank" data-lang="pt" data-count="none" aria-label="Compartilhar página via twitter"
+          data-url="https://www.tse.jus.br/imprensa/noticias-tse/2022/Marco/tse-promove-tuitaco-para-incentivar-participacao-dos-jovens-nas-eleicoes-2022"
+          data-title="TSE promove tuitaço para incentivar participação dos jovens nas Eleições 2022">
           <span class="card-imagem"><img src="assets/imagens/redes-sociais/twitter.png" alt="ícone do Twitter"></span>
           <span class="card-titulo">Twitter</span>
         </a>
