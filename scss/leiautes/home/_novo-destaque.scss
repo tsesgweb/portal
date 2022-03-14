@@ -3,7 +3,6 @@
 
   .destaque-tema {
     @include item(item) {
-
       background-color: $cinza-azulado;
 
       @include media-breakpoint-up(xs) {
@@ -66,7 +65,6 @@
         font-size: 16px;
         border-color: $cinza-claro;
         padding: 0.25rem 1rem;
-
       }
     }
   }

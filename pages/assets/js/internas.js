@@ -1,12 +1,12 @@
 $(document).ready(function () {
-  $('#breadcrumb')
+  $("#breadcrumb")
     .wrapInner('<div class="breadcrumb__linha"/>')
     .wrapInner('<div class="breadcrumb__conteudo"/>');
   //Notícias
   //Adiciona a div para envolver noticia-mais-relacionada caso não carregado
   (function () {
-    var $selecionarTexto = $('#texto-conteudo'),
-      $noticiaMais = $selecionarTexto.find('.noticia-mais');
+    var $selecionarTexto = $("#texto-conteudo"),
+      $noticiaMais = $selecionarTexto.find(".noticia-mais");
     if ($noticiaMais.length == 2) {
       $noticiaMais.wrapAll('<div class="noticia-mais-relacionado"/>');
     }
@@ -15,56 +15,81 @@ $(document).ready(function () {
    * Adiciona o id manual no portlet da barra lateral de impressa conforme orientação da sedesc4
    */
   (function () {
-    var listas = $('#coluna-lateral-noticias').find('.icone.icone-lista'),
-      titulo = listas.find('.titulo-personalizado .titulo-padrao');
+    var listas = $("#coluna-lateral-noticias").find(".icone.icone-lista"),
+      titulo = listas.find(".titulo-personalizado .titulo-padrao");
     listas.each(function (index, value) {
-      var titulo = $(value).find('.titulo-personalizado .titulo-padrao');
-      if (titulo.text() == 'Contato') {
-        $(this).closest('div').attr('id', 'contato-imprensa');
+      var titulo = $(value).find(".titulo-personalizado .titulo-padrao");
+      if (titulo.text() == "Contato") {
+        $(this).closest("div").attr("id", "contato-imprensa");
       }
-      if (titulo.text() == 'Termos de uso') {
-        $(this).closest('div').attr('id', 'termos-uso');
+      if (titulo.text() == "Termos de uso") {
+        $(this).closest("div").attr("id", "termos-uso");
       }
     });
   })();
   //adicionar wrap nas tabelas para deixar responsivo e adicionar a class table-responsive do bootstrap
   (function (ajusteTabelasGeral) {
     ajusteTabelasGeral = $(
-      '#texto-conteudo table, #texto-conteudo table.listing.grid, #texto-conteudo table.listing, #texto-conteudo table.grid'
+      "#texto-conteudo table, #texto-conteudo table.listing.grid, #texto-conteudo table.listing, #texto-conteudo table.grid"
     );
-    ajusteTabelasGeral.addClass('table');
+    ajusteTabelasGeral.addClass("table");
     ajusteTabelasGeral.wrap("<div class='table-responsive'></div>");
     return ajusteTabelasGeral;
   })();
 
   (function () {
     var $url = window.location.href,
-      $titulopagina = $('title').text(),
-      $tamanhoTela = 'width=600, height=400, top=100, left=110, scrollbars=no';
+      $titulopagina = $("title").text(),
+      $tamanhoTela = "width=600, height=400, top=100, left=110, scrollbars=no";
     //Compartilhar whatsapp
-    $('.compartilhar_whatsapp').attr(
-      'href',
-      'whatsapp://send?text=' + $titulopagina + ' ' + $url + ''
+    $(".compartilhar_whatsapp").attr(
+      "href",
+      "whatsapp://send?text=" + $titulopagina + " " + $url + ""
     );
     //Compartilhar facebook
-    $('.compartilhar_facebook').click(function (e) {
+    $(".compartilhar_facebook").on("click", function (e) {
       window.open(
-        'http://www.facebook.com/share.php?u=' +
+        "http://www.facebook.com/share.php?u=" +
           $url +
-          '&t=' +
+          "&t=" +
           $titulopagina +
-          '',
-        'Compartilhar via facebook',
+          "",
+        "Compartilhar via facebook",
         $tamanhoTela
       );
       e.preventDefault();
       e.stopPropagation();
     });
     //Compartilhar G+
-    $('.compartilhar-google-plus').click(function (e) {
+    $(".compartilhar-google-plus").click(function (e) {
       window.open(
-        'https://plus.google.com/share?url=' + $url + '',
-        'Compartilhar via g+',
+        "https://plus.google.com/share?url=" + $url + "",
+        "Compartilhar via g+",
+        $tamanhoTela
+      );
+      e.preventDefault();
+      e.stopPropagation();
+    });
+    //Compartilhar twitter
+    $(".compartilhar_twitter").click(function (e) {
+      window.open(
+        "https://twitter.com/intent/tweet?url=" +
+          $url +
+          "&text=" +
+          $titulopagina +
+          "",
+        "Compartilhar via twitter",
+        $tamanhoTela
+      );
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    //Compartilhar email
+    $(".compartilhar_email").on("click", function (e) {
+      window.open(
+        "mailto:?subject=" + $titulopagina + "&body=" + $url + "",
+        "Compartilhar via email",
         $tamanhoTela
       );
       e.preventDefault();
@@ -72,49 +97,49 @@ $(document).ready(function () {
     });
   })();
   //datepicker requer bootstrap-datepicker.min.js e bootstrap-datepicker.pt-BR.min.js
-  if (typeof jq.fn.datepicker == 'function') {
-    $('.input-daterange').datepicker({
-      format: 'dd/mm/yyyy',
-      language: 'pt-BR',
-      orientation: 'bottom right',
+  if (typeof jq.fn.datepicker == "function") {
+    $(".input-daterange").datepicker({
+      format: "dd/mm/yyyy",
+      language: "pt-BR",
+      orientation: "bottom right",
       autoclose: true,
     });
-    $('.data-para-input input').datepicker({
-      format: 'dd/mm/yyyy',
-      language: 'pt-BR',
-      orientation: 'bottom right',
+    $(".data-para-input input").datepicker({
+      format: "dd/mm/yyyy",
+      language: "pt-BR",
+      orientation: "bottom right",
       autoclose: true,
     });
     //datepicker para serviços ao eleitor
-    if (jQuery('.abrir-datetime-picker').length !== 0) {
-      jQuery('.abrir-datetime-picker').on('click', function (e) {
+    if (jQuery(".abrir-datetime-picker").length !== 0) {
+      jQuery(".abrir-datetime-picker").on("click", function (e) {
         e.preventDefault();
-        var target = jQuery(this).closest('div').find('input');
+        var target = jQuery(this).closest("div").find("input");
         // target.prop('readonly', true);
         var options = {
-          format: 'dd/mm/yyyy',
-          language: 'pt-BR',
+          format: "dd/mm/yyyy",
+          language: "pt-BR",
           autoclose: true,
-          orientation: 'top right',
+          orientation: "top right",
         };
-        target.datepicker(options).datepicker('show');
+        target.datepicker(options).datepicker("show");
       });
     }
   } else {
-    if (typeof jq.fn.mask == 'function') {
-      $('.input-daterange input, .data-para-input input').attr(
-        'placeholder',
-        'dd/mm/yyyy'
+    if (typeof jq.fn.mask == "function") {
+      $(".input-daterange input, .data-para-input input").attr(
+        "placeholder",
+        "dd/mm/yyyy"
       );
-      $('.input-daterange input, .data-para-input input').mask('99/99/9999');
+      $(".input-daterange input, .data-para-input input").mask("99/99/9999");
     } else {
-      $('.input-daterange input, .data-para-input input').attr(
-        'placeholder',
-        'dd/mm/yyyy'
+      $(".input-daterange input, .data-para-input input").attr(
+        "placeholder",
+        "dd/mm/yyyy"
       );
     }
   }
-  if (typeof jq.fn.popover == 'function') {
+  if (typeof jq.fn.popover == "function") {
     $('[data-toggle="popover"]').popover({
       html: true,
     });
@@ -122,51 +147,51 @@ $(document).ready(function () {
     //     console.log('popover');
     //     // $(e.target.data('bs.popover'));
     // });
-    $('body').on('click', function (e) {
+    $("body").on("click", function (e) {
       //did not click a popover toggle or popover
       if (
-        $(e.target).data('toggle') !== 'popover' &&
-        $(e.target).parents('.popover.in').length === 0
+        $(e.target).data("toggle") !== "popover" &&
+        $(e.target).parents(".popover.in").length === 0
       ) {
-        $('[data-toggle="popover"]').popover('hide');
+        $('[data-toggle="popover"]').popover("hide");
       }
     });
   } else {
-    var $blocoGestor = $('#gestor-responsavel, .noticia-gestor'),
-      $conteudo = $blocoGestor.find('a').data(),
-      $blocoNovo = $('<div/>')
-        .addClass('gestor-sem-formatacao')
+    var $blocoGestor = $("#gestor-responsavel, .noticia-gestor"),
+      $conteudo = $blocoGestor.find("a").data(),
+      $blocoNovo = $("<div/>")
+        .addClass("gestor-sem-formatacao")
         .appendTo($blocoGestor)
         .hide();
     $blocoNovo.html($conteudo.content);
-    $blocoGestor.on('click', 'a', function () {
-      $('.gestor-sem-formatacao').toggle();
+    $blocoGestor.on("click", "a", function () {
+      $(".gestor-sem-formatacao").toggle();
     });
   }
   //ajuste do template em monocraticas
   (function () {
-    var templateMonocraticas = $('body.template-monocraticas-search');
+    var templateMonocraticas = $("body.template-monocraticas-search");
     if (templateMonocraticas.length !== 0) {
-      templateMonocraticas.find('input[type="text"]').addClass('form-control');
-      templateMonocraticas.find('label').addClass('control-label');
-      templateMonocraticas.find('form#form-juris').addClass('form-inline');
-      templateMonocraticas.find('#relator').addClass('form-control');
+      templateMonocraticas.find('input[type="text"]').addClass("form-control");
+      templateMonocraticas.find("label").addClass("control-label");
+      templateMonocraticas.find("form#form-juris").addClass("form-inline");
+      templateMonocraticas.find("#relator").addClass("form-control");
       // templateMonocraticas.find('#tipo_doc, #data_inicial, #data_final').wrapAll("<div class='form-group'/>");
-      templateMonocraticas.find('#tipo_doc').addClass('form-control');
-      templateMonocraticas.find('#enviar').addClass('btn btn-primary');
-      templateMonocraticas.find('.limpar').addClass('btn btn-default');
-      templateMonocraticas.find('.botoes').addClass('pull-right');
+      templateMonocraticas.find("#tipo_doc").addClass("form-control");
+      templateMonocraticas.find("#enviar").addClass("btn btn-primary");
+      templateMonocraticas.find(".limpar").addClass("btn btn-default");
+      templateMonocraticas.find(".botoes").addClass("pull-right");
     }
   })();
 
   //Adicionar click na imagem de audio
-  var embedAudio = $('.embed-responsive-audio'),
-    imagem = embedAudio.find('img, .audio-contador, audio'),
+  var embedAudio = $(".embed-responsive-audio"),
+    imagem = embedAudio.find("img, .audio-contador, audio"),
     divContador = $('<div class="audio-contador progress"/>');
-  imagem.on('click bind', function () {
+  imagem.on("click bind", function () {
     audioTracker =
-      document.getElementById('audio') ||
-      document.getElementsByTagName('audio')[0];
+      document.getElementById("audio") ||
+      document.getElementsByTagName("audio")[0];
 
     if (audioTracker.paused) {
       audioTracker.play();
@@ -183,32 +208,32 @@ $(document).ready(function () {
     function tempoDuracao(seconds) {
       sec = Math.floor(seconds);
       min = Math.floor(sec / 60);
-      min = min >= 10 ? min : '0' + min;
+      min = min >= 10 ? min : "0" + min;
       sec = Math.floor(sec % 60);
-      sec = sec >= 10 ? sec : '0' + sec;
-      return min + ':' + sec;
+      sec = sec >= 10 ? sec : "0" + sec;
+      return min + ":" + sec;
     }
   });
   //end
 });
 (function () {
   var offsetNav,
-    menu = $('#nav-principal');
-  $('#nav-principal')
-    .on('affix-top.bs.affix', function () {
-      offsetNav = $(this).trigger('on').outerHeight() + 20;
+    menu = $("#nav-principal");
+  $("#nav-principal")
+    .on("affix-top.bs.affix", function () {
+      offsetNav = $(this).trigger("on").outerHeight() + 20;
       // console.log(offsetNav, '3 - affix-top.bs.affix');
     })
-    .on('affixed-top.bs.affix', function () {
-      offsetNav = $(this).trigger('on').outerHeight() + 20;
+    .on("affixed-top.bs.affix", function () {
+      offsetNav = $(this).trigger("on").outerHeight() + 20;
       // console.log(offsetNav, '4 - affixed-top.bs.affix');
     })
-    .on('affix.bs.affix', function () {
-      offsetNav = $(this).trigger('on').outerHeight();
+    .on("affix.bs.affix", function () {
+      offsetNav = $(this).trigger("on").outerHeight();
       // console.log(offsetNav, '1 - affix.bs.affix');
     })
-    .on('affixed.bs.affix', function () {
-      offsetNav = $(this).trigger('on').outerHeight();
+    .on("affixed.bs.affix", function () {
+      offsetNav = $(this).trigger("on").outerHeight();
       // console.log(offsetNav, '2 - affixed.bs.affix');
     });
   // menu = $('body').find('#nav-principal').outerHeight(),
@@ -222,24 +247,24 @@ $(document).ready(function () {
     .not('.abas-personalizadas a[href*="#"]')
     .not('.nav-tabs a[href*="#"]')
     .not('[data-toggle="collapse"]')
-    .not('a.sr-only-focusable')
+    .not("a.sr-only-focusable")
     .click(function (event) {
       // On-page links
       if (
-        location.pathname.replace(/^\//, '') ==
-          this.pathname.replace(/^\//, '') &&
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
         location.hostname == this.hostname
       ) {
         // Figure out element to scroll to
         var target = $(this.hash);
         target = target.length
           ? target
-          : $('[name=' + this.hash.slice(1) + ']');
+          : $("[name=" + this.hash.slice(1) + "]");
         // Does a scroll target exist?
         if (target.length) {
           // Only prevent default if animation is actually gonna happen
           event.preventDefault();
-          $('html, body').animate(
+          $("html, body").animate(
             {
               scrollTop: target.offset().top - offsetNav,
             },
@@ -249,11 +274,11 @@ $(document).ready(function () {
               // Must change focus!
               var $target = $(target);
               $target.focus();
-              if ($target.is(':focus')) {
+              if ($target.is(":focus")) {
                 // Checking if the target was focused
                 return false;
               } else {
-                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
                 $target.focus(); // Set focus again
               }
             }
@@ -289,14 +314,14 @@ $(document).ready(function () {
 // }
 
 $(function () {
-  if ($('#topo-reduzido').length) {
-    var linha1 = $('#linha1');
-    var linha2 = $('#linha2');
-    var bola1 = $('#bola1');
-    var bola2 = $('#bola2');
-    var bola3 = $('#bola3');
-    var socialIcon = $('.social-icon');
-    var sharePanelIcons = $('#painel-compartilhamento-icones');
+  if ($("#topo-reduzido").length) {
+    var linha1 = $("#linha1");
+    var linha2 = $("#linha2");
+    var bola1 = $("#bola1");
+    var bola2 = $("#bola2");
+    var bola3 = $("#bola3");
+    var socialIcon = $(".social-icon");
+    var sharePanelIcons = $("#painel-compartilhamento-icones");
 
     var tl = new TimelineLite({
       paused: true,
@@ -308,7 +333,7 @@ $(function () {
       [bola1, bola2, bola3],
       0.5,
       {
-        transformOrigin: '50% 50%',
+        transformOrigin: "50% 50%",
         scale: 0,
       },
       0.05
@@ -317,7 +342,7 @@ $(function () {
         linha1,
         0.5,
         {
-          transformOrigin: '50% 50%',
+          transformOrigin: "50% 50%",
           scale: 2.5,
           rotation: 72,
           y: 82,
@@ -329,7 +354,7 @@ $(function () {
         linha2,
         0.5,
         {
-          transformOrigin: '50% 50%',
+          transformOrigin: "50% 50%",
           scale: 2.5,
           rotation: -72,
           y: -82,
@@ -344,7 +369,7 @@ $(function () {
           scaleX: 0,
         },
         {
-          transformOrigin: '100% 50%',
+          transformOrigin: "100% 50%",
           scaleX: 1,
           ease: Circ.easeInOut,
         },
@@ -358,7 +383,7 @@ $(function () {
           x: -10,
         },
         {
-          transformOrigin: '50% 50%',
+          transformOrigin: "50% 50%",
           scaleY: 1,
           x: 0,
           ease: Circ.easeInOut,
@@ -379,13 +404,13 @@ $(function () {
         -0.05
       );
   }
-  $('#icone-compartilhar').click(function () {
-    if ($(this).hasClass('toggled')) {
+  $("#icone-compartilhar").click(function () {
+    if ($(this).hasClass("toggled")) {
       tl.reverse();
     } else {
       tl.play();
     }
 
-    $(this).toggleClass('toggled');
+    $(this).toggleClass("toggled");
   });
 });

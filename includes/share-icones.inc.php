@@ -15,7 +15,7 @@
           </i>
         </span>
       </a>
-      <a href="https://twitter.com/share" target="_blank" data-lang="pt" data-count="none"
+      <a class="compartilhar_twitter" href="https://twitter.com/share" target="_blank" data-lang="pt" data-count="none"
         aria-label="Compartilhar página via twitter">
         <span class="fa-stack fa-1x">
           <i class="fa fa-circle fa-stack-2x noticia-icone-background"></i>

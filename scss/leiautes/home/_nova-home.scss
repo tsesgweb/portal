@@ -1,6 +1,6 @@
 @mixin filtro($bg-color, $color: #000) {
   background: $bg-color;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 10px;
   color: $color;
   font-weight: normal;
@@ -11,16 +11,11 @@
 }
 
 // $bagde-theme in _config.scss
-@each $badge-nome,
-$badge-content in $badge-theme {
+@each $badge-nome, $badge-content in $badge-theme {
   .badge-#{$badge-nome} {
-    @if $badge-nome=='comunicado'or $badge-nome=='aovivo'or $badge-nome=='video'
-
-      {
+    @if $badge-nome== "comunicado" or $badge-nome== "aovivo" or $badge-nome== "video" {
       @include filtro($badge-content, #fff);
-    }
-
-    @else {
+    } @else {
       @include filtro($badge-content);
     }
   }
@@ -32,7 +27,6 @@ $badge-content in $badge-theme {
 }
 
 .destaque {
-
   &.oculto {
     display: none;
   }
@@ -52,7 +46,6 @@ $badge-content in $badge-theme {
   }
 
   @include item(noticia) {
-
     @include media-breakpoint-only(xs) {
       margin-bottom: 15px;
     }
@@ -83,10 +76,14 @@ $badge-content in $badge-theme {
       @include make-col(3);
     }
 
-
-
     & {
       @include elemento(servico-eleitor) {
+        .destaque-servico-list__item:first-child {
+          background-color: lighten($amarelo, 10%);
+          border-bottom: 1px solid darken($amarelo, 10%);
+          font-weight: bold;
+          color: #666;
+        }
         .destaque-servico-card-header {
           border-bottom: 2px solid $amarelo;
         }
@@ -97,7 +94,7 @@ $badge-content in $badge-theme {
           &,
           a,
           & a:hover {
-            color: #6B6B6B;
+            color: #6b6b6b;
           }
 
           &::before {
@@ -108,9 +105,8 @@ $badge-content in $badge-theme {
             height: 17px;
             display: inline-block;
             vertical-align: middle;
-            color: #6B6B6B;
+            color: #6b6b6b;
           }
-
         }
       }
     }
@@ -118,11 +114,9 @@ $badge-content in $badge-theme {
     @include elemento(consulta-juridica) {
       .destaque-servico-card-header {
         border-bottom: 2px solid $verde;
-
       }
 
       .destaque-servico-list__item:hover {
-
         &,
         a {
           color: $branco;
@@ -140,7 +134,6 @@ $badge-content in $badge-theme {
           color: $branco;
           filter: brightness(100);
         }
-
       }
     }
 
@@ -151,7 +144,7 @@ $badge-content in $badge-theme {
       border-right: 10px solid $branco;
       border-radius: $radius;
 
-      &+.destaque-servico-card {
+      & + .destaque-servico-card {
         margin-top: 10px;
       }
     }
@@ -199,19 +192,19 @@ $badge-content in $badge-theme {
         display: block;
       }
 
-      @include media-breakpoint-up(sm) {}
+      @include media-breakpoint-up(sm) {
+      }
 
-      @include media-breakpoint-up(md) {}
+      @include media-breakpoint-up(md) {
+      }
 
-      @include media-breakpoint-up(lg) {}
+      @include media-breakpoint-up(lg) {
+      }
     }
-
-
   }
 }
 
 .noticia {
-
   // noticias sem imagem
   @include media-breakpoint-only(xs) {
     @include make-col-ready();
@@ -221,8 +214,6 @@ $badge-content in $badge-theme {
       padding: 0.625rem;
       background: $amarelo;
     }
-
-
 
     a {
       font-size: 14px;
@@ -345,16 +336,12 @@ $badge-content in $badge-theme {
       }
 
       .titulo {
-        font-family: 'Merriweather',
-          sans-serif;
+        font-family: "Merriweather", sans-serif;
         font-weight: 700;
-        text-shadow: 1px 1px 2px black,
-          0 0 1em $cinza,
-          0 0 0.2em $cinza;
+        text-shadow: 1px 1px 2px black, 0 0 1em $cinza, 0 0 0.2em $cinza;
         margin-top: 1rem;
 
         a {
-
           &:focus,
           &:hover {
             width: 0;
@@ -371,7 +358,6 @@ $badge-content in $badge-theme {
             margin-left: 0;
           }
         }
-
 
         @include media-breakpoint-up(xs) {
           font-size: 1rem;
@@ -390,7 +376,6 @@ $badge-content in $badge-theme {
         }
 
         a {
-
           color: $branco;
           text-decoration: none;
           transition: 0.4s;
@@ -418,7 +403,6 @@ $badge-content in $badge-theme {
 
       // animação no ao vivo
       @keyframes vivo {
-
         0%,
         100% {
           opacity: 0;
@@ -448,14 +432,12 @@ $badge-content in $badge-theme {
       margin-top: 20px;
     }
 
-
     .img-responsive {
       border-top-left-radius: $radius;
       border-top-right-radius: $radius;
     }
 
     .noticia-item {
-
       @include media-breakpoint-only(xs) {
         display: flex;
         align-items: center;
@@ -488,13 +470,10 @@ $badge-content in $badge-theme {
         padding-right: 7.5px;
         border-left: 0;
         border-right: 7.5px solid transparent;
-
       }
     }
 
-
     .noticia__titulo {
-
       .badge {
         top: 120px;
         left: 12.5px;
@@ -520,7 +499,6 @@ $badge-content in $badge-theme {
         }
 
         a {
-
           &:focus,
           &:hover {
             width: 0;
@@ -642,7 +620,7 @@ $badge-content in $badge-theme {
   }
 
   @include elemento(titulo) {
-    font-family: 'Merriweather', sans-serif;
+    font-family: "Merriweather", sans-serif;
     font-size: 18px;
     color: #6b6b6b;
     line-height: 20px;
@@ -652,7 +630,7 @@ $badge-content in $badge-theme {
       transition: 0.4s;
 
       &:before {
-        content: ' ';
+        content: " ";
         display: inline-block;
         margin-bottom: 5px;
         margin-right: 10px;
@@ -668,7 +646,7 @@ $badge-content in $badge-theme {
         transition: 0.4s;
 
         &:before {
-          content: ' ';
+          content: " ";
           display: inline-block;
           transition: 0.4s;
           margin-bottom: 5px;

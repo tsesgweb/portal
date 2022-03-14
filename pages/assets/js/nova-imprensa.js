@@ -46,9 +46,24 @@ $(window).on("load", function () {
   }
 
   sharingOverlay(".news-list-sharing", "news-list-sharing", "div", "div");
-  sharingOverlay(".news-list-sharing", "news-list-sharing", ".news-list-col-8", "div");
-  sharingOverlay(".news-btn-sharing", "news-list-sharing", ".news-card", ".news-footer");
-  sharingOverlay(".radio-list-sharing", "radio-list-sharing", "div", ".radio-list-footer");
+  sharingOverlay(
+    ".news-list-sharing",
+    "news-list-sharing",
+    ".news-list-col-8",
+    "div"
+  );
+  sharingOverlay(
+    ".news-btn-sharing",
+    "news-list-sharing",
+    ".news-card",
+    ".news-footer"
+  );
+  sharingOverlay(
+    ".radio-list-sharing",
+    "radio-list-sharing",
+    "div",
+    ".radio-list-footer"
+  );
 
   //habilita o tooltip
 
