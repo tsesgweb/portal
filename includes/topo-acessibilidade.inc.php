@@ -71,11 +71,13 @@
           <li class="nav-item">
             <a href="#ingles">
               <img src="assets/imagens/topo/ingles.png" alt="ingles" />
+              ENG
             </a>
           </li>
           <li class="nav-item">
             <a href="#espanhol">
               <img src="assets/imagens/topo/espanhol.png" alt="espanhol" />
+              ESP
             </a>
           </li>
         </ul>
