@@ -50,7 +50,7 @@
     }
 
     @include media-breakpoint-up(xs) {
-      @include make-col(12);
+      @include make-col(9);
       // padding-left: 0;
       // padding-right: 0;
       // margin-left: 0;
@@ -66,13 +66,17 @@
       @extend .btn-sm;
       color: theme-color("branco");
 
+      @include media-breakpoint-only(xs) {
+        padding: 0.25rem 0.3rem;
+      }
+
       &:hover {
         color: theme-color("branco");
       }
     }
 
     .nav {
-      justify-content: space-between;
+      justify-content: flex-end;
 
       .nav-item {
         &::after {
@@ -85,14 +89,19 @@
         &:last-child::after {
           display: none;
         }
+
+        @include media-breakpoint-only(xs) {
+          &:last-child::after {
+            display: block;
+          }
+        }
       }
     }
   }
 
   .idioma {
     @include media-breakpoint-up(xs) {
-      @include make-col(12);
-      // links a direita
+      @include make-col(3);
     }
 
     @include media-breakpoint-up(lg) {
@@ -104,12 +113,24 @@
       justify-content: space-evenly;
       align-items: center;
 
+      @include media-breakpoint-only(xs) {
+        justify-content: flex-end;
+      }
+
       .nav-item {
+        @include media-breakpoint-only(xs) {
+          min-width: 95px;
+        }
+
         &::after {
           content: "|";
           float: left;
           color: $branco;
           margin-top: calc(5px - 5px);
+
+          @include media-breakpoint-only(xs) {
+            display: none;
+          }
         }
 
         &:last-child::after {
