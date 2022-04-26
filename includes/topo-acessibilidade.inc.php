@@ -1,7 +1,7 @@
 <!-- start: topo-acessibilidade -->
 <div class="acessibilidade acessibilidade_bg-azul">
   <div class="acessibilidade__conteudo">
-    <div class="acessibilidade__linha">
+    <div class="acessibilidade__linha acessibilidade_no-language">
       <div class="atalhos">
         <div class="acessibilidade_inline-block">
           <a href="#destaque-principal" name="destaque-principal" accesskey="1"
@@ -40,6 +40,12 @@
       <div class="transparencia">
         <ul class="nav">
           <li class="nav-item">
+            <a id="transparencia_link-administracao" class=" transparencia_link" title="administracao"
+              href="http://www.tse.jus.br/administracaos-tse" target="_self">
+              Administração
+            </a>
+          </li>
+          <li class="nav-item">
             <a id="transparencia_link-acessibilidade" class=" transparencia_link" title="Acessibilidade"
               href="http://www.tse.jus.br/acessibilidades-tse" target="_self">
               Acessibilidade
@@ -66,7 +72,7 @@
           </li>
         </ul>
       </div>
-      <div class="idioma">
+      <!-- <div class="idioma">
         <ul class="nav">
           <li class="nav-item">
             <a href="#ingles">
@@ -81,7 +87,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
