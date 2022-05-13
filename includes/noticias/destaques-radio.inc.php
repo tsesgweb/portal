@@ -9,7 +9,8 @@ $noticias = [
   "description" => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. A fugiat
   dolore adipisci repellat
   consequuntur, voluptate qui nisi. Minus corrupti eveniet sint natus eum fugit dolores, fuga quaerat animi. Ut,
-  alias.'
+  alias.',
+  "link" => 'https://www.tse.jus.br',
 ],
 [
 "img" => '', 
@@ -18,7 +19,8 @@ $noticias = [
  "description" => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. A fugiat
   dolore adipisci repellat
   consequuntur, voluptate qui nisi. Minus corrupti eveniet sint natus eum fugit dolores, fuga quaerat animi. Ut,
-  alias.'
+  alias.',
+  "link" => 'https://www.tse.jus.br',
   ],
 ];
 ?>
@@ -39,7 +41,11 @@ $noticias = [
           </h3>
 
           <div class="noticia-listagem_description noticia-listagem_description-radio">
-            <?php include(BASE_URL.'/includes/components/player-radio.inc.php'); ?>
+            <div class="ready-player-<?= $key ?> player-with-accessibility">
+              <audio crossorigin>
+                <source src="" type="audio/mpeg">
+              </audio>
+            </div>
             <div class="noticia-listagem_description-buttons">
               <button class="radio-list-view" type="button">
                 <img src="assets/imagens/noticias/view.svg" alt="">
@@ -53,7 +59,7 @@ $noticias = [
               <div
                 class="radio-list-sharing-overlay radio-list-sharing-overlay__active radio-list-sharing-overlay_color-radio">
                 <button class="radio-list-sharing-overlay__close">X</button>
-                <span class="radio-list-sharing-overlay__title"><?= $noticia->title; ?></span>
+                <span class="radio-list-sharing-overlay__title"><?= $value['title'] ?></span>
                 <span class="radio-list-sharing-overlay__content">
                   <div class="header">
                     COMPARTILHAR:
@@ -61,7 +67,7 @@ $noticias = [
                       <?php include BASE_URL . '/includes/share.inc.php';?>
                     </div>
                   </div>
-                  <button aria-label="COPIAR LINK DA MATÉRIA" data-clipboard-text="<?= $noticia->url; ?>"
+                  <button aria-label="COPIAR LINK DA MATÉRIA" data-clipboard-text="<?= $value['link'] ?>"
                     class="btn btn-link footer radio-list-sharing-clipboard radio-list-sharing-overlay__content_color-radio__footer">
                     COPIAR LINK DA MATÉRIA
                   </button>
