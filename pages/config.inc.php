@@ -31,6 +31,7 @@ $paginafull           = false;
 $aviso                = true;
 $selos                = false;
 $destaquenoticia      = false;
+$destaqueradio        = false;
 $internanoticia       = false;
 $asidenoticialistagem = false;
 $asidenoticiaradio    = false;

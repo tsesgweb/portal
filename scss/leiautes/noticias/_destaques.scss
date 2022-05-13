@@ -3,8 +3,7 @@ $anim-speed: 0.3s;
 @mixin shadowEffect {
   &::after {
     content: "";
-    background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%)
-      0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
     width: 100%;
     height: 60%;
 
@@ -90,8 +89,8 @@ $anim-speed: 0.3s;
       .noticia-listagem_card-item {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;        
-        height: 100%;                
+        justify-content: space-between;
+        height: 100%;
       }
     }
   }
@@ -143,7 +142,7 @@ $anim-speed: 0.3s;
       }
 
       .green-audio-player {
-        background-color:  rgba(#ff7541, 0.2);
+        background-color: rgba(#ff7541, 0.2);
         padding: 0 0.5em;
       }
     }
@@ -221,7 +220,7 @@ $anim-speed: 0.3s;
     }
 
     .green-audio-player {
-      background-color:  rgba(#ff7541, 0.2);
+      background-color: rgba(#ff7541, 0.2);
       padding: 0 0.5em;
     }
 
@@ -234,6 +233,12 @@ $anim-speed: 0.3s;
         color: #fff;
       }
     }
+  }
+  @include modificar(description-radio) {
+    display: flex;
+  }
+  @include modificar(description-buttons) {
+    display: flex;
   }
 }
 

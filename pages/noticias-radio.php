@@ -8,7 +8,7 @@ $tags                 = false;
 $gestor               = false;
 $maisvisitados        = false;
 $paginacao            = false;
-$destaquenoticia      = true;
+$destaqueradio        = true;
 $asidenoticiaradio    = true;
 $data                 = file_get_contents(BASE_URL."/includes/noticias/conteudo.json");
 $outrasNoticias       = json_decode($data);
@@ -84,7 +84,6 @@ include BASE_URL.'/includes/noticias/navegacao-data.inc.php';?>
           <button class="radio-list-sharing" type="button">
             <img src="assets/imagens/noticias/share.svg" alt="">
           </button>
-
         </footer>
         <div
           class="radio-list-sharing-overlay radio-list-sharing-overlay__active radio-list-sharing-overlay_color-radio">

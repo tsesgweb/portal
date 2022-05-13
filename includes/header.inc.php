@@ -82,6 +82,7 @@ if (!$home) {
   print '<!-- start:conteudo > linha --><main class="main__conteudo' . $full . '"><div class="main__linha">';
   $asideinterna && include __DIR__ . '/widgets/internas.inc.php';
   $destaquenoticia && include __DIR__ . '/noticias/destaques.inc.php';
+  $destaqueradio && include __DIR__ . '/noticias/destaques-radio.inc.php';
   $internanoticia && include __DIR__ . '/noticias/topo-noticia.inc.php';
   print '<!-- start:conteudo?coluna--><div id="conteudo" class="conteudo ' . $aside . '">';
   !$ocultartitulo && print "<h2>{$titulo}</h2>";

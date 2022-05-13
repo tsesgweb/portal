@@ -65,6 +65,13 @@ $(window).on("load", function () {
     ".radio-list-footer"
   );
 
+  sharingOverlay(
+    "button.radio-list-sharing",
+    "radio-list-sharing",
+    "div",
+    ".noticia-listagem_description-buttons"
+  );
+
   //habilita o tooltip
 
   $(".news-footer button").tooltip({
