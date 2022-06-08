@@ -9,11 +9,11 @@ function destaqueTituloHandler() {
     bottom: "-" + sutiaHeight + "px",
   });
 
-  if (!isNaN(dots)) {
-    destaqueTitulo.css({
-      bottom: sutiaHeight + dots + "px",
-    });
-  }
+  // if (!isNaN(dots)) {
+  //   destaqueTitulo.css({
+  //     bottom: sutiaHeight + dots + "px",
+  //   });
+  // }
 
   destaqueTitulo
     .on("mouseover focusin", function () {
