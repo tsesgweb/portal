@@ -172,6 +172,7 @@ $ignore-links: (".nav-link", "#galeria-pagina-interna  a");
     ul,
     ol {
       margin-left: 35px;
+      padding-left: 0
     }
 
     @include media-breakpoint-only(xs) {
@@ -185,10 +186,6 @@ $ignore-links: (".nav-link", "#galeria-pagina-interna  a");
       a {
         font-size: 1rem !important;
         line-height: 1.2rem !important;
-      }
-
-      ul {
-        margin-left: 0;
       }
 
       .lr-descricao {
