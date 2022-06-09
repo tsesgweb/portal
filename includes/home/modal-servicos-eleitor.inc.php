@@ -258,6 +258,12 @@
                         </div>
                       </div>
                     </div>
+                    <div class="form-group servicos__form_uma-coluna">
+                      <div id="captcha-form-consulta-quitacao-eleitoral" class="captcha-portal">
+                                                    protegido por reCAPTCHA
+                                                    ( <a href="https://www.google.com/intl/pt-BR/policies/privacy/">Privacidade</a> -
+                                                    <a href="https://www.google.com/intl/pt-BR/policies/terms/">Termos</a> )
+                                                </div></div>
                     <div class="form-group servicos__form_botao">
                       <button
                         class="btn btn-amarelo"

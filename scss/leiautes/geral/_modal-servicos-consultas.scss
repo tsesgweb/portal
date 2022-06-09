@@ -126,6 +126,13 @@ $smile-otimo: "data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' v
 
 .servicos__form {
 
+    .captcha-portal {
+        font-size: 1rem;
+        a {
+            font-size: 1rem;
+        }
+    }
+
     .padding-input {
         padding-left: .5rem;
         padding-right: .5rem;
