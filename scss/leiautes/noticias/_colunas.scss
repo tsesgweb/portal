@@ -1,9 +1,13 @@
 #coluna-lateral-noticias,
 #aside-noticias {
   @include make-col-ready(0);
-  @include media-breakpoint-up(xs) {
+  @include media-breakpoint-up(md) {
     @include make-col-offset(1);
     @include make-col(3);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include make-col(12);
   }
 
   &.listagem {
