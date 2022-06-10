@@ -39,7 +39,9 @@
     @include make-col-ready();
 
     @include media-breakpoint-up(xs) {
-      @include make-col(9);
+      @include make-col(12);
+      font-size: .75em;
+      padding-bottom: 5px;
     }
 
     @include media-breakpoint-up(lg) {
@@ -158,6 +160,10 @@
       img {
         height: 20;
         padding-right: 4px;
+
+        @include media-breakpoint-up(xs) {
+          height: 15px;
+        }
       }
     }
   }
