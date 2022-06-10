@@ -1,5 +1,6 @@
 .acessibilidade {
-  min-height: 35px;
+  // min-height: 35px;
+  min-height: 30px;
   align-items: center;
   background-color: theme-color("azul");
   @include make-col-ready();
@@ -80,6 +81,12 @@
             display: block;
           }
         }
+
+        .transparencia_link {
+          img {
+            height: 17px;
+          }
+        }
       }
     }
   }
@@ -149,7 +156,7 @@
       }
 
       img {
-        height: 26px;
+        height: 20;
         padding-right: 4px;
       }
     }
