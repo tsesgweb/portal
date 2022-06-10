@@ -329,8 +329,9 @@
         cursor: pointer;
 
         .sutia {
-          opacity: 1;
+          color: $branco;
           display: block;
+          opacity: 1;
           transition: 0.4s;
         }
       }
@@ -396,7 +397,7 @@
           opacity: 0;
           display: block;
           transition: 0.4s;
-          color: $branco;
+          color: #000;
           text-shadow: 2px 2px 4px black, 0 0 1em $cinza, 0 0 0.2em $cinza;
         }
       }
