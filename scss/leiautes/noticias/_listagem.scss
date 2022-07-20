@@ -340,10 +340,11 @@
       display: flex;
       margin-right: 10px;
       margin-left: 10px;
-      background-color: $branco;
+      // background-color: $branco;
+      background-color: transparent;
       width: 26px;
       height: 26px;
-      border-radius: 50%;
+      // border-radius: 50%;
       padding: 0;
     }
 
