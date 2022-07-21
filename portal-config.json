@@ -25,6 +25,9 @@
                 ],
                 "biblioteca": [
                     "assets/css/biblioteca.css"
+                ],
+                "desincompatibilizacao": [
+                    "assets/css/desincompatibilizacao.css"
                 ]
             },
             "ie": {
