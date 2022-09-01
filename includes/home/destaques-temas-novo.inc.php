@@ -14,11 +14,16 @@ $temas = array(
       array("link"=> "http://www.tse.jus.br/partidos/filiacao-partidaria", "linkname"=> "Filiação Partidária")
       )
     ),
-    array("tema"=> "Processos", "icon"=> "processos.svg", "links"=>
+    array("tema"=> "Outros destaques", "icon"=> "outros-destaques.svg", "links"=>
     array(
       array("link"=> "http://www.tse.jus.br/servicos-judiciais/sessoes-de-julgamento/pautas-de-julgamento", "linkname"=> "Pauta"),
       array("link"=> "http://www.tse.jus.br/servicos-judiciais/sessoes-de-julgamento/sessao-plenaria-on-line-1", "linkname"=> "Sessão Plenária ao vivo"),
       array("link"=> "http://www.tse.jus.br/servicos-judiciais/processos/processos-julgados", "linkname"=> "Processos Julgados")
+    )
+    ),
+    array("tema"=> "Agenda do presidente", "icon"=> "agenda-do-presidente.svg", "links"=>
+  array(
+    array("link"=> "https://www.tse.jus.br/o-tse/ministros/agenda/agenda-do-ministro-alexandre-de-moraes", "linkname"=> "Compromissos")
     )
   )
 );

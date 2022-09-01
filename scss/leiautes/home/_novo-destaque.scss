@@ -2,6 +2,9 @@
   margin-top: 15px;
 
   .destaque-tema {
+    @include elemento(linha) {
+      align-items: stretch;
+    }
     @include item(item) {
       background-color: $cinza-azulado;
 
@@ -9,8 +12,14 @@
         @include make-col-ready();
         @include make-col(12);
 
-        &:nth-child(2) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &:first-of-type {
           padding-top: 10px;
+        }
+
+        &:last-of-type {
           padding-bottom: 10px;
         }
       }
@@ -19,16 +28,13 @@
         @include make-col-ready(10px);
         @include make-col(4);
 
-        &:nth-child(1) {
+        flex: 1;
+
+        &:first-of-type {
           padding-left: 0;
         }
 
-        &:nth-child(2) {
-          padding-top: 0;
-          padding-bottom: 0;
-        }
-
-        &:nth-child(3) {
+        &:last-of-type {
           padding-right: 0;
         }
       }
@@ -38,13 +44,13 @@
       @include card;
       border-radius: $radius;
       border: 15px solid $branco;
+      height: 100%
     }
 
     @include elemento(card-header) {
       @include card-header;
       border-bottom: 1px solid $cinza-claro;
-      padding-top: 20px;
-      padding-bottom: 12px;
+      padding: 20px 0 12px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
