@@ -119,7 +119,7 @@
             Serviço ao eleitor
           </button>
         </div>
-        <ul id="destaqueServico" class="destaque-servico-list collapse multi-collapse">
+        <ul id="destaqueServico" class="destaque-servico-list collapse multi-collapse show">
           <li class="destaque-servico-list__item">
             <a href="#" data-toggle="modal" data-target="#servicoTituloEleitoral">Título eleitoral</a>
           </li>
@@ -147,7 +147,7 @@
             Consultas jurídicas
           </button>
         </div>
-        <ul id="destaqueJuridica" class="destaque-servico-list collapse multi-collapse">
+        <ul id="destaqueJuridica" class="destaque-servico-list collapse multi-collapse show">
           <li class="destaque-servico-list__item">
             <a href="#" data-toggle="modal" data-target="#consultaJurisprudencia">Jurisprudência</a>
           </li>
