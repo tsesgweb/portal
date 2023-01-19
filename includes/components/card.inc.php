@@ -20,10 +20,10 @@
         $card->type->icon, 
         $card->type->icon ?
         '<span>'.$card->type->label.'</span>':
-        substr($card->type->label, 0,1), 
+        substr((string) $card->type->label, 0,1), 
         $card->type->icon ?
         null:
-        '<span>'.substr($card->type->label, 1).'</span>'
+        '<span>'.substr((string) $card->type->label, 1).'</span>'
       );
     ?>        
     <time class="news-time">07.08.2019 - 14:16</time>

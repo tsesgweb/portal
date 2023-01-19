@@ -9,7 +9,7 @@ function autoIncludeFiles($location, $type)
       foreach ($cssorjs as $chave => $chamada):
         print("\n<!-- build:{$type}{$chave}-->");
         if ($origen == "ie"):
-          print("<!--[if lt IE ${chave}]>");
+          print("<!--[if lt IE {$chave}]>");
         endif;
         if ($type == "css"):
           foreach ($chamada as $css):
