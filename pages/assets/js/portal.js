@@ -160,7 +160,7 @@ var jq = jQuery.noConflict();
 //         $iframe,
 //         $corAtual,
 //         $recaptcha = jq(
-//           "#captcha-consulta-quitacao,#captcha-consulta-situacao,#captcha-consulta-local,#captcha-consulta-quitacao,#captcha-valida-quitacao,#captcha-feedback"
+//           "#captcha-consulta-quitacao,#captcha-consulta-situacao,#captcha-consulta-local,#captcha-consulta-quitacao,#captcha-valida-quitacao,#captcha-feedback,#captcha-feedback-01"
 //         );
 //       $recaptcha.each(function () {
 //         var $self = jq(this);

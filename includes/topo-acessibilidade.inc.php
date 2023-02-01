@@ -40,25 +40,25 @@
       <div class="transparencia">
         <ul class="nav">
           <li class="nav-item">
-            <a id="transparencia_link-administracao" class=" transparencia_link" title="administracao"
+            <a id="transparencia_link-administracao" class=" transparencia_link" title="Título administracao"
               href="http://www.tse.jus.br/administracaos-tse" target="_self">
               Administração
             </a>
           </li>
           <li class="nav-item">
-            <a id="transparencia_link-acessibilidade" class=" transparencia_link" title="Acessibilidade"
+            <a id="transparencia_link-acessibilidade" class=" transparencia_link" title="Título Acessibilidade"
               href="http://www.tse.jus.br/acessibilidades-tse" target="_self">
               Acessibilidade
             </a>
           </li>
           <li class="nav-item">
-            <a id="transparencia_link-faleconosco" class=" transparencia_link" title="Fale conosco"
+            <a id="transparencia_link-faleconosco" class=" transparencia_link" title="Título Fale conosco"
               href="http://www.tse.jus.br/eleitor/servicos/ouvidoria" target="_self">
               Fale conosco
             </a>
           </li>
           <li class="nav-item">
-            <a class="transparencia_link" title="Transparência" href="http://www.tse.jus.br/transparencia"
+            <a class="transparencia_link" title="Título Transparência" href="http://www.tse.jus.br/transparencia"
               target="_self">
               Transparência e prestações de contas
             </a>

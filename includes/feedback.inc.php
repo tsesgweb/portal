@@ -27,27 +27,27 @@
                                 <div class="btn-group-toggle feedback__modal_radio" data-toggle="buttons">
 
                                     <label class="btn" for="ex-site-pessima">
-                                        <input type="radio" name="experiencia-site" id="ex-site-pessima" autocomplete="off" value="péssima">
+                                        <input type="radio" name="experiencia-site" id="ex-site-pessima" value="péssima">
                                         <span class="sr-only">Péssima</span>
                                     </label>
 
                                     <label class="btn" for="ex-site-ruim">
-                                        <input type="radio" name="experiencia-site" id="ex-site-ruim" autocomplete="off" value="ruim">
+                                        <input type="radio" name="experiencia-site" id="ex-site-ruim" value="ruim">
                                         <span class="sr-only">Ruim</span>
                                     </label>
 
                                     <label class="btn" for="ex-site-normal">
-                                        <input type="radio" name="experiencia-site" id="ex-site-normal" autocomplete="off" value="normal">
+                                        <input type="radio" name="experiencia-site" id="ex-site-normal" value="normal">
                                         <span class="sr-only">Normal</span>
                                     </label>
 
                                     <label class="btn" for="ex-site-boa">
-                                        <input type="radio" name="experiencia-site" id="ex-site-boa" autocomplete="off" value="boa">
+                                        <input type="radio" name="experiencia-site" id="ex-site-boa" value="boa">
                                         <span class="sr-only">Boa</span>
                                     </label>
 
                                     <label class="btn" for="ex-site-otima">
-                                        <input type="radio" name="experiencia-site" id="ex-site-otima" autocomplete="off" value="ótima">
+                                        <input type="radio" name="experiencia-site" id="ex-site-otima" value="ótima">
                                         <span class="sr-only">Ótima</span>
                                     </label>
                                 </div>
@@ -117,7 +117,7 @@
                                 <button type="reset" data-dismiss="modal" class="btn btn-cinza">Cancelar</button>
                                 <button type="submit" class="btn btn-amarelo">Enviar feedback</button>
                                 <div class="center-block">
-                                    <div id="captcha-feedback"></div>
+                                    <div id="captcha-feedback-01"></div>
                                 </div>
                             </div>
                         </div>
