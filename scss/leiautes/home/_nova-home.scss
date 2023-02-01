@@ -339,8 +339,9 @@
       .titulo {
         font-family: "Merriweather", sans-serif;
         font-weight: 700;
-        text-shadow: 1px 1px 2px black, 0 0 1em $cinza, 0 0 0.2em $cinza;
+        // text-shadow: 1px 1px 2px black, 0 0 1em $cinza, 0 0 0.2em $cinza;
         margin-top: 1rem;
+        
 
         a {
           &:focus,
@@ -370,6 +371,7 @@
 
         @include media-breakpoint-up(lg) {
           font-size: 2.25rem;
+          
 
           a {
             line-height: 3rem;

@@ -11,7 +11,7 @@
           </div>
           <div class="noticia__titulo noticia-principal__titulo">
             <span class="badge badge-aovivo">
-              <i class="fa fa-circle" aria-hidden="true"></i> AO VIVO</span>
+              <i class="fa fa-circle" aria-hidden="true"></i><strong> AO VIVO</strong></span>
             <h3 class="titulo">
               <a href="http://localhost:3000/interna.php">Suspensa análise sobre distribuição do FEFC e tempo de TV a
                 candidatos negros
