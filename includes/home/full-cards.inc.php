@@ -4,7 +4,7 @@
     <div class="owl-carousel owl-theme cards-container" id="full-cards-owl-carousel">
         <div class="item card-justica-eleitoral">
             <div class="card-imagem">
-                <img src="assets/imagens/full-cards/justica-eleitoral.png" a lt="">
+                <img src="assets/imagens/full-cards/justica-eleitoral.png" alt="Conheça a Justiça Eleitoral">
             </div>
             <div class="full-card-titulo">
                 <a href="#" class="btn btn-primary stretched-link">
@@ -14,7 +14,7 @@
         </div>
         <div class="item card-regulariza-titulo">
             <div class="card-imagem">
-                <img src="assets/imagens/full-cards/regularizar-titulo.png" alt="">
+                <img src="assets/imagens/full-cards/regularizar-titulo.png" alt="Mão segurando Título Eleitoral">
             </div>
             <div class="full-card-titulo">
                 <a href="#" class="btn btn-primary stretched-link">
@@ -24,7 +24,7 @@
         </div>
         <div class="item card-respostas-biometria">
             <div class="card-imagem">
-                <img src="assets/imagens/full-cards/biometria.png" alt="">
+                <img src="assets/imagens/full-cards/biometria.png" alt="Imagem da digital do dedo">
             </div>
             <div class="full-card-titulo">
                 <a href="#" class="btn btn-primary stretched-link">
@@ -34,7 +34,7 @@
         </div>
         <div class="item card-seguranca-urna">
             <div class="card-imagem">
-                <img src="assets/imagens/full-cards/seguranca.png" alt="">
+                <img src="assets/imagens/full-cards/seguranca.png" alt="Imagem de um Cadeado">
             </div>
             <div class="full-card-titulo">
                 <a href="#" class="btn btn-primary stretched-link">
@@ -44,7 +44,7 @@
         </div>
         <div class="item card-seguranca-urna">
             <div class="card-imagem">
-                <img src="assets/imagens/full-cards/seguranca.png" alt="">
+                <img src="assets/imagens/full-cards/seguranca.png" alt="Imagem de um Cadeado">
             </div>
             <div class="full-card-titulo">
                 <a href="#" class="btn btn-primary stretched-link">

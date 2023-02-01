@@ -15,9 +15,12 @@
                             <section class="dje dje__linha">
                                 <h2 class="titulo__oculto">Matérias do diário da justiça eleitoral</h2>
                                 <div class="dje-materias">
-                                    <p class="dje-titulo">Últimas edições disponíveis</p>
+                                    
+                                        <p class="dje-titulo">Últimas edições disponíveis</p>
+                                    
                                     <div class="table-responsive">
                                         <table class="table table-striped">
+                                            <caption>Últimas edições disponíveis</caption>
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Número</th>
