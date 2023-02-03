@@ -73,13 +73,13 @@
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a class="figure__link" href="#" title="boletin na mão">
+                                <a class="figure__link" href="#" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded"
-                                    alt="boletin na mão">
+                                    alt="boletim na mão">
                                 </a>
                                 <figcaption class="figure-caption">
-                                  <a class="figure__link" href="#" title="boletin na mão">
-                                    boletin na mão
+                                  <a class="figure__link" href="#" title="boletim na mão">
+                                    boletim na mão
                                   </a>
                                 </figcaption>
 
@@ -164,22 +164,22 @@
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a class="figure__link" href="#" title="boletin na mão">
+                                <a class="figure__link" href="#" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded" alt="...">
                                 </a>
                                 <figcaption class="figure-caption">
-                                  <a class="figure__link" href="#" title="boletin na mão">boletin na mão</a>
+                                  <a class="figure__link" href="#" title="boletim na mão">boletim na mão</a>
                                 </figcaption>
 
                               </figure>
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a class="figure__link" href="#" title="boletin na mão">
+                                <a class="figure__link" href="#" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded" alt="...">
                                 </a>
                                 <figcaption class="figure-caption"> <a class="figure__link" href="#"
-                                    title="boletin na mão">boletin na mão
+                                    title="boletim na mão">boletim na mão
                                   </a></figcaption>
                               </figure>
                             </div>
@@ -253,23 +253,23 @@
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a href="#" class="figure__link" title="boletin na mão">
+                                <a href="#" class="figure__link" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded"
-                                    alt="boletin na mão">
+                                    alt="boletim na mão">
                                 </a>
                                 <figcaption class="figure-caption"><a href="#" class="figure__link"
-                                    title="boletin na mão">boletin na mão
+                                    title="boletim na mão">boletim na mão
                                   </a></figcaption>
                               </figure>
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a href="#" class="figure__link" title="boletin na mão">
+                                <a href="#" class="figure__link" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded"
-                                    alt="boletin na mão">
+                                    alt="boletim na mão">
                                 </a>
                                 <figcaption class="figure-caption"><a href="#" class="figure__link"
-                                    title="boletin na mão">boletin na mão
+                                    title="boletim na mão">boletim na mão
                                   </a></figcaption>
                               </figure>
                             </div>
@@ -335,12 +335,12 @@
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a href="#" class="figure__link" title="boletin na mão">
+                                <a href="#" class="figure__link" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded"
-                                    alt="boletin na mão">
+                                    alt="boletim na mão">
                                 </a>
                                 <figcaption class="figure-caption"><a href="#" class="figure__link"
-                                    title="boletin na mão">boletin na mão
+                                    title="boletim na mão">boletim na mão
                                   </a></figcaption>
                               </figure>
                             </div>
@@ -398,12 +398,12 @@
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a href="#" class="figure__link" title="boletin na mão">
+                                <a href="#" class="figure__link" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded"
-                                    alt="boletin na mão">
+                                    alt="boletim na mão">
                                 </a>
                                 <figcaption class="figure-caption"><a href="#" class="figure__link"
-                                    title="boletin na mão">boletin na mão
+                                    title="boletim na mão">boletim na mão
                                   </a></figcaption>
                               </figure>
                             </div>
@@ -458,23 +458,23 @@
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a href="#" class="figure__link" title="boletin na mão">
+                                <a href="#" class="figure__link" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded"
-                                    alt="boletin na mão">
+                                    alt="boletim na mão">
                                 </a>
                                 <figcaption class="figure-caption"><a href="#" class="figure__link"
-                                    title="boletin na mão">boletin na mão
+                                    title="boletim na mão">boletim na mão
                                   </a></figcaption>
                               </figure>
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a href="#" class="figure__link" title="boletin na mão">
+                                <a href="#" class="figure__link" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded"
-                                    alt="boletin na mão">
+                                    alt="boletim na mão">
                                 </a>
                                 <figcaption class="figure-caption"><a href="#" class="figure__link"
-                                    title="boletin na mão">boletin na mão
+                                    title="boletim na mão">boletim na mão
                                   </a></figcaption>
                               </figure>
                             </div>
@@ -535,23 +535,23 @@
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a href="#" class="figure__link" title="boletin na mão">
+                                <a href="#" class="figure__link" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded"
-                                    alt="boletin na mão">
+                                    alt="boletim na mão">
                                 </a>
                                 <figcaption class="figure-caption"><a href="#" class="figure__link"
-                                    title="boletin na mão">boletin na mão
+                                    title="boletim na mão">boletim na mão
                                   </a></figcaption>
                               </figure>
                             </div>
                             <div class="campanhas__item">
                               <figure class="figure">
-                                <a href="#" class="figure__link" title="boletin na mão">
+                                <a href="#" class="figure__link" title="boletim na mão">
                                   <img src="http://placehold.it/153x83" class="figure-img img-fluid rounded"
-                                    alt="boletin na mão">
+                                    alt="boletim na mão">
                                 </a>
                                 <figcaption class="figure-caption"><a href="#" class="figure__link"
-                                    title="boletin na mão">boletin na mão
+                                    title="boletim na mão">boletim na mão
                                   </a></figcaption>
                               </figure>
                             </div>
