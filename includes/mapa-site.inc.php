@@ -10,7 +10,7 @@
                         <div id="mapa-resultado" class="mapa-resultado mapa-resultado__lista-grupo"></div>
                         <div class="input-group">
                             <label for="mapa-search" class="sr-only">Acesso rápido</label>
-                            <input type="text" class="form-control" id="mapa-search" aria-describedby="helpId" placeholder="Filtrar por..." autocomplete="off">
+                            <input type="text" class="form-control" id="mapa-search" placeholder="Filtrar por..." autocomplete="off">
                             <div class="input-group-prepend">
                                 <button class="btn btn-outline-azul icon-fa-search" type="submit" id="button-addon1"> Buscar em todo site</button>
                             </div>

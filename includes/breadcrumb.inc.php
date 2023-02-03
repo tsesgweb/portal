@@ -4,7 +4,7 @@
             <nav id="breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a class="breadcrumb-link" href="/" title="Página inicial"><i class="fa fa-lg fa-home" aria-hidden="true"></i> <span class="breadcrumb__oculto">Página inicial</span></a>
+                        <a class="breadcrumb-link" href="/" title="Título Página inicial"><i class="fa fa-lg fa-home" aria-hidden="true"></i> <span class="breadcrumb__oculto">Página inicial</span></a>
                     </li>
                     <li class="breadcrumb-item">
                         <a class="breadcrumb-link" href="#">Imprensa</a>

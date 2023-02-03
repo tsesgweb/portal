@@ -56,7 +56,8 @@ include BASE_URL .'/includes/imagem-topo.inc.php';
                 <p><span>A tabela abaixo apresenta a previsão de coleta biométrica para 2017 considerando as revisões iniciadas nesse ano (mesmo que se estendam até 2018) e o atendimento ordinário (excluídos os municípios que adotaram a revisão ainda em 2017 e aqueles que concluíram o cadastramento biométrico).&nbsp;</span></p>
                 <div class="table-responsive">
                     <table class="grid listing table">
-                        <tbody>
+                    <caption> título </caption>
+                    <tbody>
                             <tr class="odd">
                                 <th rowspan="2" width="45">
                                     <p align="center"><strong>UF</strong></p>
